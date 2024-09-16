@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Quizz Culture web.</h1>
+    <div class="containerQuizz">
+        <form action="" id="formQuizz">
+        <div class="containerItem" id="wwwItem">
+            <h4>Qui a inventé le World Wide Web (www) ?</h4>
+            <input type="radio" name="www" id="gates" value="wrong">
+            <label for="gates">Bill Gates</label><br>
+            <input type="radio" name="www" id="jobs" value="wrong">
+            <label for="jobs">Steve Jobs</label><br>
+            <input type="radio" name="www" id="berners" value="correct">
+            <label for="jobs">Tim Berners-Lee</label>
+        </div>
+        <div class="containerItem" id="langageItem">
+            <h4>Quel est le langage de programmation le plus utilisé dans le monde ?</h4>
+            <input type="radio" name="langage" id="python" value="wrong">
+            <label for="python">Python</label><br>
+            <input type="radio" name="langage" id="js" value="correct">
+            <label for="js">JavaScript</label><br>
+            <input type="radio" name="langage" id="java" value="wrong">
+            <label for="java">Java</label>
+        </div>
+        <div class="containerItem" id="hwItem">
+            <h4>Comment afficher "Hello World" dans la console en JavaScript ?</h4>
+            <input type="radio" name="hw" id="hello" value="wrong">
+            <label for="hello"># Hello World</label><br>
+            <input type="radio" name="hw" id="print" value="wrong">
+            <label for="print">print("Hello World")</label><br>
+            <input type="radio" name="hw" id="console" value="correct">
+            <label for="console">console.log("Hello World")</label>
+        </div>
+        <div class="containerItem" id="openItem">
+            <h4>Qu'est-ce que l'open source ?</h4>
+            <input type="radio" name="openSrc" id="free" value="wrong">
+            <label for="free">Un logiciel gratuit</label><br>
+            <input type="radio" name="openSrc" id="access" value="correct">
+            <label for="access">Un logiciel dont le code source est accessible à tous</label><br>
+            <input type="radio" name="openSrc" id="interface" value="wrong">
+            <label for="interface">Un logiciel avec une interface utilisateur facile à utiliser</label>
+        </div>
+        <div class="containerItem" id="cloudItem">
+            <h4>Quelle entreprise est le plus grand fournisseur de services de cloud computing dans le monde ?</h4>
+            <input type="radio" name="cloud" id="amazon" value="correct">
+            <label for="amazon">Amazon Web Services</label><br>
+            <input type="radio" name="cloud" id="google" value="wrong">
+            <label for="google">Google Cloud Platform</label><br>
+            <input type="radio" name="cloud" id="microsoft" value="wrong">
+            <label for="microsoft">Microsoft Azure</label>
+        </div>
+        <input type="submit" id="valider" value="Valider">
+        <p id="result">Cliquez sur <strong>valider</strong> pour voir les <strong>résultats</strong>.</p>
+    </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

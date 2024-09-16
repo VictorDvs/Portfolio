@@ -1,0 +1,259 @@
+body{
+    background-color: #4c7766;
+    font-family:"k2d", sans-serif ;
+    font-weight: 100;
+    font-style: normal;
+    color: #ebe6e0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+#nav{
+    background-color: #4c7766 !important;
+    z-index: 10;
+}
+
+.nav-link{
+    font-family:"k2d", sans-serif ;
+    font-weight: 500;
+    font-style: normal;
+    color: #ebe6e0;
+    font-size: 2em;
+    margin-top: 15px;
+    margin-right: 20px;
+    
+}
+
+.nav-link:hover{
+    color: black;
+}
+
+.nav-link:active{
+    color: black;
+}
+
+.link-cv{
+    border: 2.5px solid black;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 5px 15px;
+}
+
+.link-cv:hover{
+    background-color: black;
+    color: #ebe6e0;
+}
+
+.home{
+    margin: 100px 0 150px;
+}
+
+.home-text-intro{
+    margin-left: 50px;
+}
+
+@media (max-width: 992px) {
+    .home-text-intro {
+        margin-left: 0px;
+    }
+}
+
+.circle-container {
+    position: relative; /* Nécessaire pour que l'ombre soit bien positionnée */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; /* Ajuste la taille du cercle selon ton besoin */
+    height: 300px; /* Ajuste la taille du cercle selon ton besoin */
+    border-radius: 50%; /* Rend le conteneur circulaire */
+    overflow: hidden; /* Coupe l'image qui dépasse */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9); /* Ombre portée */
+    padding-top: 100px;
+}
+
+
+@media (max-width: 992px) {
+    .ma-photo {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.circle-container img{
+    max-width: 100%; 
+    /* object-fit: cover; */
+    /* object-position: center; */
+ }
+
+ #text-greetings{
+     font-size: 3em;
+     font-weight: 300;
+ }
+ #text-intro{
+     font-size: 2.5em;
+     font-weight: 100;
+ }
+
+ 
+
+.bi{
+    margin: 10px;
+    cursor: pointer;
+    color: #ebe6e0;
+}
+
+.bi:hover{
+    color: black;
+}
+
+.btn-primary{
+    background-color: rgb(251, 251, 251);
+    color: black;
+    border: none;
+    /* margin: auto; */
+}
+
+
+.btn-primary:hover{
+    background-color: rgb(0, 0, 0);
+    border: none;
+    color: #ebe6e0;
+    
+}
+
+.btn-primary, .btn-secondary{
+    width: fit-content;
+}
+
+
+.btn-secondary{
+    background-color: gray;
+    border: none;
+}
+.btn-secondary:hover{
+    border: none;
+}
+
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.carousel {
+    max-width: 100%;
+    /* margin-bottom: 30px; */
+}
+
+  /* Ajustement de la largeur du carousel selon les tailles d'écran */
+  @media (min-width: 768px) {
+    .carousel {
+        width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .carousel {
+        width: 75%;
+    }
+}
+
+
+
+
+.carousel-item img {
+    margin: 0 auto;
+    cursor: pointer;
+    max-height: 500px; /* Limite la hauteur maximale pour éviter de déformer l'image */
+    object-fit: contain;
+}
+
+.image-caption {
+    text-align: center;
+    color: #ebe6e0;
+    padding: 10px;
+}
+
+.bi-caret-right-fill, .bi-caret-left-fill{
+    font-size: 3em;
+}
+
+.bi-caret-right-fill:hover, .bi-caret-left-fill:hover{
+    color: white;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    width: auto;
+}
+
+#role-olfeo{
+    text-align: center;
+}
+
+
+.row-equal{
+    display: flex;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-img-top{
+cursor: pointer;
+/* object-fit: contain; */
+}
+
+
+
+.footer{
+    background-color: black;
+    height: 100px;
+    color: #ebe6e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content{
+    /* margin: 0 25px; */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: auto 0;
+    cursor: pointer;
+    
+}
+
+.footer-content p{
+    margin: 0 25px;
+}
+
+
+
+.footer-content p:hover{
+    font-weight: 500 ;
+}
+
+.footer-link-cv{
+    border: 2.5px solid white;
+    border-radius: 8px;
+    /* width: fit-content; */
+    padding: 5px 5px;
+}
+
+.footer-link-cv:hover{
+    background-color: white;
+    color: black;
+}
+
