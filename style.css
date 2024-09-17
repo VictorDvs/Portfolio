@@ -17,6 +17,13 @@ p {
     font-weight: 200;
 }
 
+.section{
+    margin: 150px 0;
+}
+
+
+/* -------------------------NAVIGATION-------------------------- */
+
 #nav{
     background-color: #4c7766 !important;
     z-index: 10;
@@ -52,6 +59,8 @@ p {
     background-color: black;
     color: #ebe6e0;
 }
+
+/* -------------------------SECTION ABOUT------------------------- */
 
 .home{
     margin: 100px 0 150px;
@@ -143,6 +152,7 @@ p {
     border: none;
 }
 
+/* -----------------------------SECTION EXPERIENCES--------------------------- */
 
 .carousel-container {
     display: flex;
@@ -165,8 +175,6 @@ p {
         width: 75%;
     }
 }
-
-
 
 
 .carousel-item img {
@@ -198,6 +206,7 @@ p {
     text-align: center;
 }
 
+/* -----------------------------------SECTION PROJETS--------------------------------------- */
 
 .row-equal{
     display: flex;
@@ -214,7 +223,34 @@ cursor: pointer;
 /* object-fit: contain; */
 }
 
+/* -----------------------------------SECTION CONTACT--------------------------------------- */
 
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact form{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact form label {
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------FOOTER--------------------------------------- */
 
 .footer{
     background-color: black;

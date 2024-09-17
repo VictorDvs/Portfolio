@@ -18,17 +18,24 @@
 
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary  sticky-top" id="nav">
+    
+  
     <div class="container-fluid">
+      <!-- <a class="navbar-brand" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+      </svg>
+      </a> -->
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#home">Home</a>
-          <a class="nav-link" href="#experiences">Experiences</a>
-          <a class="nav-link" href="#projets">Projets</a>
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link nav-anchor" aria-current="page" href="#home">Home</a>
+          <a class="nav-link nav-anchor" href="#experiences">Experiences</a>
+          <a class="nav-link nav-anchor" href="#projets">Projets</a>
+          <a class="nav-link nav-anchor" href="#contact">Contact</a>
           <a class="nav-link link-cv" target="_blank" href="assets/CV_Victor_De_Vos_DWWM.pdf">Mon CV</a>
         </div>
       </div>
@@ -69,9 +76,8 @@
     </div>
 
   </div>
-  <div id="experiences"><br><br></div>
-  
-  <div class="container-fluid experiences">
+ 
+  <div class="container-fluid experiences section" id="experiences">
     
     <div class="carousel-container container-fluid d-flex justify-content-center mt-5 mb-7">
       <div id="carouselExampleCaptions" class="carousel slide ">
@@ -179,8 +185,7 @@
     </div>
 
   </div> -->
-  <hr>
-  <div id="projets" class="container-fluid projets">
+  <div id="projets" class="container-fluid projets section">
     <h2>Projets Développeurs Web</h2>
     <p>Quelques jeux développés en HTML, CSS et JavaScript</p>
     <div class="row row-equal">
@@ -225,7 +230,25 @@
       </div>
     </div>
   </div>
-  
+  <div class="container-fluid section" id="contact">
+
+    <!-- modify this form HTML and place wherever you want your form -->
+<form
+action="https://formspree.io/f/mpwaeeld"
+method="POST"
+>
+<label>
+  Votre mail :
+  <input type="email" name="email">
+</label>
+<label>
+  Votre message :
+  <textarea name="message"></textarea>
+</label>
+<!-- your other form fields go here -->
+<button type="submit">Send</button>
+</form>
+  </div>
   <div class="container-fluid footer">
     <div class="footer-content"><p>Experiences</p></div>
     <div class="footer-content"><p>Home</p></div>
