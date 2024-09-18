@@ -20,6 +20,14 @@ document.querySelectorAll('.nav-anchor').forEach(anchor => {
     document.getElementById('modalImage').src = imgSrc;
 }
 
+
+var typed = new Typed('#text-greetings', {
+  strings: ["Bienvenu(e) sur mon site !", "Je m'appelle Victor, je suis apprenti développeur web et rédacteur technique de profession."],
+  typeSpeed: 10,
+  backSpeed: 30, 
+});
+
+
 // Sélectionner les éléments nécessaires
 const button = document.querySelector('.navbar-brand');
 const span = document.querySelector('span');
