@@ -1,0 +1,16 @@
+/* -----------------------------------SECTION PROJETS--------------------------------------- */
+
+.row-equal{
+    display: flex;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-img-top{
+cursor: pointer;
+/* object-fit: contain; */
+}

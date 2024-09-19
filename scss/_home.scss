@@ -1,0 +1,101 @@
+/* -------------------------SECTION ABOUT------------------------- */
+
+.home{
+    margin: 100px 0 150px;
+}
+
+.home-text-intro{
+    margin-left: 50px;
+}
+
+@media (max-width: 992px) {
+    .home-text-intro {
+        margin-left: 0px;
+    }
+}
+
+.circle-container {
+    position: relative; /* Nécessaire pour que l'ombre soit bien positionnée */
+    @include displayFlex;
+    width: 320px; /* Ajuste la taille du cercle selon ton besoin */
+    height: 320px; /* Ajuste la taille du cercle selon ton besoin */
+    border-radius: 50%; /* Rend le conteneur circulaire */
+    overflow: hidden; /* Coupe l'image qui dépasse */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9); /* Ombre portée */
+    padding-top: 100px;
+}
+
+
+@media (max-width: 992px) {
+    .ma-photo {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.circle-container img{
+    max-width: 100%; 
+    /* object-fit: cover; */
+    /* object-position: center; */
+ }
+
+ #text-greetings{
+     font-size: 3em;
+     font-weight: 300;
+     height: 200px;
+ }
+
+@media (max-width: 1078px){
+    #text-greetings{
+        margin-bottom: 60px;
+        text-align: center;
+    }
+}
+
+ #text-intro{
+     font-size: 2.5em;
+     font-weight: 100;
+ }
+
+#sources-perso{
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.bi{
+    margin: 10px;
+    cursor: pointer;
+    color: #ebe6e0;
+}
+
+.bi:hover{
+    color: black;
+}
+
+.btn-primary{
+    background-color: rgb(251, 251, 251);
+    color: black;
+    border: none;
+    /* justify-content: end; */
+    
+}
+
+
+.btn-primary:hover{
+    background-color: rgb(0, 0, 0);
+    border: none;
+    /* color: #ebe6e0; */
+    
+}
+
+#consult-cv:hover{
+    color: #ebe6e0;
+}
+
+@media (max-width: 775px){
+    .btn-primary, .btn-secondary{
+        margin: 0 auto;
+        
+}
+}

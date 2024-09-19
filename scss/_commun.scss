@@ -1,0 +1,36 @@
+body{
+    background-color: #4c7766;
+    font-family:"k2d", sans-serif ;
+    font-weight: 100;
+    font-style: normal;
+    color: #ebe6e0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+.section{
+    margin: 150px 0;
+}
+
+#separation{
+    border: 1px solid rgba(255, 255, 255, 0.532);
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9); 
+}
+
+@mixin displayFlex($justify-content: center, $align-items: center, $display: flex){
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}

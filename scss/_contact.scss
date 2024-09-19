@@ -1,0 +1,16 @@
+/* -----------------------------------SECTION CONTACT--------------------------------------- */
+
+#contact{
+    @include displayFlex;
+    flex-direction: column;
+}
+
+#contact form{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact form label {
+    margin: 10px;
+}
+
