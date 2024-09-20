@@ -7,10 +7,21 @@
 .card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 100%;
+    border-radius: 20px;
+    border: none;
+    transition: transform 0.3s ease;
 }
+
+.card:hover {
+    transform: scale(1.05);
+  }
 
 .card-img-top{
 cursor: pointer;
-/* object-fit: contain; */
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+// object-fit: fill;
+height: 310px;
 }

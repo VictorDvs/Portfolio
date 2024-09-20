@@ -29,14 +29,6 @@ let hwItem = document.querySelector('#hwItem');
 let openItem = document.querySelector('#openItem');
 let cloudItem = document.querySelector('#cloudItem');
 
-// On stocke les inputs dans des variables
-
-// let www = document.querySelector('input[name ="www"]:checked');
-// let langage = document.querySelector('input[name ="langage"]:checked');
-// let hw = document.querySelector('input[name ="hw"]:checked');
-// let openSrc = document.querySelector('input[name ="openSrc"]:checked');
-// let cloud = document.querySelector('input[name ="cloud"]:checked');
-
 // On récupère le msg de fin
 let resultMsg = document.querySelector('#result');
 
@@ -59,6 +51,16 @@ const cloud = document.querySelector('input[name ="cloud"]:checked');
     
 }
 
+
+// Fonction pour désactiver les boutons radio d'une question
+function disableInputs(questionName) {
+    let radios = document.querySelectorAll(`input[name="${questionName}"]`);
+    radios.forEach(radio => {
+        radio.disabled = true; // Désactiver le bouton radio
+    });
+}
+
+// Fonction pour changer la couleur et désactiver les bonnes réponses
 function changeColor(){
 
 const www = document.querySelector('input[name ="www"]:checked');
@@ -67,14 +69,45 @@ const hw = document.querySelector('input[name ="hw"]:checked');
 const openSrc = document.querySelector('input[name ="openSrc"]:checked');
 const cloud = document.querySelector('input[name ="cloud"]:checked');
 
-wwwItem.style.backgroundColor = (www && www.value === "correct") ? "green" : "red";
-langageItem.style.backgroundColor = (langage && langage.value === "correct") ? "green" : "red";
-hwItem.style.backgroundColor = (hw && hw.value === "correct") ? "green" : "red";
-openItem.style.backgroundColor = (openSrc && openSrc.value === "correct") ? "green" : "red";
-cloudItem.style.backgroundColor = (cloud && cloud.value === "correct") ? "green" : "red";
+// Vérifier et changer les couleurs + désactiver les inputs corrects
+if (www && www.value === "correct") {
+    wwwItem.style.backgroundColor = "green";
+    disableInputs('www'); // Désactiver les inputs si réponse correcte
+} else {
+    wwwItem.style.backgroundColor = "red";
+}
+
+if (langage && langage.value === "correct") {
+    langageItem.style.backgroundColor = "green";
+    disableInputs('langage');
+} else {
+    langageItem.style.backgroundColor = "red";
+}
+
+if (hw && hw.value === "correct") {
+    hwItem.style.backgroundColor = "green";
+    disableInputs('hw');
+} else {
+    hwItem.style.backgroundColor = "red";
+}
+
+if (openSrc && openSrc.value === "correct") {
+    openItem.style.backgroundColor = "green";
+    disableInputs('openSrc');
+} else {
+    openItem.style.backgroundColor = "red";
+}
+
+if (cloud && cloud.value === "correct") {
+    cloudItem.style.backgroundColor = "green";
+    disableInputs('cloud');
+} else {
+    cloudItem.style.backgroundColor = "red";
+}
 
 }
 
+// Message de fin
 function msgDeFin(score){
     switch (score){
         case 0: 
@@ -95,24 +128,40 @@ function msgDeFin(score){
         resultMsg.innerHTML = "Bravo, c'est un sans faute ! <br><br> Score: <strong>5 / 5</strong> <br><br> Quelle culture ...";
         break;
     }
-    // if (score === 5) {
-    //     resultMsg.innerHTML = "Bravo, c'est un sans faute ! <br><br> Score: <strong>5 / 5</strong> <br><br> Quelle culture ...";
-    // } else if (score === 4) {
-    //     resultMsg.innerHTML = "Vous y êtes presque ! <br><br> Score: <strong>4 / 5</strong> <br><br> Retentez une autre réponse dans la case rouge, puis re-validez !";
-    // } else if (score === 3) {
-    //     resultMsg.innerHTML = "Vous êtes sur la bonne voie ! <br><br> Score: <strong>3 / 5</strong> <br><br> Retentez une autre réponse dans la case rouge, puis re-validez !";
-    // } else if (score === 2) {
-    //     resultMsg.innerHTML = "Courage ! <br><br> Score: <strong>2 / 5</strong> <br><br> Retentez une autre réponse dans la case rouge, puis re-validez !";
-    // } else if (score === 1) {
-    //     resultMsg.innerHTML = "Peut mieux faire ! <br><br> Score: <strong>1 / 5</strong> <br><br> Retentez une autre réponse dans la case rouge, puis re-validez !";
-    // } else {
-    //     resultMsg.innerHTML = "Ne vous découragez-pas ! <br><br> Score: <strong>0 / 5</strong> <br><br> Retentez une autre réponse dans la case rouge, puis re-validez !";
-    // }
+   
 }
 
+// Ajouter l'événement au bouton valider
 submit.addEventListener('click', (e) => {
     e.preventDefault();
     let score = calculateScore();
     changeColor();
     msgDeFin(score);
 })
+
+// Réinitialiser la couleur de fond lorsque l'utilisateur modifie sa réponse
+let resetCol = document.querySelectorAll("input[type='radio']");
+resetCol.forEach(radio => radio.addEventListener("input", resetColor));
+
+function resetColor(event) {
+    const name = event.target.getAttribute("name");
+
+    // Réinitialiser la couleur de fond de l'élément associé à la question
+    switch (name) {
+        case 'www':
+            wwwItem.style.backgroundColor = "white";
+            break;
+        case 'langage':
+            langageItem.style.backgroundColor = "white";
+            break;
+        case 'hw':
+            hwItem.style.backgroundColor = "white";
+            break;
+        case 'openSrc':
+            openItem.style.backgroundColor = "white";
+            break;
+        case 'cloud':
+            cloudItem.style.backgroundColor = "white";
+            break;
+    }
+}
