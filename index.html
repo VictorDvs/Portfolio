@@ -72,13 +72,6 @@
     
     <div class="carousel-container container-fluid d-flex justify-content-center mt-5 mb-7">
       <div id="carouselExampleCaptions" class="carousel slide ">
-          <!-- <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-          </div> -->
           <div class="carousel-inner">
             <h2 id="role-olfeo">Présentation visuelle de mon rôle au sein de l'équipe <em>Product</em></h2>
               <div class="carousel-item active">
@@ -180,7 +173,7 @@
     <h2>Projets Développeurs Web</h2>
     <p>Quelques jeux développés en HTML, CSS et JavaScript</p>
     <div class="row row-equal">
-      <div class="col-12 col-md-4 mb-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 card-margin">
         <div class="card">
           <a target="_blank" href="projets/Quizz/index.html">
             <img src="assets/img/Projets/projets-quizz.png" class="card-img-top" alt="Quizz de culture générale">
@@ -192,7 +185,7 @@
             </div>
         </div>
       </div>
-      <div class="col-12 col-md-4 mb-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 card-margin">
         <div class="card">
           <img src="assets/img/Projets/projets-shifumi.png"  class="card-img-top" alt="...">
           <div class="card-body">
@@ -202,7 +195,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-4 mb-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 card-margin">
         <div class="card">
           <img src="assets/img/Projets/projets-morpion.png" class="card-img-top" alt="...">
           <div class="card-body">
@@ -211,7 +204,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-4 mb-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 card-margin">
         <div class="card">
           <img src="assets/img/Projets/projets-imc.png" class="card-img-top" alt="...">
           <div class="card-body">
@@ -220,7 +213,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-4 mb-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 card-margin">
         <div class="card">
           <img src="assets/img/Projets/projets-chartJS.png" class="card-img-top" alt="...">
           <div class="card-body">
@@ -229,7 +222,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-4 mb-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 card-margin">
         <div class="card">
           <img src="assets/img/Projets/projets-meteo.png" class="card-img-top" alt="...">
           <div class="card-body">
@@ -240,8 +233,13 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid section" id="contact">
+  <div class="container-fluid section mb-0" id="contact">
+<div class="row">
+  <div class="col-sm-6 col-12 align-items-center d-flex">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero dolorem eveniet vel excepturi vitae odio omnis laudantium, sapiente exercitationem quaerat. Vitae fugit deleniti molestiae modi asperiores beatae possimus aspernatur odio!</p>
+  </div>
 
+  <div class="col-sm-6 col-12 align-items-center d-flex justify-content-lg-end">
     <!-- modify this form HTML and place wherever you want your form -->
 <form
 action="https://formspree.io/f/mpwaeeld"
@@ -249,23 +247,28 @@ method="POST"
 >
 <label>
   Votre mail :
-  <input type="email" name="email">
+  <input type="email" name="email" class="form-control mb-3">
 </label>
 <label>
   Votre message :
-  <textarea name="message"></textarea>
+  <textarea name="message" class="form-control mb-3" rows="4" ></textarea>
 </label>
 <!-- your other form fields go here -->
-<button type="submit">Send</button>
+<button type="submit">Envoyez votre message</button>
 </form>
+</div>
+</div>
   </div>
   <div class="container-fluid footer">
-    <div class="footer-content"><p>Experiences</p></div>
-    <div class="footer-content"><p>Home</p></div>
-    <div class="footer-content"><p>Projets</p></div>
-    <div class="footer-content"><p>Contact</p></div>
-    <div class="footer-content footer-link-cv"><p>Mon CV</p></div>
+    <div class="row">
+      <div class="col-12 d-flex flex-wrap justify-content-center">
+    <div class="footer-content me-4 mb-2"><p>Experiences</p></div>
+    <div class="footer-content me-4 mb-2"><p>Home</p></div>
+    <div class="footer-content me-4 mb-2"><p>Projets</p></div>
+    <div class="footer-content me-4 mb-2"><p>Contact</p></div>
+    <div class="footer-content footer-link-cv mb-2"><p>Mon CV</p></div>
   </div>
+    </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
   crossorigin="anonymous"></script>
