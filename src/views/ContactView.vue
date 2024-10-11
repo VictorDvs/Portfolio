@@ -3,24 +3,29 @@
         <HeaderComponent/>
         <div class="container-fluid section" id="contact">
 <div class="row">
-  <div class="col-sm-6 col-12 align-items-center d-flex">
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero dolorem eveniet vel excepturi vitae odio omnis laudantium, sapiente exercitationem quaerat. Vitae fugit deleniti molestiae modi asperiores beatae possimus aspernatur odio!</p>
+  <div class="col-sm-6 col-12 align-items-end justify-content-center d-flex flex-column">
+    <p id="contact-text">Je suis basé à Paris, mais je suis mobile et entrain à l'idée d'acquérir de l'expérience ailleurs. Vous pouvez aussi m'envoyer un mail directement via le formulaire ci-joint.</p>
+    <div class="coordonnees">
+    <p><i class="bi bi-telephone"></i> 06.81.88.31.76</p>
+    <p><i class="bi bi-envelope"></i> victordevos.pro@gmail.com</p>
+</div>
   </div>
 
-  <div class="col-sm-6 col-12 align-items-center d-flex justify-content-lg-end">
+  <div class="col-sm-6 col-12 align-items-center d-flex justify-content-center">
     <!-- modify this form HTML and place wherever you want your form -->
-<form
+<form 
+id="form"
 action="https://formspree.io/f/mpwaeeld"
 method="POST"
 >
-<label>
-  Votre mail :
-  <input type="email" name="email" class="form-control mb-3">
-</label>
-<label>
-  Votre message :
-  <textarea name="message" class="form-control mb-3" rows="4" ></textarea>
-</label>
+
+  <p>Adresse mail :</p>
+  <input type="email" name="email" class="form-control mb-3" placeholder="Votre email">
+
+
+  <p>Message :</p>
+  <textarea name="message" class="form-control mb-3" rows="4" placeholder="Votre message..."></textarea>
+
 <!-- your other form fields go here -->
 <button type="submit">Envoyez votre message</button>
 </form>
@@ -44,6 +49,11 @@ import FooterComponent from '@/components/FooterComponent.vue'
 <style lang="scss" scoped>
 @import "@/assets/styles/_mixins.scss";
 
+
+#contact-text{
+    max-width: 65%;
+}
+
 #contact{
     @include displayFlex;
     flex-direction: column;
@@ -54,20 +64,35 @@ import FooterComponent from '@/components/FooterComponent.vue'
 #contact form{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    background-color: #EFEBFE;
+    text-align: start;
     color: black;
     margin: 25px 0px;
     width: 100%;
+    height: 400px;
     max-width: 600px;
     padding: 0 10px;
     box-sizing: border-box;
+    border-radius: 20px;
 
 }
 
-#contact form label {
-    margin: 10px;
+// #contact form label {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     margin: 10px;
+//     width: 100%;
+// }
+
+#contact form p{
+    display: flex;
+    align-items: start;
     width: 100%;
+    padding-left: 40px;
 }
 
 #contact input, #contact textarea {
@@ -75,10 +100,19 @@ import FooterComponent from '@/components/FooterComponent.vue'
     max-width: 500px; /* Limiter la largeur pour les écrans larges */
 }
 
-.footer-content {
-    text-align: center; /* Centrer les textes du footer */
-    margin: 5px 0; /* Marges plus petites pour éviter le débordement */
-    word-wrap: break-word; /* Forcer la casse des longs mots */
+#contact form button {
+    display: flex;
+    // align-self: flex-end;
+    border: none;
+    background-color: #3615B1;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-radius: 30px;
+    padding: 10px;
+    
+    // margin-right: 35px;
+    // margin-top: 15px;
 }
 
 /* Media queries pour petits écrans */
@@ -94,9 +128,6 @@ import FooterComponent from '@/components/FooterComponent.vue'
     #contact form label {
         margin: 5px; /* Réduire les marges des labels */
     }
-    
-    .footer-content {
-        font-size: 0.9rem; /* Réduire la taille du texte dans le footer sur petits écrans */
-    }
+
 }
 </style>
