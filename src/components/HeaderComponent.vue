@@ -1,6 +1,6 @@
 <template>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" id="nav">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg sticky-top" id="nav">
+      <div class="container-fluid coll-header">
         <!-- Logo ou autre élément ici si nécessaire -->
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,7 +8,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <div class="navbar-nav">
-            <router-link class="nav-link nav-anchor" :to="'/'">Faisons connaissance </router-link>
+            <router-link class="nav-link nav-anchor" :to="'/'">A mon propos </router-link>
             <router-link class="nav-link nav-anchor" :to="'/projects'">Mes Projets</router-link>
             <router-link class="nav-link nav-anchor" :to="'/experiences'">Mes Éxperiences</router-link>
             <router-link class="nav-link nav-anchor" :to="'/contact'">Entrons en contact 🛸</router-link>
@@ -27,28 +27,42 @@
 
 <style lang="scss" scoped>
 
-#nav {
-    background-color: #fcfcf7 !important;
-    z-index: 10;
-    height: 80px;
+.theme-light {
+              --background: #fcfcf7;
+              --color: #000;
+              --border: 2.5px solid black;
+          }
+  
+  .theme-dark {
+      --background: #000;
+      --color: #fff;
+      --border: 2.5px solid white;
   }
+
+#nav {
+  background: var(--background);
+    z-index: 10;
+    height: 100px;
+    position: fixed; /* Change to fixed */
+  top: 0;
+  width: 100%; /* Assure-toi qu'il prend toute la largeur */  }
   
   .nav-link {
     font-family: "k2d", sans-serif;
     font-weight: 500;
     font-style: normal;
-    color: black;
+    color: var(--color);
     font-size: 1.3em;
     margin-right: 20px;
   }
   
-  .nav-link:hover {
-    color: black;
-  }
+  // .nav-link:hover {
+  //   color: black;
+  // }
   
-  .nav-link:active {
-    color: black;
-  }
+  // .nav-link:active {
+  //   color: black;
+  // }
   
   .link-cv {
     border: 2.5px solid black;
@@ -61,5 +75,12 @@
     background-color: black;
     color: #ebe6e0;
   }
+
+@media screen and (max-width:991px) {
+  .coll-header{
+    background-color: #fcfcf7;
+    padding-bottom: 30px;
+  }
+}
   
 </style>

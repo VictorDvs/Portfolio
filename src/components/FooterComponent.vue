@@ -4,11 +4,11 @@
     <div class="row">
       <div class="col-12 d-flex flex-wrap justify-content-start">
     <div class="footer-content me-auto"><p>Portfolio créé avec Vue.js et hebergé sur GitHub</p></div>
-    <div class="footer-content me-4"><p>Experiences</p></div>
+    <!-- <div class="footer-content me-4"><p>Experiences</p></div>
     <div class="footer-content me-4"><p>Home</p></div>
     <div class="footer-content me-4"><p>Projets</p></div>
     <div class="footer-content me-4"><p>Contact</p></div>
-    <div class="footer-content footer-link-cv"><p>Mon CV</p></div>
+    <div class="footer-content footer-link-cv"><p>Mon CV</p></div> -->
   </div>
     </div>
   </div>
@@ -28,7 +28,7 @@
     background-color: rgba(0, 0, 0, 0.808);
     height: 70px;
     color: #ebe6e0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     @include displayFlex;
@@ -38,7 +38,6 @@
     /* margin: 0 25px; */
     @include displayFlex;
     padding: auto 0;
-    cursor: pointer;
     
 }
 

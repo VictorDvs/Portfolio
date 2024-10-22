@@ -8,13 +8,27 @@
   <router-view/>
 </template>
 
+<script>
+
+</script>
+
 <style lang="scss">
+  .theme-light {
+              --background: #fcfcf7;
+              --color: #000;
+          }
+  
+  .theme-dark {
+      --background: #000;
+      --color: #fff;
+  }
+
 html, body{
-    background-color: #fcfcf7;
+  background: var(--background);
     font-family:"k2d", sans-serif ;
     font-weight: 100;
     font-style: normal;
-    color: #000000;
+    color: var(--color);
     height: 100%;
 }
 
@@ -32,5 +46,6 @@ p {
 .section{
     margin: 150px 0;
 }
+
 
 </style>
