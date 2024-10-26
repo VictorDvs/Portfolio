@@ -25,9 +25,9 @@
 
 html, body{
   background: var(--background);
-    font-family:"k2d", sans-serif ;
-    font-weight: 100;
-    font-style: normal;
+    // font-family:"k2d", sans-serif ;
+    // font-weight: 100;
+    // font-style: normal;
     color: var(--color);
     height: 100%;
 }

@@ -14,11 +14,10 @@
         <h2 id="text-greetings"></h2>
         <div id="text-body">
           <p>
-            Du haut de mes 2 années d'expériences en tant que rédacteur technique dans des entreprises orientées <em>Logiciel</em>, 
-            j'ai réalisé que le code prenait une part trop importante pour que je ne m'y intéresse pas de plus près. Vous trouverez sur mon site les missions 
-            qui m'ont été confiées dans "ma vie professionnelle antérieure" ainsi que quelques projets développés en langages front-end. 
-            <br><br>
-            Je serais heureux d'échanger avec vous, n'hésitez pas à <router-link :to="'/contact'" class="me-contacter">me contacter</router-link> !
+            Je recherche actuellement un stage en développement web afin de valider mon titre professionnel <em>Développeur web et web mobile</em> débuté en juin 2024 avec <a href="https://territoiredigital.afpa.fr/fr/fair/visiting/1" target="_blank" rel="noopener"><u>l'AFPA Territoire Digital</u></a>. </p>
+            <p>J'ai déjà acquis certaines expériences en développement ces années passées via le prisme du rédacteur technique, en travaillant en agilité mais également en collaborant à mettre en place un process <a href="https://www.writethedocs.org/guide/docs-as-code/" target="_blank" rel="noopener"><u>docs-as-code</u></a>. </p>  
+            <p>
+            N'hésitez pas à visualiser mon CV et à <router-link :to="'/contact'" class="me-contacter">me contacter</router-link>.
           </p>
         </div>
         <p id="sources-perso" class="d-flex">
@@ -29,23 +28,23 @@
       </div>
     </div>
     <div class="temoignage-helene d-flex align-items-center flex-column justify-content-center">
-        
+        <h2>Témoignage</h2>
         <p class="temoignage-content">
-            "Victor a rejoint mon équipe dans le cadre d'un remplacement de 9 mois, au cours d'une période d'importantes transformations dans l'entreprise. 
+            Victor a rejoint mon équipe dans le cadre d'un remplacement de 9 mois, au cours d'une période d'importantes transformations dans l'entreprise. 
 Bien que cela soit sa première réelle expérience professionnelle en tant que rédacteur technique, il m'a impressionnée par la rapidité avec laquelle il est monté en compétences et s'est adapté à nos outils et méthodes. 
 Victor m'a notamment été d'une aide considérable dans la mise en place de la méthode "Doc-as-code". <br>Curieux par nature et soucieux de bien faire, il s'est beaucoup investi dans les recherches en vue d'optimiser nos méthodes et a été force de proposition.
 <br>Victor est calme et discret sans pour autant être effacé. Il a un effet apaisant et positif sur l'équipe, c'est extrêmement agréable de travailler avec lui.
-Il a toutes les qualités pour évoluer avec succès dans le monde de la rédaction technique ou ailleurs. Je le recommande vivement."  </p>
+Il a toutes les qualités pour évoluer avec succès dans le monde de la rédaction technique ou ailleurs. Je le recommande vivement.</p>
         <p class="author"> <img src="icon-helene.jpg" alt="" class="helene"> Hélène Le Tutour, Rédactrice Technique chez EXFO</p>
   
     </div>
   </div>
-  <FooterComponent/>
+  <!-- <FooterComponent/> -->
 </template>
 
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
-import FooterComponent from '@/components/FooterComponent.vue'
+// import FooterComponent from '@/components/FooterComponent.vue'
 import Typed from 'typed.js'; // Importation de Typed.js
     export default {
         name: 'AboutView',
@@ -54,7 +53,7 @@ import Typed from 'typed.js'; // Importation de Typed.js
         },
         components: {
             HeaderComponent,
-            FooterComponent
+            // FooterComponent
         },
         methods: {
             initTyped() {
@@ -101,7 +100,7 @@ import Typed from 'typed.js'; // Importation de Typed.js
 }
 
 .home{
-    margin: 150px 0 ;
+    margin: 200px 0 ;
 }
 
 .home-text-intro{
@@ -134,31 +133,43 @@ import Typed from 'typed.js'; // Importation de Typed.js
  }
 
  #text-greetings{
-     font-size: 3em;
-     font-family: "Kalam", cursive;
-  font-weight: 400;
-  font-style: normal;
-     height: 130px;
-     
+font-size: 2.8em;
+font-family: "Istok Web", sans-serif;
+font-weight: 400;
+font-style: normal;
+height: 130px;  
  }
+
+#text-body{
+font-family: "Istok Web", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.temoignage-helene{
+    margin-top: 100px;
+}
 
 .temoignage-content {
     font-family: "Kalam", cursive;
     font-weight: 300;
     font-size: 2em;
     max-width: 75%;
-    margin-top: 100px;
+    margin-top: 25px;
     border-width: var(--border-width);
     border-style: var(--border-style);
     border-color: var(--border-color);
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 30px;
-    box-shadow: 2px 2px 5px black;
+    // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.233);
 }
 
 .author{
     @include displayFlex;
     padding: 30px;
+    font-family: "Istok Web", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .helene{
@@ -195,7 +206,7 @@ import Typed from 'typed.js'; // Importation de Typed.js
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: start;
 }
 
 .bi{

@@ -8,11 +8,11 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <div class="navbar-nav">
-            <router-link class="nav-link nav-anchor" :to="'/'">A mon propos </router-link>
-            <router-link class="nav-link nav-anchor" :to="'/projects'">Mes Projets</router-link>
-            <router-link class="nav-link nav-anchor" :to="'/experiences'">Mes Éxperiences</router-link>
-            <router-link class="nav-link nav-anchor" :to="'/contact'">Entrons en contact 🛸</router-link>
-            <a class="nav-link link-cv" target="_blank" href="/CV_Victor_De_Vos.pdf">Télécharger Mon CV</a>
+            <router-link class="nav-link nav-anchor" :to="'/'">À mon propos </router-link>
+            <router-link class="nav-link nav-anchor" :to="'/projects'">Projets</router-link>
+            <router-link class="nav-link nav-anchor" :to="'/experiences'">Éxperiences</router-link>
+            <router-link class="nav-link nav-anchor" :to="'/contact'">Contact 🛸</router-link>
+            <a class="nav-link link-cv" target="_blank" href="/CV_Victor_De_Vos.pdf">Voir Mon CV</a>
           </div>
         </div>
       </div>
@@ -48,9 +48,9 @@
   width: 100%; /* Assure-toi qu'il prend toute la largeur */  }
   
   .nav-link {
-    font-family: "k2d", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+    font-family: "Istok Web", sans-serif;
+  font-weight: 500;
+  font-style: normal;
     color: var(--color);
     font-size: 1.3em;
     margin-right: 20px;
