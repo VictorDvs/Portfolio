@@ -3,15 +3,15 @@
         <HeaderComponent/>
     </div>
     <div id="projets" class="container-fluid projets section">
-    <h2>Projets Développeurs Web</h2>
-    <p>Quelques jeux développés en HTML, CSS et JavaScript</p>
+    
     
     <div class="row row-equal">
+      <h4>Exercices réalisés avec Vue CDN</h4>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
         v-for="(project, index) in projects" 
         :key="index" 
-        class="col-12 col-lg-3 mb-6 d-flex justify-content-center card-margin"
+        class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center card-margin"
       >
         <div class="card">
           <a :href="project.link" target="_blank">
@@ -21,7 +21,49 @@
             <a :href="project.link" target="_blank">
               <h5 class="card-title">{{ project.title }}</h5>
             </a>
-            <p class="card-text text-end">Vers le code source</p>
+            <p class="card-text">Vers le code source</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-equal">
+      <h4>Exercices et projet de groupe réalisés avec Vue CLI</h4>
+      <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
+      <div 
+        v-for="(project, index) in projects" 
+        :key="index" 
+        class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center card-margin"
+      >
+        <div class="card">
+          <a :href="project.link" target="_blank">
+            <img :src="project.image" class="card-img-top" :alt="project.title" />
+          </a>
+          <div class="card-body">
+            <a :href="project.link" target="_blank">
+              <h5 class="card-title">{{ project.title }}</h5>
+            </a>
+            <p class="card-text">{{ projet.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-equal">
+      <h4>Exercices réalisés en JavaScript <em>vanilla</em></h4>
+      <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
+      <div 
+        v-for="(project, index) in projectsVanilla" 
+        :key="index" 
+        class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center card-margin"
+      >
+        <div class="card">
+          <a :href="project.link" target="_blank">
+            <img :src="project.image" class="card-img-top" :alt="project.title" />
+          </a>
+          <div class="card-body">
+            <a :href="project.link" target="_blank">
+              <h5 class="card-title">{{ project.title }}</h5>
+            </a>
+            <p class="card-text text-center">{{ project.desc }}</p>
           </div>
         </div>
       </div>
@@ -37,37 +79,59 @@
 
         data() {
     return {
-      projects: [
+      projectsVanilla: [
         {
-          title: 'Quizz Culture Générale',
+          title: 'Quizz WWW',
+          desc: '5 questions sur le web, à vous de jouer.',
           image: 'Projets/projets-quizz.png',
-          link: 'projets/Quizz/index.html',
+          link: 'https://quizz-afpa-project.netlify.app/',
         },
         {
           title: 'Shifumi',
+          desc: 'Le premier à 5 l\'emporte !',
           image: 'Projets/projets-shifumi.png',
-          link: 'projets/Shifumi/index.html',
+          link: 'https://shifumi-afpa-project.netlify.app/',
         },
         {
           title: 'Morpion',
           image: 'Projets/projets-morpion.png',
-          link: 'projets/Morpion/index.html',
+          link: 'https://morpion-afpa-project.netlify.app/',
         },
         {
           title: "Calcul de l'IMC",
           image: 'Projets/projets-imc.png',
-          link: 'projets/IMC/index.html',
+          link: 'https://imc-afpa-project.netlify.app/',
         },
         {
           title: "API's ChartJS TypedJS CoinBase",
           image: 'Projets/projets-chartJS.png',
-          link: 'projets/ChartJS/index.html',
+          link: 'https://chartjs-bitcoin-afpa-project.netlify.app/',
         },
         {
           title: 'API OpenWeatherMap',
           image: 'Projets/projets-meteo.png',
-          link: 'projets/Meteo/index.html',
-        }
+          link: 'https://api-meteo-afpa-project.netlify.app/',
+        },
+        {
+          title: "Rollin' Dice",
+          image: 'Projets/projets-rolling-dice.png',
+          link: 'https://rolling-dice-afpa-project.netlify.app/',
+        },
+        {
+          title: 'Simple Canvas',
+          image: 'Projets/projets-canvas.png',
+          link: 'https://canvas-afpa-project.netlify.app/',
+        },
+        {
+          title: 'Local Storage',
+          image: 'Projets/projets-local-storage.png',
+          link: 'https://local-storage-afpa-project.netlify.app/',
+        },
+        {
+          title: 'Snake Dragon Ball',
+          image: 'Projets/projets-snake.png',
+          link: 'https://snake-afpa-project.netlify.app/',
+        },
       ]
     }
   },
@@ -79,9 +143,16 @@
 </script>
 
 <style lang="scss" scoped>
+
+.projets{
+  text-align: center;
+}
+
 .row-equal{
     display: flex;
-    justify-content: space-around;
+    max-width: 80%;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .card {
@@ -92,8 +163,9 @@
     border-radius: 10px;
     border: none;
     transition: transform 0.3s ease;
-    width: 200px;
-    background-position: center;
+    margin-bottom: 50px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.13);
+    // width: 100px;
 }
 
 .card:hover {
@@ -104,7 +176,13 @@
 cursor: pointer;
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
-object-fit: cover;
-height: 200px;
+background-position: center;
+// height: 100px;
+// width: auto;
 }
+
+.card-body {
+  text-align: center;
+}
+
 </style>
