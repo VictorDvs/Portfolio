@@ -10,32 +10,35 @@ const routes = [
   {
     path: '/projects',
     name: 'projects',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/ProjectsView.vue')
   },
   {
     path: '/experiences',
     name: 'experiences',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/ExperiencesView.vue')
   },
   {
     path: '/contact',
     name: 'contact',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/ContactView.vue')
   }
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition; // Position sauvegardée lors du retour à une page précédente
+    } else if (to.hash) {
+      return {
+        el: to.hash, // Cible le hash (ancre) spécifié
+        behavior: 'smooth', // Ajoute un défilement fluide
+      };
+    } else {
+      return { top: 0 }; // Retourne en haut de page si aucun hash n'est spécifié
+    }
+  },
 })
 
 export default router

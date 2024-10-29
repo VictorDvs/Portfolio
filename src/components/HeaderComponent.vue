@@ -9,7 +9,17 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <div class="navbar-nav">
             <router-link class="nav-link nav-anchor" :to="'/'">À mon propos </router-link>
-            <router-link class="nav-link nav-anchor" :to="'/projects'">Projets</router-link>
+            <div class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         Projets
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+         <li><router-link class="dropdown-item" :to="'/projects#vue-cli'">Vue CLI</router-link></li>
+         <li><router-link class="dropdown-item" :to="'/projects#vue-cdn'">Vue CDN</router-link></li>
+         <li><router-link class="dropdown-item" :to="'/projects#vanilla-js'">Vanilla JS</router-link></li>
+         <li><router-link class="dropdown-item" :to="'/projects#css-pur'">CSS pur</router-link></li>
+      </ul>
+   </div>
             <router-link class="nav-link nav-anchor" :to="'/experiences'">Éxperiences</router-link>
             <router-link class="nav-link nav-anchor" :to="'/contact'">Contact 🛸</router-link>
             <a class="nav-link link-cv" target="_blank" href="/CV_Victor_De_Vos.pdf">Voir Mon CV</a>
@@ -52,7 +62,7 @@
   font-weight: 500;
   font-style: normal;
     color: var(--color);
-    font-size: 1.3em;
+    font-size: 1.5em;
     margin-right: 20px;
   }
   
