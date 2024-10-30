@@ -5,13 +5,13 @@
     <div class="container-fluid home" id="home">
     <div class="row">
       <div
-        class="ma-photo col-12 col-lg-4 d-flex justify-content-lg-end align-items-center mb-4 mb-lg-0">
+        class="ma-photo col-12 col-lg-4 d-flex justify-content-lg-end align-items-center mb-4 ">
         <div class="circle-container">
           <img src="/ma-photo.jpg" class="img-fluid" id="ma-photo" alt="Ma photo">
         </div>
       </div>
       <div class="home-text-intro col-12 col-lg-6 text-start text-column">
-        <h2 id="text-greetings"></h2>
+        <h2 id="text-greetings">Bienvenu(e) sur mon portfolio !</h2>
         <div id="text-body">
           <p>
             Je recherche actuellement un stage en développement web afin de valider mon titre professionnel <em>Développeur web et web mobile</em> débuté en juin 2024 avec <a href="https://territoiredigital.afpa.fr/fr/fair/visiting/1" target="_blank" rel="noopener"><u>l'AFPA Territoire Digital</u></a>. </p>
@@ -29,12 +29,7 @@
     </div>
     <div class="temoignage-helene d-flex align-items-center flex-column justify-content-center">
         <h2>Témoignage</h2>
-        <p class="temoignage-content">
-            Victor a rejoint mon équipe dans le cadre d'un remplacement de 9 mois, au cours d'une période d'importantes transformations dans l'entreprise. 
-Bien que cela soit sa première réelle expérience professionnelle en tant que rédacteur technique, il m'a impressionnée par la rapidité avec laquelle il est monté en compétences et s'est adapté à nos outils et méthodes. 
-Victor m'a notamment été d'une aide considérable dans la mise en place de la méthode "Doc-as-code". <br>Curieux par nature et soucieux de bien faire, il s'est beaucoup investi dans les recherches en vue d'optimiser nos méthodes et a été force de proposition.
-<br>Victor est calme et discret sans pour autant être effacé. Il a un effet apaisant et positif sur l'équipe, c'est extrêmement agréable de travailler avec lui.
-Il a toutes les qualités pour évoluer avec succès dans le monde de la rédaction technique ou ailleurs. Je le recommande vivement.</p>
+        <p class="temoignage-content" id="tem-cont"></p>
         <p class="author"> <img src="icon-helene.jpg" alt="" class="helene"> Hélène Le Tutour, Rédactrice Technique chez EXFO</p>
   
     </div>
@@ -60,15 +55,15 @@ import Typed from 'typed.js'; // Importation de Typed.js
       // Initialisation de Typed.js avec les options
       const options = {
         strings: [
-          "Soyez les bienvenus sur mon portfolio !", 
-          "Je m'appelle Victor, j'apprends le développement web et je suis rédacteur technique de profession."
+          "Victor a rejoint mon équipe dans le cadre d'un remplacement de 9 mois, au cours d'une période d'importantes transformations dans l'entreprise. Bien que cela soit sa première réelle expérience professionnelle en tant que rédacteur technique, il m'a impressionnée par la rapidité avec laquelle il est monté en compétences et s'est adapté à nos outils et méthodes. Victor m'a notamment été d'une aide considérable dans la mise en place de la méthode 'Doc-as-code'. Curieux par nature et soucieux de bien faire, il s'est beaucoup investi dans les recherches en vue d'optimiser nos méthodes et a été force de proposition. Victor est calme et discret sans pour autant être effacé. Il a un effet apaisant et positif sur l'équipe, c'est extrêmement agréable de travailler avec lui. Il a toutes les qualités pour évoluer avec succès dans le monde de la rédaction technique ou ailleurs. Je le recommande vivement. 'Hélène Le Tutour, Rédactrice technique chez EXFO'.",
+          
         ],
         typeSpeed: 10,
         backSpeed: 20,
         loop: false // Répéter l'animation en boucle si nécessaire
       };
 
-      new Typed('#text-greetings', options);
+      new Typed('#tem-cont', options);
     }
         }
     }
@@ -119,8 +114,8 @@ import Typed from 'typed.js'; // Importation de Typed.js
 .circle-container {
     position: relative; /* Nécessaire pour que l'ombre soit bien positionnée */
     @include displayFlex;
-    width: 320px; /* Ajuste la taille du cercle selon ton besoin */
-    height: 320px; /* Ajuste la taille du cercle selon ton besoin */
+    width: 250px; /* Ajuste la taille du cercle selon ton besoin */
+    height: 250px; /* Ajuste la taille du cercle selon ton besoin */
     border-radius: 50%; /* Rend le conteneur circulaire */
     overflow: hidden; /* Coupe l'image qui dépasse */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9); /* Ombre portée */
@@ -137,7 +132,6 @@ font-size: 2.8em;
 font-family: "Istok Web", sans-serif;
 font-weight: 400;
 font-style: normal;
-height: 130px;  
  }
 
 #text-body{
@@ -152,16 +146,16 @@ font-family: "Istok Web", sans-serif;
 
 .temoignage-content {
     font-family: "Kalam", cursive;
-    font-weight: 300;
     font-size: 2em;
     max-width: 75%;
     margin-top: 25px;
-    border-width: var(--border-width);
-    border-style: var(--border-style);
-    border-color: var(--border-color);
-    border-radius: 10px;
+    // border-width: var(--border-width);
+    // border-style: var(--border-style);
+    // border-color: var(--border-color);
+    // border-radius: 10px;
     padding: 30px;
     // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.233);
+    text-align: center;
 }
 
 .author{

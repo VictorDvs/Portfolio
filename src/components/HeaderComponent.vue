@@ -2,6 +2,9 @@
     <nav class="navbar navbar-expand-lg sticky-top" id="nav">
       <div class="container-fluid coll-header">
         <!-- Logo ou autre élément ici si nécessaire -->
+
+
+
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
