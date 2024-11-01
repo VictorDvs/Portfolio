@@ -4,7 +4,7 @@
         
         <div class="row">
             <div class="col-sm-12 col-12 align-items-center d-flex justify-content-center flex-column">
-                <h5 id="invit">Je serai ravi d'échanger avec vous ! Que vous ayez des questions, des projets en tête, ou simplement une envie de discuter, n'hésitez pas à m'écrire. <br> Vous pouvez compter sur une réponse rapide pour que nous puissions avancer ensemble. <br>Merci ! </h5>
+                <h3 id="invit">Je serai ravi d'échanger avec vous ! Que vous ayez des questions, des projets en tête, ou simplement une envie de discuter, n'hésitez pas à m'écrire. <br> Vous pouvez compter sur une réponse rapide pour que nous puissions avancer ensemble. <br>À bientôt ! </h3>
                 <!-- modify this form HTML and place wherever you want your form -->
                 <form id="form" action="https://formspree.io/f/mpwaeeld" method="POST">
 
@@ -51,12 +51,14 @@ export default {
 #invit{
     font-family: "Kalam", cursive;
     font-weight: 300;
-    font-size: 1.4em;
+    // font-size: 1.4em;
     width: 60%;
+    text-align: justify;
 }
 
 .row {
     width: 100%;
+    margin: 0 auto;
 }
 
 
@@ -64,6 +66,8 @@ export default {
     @include displayFlex;
     flex-direction: column;
     color: black;
+    background-color: #fcfcf7;
+    height: 100vh;
 }
 
 #contact form {

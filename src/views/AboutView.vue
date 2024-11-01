@@ -72,30 +72,14 @@ import Typed from 'typed.js'; // Importation de Typed.js
 <style lang="scss" scoped>
 @import "@/assets/styles/_mixins.scss";
 
-.theme-light {
-            --background: #fcfcf7;
-            --color: #000;
-            --border-width: 1px;
-            --border-style: solid;
-            --border-color: black;
-        }
-
-.theme-dark {
-    --background: #000;
-    --color: #fff;
-    --border-width: 1px;
-    --border-style: solid;
-    --border-color: #fcfcf7;
-}
-
-
 .me-contacter {
-    color: var(--color);
     font-weight: 500;
 }
 
 .home{
-    margin: 200px 0 ;
+    margin: 200px 0;
+    background-color: #fcfcf7;
+    height: 100vh;
 }
 
 .home-text-intro{

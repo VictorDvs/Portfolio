@@ -9,26 +9,42 @@
 </template>
 
 <script>
+import { onMounted, watch } from 'vue';
+import { useRouter } from 'vue-router';
+import { Dropdown } from 'bootstrap';
 
+export default {
+  setup() {
+    const router = useRouter();
+
+    const initializeDropdowns = () => {
+      // Sélectionne tous les éléments de dropdown
+      const dropdownElements = document.querySelectorAll('.dropdown-toggle');
+      dropdownElements.forEach((dropdown) => {
+        new Dropdown(dropdown);
+      });
+    };
+
+    onMounted(() => {
+      initializeDropdowns(); // Initialise les dropdowns au chargement initial
+
+      // Surveille les changements de route pour réinitialiser les dropdowns
+      watch(
+        () => router.currentRoute.value,
+        () => {
+          initializeDropdowns(); // Réinitialise les dropdowns après chaque navigation
+        }
+      );
+    });
+  },
+};
 </script>
 
 <style lang="scss">
-  .theme-light {
-              --background: #fcfcf7;
-              --color: #000;
-          }
-  
-  .theme-dark {
-      --background: #000;
-      --color: #fff;
-  }
+
 
 html, body{
-  background: var(--background);
-    // font-family:"k2d", sans-serif ;
-    // font-weight: 100;
-    // font-style: normal;
-    color: var(--color);
+    background-color: #fcfcf7;
     height: 100%;
 }
 
@@ -44,7 +60,7 @@ p {
 }
 
 .section{
-    margin: 150px 0;
+    margin: 100px 0;
 }
 
 

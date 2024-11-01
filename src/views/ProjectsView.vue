@@ -90,12 +90,10 @@
       </div>
     </div>
   </div>
-    <FooterComponent/>
 </template>
 
 <script>
    import HeaderComponent from '@/components/HeaderComponent.vue'
-   import FooterComponent from '@/components/FooterComponent.vue'
     export default {
 
         data() {
@@ -232,7 +230,6 @@
   },
         components: {
             HeaderComponent,
-            FooterComponent
         }
     }
 </script>
@@ -241,18 +238,24 @@
 
 .projets{
   text-align: center;
+  background-color: #fcfcf7;
+    height: 100vh;
+}
+
+.projets a {
+  text-decoration: none;
+  color: black;
 }
 
 .row-equal{
     display: flex;
     max-width: 80%;
-    justify-content: center;
     margin: 0 auto;
 }
 
 .scroll-offset {
    position: relative;
-   padding-top: 100px; /* Ajuste en fonction de la hauteur de ton header */
+   padding-top: 120px; /* Ajuste en fonction de la hauteur de ton header */
    margin-top: -70px;
 }
 
@@ -270,7 +273,7 @@
     border: none;
     transition: transform 0.3s ease;
     margin-bottom: 50px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.13);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.281);
     // width: 100px;
 }
 

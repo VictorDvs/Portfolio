@@ -2,9 +2,8 @@
         <HeaderComponent/>
 <div class="container-fluid experiences">
     <div class="row row-xp">
-        <h2>Illustrations de travaux réalisés chez EXFO entre 2022 et 2023 </h2>
-        <p>La documentation technique des solutions d'EXFO est privé mais voici quelques illustrations de mes missions.</p>
-
+        <h2>Les missions du rédacteur technique chez EXFO </h2>
+        <p>Étant donné que la documentation technique des solutions est confidentielle, je ne peux pas fournir les documents auxquels j'ai contribué. Cependant, je vous présente quelques images qui illustrent mon travail en tant que rédacteur technique.</p>
         <CarouselComponent :slides="carouselSlides" />
     </div>
 </div>
@@ -27,9 +26,9 @@
         data() {
     return {
         carouselSlides: [
-            { src: "/Experiences/mkdocs_config.png", title: "First slide label", text: "Édition de fichiers YAML pour configurer notre documentation avec MkDocs" },
-            { src: "/Experiences/new-version-guide-exfo.png", title: "Second slide label", text: "Map du process pour la publication d'un nouveau guide" },
-            { src: "/Experiences/validate-comments-exfo.png", title: "Third slide label", text: "Some representative placeholder content for the first slide." }
+            { src: "/Experiences/mkdocs_config.png", title: "First slide label", text: "Configuration de la documentation avec MkDocs" },
+            { src: "/Experiences/new-version-guide-exfo.png", title: "Second slide label", text: "Process de publication d'une nouvelle version de documentation" },
+            { src: "/Experiences/validate-comments-exfo.png", title: "Third slide label", text: "Process de validation des commentaires utilisateurs de la documentation" }
         ],
     }
         }
@@ -39,46 +38,18 @@
 
 <style lang="scss" scoped>
 
-
-.carousel {
-    max-width: 65%;
-    width: 65%;
-    @media (max-width: 768px) {
-        width: 100%;
-}
-}
-
-
 .experiences {
     margin: 200px auto;
-    max-width: 80%;
+    background-color: #fcfcf7;
+    height: 100vh;
 }
 
 .row-xp{
-    margin: 50px 0 0;
+    width: 65%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: justify;
 }
-
-.image-container {
-    width: 100%;       // Remplir la largeur du carousel
-    height: 300px;     // Hauteur fixe, ajustez selon vos besoins
-    overflow: hidden;  // Masque les parties qui dépassent
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; // Remplit le conteneur sans déformer l'image
-}
-
-.carousel-caption-below {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 1rem;
-    color: #333;
-}
-
-
-
 </style>

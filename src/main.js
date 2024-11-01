@@ -2,9 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import Darkmode from 'drkmd-js'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-
-new Darkmode().attach()
 
 createApp(App).use(store).use(router).mount('#app')

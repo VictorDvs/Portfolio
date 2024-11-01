@@ -70,23 +70,31 @@ export default {
 
 <style scoped>
 .carousel {
-  max-width: 65%;
+  
   width: 65%;
-  @media (max-width: 768px) {
+}
+@media screen and (max-width: 1096px) {
+  .carousel{
     width: 100%;
+  max-width: 100%;
   }
 }
-
 .image-container {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-}
+    width: 100%;       
+    height: 300px;     
+    overflow: hidden;  
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        transition: transform 0.3s ease; 
+    }
 
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    img:hover {
+        cursor: zoom-in; 
+        transform: scale(1.1); 
+    }
 }
 
 .carousel-caption-below {
