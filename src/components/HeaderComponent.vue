@@ -13,7 +13,7 @@
           <div class="navbar-nav">
             <router-link class="nav-link nav-anchor" :to="'/'">À mon propos </router-link>
             <div class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
          Projets
       </a>
       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -55,10 +55,11 @@
 #nav {
   background: var(--background);
     z-index: 10;
-    height: 100px;
-    position: fixed; /* Change to fixed */
-  top: 0;
-  width: 100%; /* Assure-toi qu'il prend toute la largeur */  }
+    height: 150px;
+    position: fixed; 
+    top: 0;
+    width: 100%; 
+   }
   
   .nav-link {
     font-family: "Istok Web", sans-serif;
