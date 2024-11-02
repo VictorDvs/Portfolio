@@ -13,7 +13,7 @@
           <div class="navbar-nav">
             <router-link class="nav-link nav-anchor" :to="'/'" @click="closeMenu">À mon propos </router-link>
             <div class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <a class="nav-link dropdown-toggle" href="#" role="button" @click.prevent data-bs-toggle="dropdown" aria-expanded="false">
          Projets
       </a>
       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -24,7 +24,7 @@
       </ul>
    </div>
             <router-link class="nav-link nav-anchor" :to="'/experiences'" @click="closeMenu">Éxperiences</router-link>
-            <router-link class="nav-link nav-anchor" :to="'/contact'" @click="closeMenu">Contact 🛸</router-link>
+            <router-link class="nav-link nav-anchor" :to="'/contact'" @click="closeMenu">Contact</router-link>
             <a class="nav-link link-cv" target="_blank" href="/CV_Victor_De_Vos.pdf">Voir Mon CV</a>
           </div>
         </div>
@@ -62,7 +62,7 @@ import { Collapse } from 'bootstrap'; // Import explicite de Collapse
     font-family: "Istok Web", sans-serif;
   font-weight: 500;
   font-style: normal;
-    color: var(--color);
+    color: black;
     font-size: 1.5em;
     margin-right: 40px;
   }
@@ -80,12 +80,13 @@ import { Collapse } from 'bootstrap'; // Import explicite de Collapse
     border-radius: 8px;
     width: fit-content;
     padding: 5px 15px;
-  }
-  
-  .link-cv:hover {
+
+    &:hover {
     background-color: black;
     color: #ebe6e0;
   }
+  }
+  
 
 @media screen and (max-width:991px) {
   .coll-header{

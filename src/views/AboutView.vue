@@ -2,44 +2,43 @@
     
 <HeaderComponent/>
     
-    <div class="container-fluid home" id="home">
-    <div class="row">
-      <div
-        class="ma-photo col-12 col-lg-4 d-flex justify-content-lg-end align-items-center mb-4 ">
-        <div class="circle-container">
-          <img src="/ma-photo.jpg" class="img-fluid" id="ma-photo" alt="Ma photo">
+    <main>
+        <div class="container-fluid home" id="home">
+        <div class="row">
+          <div
+            class="ma-photo col-12 col-lg-4 d-flex justify-content-lg-end align-items-center mb-4 ">
+            <div class="circle-container">
+              <img src="/ma-photo.jpg" class="img-fluid" id="ma-photo" alt="Ma photo">
+            </div>
+          </div>
+          <div class="home-text-intro col-12 col-lg-6 text-start text-column">
+            <h2 id="text-greetings">Bienvenu(e) sur mon portfolio !</h2>
+            <div id="text-body">
+              <p>
+                Je recherche actuellement un stage en développement web afin de valider mon titre professionnel <em>Développeur web et web mobile</em> débuté en juin 2024 avec <a href="https://territoiredigital.afpa.fr/fr/fair/visiting/1" target="_blank" rel="noopener"><u>l'AFPA Territoire Digital</u></a>. </p>
+                <p>J'ai déjà acquis certaines expériences en développement ces années passées via le prisme du rédacteur technique, en travaillant en agilité mais également en collaborant à mettre en place un process <a href="https://www.writethedocs.org/guide/docs-as-code/" target="_blank" rel="noopener"><u>docs-as-code</u></a>. </p>
+                <p>
+                N'hésitez pas à visualiser mon CV et à <router-link :to="'/contact'" class="me-contacter">me contacter</router-link>.
+              </p>
+            </div>
+            <p id="sources-perso" class="d-flex">
+              <a target="_blank" href="https://github.com/VictorDvs?tab=repositories" rel="noopener"><i class="bi bi-github"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/in/victor2vos/" rel="noopener"> <i class="bi bi-linkedin"></i></a>
+              <a target="_blank" href="https://www.facebook.com/vittoriodevos" rel="noopener"><i class="bi bi-facebook"></i></a>
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="home-text-intro col-12 col-lg-6 text-start text-column">
-        <h2 id="text-greetings">Bienvenu(e) sur mon portfolio !</h2>
-        <div id="text-body">
-          <p>
-            Je recherche actuellement un stage en développement web afin de valider mon titre professionnel <em>Développeur web et web mobile</em> débuté en juin 2024 avec <a href="https://territoiredigital.afpa.fr/fr/fair/visiting/1" target="_blank" rel="noopener"><u>l'AFPA Territoire Digital</u></a>. </p>
-            <p>J'ai déjà acquis certaines expériences en développement ces années passées via le prisme du rédacteur technique, en travaillant en agilité mais également en collaborant à mettre en place un process <a href="https://www.writethedocs.org/guide/docs-as-code/" target="_blank" rel="noopener"><u>docs-as-code</u></a>. </p>  
-            <p>
-            N'hésitez pas à visualiser mon CV et à <router-link :to="'/contact'" class="me-contacter">me contacter</router-link>.
-          </p>
+        <div class="temoignage-helene d-flex align-items-center flex-column justify-content-center">
+            <h2>Témoignage</h2>
+            <p class="temoignage-content" id="tem-cont"></p>
+            <p class="author"> <img src="icon-helene.jpg" alt="Photo de ma collègue Hélène Le Tutour" class="helene"> Hélène Le Tutour, Rédactrice Technique chez EXFO</p>
         </div>
-        <p id="sources-perso" class="d-flex">
-          <a target="_blank" href="https://github.com/VictorDvs?tab=repositories"><i class="bi bi-github"></i></a>
-          <a target="_blank" href="https://www.linkedin.com/in/victor2vos/"> <i class="bi bi-linkedin"></i></a>
-          <a target="_blank" href="https://www.facebook.com/vittoriodevos"><i class="bi bi-facebook"></i></a>
-        </p>
-      </div>
-    </div>
-    <div class="temoignage-helene d-flex align-items-center flex-column justify-content-center">
-        <h2>Témoignage</h2>
-        <p class="temoignage-content" id="tem-cont"></p>
-        <p class="author"> <img src="icon-helene.jpg" alt="" class="helene"> Hélène Le Tutour, Rédactrice Technique chez EXFO</p>
-  
-    </div>
-  </div>
-  <!-- <FooterComponent/> -->
+          </div>
+    </main>
 </template>
 
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
-// import FooterComponent from '@/components/FooterComponent.vue'
 import Typed from 'typed.js'; // Importation de Typed.js
     export default {
         name: 'AboutView',
@@ -48,22 +47,22 @@ import Typed from 'typed.js'; // Importation de Typed.js
         },
         components: {
             HeaderComponent,
-            // FooterComponent
         },
         methods: {
             initTyped() {
-      // Initialisation de Typed.js avec les options
-      const options = {
-        strings: [
-          "Victor a rejoint mon équipe dans le cadre d'un remplacement de 9 mois, au cours d'une période d'importantes transformations dans l'entreprise. Bien que cela soit sa première réelle expérience professionnelle en tant que rédacteur technique, il m'a impressionnée par la rapidité avec laquelle il est monté en compétences et s'est adapté à nos outils et méthodes. Victor m'a notamment été d'une aide considérable dans la mise en place de la méthode 'Doc-as-code'. Curieux par nature et soucieux de bien faire, il s'est beaucoup investi dans les recherches en vue d'optimiser nos méthodes et a été force de proposition. Victor est calme et discret sans pour autant être effacé. Il a un effet apaisant et positif sur l'équipe, c'est extrêmement agréable de travailler avec lui. Il a toutes les qualités pour évoluer avec succès dans le monde de la rédaction technique ou ailleurs. Je le recommande vivement. 'Hélène Le Tutour, Rédactrice technique chez EXFO'.",
-          
+                const element = document.getElementById('tem-cont');
+                if (element) {
+                    new Typed(element, {
+                        strings: [
+          "Victor a rejoint mon équipe dans le cadre d'un remplacement de 9 mois, au cours d'une période d'importantes transformations dans l'entreprise. Bien que cela soit sa première réelle expérience professionnelle en tant que rédacteur technique, il m'a impressionnée par la rapidité avec laquelle il est monté en compétences et s'est adapté à nos outils et méthodes. Victor m'a notamment été d'une aide considérable dans la mise en place de la méthode 'Doc-as-code'. Curieux par nature et soucieux de bien faire, il s'est beaucoup investi dans les recherches en vue d'optimiser nos méthodes et a été force de proposition. Victor est calme et discret sans pour autant être effacé. Il a un effet apaisant et positif sur l'équipe, c'est extrêmement agréable de travailler avec lui. Il a toutes les qualités pour évoluer avec succès dans le monde de la rédaction technique ou ailleurs. Je le recommande vivement.",
         ],
         typeSpeed: 10,
         backSpeed: 20,
-        loop: false // Répéter l'animation en boucle si nécessaire
-      };
+        loop: false
+                    })
+                }
 
-      new Typed('#tem-cont', options);
+     
     }
         }
     }
@@ -107,8 +106,6 @@ import Typed from 'typed.js'; // Importation de Typed.js
 }
 .circle-container img{
     max-width: 100%; 
-    /* object-fit: cover; */
-    /* object-position: center; */
  }
 
  #text-greetings{
@@ -133,12 +130,7 @@ font-family: "Istok Web", sans-serif;
     font-size: 2em;
     max-width: 75%;
     margin-top: 25px;
-    // border-width: var(--border-width);
-    // border-style: var(--border-style);
-    // border-color: var(--border-color);
-    // border-radius: 10px;
     padding: 30px;
-    // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.233);
     text-align: center;
 }
 
@@ -154,8 +146,6 @@ font-family: "Istok Web", sans-serif;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    // background-color: white;
-    // box-shadow: 1px 1px 5px black;
     margin-right: 15px;
     
 }
