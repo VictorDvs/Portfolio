@@ -5,41 +5,33 @@
         <div class="row">
             <div class="col-sm-12 col-12 align-items-center d-flex justify-content-center flex-column">
                 <h3 id="invit">Je serai ravi d'échanger avec vous ! Que vous ayez des questions, des projets en tête, ou simplement une envie de discuter, n'hésitez pas à m'écrire. <br> Vous pouvez compter sur une réponse rapide pour que nous puissions avancer ensemble. <br>À bientôt ! </h3>
-                <!-- modify this form HTML and place wherever you want your form -->
+   
+             <!-- modify this form HTML and place wherever you want your form -->
                 <form id="form" action="https://formspree.io/f/mpwaeeld" method="POST">
 
-                    <p>Adresse mail :</p>
-                    <input type="email" name="email" class="form-control mb-3" placeholder="Votre email">
+                    <label for="email">Adresse mail :</label>
+                    <input type="email" name="email" class="form-control mb-3" placeholder="Votre email" required>
 
 
-                    <p>Message :</p>
+                    <label for="message">Message :</label>
                     <textarea name="message" class="form-control mb-3" rows="4"
-                        placeholder="Votre message..."></textarea>
+                        placeholder="Votre message..." required></textarea>
 
-                    <!-- your other form fields go here -->
                     <button type="submit">Envoyez votre message</button>
                 </form>
             </div>
-            <!-- <div class="col-sm-6 col-12 align-items-center justify-content-center d-flex flex-column">
-                    <ul>
-                    <li><p><i class="bi bi-telephone"></i> +33 6 81 88 31 76</p></li>
-                    <li><p><i class="bi bi-envelope"></i> victordevos.pro@gmail.com</p></li>
-                </ul>
-            </div> -->
-
-            
         </div>
     </div>
-    <!-- <FooterComponent /> -->
+
 </template>
 
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
-// import FooterComponent from '@/components/FooterComponent.vue'
+
 export default {
     components: {
         HeaderComponent,
-        // FooterComponent
+
     }
 }
 </script>
@@ -54,6 +46,12 @@ export default {
     // font-size: 1.4em;
     width: 60%;
     text-align: justify;
+
+    @media (max-width: 576px) {
+        text-align: center;
+        width: 80%;
+    }
+
 }
 
 .row {
@@ -68,65 +66,57 @@ export default {
     color: black;
     background-color: #fcfcf7;
     height: 100vh;
-}
+    padding: 10px; // Centralisé pour tous les écrans
 
-#contact form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #EFEBFE;
-    text-align: start;
-    color: black;
-    margin: 25px 0px;
-    width: 100%;
-    height: 400px;
-    max-width: 600px;
-    padding: 0 10px;
-    box-sizing: border-box;
-    border-radius: 20px;
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #EFEBFE;
+        color: black;
+        margin: 25px 0;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        padding: 20px;
+        border-radius: 20px;
+        box-sizing: border-box;
 
-}
+        label {
+            width: 100%;
+            padding-left: 20px;
+        }
 
-#contact form p {
-    display: flex;
-    align-items: start;
-    width: 100%;
-    padding-left: 40px;
-}
+        .form-control {
+            width: calc(100% - 40px);
+            max-width: 500px;
+            margin: 0 20px;
+        }
 
-#contact input,
-#contact textarea {
-    width: calc(100% - 40px);  // Réduit de 40px pour correspondre aux marges intérieures
-    max-width: 500px;           // Limite la largeur sur les grands écrans
-    margin: 0 20px;    
-}
+        button {
+            border: none;
+            background-color: #3615B1;
+            color: white;
+            font-size: 1.2em;
+            font-weight: 500;
+            border-radius: 30px;
+            padding: 10px;
+            max-width: 250px;
+            width: calc(100% - 40px);
+            margin: 15px auto 0;
+            justify-content: center;
+            transition: transform 0.3s ease;
 
-#contact form button {
-    display: flex;
-    // align-self: flex-end;
-    border: none;
-    background-color: #3615B1;
-    color: white;
-    font-size: 1.2em;
-    font-weight: 500;
-    border-radius: 30px;
-    padding: 10px;
-
-    width: calc(100% - 60px);   // Largeur du bouton ajustée pour correspondre aux marges du conteneur
-    max-width: 250px;
-    margin: 15px auto 0;        // Centré et espacement supplémentaire
-    justify-content: center;
-
+                &:hover {
+                    transform: scale(1.07);
+                    
+                }
+        }
+    }
 }
 
 /* Media queries pour petits écrans */
 @media (max-width: 576px) {
-#invit{
-    text-align: center;
-    width: 80%;
-}
-
 
     #contact {
         padding: 10px;

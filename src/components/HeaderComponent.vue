@@ -13,7 +13,7 @@
           <div class="navbar-nav">
             <router-link class="nav-link nav-anchor" :to="'/'" @click="closeMenu">À mon propos </router-link>
             <div class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" role="button" @click.prevent data-bs-toggle="dropdown" aria-expanded="false">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
          Projets
       </a>
       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -42,9 +42,25 @@ import { Collapse } from 'bootstrap'; // Import explicite de Collapse
       if (navbarCollapse.classList.contains('show')) {
         new Collapse(navbarCollapse).hide(); // Utilise l'objet Collapse pour fermer le menu
       }
+    },
+
+    handleOutsideClick(event) {
+      const navbar = document.getElementById('navbarNav');
+      const toggleButton = document.querySelector('.navbar-toggler');
+      
+      if (navbar.classList.contains('show') && !navbar.contains(event.target) && event.target !== toggleButton) {
+        this.closeMenu();
+      }
     }
+  },
+  mounted() {
+    document.addEventListener('click', this.handleOutsideClick);
+  },
+  beforeUnmount() {
+    document.removeEventListener('click', this.handleOutsideClick);
   }
-    }
+  }
+    
 </script>
 
 <style lang="scss" scoped>
