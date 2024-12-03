@@ -74,25 +74,36 @@
 <style lang="scss" scoped>
 
 .dropdown{
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu{
+  font-family: "Istok Web", sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.258);
+
 }
 
 #nav {
-  background-color: #fcfcf7;
+    background-color: #fcfcf7;
     z-index: 10;
-    height: 120px;
+    height: 80px;
     position: fixed; 
     top: 0;
     width: 100%; 
    }
 
+   .navbar-nav{
+    justify-content: space-evenly;
+    width: 100%;
+   }
+
    .nav-link-projects{
     font-family: "Istok Web", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+    font-weight: 500;
+    font-style: normal;
     color: black;
-    font-size: 1.5em;
+    font-size: 1.7em;
     margin-right: 40px;
     text-decoration: none;
    }
@@ -100,10 +111,10 @@
   .nav-link {
     position: relative;
     font-family: "Istok Web", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+    font-weight: 500;
+    font-style: normal;
     color: black;
-    font-size: 1.5em;
+    font-size: 1.7em;
     margin-right: 40px;
   }
 

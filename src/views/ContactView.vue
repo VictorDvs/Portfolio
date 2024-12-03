@@ -4,17 +4,17 @@
         
         <div class="row">
             <div class="col-sm-12 col-12 align-items-center d-flex justify-content-center flex-column">
-                <h3 id="invit">Je serai ravi d'échanger avec vous ! Que vous ayez des questions, des projets en tête, ou simplement une envie de discuter, n'hésitez pas à m'écrire. <br> Vous pouvez compter sur une réponse rapide pour que nous puissions avancer ensemble. <br>À bientôt ! </h3>
+                <h3 id="invit">Je serai ravi d'échanger avec vous ! Que vous ayez des questions, des projets en tête, ou simplement une envie de discuter, n'hésitez pas à m'écrire. <br> Vous pouvez compter sur une réponse rapide pour que nous puissions avancer ensemble. </h3>
    
              <!-- modify this form HTML and place wherever you want your form -->
                 <form id="form" action="https://formspree.io/f/mpwaeeld" method="POST">
 
-                    <label for="email">Adresse mail :</label>
+                    <label for="email" class="mb-2">Adresse mail :</label>
                     <input type="email" name="email" class="form-control mb-3" placeholder="Votre email" required>
 
 
-                    <label for="message">Message :</label>
-                    <textarea name="message" class="form-control mb-3" rows="4"
+                    <label for="message" class="mb-2">Message :</label>
+                    <textarea name="message" class="form-control mb-3" rows="5"
                         placeholder="Votre message..." required></textarea>
 
                     <button type="submit">Envoyez votre message</button>
@@ -42,10 +42,10 @@ export default {
 
 #invit{
     font-family: "Kalam", cursive;
-    font-weight: 300;
-    // font-size: 1.4em;
-    width: 60%;
-    text-align: justify;
+    font-weight: 400;
+    font-size: 2em;
+    width: 50%;
+    text-align: left;
 
     @media (max-width: 576px) {
         text-align: center;
@@ -123,10 +123,6 @@ export default {
         /* Réduire le padding sur petits écrans */
     }
 
-    #contact form {
-        padding: 0;
-        /* Réduire le padding sur petits écrans */
-    }
 
     #contact form label {
         margin: 5px;
