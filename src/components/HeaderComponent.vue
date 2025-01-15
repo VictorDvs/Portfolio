@@ -8,7 +8,7 @@
         @click.stop="toggleMenu"
         aria-expanded="isMenuOpen" 
         aria-label="Toggle navigation">
-          <i class="bi bi-list"></i>
+          <span class="bi bi-list"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end " :class="{ show: isMenuOpen }" id="navbarNav">
           <div class="navbar-nav ">
