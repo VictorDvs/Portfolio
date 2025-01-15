@@ -1,3 +1,7 @@
+// * {
+//   outline: 1px solid red;
+// }
+
 /* Liens */
 a {
     color: #f5f5f5;
@@ -19,22 +23,21 @@ a {
     padding-top: 150px;
     padding-bottom: 125px;
     background-color: #121212ee;
-    min-height: 100%;
-    min-width: 100%;
+    // min-height: 100%;
+    // min-width: 100%;
   }
   
   /* Section Bio */
-  .bio {
-    padding-top: 50px;
-  }
+  // .bio {
+  //   padding-top: 50px;
+  // }
   
   /* Texte d'introduction de la page d'accueil */
   .home-text-intro {
     padding: 50px 0;
-    margin-left: 25px;
     font-family: "Istok Web", sans-serif;
     font-weight: 500;
-    min-width: 670px;
+    // min-width: 670px;
   }
   
   /* Image de profil */
@@ -50,9 +53,8 @@ a {
     text-align: left;
     border-radius: 200px 25px 200px 26px;
     min-height: 75vh;
-    width: 90%;
+    width: 100%;
     max-width: 75%;
-    margin: 0 auto;
     padding: 40px;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.637);
     overflow: auto;
@@ -172,7 +174,7 @@ a {
     }
     #text-body {
       font-size: 1.2em;
-      text-align: center;
+      text-align: left;
     }
   }
   
@@ -186,12 +188,15 @@ a {
       font-size: 1.1em;
       line-height: 1.6;
       margin: 0 10px;
+      text-align: justify;
     }
     .tem {
       font-size: 1em;
       border-radius: 100px 0px 100px 0px;
       padding: 15px;
       width: 100%;
+      max-width: 100%;
+      text-align: justify;
     }
   }
   
@@ -203,7 +208,12 @@ a {
     }
     #text-body {
       font-size: 1em;
-      text-align: left;
+      text-align: justify;
+    }
+
+    .tem {
+      max-width: 100%;
+      text-align: justify;
     }
   }
   
