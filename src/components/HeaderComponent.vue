@@ -249,19 +249,19 @@
 /* Media Queries pour les écrans réduits */
 @media screen and (max-width: 991px) {
   /* Style pour le bouton hamburger */
-  .navbar-toggler {
-    // margin-bottom: 40px;
-    border: none;
-  }
+  // .navbar-toggler {
+  //   // margin-bottom: 40px;
+  //   // border: none;
+  // }
 
   .router-link-exact-active::after {
     display: none;
   }
 
-  .navbar-toggler-icon {
-    background-color: #f5f5f5;
-    border-radius: 2px;
-  }
+  // .navbar-toggler-icon {
+  //   background-color: #f5f5f5;
+  //   border-radius: 2px;
+  // }
 
   /* Désactive l'animation de soulignement au survol sur les petits écrans */
   // .nav-link:hover::after {
