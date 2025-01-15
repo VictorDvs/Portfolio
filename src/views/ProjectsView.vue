@@ -4,8 +4,29 @@
     </div>
     <div id="projets" class="container-fluid projets section">
     
+      <div class="row row-equal scroll-offset" id="symfony">
+      <h3>{{ $t('projects.symfony_title') }}</h3>
+      <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
+      <div 
+        v-for="(project, index) in symfony" 
+        :key="index" 
+        class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center card-margin"
+      >
+        <div class="card">
+          <a :href="project.link" target="_blank" rel="noopener">
+            <img :src="project.image" class="card-img-top" :alt="project.title" />
+          </a>
+          <div class="card-body">
+            <a :href="project.link" target="_blank">
+              <h5 class="card-title">{{ project.title }}</h5>
+            </a>
+            <p class="card-text cli" v-html="project.desc"></p>
+          </div>
+        </div>
+      </div>
+    </div>
       <div class="row row-equal scroll-offset" id="vue-cli">
-      <h3>Exercices et projet de groupe réalisés avec Vue CLI</h3>
+      <h3>{{ $t('projects.vueCLI_title') }}</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
         v-for="(project, index) in projectsVueCLI" 
@@ -13,20 +34,20 @@
         class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center card-margin"
       >
         <div class="card">
-          <a :href="project.link" target="_blank">
+          <a :href="project.link" target="_blank" rel="noopener">
             <img :src="project.image" class="card-img-top" :alt="project.title" />
           </a>
           <div class="card-body">
             <a :href="project.link" target="_blank">
               <h5 class="card-title">{{ project.title }}</h5>
             </a>
-            <p class="card-text">{{ project.desc }}</p>
+            <p class="card-text" v-html="project.desc"></p>
           </div>
         </div>
       </div>
     </div>
     <div class="row row-equal scroll-offset" id="vue-cdn">
-      <h3>Exercices réalisés avec Vue CDN</h3>
+      <h3>Projets Vue CDN</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
         v-for="(project, index) in projectsVueCDN" 
@@ -34,7 +55,7 @@
         class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center card-margin"
       >
         <div class="card">
-          <a :href="project.link" target="_blank">
+          <a :href="project.link" target="_blank" rel="noopener">
             <img :src="project.image" class="card-img-top" :alt="project.title" />
           </a>
           <div class="card-body">
@@ -48,7 +69,7 @@
     </div>
     
     <div class="row row-equal scroll-offset" id="vanilla-js">
-      <h3>Exercices réalisés en <em>Vanilla</em> JavaScript</h3>
+      <h3>Projets JavaScript</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
         v-for="(project, index) in projectsVanilla" 
@@ -56,7 +77,7 @@
         class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center card-margin"
       >
         <div class="card">
-          <a :href="project.link" target="_blank">
+          <a :href="project.link" target="_blank" rel="noopener">
             <img :src="project.image" class="card-img-top" :alt="project.title" />
           </a>
           <div class="card-body">
@@ -69,7 +90,7 @@
       </div>
     </div>
     <div class="row row-equal scroll-offset" id="css-pur">
-      <h3>Projet pur CSS</h3>
+      <h3>Projet CSS</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
         v-for="(project, index) in projectsCSS" 
@@ -77,7 +98,7 @@
         class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center card-margin"
       >
         <div class="card">
-          <a :href="project.link" target="_blank">
+          <a :href="project.link" target="_blank" rel="noopener">
             <img :src="project.image" class="card-img-top" :alt="project.title" />
           </a>
           <div class="card-body">
@@ -93,35 +114,13 @@
 </template>
 
 <script>
-   import HeaderComponent from '@/components/HeaderComponent.vue'
-    export default {
+import HeaderComponent from '@/components/HeaderComponent.vue';
 
-        data() {
+export default {
+  data() {
     return {
-
-
-      projectsVueCLI: [
-      {
-          title: 'Projet de groupe WebWares',
-          desc: 'Site de vente en B2B',
-          image: 'Projets/projets-webwares-vuecli.png',
-          link: 'https://vuecli-ecfproject-afpa-project.netlify.app/#/',
-        },
-        {
-          title: 'Random Questions API',
-          desc: 'Axé sur VueX',
-          image: 'Projets/projets-random-questions-vuecli.png',
-          link: 'https://vuecli-quizz-afpa-project.netlify.app/',
-        },
-        {
-          title: 'Le Shop',
-          desc: 'Travail axé sur la gestion du panier',
-          image: 'Projets/projets-fakeshop-vuecli.png',
-          link: 'https://vuecli-shop-afpa-project.netlify.app/',
-        },
-      ],
-
-
+      symfony: [],
+      projectsVueCLI: [],
       projectsVueCDN: [
         {
           title: 'Menu Fast-food',
@@ -142,8 +141,6 @@
           link: 'https://vuecdn-to-do-list-afpa-project.netlify.app/',
         },
       ],
-
-
       projectsVanilla: [
         {
           title: 'Quizz WWW',
@@ -159,87 +156,82 @@
         },
         {
           title: 'Morpion',
-          desc: "Un must.",
+          desc: 'Un must.',
           image: 'Projets/projets-morpion.png',
           link: 'https://morpion-afpa-project.netlify.app/',
         },
-        {
-          title: "Calcul de l'IMC",
-          desc: "Pas de panique !",
-          image: 'Projets/projets-imc.png',
-          link: 'https://imc-afpa-project.netlify.app/',
-        },
-        {
-          title: "API's ChartJS TypedJS CoinBase",
-          desc: "Si je pouvais remonter le temps, je sais ce que je ferais...",
-          image: 'Projets/projets-chartJS.png',
-          link: 'https://chartjs-bitcoin-afpa-project.netlify.app/',
-        },
-        {
-          title: 'API OpenWeatherMap',
-          desc: "Quel temps fait-il par chez vous ?",
-          image: 'Projets/projets-meteo.png',
-          link: 'https://api-meteo-afpa-project.netlify.app/',
-        },
-        {
-          title: "Rollin' Dice",
-          desc: "Pas de face cachée ici.",
-          image: 'Projets/projets-rolling-dice.png',
-          link: 'https://rolling-dice-afpa-project.netlify.app/',
-        },
-        {
-          title: 'Simple Canvas',
-          desc: "Pour faire de beaux diagrammes !",
-          image: 'Projets/projets-canvas.png',
-          link: 'https://canvas-afpa-project.netlify.app/',
-        },
-        {
-          title: 'Local Storage',
-          desc: "Pour enregistrer vos données.",
-          image: 'Projets/projets-local-storage.png',
-          link: 'https://local-storage-afpa-project.netlify.app/',
-        },
-        {
-          title: 'Snake Dragon Ball',
-          desc: "Vite, avant que les sayans n'arrivent...",
-          image: 'Projets/projets-snake.png',
-          link: 'https://snake-afpa-project.netlify.app/',
-        },
-        {
-          title: 'CRUD inventaire',
-          desc: "Mise en pratique d'un CRUD.",
-          image: 'Projets/projets-crud-poo.png',
-          link: 'https://crud-poo-afpa-project.netlify.app/',
-        },
-        {
-          title: 'Random User API',
-          desc: "Mise en pratique d'une API.",
-          image: 'Projets/projets-user-api.png',
-          link: 'https://api-list-user-afpa-project.netlify.app/',
-        },
       ],
-      projectsCSS: [ 
+      projectsCSS: [
         {
-          title: "Visitez Kyoto",
-          desc: "Un beau voyage au Japon !",
+          title: 'Visitez Kyoto',
+          desc: 'Un beau voyage au Japon !',
           image: 'Projets/projets-kyoto-css.png',
           link: 'https://kyoto-css-afpa-project.netlify.app/',
-        }
-       ]
-    }
+        },
+      ],
+    };
   },
-        components: {
-            HeaderComponent,
-        }
-    }
+  components: {
+    HeaderComponent,
+  },
+  mounted() {
+    this.updateProjects();
+  },
+  methods: {
+    updateProjects() {
+      this.symfony = [
+        {
+          title: this.$t('projects.symfony_title'),
+          desc: this.$t('projects.biblion_desc'),
+          image: 'Projets/projets-symfony-ecf-cover.png',
+          link: 'https://github.com/VictorDvs/symfony-ecf-project',
+        },
+      ];
+      this.projectsVueCLI = [
+      {
+        title: this.$t('projects.vueCLI.0.title'),
+        desc: this.$t('projects.vueCLI.0.desc'),
+        image: 'Projets/projets-webwares-vuecli.png',
+        link: 'https://vuecli-ecfproject-afpa-project.netlify.app/#/',
+      },
+      {
+        title: this.$t('projects.vueCLI.1.title'),
+        desc: this.$t('projects.vueCLI.1.desc'),
+        image: 'Projets/projets-random-questions-vuecli.png',
+        link: 'https://vuecli-quizz-afpa-project.netlify.app/',
+      },
+      {
+        title: this.$t('projects.vueCLI.2.title'),
+        desc: this.$t('projects.vueCLI.2.desc'),
+        image: 'Projets/projets-fakeshop-vuecli.png',
+        link: 'https://vuecli-shop-afpa-project.netlify.app/',
+      },
+    ];
+    },
+  },
+  watch: {
+  // Surveille les changements de langue pour recharger les traductions
+  '$i18n.locale': function () {
+    this.updateProjects();
+  },
+},
+};
 </script>
 
 <style lang="scss" scoped>
 
 .projets{
   text-align: center;
-  background-color: #fcfcf7;
-    height: 100vh;
+  background-color: #121212ee;
+  color: #f5f5f5;
+    height: 100%;
+}
+
+.projets h3 {
+  font-family: "Kalam", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2em;
 }
 
 .projets a {
@@ -293,6 +285,15 @@ border-bottom: 1px solid #8e8e8e7d;
 
 .card-body {
   text-align: center;
+}
+
+.cli{
+  font-size: 1.3em;
+  text-align: center;
+}
+
+#symfony{
+  padding-top: 250px;
 }
 
 </style>

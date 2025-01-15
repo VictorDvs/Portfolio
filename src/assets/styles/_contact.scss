@@ -1,0 +1,117 @@
+// Style global pour la section de contact
+#contact {
+    @include displayFlex; // Utilisation du mixin displayFlex
+    flex-direction: column;
+    background-color: #121212ee;
+    color: #f5f5f5;
+    height: 100vh;
+    padding-bottom: 50px;
+    justify-content: center; // Centrer le contenu sur toute la hauteur de l'écran
+    padding: 0 15px; // Ajouter un padding horizontal pour les petits écrans
+  
+    /* Style du formulaire */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #EFEBFE;
+      color: black;
+      margin: 25px 0;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      padding: 20px;
+      border-radius: 20px;
+      box-sizing: border-box;
+      box-shadow: 0 10px 80px rgba(0, 0, 0, 0.3); // Ajout d'une ombre pour plus de profondeur
+      font-family: "Istok Web", sans-serif;
+  
+      /* Style des labels */
+      label {
+        width: 100%;
+        padding-left: 32px;
+        font-size: 1.3em;
+        margin-bottom: 10px;
+      }
+  
+      /* Style des champs de formulaire */
+      .form-control {
+        width: calc(100% - 40px); // Prendre toute la largeur du formulaire avec un padding
+        max-width: 500px;
+        margin: 0 20px 15px;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 1em;
+      }
+  
+      /* Style du bouton */
+      button {
+        border: none;
+        background-color: #3615B1;
+        color: white;
+        font-size: 1.3em;
+        font-weight: 500;
+        border-radius: 30px;
+        padding: 10px;
+        max-width: 250px;
+        width: 100%;
+        margin: 15px auto 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #270e9b; // Changer la couleur au survol
+        }
+      }
+    }
+  }
+  
+  // Style pour le titre de la section "Contact"
+  #invit {
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-size: 2em;
+    width: 50%;
+    text-align: left;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    color: #f5f5f5;
+  
+    @media (max-width: 576px) {
+      text-align: center;
+      width: 80%;
+    }
+  }
+  
+  // Responsive design - Média Queries pour les petits écrans
+  @media (max-width: 1000px) {
+    #contact {
+      padding: 10px;
+      height: 100%;
+      
+    }
+  
+    #contact form label {
+      margin: 5px 0; // Réduire les marges des labels
+    }
+  
+    #contact input,
+    #contact textarea {
+      width: calc(100% - 20px); // Ajuster la largeur des champs de texte
+      margin: 0 10px;
+    }
+  
+    #contact form button {
+      width: calc(100% - 20px); // Ajuster la largeur du bouton
+      margin: 10px auto 0;
+    }
+  }
+  
+  // Média Query pour les petits écrans
+  @media (max-width: 576px) {
+    #invit {
+      padding-top: 150px; // Réduire l'espacement supérieur sur les très petits écrans
+    }
+    
+  }
+  

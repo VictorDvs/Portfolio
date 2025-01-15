@@ -6,22 +6,26 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: AboutView
+    component: AboutView,
+    meta: { title: 'Accueil - Mon Portfolio' },
   },
   {
     path: '/projects',
     name: 'projects',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ProjectsView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/ProjectsView.vue'),
+    meta: { title: 'Les projets - Mon Portfolio' },
   },
   {
     path: '/experiences',
     name: 'experiences',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ExperiencesView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/ExperiencesView.vue'),
+    meta: { title: 'Les expériences - Mon Portfolio' },
   },
   {
     path: '/contact',
     name: 'contact',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ContactView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/ContactView.vue'),
+    meta: { title: 'Contact - Mon Portfolio' },
   }
 ]
 
@@ -41,5 +45,11 @@ const router = createRouter({
     }
   },
 })
+
+// Hook pour changer le titre
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || 'Mon Application';
+  next();
+});
 
 export default router

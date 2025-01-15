@@ -40,28 +40,24 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 
-
-html, body{
-    background-color: #fcfcf7;
-    height: 100%;
+html, body {
+  height: 10vh;
 }
 
-a{
+/* a{
     text-decoration: none;
     color: black;
     font-weight: 400;
-}
+} */
 
 p {
     font-size: 1.5em;
     font-weight: 200;
 }
 
-.section{
-    margin: 100px 0;
-}
+
 
 
 </style>
