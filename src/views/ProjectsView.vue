@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-      <div class="row row-equal scroll-offset" id="vue-cli">
+      <div class="row row-equal scroll-offset" id="projectsVueCLI">
       <h3>{{ $t('projects.vueCLI_title') }}</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
@@ -47,7 +47,7 @@
       </div>
     </div>
     <div class="row row-equal scroll-offset" id="vue-cdn">
-      <h3>Projets Vue CDN</h3>
+      <h3>{{ $t('projects.vueCDN_title') }}</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
         v-for="(project, index) in projectsVueCDN" 
@@ -69,10 +69,10 @@
     </div>
     
     <div class="row row-equal scroll-offset" id="vanilla-js">
-      <h3>Projets JavaScript</h3>
+      <h3>{{ $t('projects.vanillaJS_title') }}</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
-        v-for="(project, index) in projectsVanilla" 
+        v-for="(project, index) in vanillaJS" 
         :key="index" 
         class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center card-margin"
       >
@@ -89,11 +89,11 @@
         </div>
       </div>
     </div>
-    <div class="row row-equal scroll-offset" id="css-pur">
-      <h3>Projet CSS</h3>
+    <div class="row row-equal scroll-offset" id="css">
+      <h3>{{ $t('projects.css_title') }}</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
-        v-for="(project, index) in projectsCSS" 
+        v-for="(project, index) in css" 
         :key="index" 
         class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center card-margin"
       >
@@ -121,54 +121,9 @@ export default {
     return {
       symfony: [],
       projectsVueCLI: [],
-      projectsVueCDN: [
-        {
-          title: 'Menu Fast-food',
-          desc: 'Une grande frite pour moi',
-          image: 'Projets/projets-menu-vuecdn.png',
-          link: 'https://vuecdn-menu-afpa-project.netlify.app/',
-        },
-        {
-          title: 'Gestion d\'une liste de produits',
-          desc: 'Un CRUD de liste de produits',
-          image: 'Projets/projets-liste-produits-vuecdn.png',
-          link: 'https://vuecdn-products-list-afpa-project.netlify.app/',
-        },
-        {
-          title: 'To-do list',
-          desc: 'La one and only!',
-          image: 'Projets/projets-todo-vuecdn.png',
-          link: 'https://vuecdn-to-do-list-afpa-project.netlify.app/',
-        },
-      ],
-      projectsVanilla: [
-        {
-          title: 'Quizz WWW',
-          desc: '5 questions sur le web, c\'est à vous de jouer.',
-          image: 'Projets/projets-quizz.png',
-          link: 'https://quizz-afpa-project.netlify.app/',
-        },
-        {
-          title: 'Shifumi',
-          desc: 'Le premier à 5 l\'emporte.',
-          image: 'Projets/projets-shifumi.png',
-          link: 'https://shifumi-afpa-project.netlify.app/',
-        },
-        {
-          title: 'Morpion',
-          desc: 'Un must.',
-          image: 'Projets/projets-morpion.png',
-          link: 'https://morpion-afpa-project.netlify.app/',
-        },
-      ],
-      projectsCSS: [
-        {
-          title: 'Visitez Kyoto',
-          desc: 'Un beau voyage au Japon !',
-          image: 'Projets/projets-kyoto-css.png',
-          link: 'https://kyoto-css-afpa-project.netlify.app/',
-        },
-      ],
+      projectsVueCDN: [],
+      vanillaJS: [],
+      css: [],
     };
   },
   components: {
@@ -207,6 +162,54 @@ export default {
         link: 'https://vuecli-shop-afpa-project.netlify.app/',
       },
     ];
+    this.projectsVueCDN = [
+      {
+        title: this.$t('projects.vueCDN.0.title'),
+        desc: this.$t('projects.vueCDN.0.desc'),
+        image: 'Projets/projets-menu-vuecdn.png',
+        link: 'https://vuejs-cdn-project-afpa-project.netlify.app/',
+      },
+      {
+        title: this.$t('projects.vueCDN.1.title'),
+        desc: this.$t('projects.vueCDN.1.desc'),
+        image: 'Projets/projets-liste-produits-vuecdn.png',
+        link: 'https://vue-chess-cdn-project-afpa-project.netlify.app/',
+      },
+      {
+        title: this.$t('projects.vueCDN.2.title'),
+        desc: this.$t('projects.vueCDN.2.desc'),
+        image: 'Projets/projets-todo-vuecdn.png',
+        link: 'https://vuecdn-to-do-list-afpa-project.netlify.app/',
+      },
+    ];
+    this.vanillaJS = [
+      {
+        title: this.$t('projects.vanillaJS.0.title'),
+        desc: this.$t('projects.vanillaJS.0.desc'),
+        image: 'Projets/projets-quizz.png',
+        link: 'https://quizz-afpa-project.netlify.app/',
+      },
+      {
+        title: this.$t('projects.vanillaJS.1.title'),
+        desc: this.$t('projects.vanillaJS.1.desc'),
+        image: 'Projets/projets-shifumi.png',
+        link: 'https://shifumi-afpa-project.netlify.app/',
+      },
+      {
+        title: this.$t('projects.vanillaJS.2.title'),
+        desc: this.$t('projects.vanillaJS.2.desc'),
+        image: 'Projets/projets-morpion.png',
+        link: 'https://morpion-afpa-project.netlify.app/',
+      },
+    ];
+      this.css = [
+        {
+        title: this.$t('projects.css.0.title'),
+        desc: this.$t('projects.css.0.desc'),
+        image: 'Projets/projets-kyoto-css.png',
+        link: 'https://kyoto-css-afpa-project.netlify.app/',
+        }
+      ]
     },
   },
   watch: {

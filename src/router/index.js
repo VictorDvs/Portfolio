@@ -7,25 +7,25 @@ const routes = [
     path: '/',
     name: 'home',
     component: AboutView,
-    meta: { title: 'Accueil - Mon Portfolio' },
+    meta: { title: 'Home' },
   },
   {
     path: '/projects',
     name: 'projects',
     component: () => import(/* webpackChunkName: "about" */ '../views/ProjectsView.vue'),
-    meta: { title: 'Les projets - Mon Portfolio' },
+    meta: { title: 'Dev Projects' },
   },
   {
     path: '/experiences',
     name: 'experiences',
     component: () => import(/* webpackChunkName: "about" */ '../views/ExperiencesView.vue'),
-    meta: { title: 'Les expériences - Mon Portfolio' },
+    meta: { title: 'Experiences' },
   },
   {
     path: '/contact',
     name: 'contact',
     component: () => import(/* webpackChunkName: "about" */ '../views/ContactView.vue'),
-    meta: { title: 'Contact - Mon Portfolio' },
+    meta: { title: 'Contact' },
   }
 ]
 

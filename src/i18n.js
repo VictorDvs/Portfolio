@@ -26,7 +26,10 @@ const messages = {
       symfony_title: 'Symfony project',
       biblion_title: 'Library βιβλίον',
       biblion_desc: 'Check the README to install the site locally',
-      vueCLI_title: 'Projects and Group Project Vue CLI',
+      vueCLI_title: 'Vue CLI Projects and Group Project',
+      vueCDN_title: 'Vue CDN projects',
+      vanillaJS_title: 'JavaScript projects',
+      css_title: "CSS Project",
       "vueCLI": [
       {
         "title": "WebWares Group Project",
@@ -50,7 +53,7 @@ const messages = {
     "vueCDN": [
       {
         "title": "Fast Food Menu",
-        "desc": "A large fries for me",
+        "desc": "",
         "image": "Projets/projets-menu-vuecdn.png",
         "link": "https://vuecdn-menu-afpa-project.netlify.app/"
       },
@@ -62,27 +65,27 @@ const messages = {
       },
       {
         "title": "To-do List",
-        "desc": "The one and only!",
+        "desc": "",
         "image": "Projets/projets-todo-vuecdn.png",
         "link": "https://vuecdn-to-do-list-afpa-project.netlify.app/"
       }
     ],
-    "vanilla": [
+    "vanillaJS": [
       {
-        "title": "WWW Quiz",
-        "desc": "5 questions about the web, it's your turn to play.",
+        "title": "World Wide Web Quiz",
+        "desc": "",
         "image": "Projets/projets-quizz.png",
         "link": "https://quizz-afpa-project.netlify.app/"
       },
       {
         "title": "Shifumi",
-        "desc": "The first to 5 wins.",
+        "desc": "",
         "image": "Projets/projets-shifumi.png",
         "link": "https://shifumi-afpa-project.netlify.app/"
       },
       {
         "title": "Tic Tac Toe",
-        "desc": "A must.",
+        "desc": "",
         "image": "Projets/projets-morpion.png",
         "link": "https://morpion-afpa-project.netlify.app/"
       }
@@ -90,7 +93,7 @@ const messages = {
     "css": [
       {
         "title": "Visit Kyoto",
-        "desc": "A beautiful journey in Japan!",
+        "desc": "",
         "image": "Projets/projets-kyoto-css.png",
         "link": "https://kyoto-css-afpa-project.netlify.app/"
       }
@@ -149,6 +152,10 @@ const messages = {
       biblion_title: 'Bibliothèque βιβλίον',
       biblion_desc: 'Consultez le README afin d\'installer le site en local',
       vueCLI_title: 'Projets et projet de groupe Vue CLI',
+      vueCDN_title: 'Projets Vue CDN',
+      vanillaJS_title: 'Projets JavaScript',
+      css_title: "Projet CSS",
+
       "vueCLI": [
       {
         "title": "Projet de groupe WebWares",
@@ -172,7 +179,7 @@ const messages = {
     "vueCDN": [
       {
         "title": "Commander un menu",
-        "desc": "A large fries for me",
+        "desc": "",
         "image": "Projets/projets-menu-vuecdn.png",
         "link": "https://vuecdn-menu-afpa-project.netlify.app/"
       },
@@ -189,9 +196,9 @@ const messages = {
         "link": "https://vuecdn-to-do-list-afpa-project.netlify.app/"
       }
     ],
-    "vanilla": [
+    "vanillaJS": [
       {
-        "title": "Quiz WWW",
+        "title": "Quiz World Wide Web",
         "desc": "",
         "image": "Projets/projets-quizz.png",
         "link": "https://quizz-afpa-project.netlify.app/"
@@ -212,7 +219,7 @@ const messages = {
     "css": [
       {
         "title": "Visitez Kyoto",
-        "desc": "A beautiful journey in Japan!",
+        "desc": "",
         "image": "Projets/projets-kyoto-css.png",
         "link": "https://kyoto-css-afpa-project.netlify.app/"
       }
