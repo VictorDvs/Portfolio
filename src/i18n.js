@@ -30,72 +30,72 @@ const messages = {
       vueCDN_title: 'Vue CDN projects',
       vanillaJS_title: 'JavaScript projects',
       css_title: "CSS Project",
-      "vueCLI": [
+      vueCLI: [
       {
-        "title": "WebWares Group Project",
-        "desc": "<strong>Log in as a user</strong> :<br><span>entrepriseA@example.com</span> <span>motdepasseA</span><br><strong>Log in as admin</strong> :<br><span>web.wares@gmail.com</span> <span>motdepasseB12_</span>",
-        "image": "Projets/projets-webwares-vuecli.png",
-        "link": "https://vuecli-ecfproject-afpa-project.netlify.app/#/"
+        title: "WebWares Group Project",
+        desc: "<strong>Log in as a user</strong> :<br><span>entrepriseA@example.com</span> <span>motdepasseA</span><br><strong>Log in as admin</strong> :<br><span>web.wares@gmail.com</span> <span>motdepasseB12_</span>",
+        image: "Projets/projets-webwares-vuecli.png",
+        link: "https://vuecli-ecfproject-afpa-project.netlify.app/#/"
       },
       {
-        "title": "Random Questions API",
-        "desc": "Focus on VueX",
-        "image": "Projets/projets-random-questions-vuecli.png",
-        "link": "https://vuecli-quizz-afpa-project.netlify.app/"
+        title: "Random Questions API",
+        desc: "Focus on VueX",
+        image: "Projets/projets-random-questions-vuecli.png",
+        link: "https://vuecli-quizz-afpa-project.netlify.app/"
       },
       {
-        "title": "The Shop",
-        "desc": "Work focused on cart management",
-        "image": "Projets/projets-fakeshop-vuecli.png",
-        "link": "https://vuecli-shop-afpa-project.netlify.app/"
+        title: "The Shop",
+        desc: "Work focused on cart management",
+        image: "Projets/projets-fakeshop-vuecli.png",
+        link: "https://vuecli-shop-afpa-project.netlify.app/"
       }
     ],
-    "vueCDN": [
+    vueCDN: [
       {
-        "title": "Fast Food Menu",
-        "desc": "",
-        "image": "Projets/projets-menu-vuecdn.png",
-        "link": "https://vuecdn-menu-afpa-project.netlify.app/"
+        title: "Fast Food Menu",
+        desc: "",
+        image: "Projets/projets-menu-vuecdn.png",
+        link: "https://vuecdn-menu-afpa-project.netlify.app/"
       },
       {
-        "title": "Product List Management",
-        "desc": "A CRUD of product list",
-        "image": "Projets/projets-liste-produits-vuecdn.png",
-        "link": "https://vuecdn-products-list-afpa-project.netlify.app/"
+        title: "Product List Management",
+        desc: "A CRUD of product list",
+        image: "Projets/projets-liste-produits-vuecdn.png",
+        link: "https://vuecdn-products-list-afpa-project.netlify.app/"
       },
       {
-        "title": "To-do List",
-        "desc": "",
-        "image": "Projets/projets-todo-vuecdn.png",
-        "link": "https://vuecdn-to-do-list-afpa-project.netlify.app/"
+        title: "To-do List",
+        desc: "",
+        image: "Projets/projets-todo-vuecdn.png",
+        link: "https://vuecdn-to-do-list-afpa-project.netlify.app/"
       }
     ],
-    "vanillaJS": [
+    vanillaJS: [
       {
-        "title": "World Wide Web Quiz",
-        "desc": "",
-        "image": "Projets/projets-quizz.png",
-        "link": "https://quizz-afpa-project.netlify.app/"
+        title: "World Wide Web Quiz",
+        desc: "",
+        image: "Projets/projets-quizz.png",
+        link: "https://quizz-afpa-project.netlify.app/"
       },
       {
-        "title": "Shifumi",
-        "desc": "",
-        "image": "Projets/projets-shifumi.png",
-        "link": "https://shifumi-afpa-project.netlify.app/"
+        title: "Shifumi",
+        desc: "",
+        image: "Projets/projets-shifumi.png",
+        link: "https://shifumi-afpa-project.netlify.app/"
       },
       {
-        "title": "Tic Tac Toe",
-        "desc": "",
-        "image": "Projets/projets-morpion.png",
-        "link": "https://morpion-afpa-project.netlify.app/"
+        title: "Tic Tac Toe",
+        desc: "",
+        image: "Projets/projets-morpion.png",
+        link: "https://morpion-afpa-project.netlify.app/"
       }
     ],
-    "css": [
+    css: [
       {
-        "title": "Visit Kyoto",
-        "desc": "",
-        "image": "Projets/projets-kyoto-css.png",
-        "link": "https://kyoto-css-afpa-project.netlify.app/"
+        title: "Visit Kyoto",
+        desc: "",
+        image: "Projets/projets-kyoto-css.png",
+        link: "https://kyoto-css-afpa-project.netlify.app/"
       }
     ]
     },
@@ -156,72 +156,72 @@ const messages = {
       vanillaJS_title: 'Projets JavaScript',
       css_title: "Projet CSS",
 
-      "vueCLI": [
+      vueCLI: [
       {
-        "title": "Projet de groupe WebWares",
-        "desc": "<strong>Utilisateur</strong> :<br> <span>entrepriseA@example.com</span> <span>motdepasseA</span><br><strong>Admin</strong> :<br><span>web.wares@gmail.com</span> <span>motdepasseB12_</span>",
-        "image": "Projets/projets-webwares-vuecli.png",
-        "link": "https://vuecli-ecfproject-afpa-project.netlify.app/#/"
+        title: "Projet de groupe WebWares",
+        desc: "<strong>Utilisateur</strong> :<br> <span>entrepriseA@example.com</span> <span>motdepasseA</span><br><strong>Admin</strong> :<br><span>web.wares@gmail.com</span> <span>motdepasseB12_</span>",
+        image: "Projets/projets-webwares-vuecli.png",
+        link: "https://vuecli-ecfproject-afpa-project.netlify.app/#/"
       },
       {
-        "title": "Utilisation de l'API Open Trivia DB",
-        "desc": "Axé sur VueX",
-        "image": "Projets/projets-random-questions-vuecli.png",
-        "link": "https://vuecli-quizz-afpa-project.netlify.app/"
+        title: "Utilisation de l'API Open Trivia DB",
+        desc: "Axé sur VueX",
+        image: "Projets/projets-random-questions-vuecli.png",
+        link: "https://vuecli-quizz-afpa-project.netlify.app/"
       },
       {
-        "title": "Le Shop",
-        "desc": "Travail axé sur la gestion du panier",
-        "image": "Projets/projets-fakeshop-vuecli.png",
-        "link": "https://vuecli-shop-afpa-project.netlify.app/"
+        title: "Le Shop",
+        desc: "Travail axé sur la gestion du panier",
+        image: "Projets/projets-fakeshop-vuecli.png",
+        link: "https://vuecli-shop-afpa-project.netlify.app/"
       }
     ],
-    "vueCDN": [
+    vueCDN: [
       {
-        "title": "Commander un menu",
-        "desc": "",
-        "image": "Projets/projets-menu-vuecdn.png",
-        "link": "https://vuecdn-menu-afpa-project.netlify.app/"
+        title: "Commander un menu",
+        desc: "",
+        image: "Projets/projets-menu-vuecdn.png",
+        link: "https://vuecdn-menu-afpa-project.netlify.app/"
       },
       {
-        "title": "Liste de produits",
-        "desc": "A CRUD of product list",
-        "image": "Projets/projets-liste-produits-vuecdn.png",
-        "link": "https://vuecdn-products-list-afpa-project.netlify.app/"
+        title: "Liste de produits",
+        desc: "A CRUD of product list",
+        image: "Projets/projets-liste-produits-vuecdn.png",
+        link: "https://vuecdn-products-list-afpa-project.netlify.app/"
       },
       {
-        "title": "Liste To-do",
-        "desc": "",
-        "image": "Projets/projets-todo-vuecdn.png",
-        "link": "https://vuecdn-to-do-list-afpa-project.netlify.app/"
+        title: "Liste To-do",
+        desc: "",
+        image: "Projets/projets-todo-vuecdn.png",
+        link: "https://vuecdn-to-do-list-afpa-project.netlify.app/"
       }
     ],
-    "vanillaJS": [
+    vanillaJS: [
       {
-        "title": "Quiz World Wide Web",
-        "desc": "",
-        "image": "Projets/projets-quizz.png",
-        "link": "https://quizz-afpa-project.netlify.app/"
+        title: "Quiz World Wide Web",
+        desc: "",
+        image: "Projets/projets-quizz.png",
+        link: "https://quizz-afpa-project.netlify.app/"
       },
       {
-        "title": "Shifumi",
-        "desc": "",
-        "image": "Projets/projets-shifumi.png",
-        "link": "https://shifumi-afpa-project.netlify.app/"
+        title: "Shifumi",
+        desc: "",
+        image: "Projets/projets-shifumi.png",
+        link: "https://shifumi-afpa-project.netlify.app/"
       },
       {
-        "title": "Le Morpion",
-        "desc": "",
-        "image": "Projets/projets-morpion.png",
-        "link": "https://morpion-afpa-project.netlify.app/"
+        title: "Le Morpion",
+        desc: "",
+        image: "Projets/projets-morpion.png",
+        link: "https://morpion-afpa-project.netlify.app/"
       }
     ],
-    "css": [
+    css: [
       {
-        "title": "Visitez Kyoto",
-        "desc": "",
-        "image": "Projets/projets-kyoto-css.png",
-        "link": "https://kyoto-css-afpa-project.netlify.app/"
+        title: "Visitez Kyoto",
+        desc: "",
+        image: "Projets/projets-kyoto-css.png",
+        link: "https://kyoto-css-afpa-project.netlify.app/"
       }
     ]
     },
