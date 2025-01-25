@@ -144,68 +144,68 @@ export default {
       ];
       this.VueCLI = [
       {
-        title: this.$t('vueCLI.0.title'),
-        desc: this.$t('vueCLI.0.desc'),
+        title: this.$t('webwares_title'),
+        desc: this.$t('webwares_desc'),
         image: 'Projets/projets-webwares-vuecli.png',
         link: 'https://vuecli-ecfproject-afpa-project.netlify.app/#/',
       },
       {
-        title: this.$t('vueCLI.1.title'),
-        desc: this.$t('vueCLI.1.desc'),
+        title: this.$t('randomAPI_title'),
+        desc: this.$t('randomAPI_desc'),
         image: 'Projets/projets-random-questions-vuecli.png',
         link: 'https://vuecli-quizz-afpa-project.netlify.app/',
       },
       {
-        title: this.$t('vueCLI.2.title'),
-        desc: this.$t('vueCLI.2.desc'),
+        title: this.$t('shop_title'),
+        desc: this.$t('shop_desc'),
         image: 'Projets/projets-fakeshop-vuecli.png',
         link: 'https://vuecli-shop-afpa-project.netlify.app/',
       },
     ];
     this.VueCDN = [
       {
-        title: this.$t('vueCDN.0.title'),
-        desc: this.$t('vueCDN.0.desc'),
+        title: this.$t('menu_title'),
+        desc: this.$t('menu_desc'),
         image: 'Projets/projets-menu-vuecdn.png',
         link: 'https://vuejs-cdn-project-afpa-project.netlify.app/',
       },
       {
-        title: this.$t('vueCDN.1.title'),
-        desc: this.$t('vueCDN.1.desc'),
+        title: this.$t('produits_title'),
+        desc: this.$t('produits_desc'),
         image: 'Projets/projets-liste-produits-vuecdn.png',
         link: 'https://vue-chess-cdn-project-afpa-project.netlify.app/',
       },
       {
-        title: this.$t('vueCDN.2.title'),
-        desc: this.$t('vueCDN.2.desc'),
+        title: this.$t('todo_title'),
+        desc: this.$t('todo_desc'),
         image: 'Projets/projets-todo-vuecdn.png',
         link: 'https://vuecdn-to-do-list-afpa-project.netlify.app/',
       },
     ];
     this.vanillaJS = [
       {
-        title: this.$t('vanillaJS.0.title'),
-        desc: this.$t('vanillaJS.0.desc'),
+        title: this.$t('quizz_title'),
+        desc: this.$t('quizz_desc'),
         image: 'Projets/projets-quizz.png',
         link: 'https://quizz-afpa-project.netlify.app/',
       },
       {
-        title: this.$t('vanillaJS.1.title'),
-        desc: this.$t('vanillaJS.1.desc'),
+        title: this.$t('shifumi_title'),
+        desc: this.$t('shifumi_desc'),
         image: 'Projets/projets-shifumi.png',
         link: 'https://shifumi-afpa-project.netlify.app/',
       },
       {
-        title: this.$t('vanillaJS.2.title'),
-        desc: this.$t('vanillaJS.2.desc'),
+        title: this.$t('ticTacToe_title'),
+        desc: this.$t('ticTacToe_desc'),
         image: 'Projets/projets-morpion.png',
         link: 'https://morpion-afpa-project.netlify.app/',
       },
     ];
       this.css = [
         {
-        title: this.$t('css_kyoto_title'),
-        desc: this.$t('css_kyoto_desc'),
+        title: this.$t('kyoto_title'),
+        desc: this.$t('kyoto_desc'),
         image: 'Projets/projets-kyoto-css.png',
         link: 'https://kyoto-css-afpa-project.netlify.app/',
         }
