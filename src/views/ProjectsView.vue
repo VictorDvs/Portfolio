@@ -131,6 +131,8 @@ export default {
   },
   mounted() {
     this.updateProjects();
+    console.log('VueCLI:', this.VueCLI);
+    console.log('VueCDN:', this.VueCDN);
   },
   methods: {
     updateProjects() {
@@ -141,7 +143,7 @@ export default {
           image: 'Projets/projets-symfony-ecf-cover.png',
           link: 'https://github.com/VictorDvs/symfony-ecf-project',
         },
-      ];
+      ],
       this.VueCLI = [
       {
         title: this.$t('webwares_title'),
@@ -161,7 +163,7 @@ export default {
         image: 'Projets/projets-fakeshop-vuecli.png',
         link: 'https://vuecli-shop-afpa-project.netlify.app/',
       },
-    ];
+    ],
     this.VueCDN = [
       {
         title: this.$t('menu_title'),
@@ -181,7 +183,7 @@ export default {
         image: 'Projets/projets-todo-vuecdn.png',
         link: 'https://vuecdn-to-do-list-afpa-project.netlify.app/',
       },
-    ];
+    ],
     this.vanillaJS = [
       {
         title: this.$t('quizz_title'),
@@ -201,7 +203,7 @@ export default {
         image: 'Projets/projets-morpion.png',
         link: 'https://morpion-afpa-project.netlify.app/',
       },
-    ];
+    ],
       this.css = [
         {
         title: this.$t('kyoto_title'),
