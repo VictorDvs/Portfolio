@@ -5,7 +5,7 @@
     <div id="projets" class="container-fluid projets section">
     
       <div class="row row-equal scroll-offset" id="symfony">
-      <h3>{{ $t('projects.symfony_title') }}</h3>
+      <h3>{{ $t('symfony_title') }}</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
         v-for="(project, index) in symfony" 
@@ -25,11 +25,11 @@
         </div>
       </div>
     </div>
-      <div class="row row-equal scroll-offset" id="projectsVueCLI">
-      <h3>{{ $t('projects.vueCLI_title') }}</h3>
+      <div class="row row-equal scroll-offset" id="VueCLI">
+      <h3>{{ $t('vueCLI_title') }}</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
-        v-for="(project, index) in projectsVueCLI" 
+        v-for="(project, index) in VueCLI" 
         :key="index" 
         class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center card-margin"
       >
@@ -46,11 +46,11 @@
         </div>
       </div>
     </div>
-    <div class="row row-equal scroll-offset" id="vue-cdn">
-      <h3>{{ $t('projects.vueCDN_title') }}</h3>
+    <div class="row row-equal scroll-offset" id="vueCDN">
+      <h3>{{ $t('vueCDN_title') }}</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
-        v-for="(project, index) in projectsVueCDN" 
+        v-for="(project, index) in VueCDN" 
         :key="index" 
         class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center card-margin"
       >
@@ -68,8 +68,8 @@
       </div>
     </div>
     
-    <div class="row row-equal scroll-offset" id="vanilla-js">
-      <h3>{{ $t('projects.vanillaJS_title') }}</h3>
+    <div class="row row-equal scroll-offset" id="vanillaJS">
+      <h3>{{ $t('vanillaJS_title') }}</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
         v-for="(project, index) in vanillaJS" 
@@ -90,7 +90,7 @@
       </div>
     </div>
     <div class="row row-equal scroll-offset" id="css">
-      <h3>{{ $t('projects.css_title') }}</h3>
+      <h3>{{ $t('css_title') }}</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
         v-for="(project, index) in css" 
@@ -120,8 +120,8 @@ export default {
   data() {
     return {
       symfony: [],
-      projectsVueCLI: [],
-      projectsVueCDN: [],
+      VueCLI: [],
+      VueCDN: [],
       vanillaJS: [],
       css: [],
     };
@@ -136,76 +136,76 @@ export default {
     updateProjects() {
       this.symfony = [
         {
-          title: this.$t('projects.symfony_title'),
-          desc: this.$t('projects.biblion_desc'),
+          title: this.$t('biblion_title'),
+          desc: this.$t('biblion_desc'),
           image: 'Projets/projets-symfony-ecf-cover.png',
           link: 'https://github.com/VictorDvs/symfony-ecf-project',
         },
       ];
-      this.projectsVueCLI = [
+      this.VueCLI = [
       {
-        title: this.$t('projects.vueCLI.0.title'),
-        desc: this.$t('projects.vueCLI.0.desc'),
+        title: this.$t('vueCLI.0.title'),
+        desc: this.$t('vueCLI.0.desc'),
         image: 'Projets/projets-webwares-vuecli.png',
         link: 'https://vuecli-ecfproject-afpa-project.netlify.app/#/',
       },
       {
-        title: this.$t('projects.vueCLI.1.title'),
-        desc: this.$t('projects.vueCLI.1.desc'),
+        title: this.$t('vueCLI.1.title'),
+        desc: this.$t('vueCLI.1.desc'),
         image: 'Projets/projets-random-questions-vuecli.png',
         link: 'https://vuecli-quizz-afpa-project.netlify.app/',
       },
       {
-        title: this.$t('projects.vueCLI.2.title'),
-        desc: this.$t('projects.vueCLI.2.desc'),
+        title: this.$t('vueCLI.2.title'),
+        desc: this.$t('vueCLI.2.desc'),
         image: 'Projets/projets-fakeshop-vuecli.png',
         link: 'https://vuecli-shop-afpa-project.netlify.app/',
       },
     ];
-    this.projectsVueCDN = [
+    this.VueCDN = [
       {
-        title: this.$t('projects.vueCDN.0.title'),
-        desc: this.$t('projects.vueCDN.0.desc'),
+        title: this.$t('vueCDN.0.title'),
+        desc: this.$t('vueCDN.0.desc'),
         image: 'Projets/projets-menu-vuecdn.png',
         link: 'https://vuejs-cdn-project-afpa-project.netlify.app/',
       },
       {
-        title: this.$t('projects.vueCDN.1.title'),
-        desc: this.$t('projects.vueCDN.1.desc'),
+        title: this.$t('vueCDN.1.title'),
+        desc: this.$t('vueCDN.1.desc'),
         image: 'Projets/projets-liste-produits-vuecdn.png',
         link: 'https://vue-chess-cdn-project-afpa-project.netlify.app/',
       },
       {
-        title: this.$t('projects.vueCDN.2.title'),
-        desc: this.$t('projects.vueCDN.2.desc'),
+        title: this.$t('vueCDN.2.title'),
+        desc: this.$t('vueCDN.2.desc'),
         image: 'Projets/projets-todo-vuecdn.png',
         link: 'https://vuecdn-to-do-list-afpa-project.netlify.app/',
       },
     ];
     this.vanillaJS = [
       {
-        title: this.$t('projects.vanillaJS.0.title'),
-        desc: this.$t('projects.vanillaJS.0.desc'),
+        title: this.$t('vanillaJS.0.title'),
+        desc: this.$t('vanillaJS.0.desc'),
         image: 'Projets/projets-quizz.png',
         link: 'https://quizz-afpa-project.netlify.app/',
       },
       {
-        title: this.$t('projects.vanillaJS.1.title'),
-        desc: this.$t('projects.vanillaJS.1.desc'),
+        title: this.$t('vanillaJS.1.title'),
+        desc: this.$t('vanillaJS.1.desc'),
         image: 'Projets/projets-shifumi.png',
         link: 'https://shifumi-afpa-project.netlify.app/',
       },
       {
-        title: this.$t('projects.vanillaJS.2.title'),
-        desc: this.$t('projects.vanillaJS.2.desc'),
+        title: this.$t('vanillaJS.2.title'),
+        desc: this.$t('vanillaJS.2.desc'),
         image: 'Projets/projets-morpion.png',
         link: 'https://morpion-afpa-project.netlify.app/',
       },
     ];
       this.css = [
         {
-        title: this.$t('projects.css_kyoto_title'),
-        desc: this.$t('projects.css_kyoto_desc'),
+        title: this.$t('css_kyoto_title'),
+        desc: this.$t('css_kyoto_desc'),
         image: 'Projets/projets-kyoto-css.png',
         link: 'https://kyoto-css-afpa-project.netlify.app/',
         }

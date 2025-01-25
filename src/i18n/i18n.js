@@ -1,5 +1,6 @@
 // src/i18n.js
 import { createI18n } from 'vue-i18n';
+import { projectsMessages } from './projects.i18n';
 
 const messages = {
   en: {
@@ -22,79 +23,7 @@ const messages = {
       helene: "Technical Writer at",
       tem: `"Victor joined my team for a 9-month replacement during a period of significant transformations within the company. Although this was his first real professional experience as a technical writer, I was impressed by how quickly he acquired new skills and adapted to our tools and methods. Victor was particularly helpful in implementing the 'Docs-as-Code' methodology. Naturally curious and eager to do things well, he invested considerable effort in researching ways to optimize our processes and was proactive in making suggestions. Victor is calm and discreet without being withdrawn. He has a calming and positive effect on the team, making it extremely pleasant to work with him. He has all the qualities needed to thrive successfully in the world of technical writing or beyond. I highly recommend him."`
           },
-    projects: {
-      symfony_title: 'Symfony project',
-      biblion_title: 'Library βιβλίον',
-      biblion_desc: 'Check the README to install the site locally',
-      vueCLI_title: 'Vue CLI Projects and Group Project',
-      vueCDN_title: 'Vue CDN projects',
-      vanillaJS_title: 'JavaScript projects',
-      css_title: "CSS Project",
-      vueCLI: [
-      {
-        title: "WebWares Group Project",
-        desc: "<strong>Log in as a user</strong> :<br><span>entrepriseA@example.com</span> <span>motdepasseA</span><br><strong>Log in as admin</strong> :<br><span>web.wares@gmail.com</span> <span>motdepasseB12_</span>",
-        image: "Projets/projets-webwares-vuecli.png",
-        link: "https://vuecli-ecfproject-afpa-project.netlify.app/#/"
-      },
-      {
-        title: "Random Questions API",
-        desc: "Focus on VueX",
-        image: "Projets/projets-random-questions-vuecli.png",
-        link: "https://vuecli-quizz-afpa-project.netlify.app/"
-      },
-      {
-        title: "The Shop",
-        desc: "Work focused on cart management",
-        image: "Projets/projets-fakeshop-vuecli.png",
-        link: "https://vuecli-shop-afpa-project.netlify.app/"
-      }
-    ],
-    vueCDN: [
-      {
-        title: "Fast Food Menu",
-        desc: "",
-        image: "Projets/projets-menu-vuecdn.png",
-        link: "https://vuecdn-menu-afpa-project.netlify.app/"
-      },
-      {
-        title: "Product List Management",
-        desc: "A CRUD of product list",
-        image: "Projets/projets-liste-produits-vuecdn.png",
-        link: "https://vuecdn-products-list-afpa-project.netlify.app/"
-      },
-      {
-        title: "To-do List",
-        desc: "",
-        image: "Projets/projets-todo-vuecdn.png",
-        link: "https://vuecdn-to-do-list-afpa-project.netlify.app/"
-      }
-    ],
-    vanillaJS: [
-      {
-        title: "World Wide Web Quiz",
-        desc: "",
-        image: "Projets/projets-quizz.png",
-        link: "https://quizz-afpa-project.netlify.app/"
-      },
-      {
-        title: "Shifumi",
-        desc: "",
-        image: "Projets/projets-shifumi.png",
-        link: "https://shifumi-afpa-project.netlify.app/"
-      },
-      {
-        title: "Tic Tac Toe",
-        desc: "",
-        image: "Projets/projets-morpion.png",
-        link: "https://morpion-afpa-project.netlify.app/"
-      }
-    ],
-    css_kyoto_title: "Visit Kyoto",
-    css_kyoto_desc: "",
-    css_kyoto_image: "Projets/projets-kyoto-css.png",
-    css_kyoto_link: "https://kyoto-css-afpa-project.netlify.app/"
-    },
+          ...projectsMessages.en,
     experiences: {
         title1: "EXFO Solutions, St. Jacques-de-la-Lande, November 2022 - August 2023",
         tech: " Technologies used:",
@@ -143,79 +72,7 @@ const messages = {
       tem: '"Victor a rejoint mon équipe dans le cadre d`\'un remplacement de 9 mois, au cours d\'une période d\'importantes transformations dans l\'entreprise. Bien que cela soit sa première réelle expérience professionnelle en tant que rédacteur technique, il m\'a impressionnée par la rapidité avec laquelle il est monté en compétences et s\'est adapté à nos outils et méthodes. Victor m\'a notamment été d\'une aide considérable dans la mise en place de la méthode \'Doc-as-code\'. Curieux par nature et soucieux de bien faire, il s\'est beaucoup investi dans les recherches en vue d\'optimiser nos méthodes et a été force de proposition. Victor est calme et discret sans pour autant être effacé. Il a un effet apaisant et positif sur l\'équipe, c\'est extrêmement agréable de travailler avec lui. Il a toutes les qualités pour évoluer avec succès dans le monde de la rédaction technique ou ailleurs. Je le recommande vivement."'
 
     },
-    projects: {
-      symfony_title: 'Projet Symfony',
-      biblion_title: 'Bibliothèque βιβλίον',
-      biblion_desc: 'Consultez le README afin d\'installer le site en local',
-      vueCLI_title: 'Projets et projet de groupe Vue CLI',
-      vueCDN_title: 'Projets Vue CDN',
-      vanillaJS_title: 'Projets JavaScript',
-      css_title: "Projet CSS",
-      vueCLI: [
-      {
-        title: "Projet de groupe WebWares",
-        desc: "<strong>Utilisateur</strong> :<br> <span>entrepriseA@example.com</span> <span>motdepasseA</span><br><strong>Admin</strong> :<br><span>web.wares@gmail.com</span> <span>motdepasseB12_</span>",
-        image: "Projets/projets-webwares-vuecli.png",
-        link: "https://vuecli-ecfproject-afpa-project.netlify.app/#/"
-      },
-      {
-        title: "Utilisation de l'API Open Trivia DB",
-        desc: "Axé sur VueX",
-        image: "Projets/projets-random-questions-vuecli.png",
-        link: "https://vuecli-quizz-afpa-project.netlify.app/"
-      },
-      {
-        title: "Le Shop",
-        desc: "Travail axé sur la gestion du panier",
-        image: "Projets/projets-fakeshop-vuecli.png",
-        link: "https://vuecli-shop-afpa-project.netlify.app/"
-      }
-    ],
-    vueCDN: [
-      {
-        title: "Commander un menu",
-        desc: "",
-        image: "Projets/projets-menu-vuecdn.png",
-        link: "https://vuecdn-menu-afpa-project.netlify.app/"
-      },
-      {
-        title: "Liste de produits",
-        desc: "A CRUD of product list",
-        image: "Projets/projets-liste-produits-vuecdn.png",
-        link: "https://vuecdn-products-list-afpa-project.netlify.app/"
-      },
-      {
-        title: "Liste To-do",
-        desc: "",
-        image: "Projets/projets-todo-vuecdn.png",
-        link: "https://vuecdn-to-do-list-afpa-project.netlify.app/"
-      }
-    ],
-    vanillaJS: [
-      {
-        title: "Quiz World Wide Web",
-        desc: "",
-        image: "Projets/projets-quizz.png",
-        link: "https://quizz-afpa-project.netlify.app/"
-      },
-      {
-        title: "Shifumi",
-        desc: "",
-        image: "Projets/projets-shifumi.png",
-        link: "https://shifumi-afpa-project.netlify.app/"
-      },
-      {
-        title: "Le Morpion",
-        desc: "",
-        image: "Projets/projets-morpion.png",
-        link: "https://morpion-afpa-project.netlify.app/"
-      }
-    ],
-    css_kyoto_title: "Visitez Kyoto",
-    css_kyoto_desc: "",
-    css_kyoto_image: "Projets/projets-kyoto-css.png",
-    css_kyoto_link: "https://kyoto-css-afpa-project.netlify.app/"
-    },
+    ...projectsMessages.fr,
     experiences: {
         title1: "EXFO Solutions, St. Jacques-de-la-Lande, Novembre 2022 - Août 2023",
         tech: " Stack utilisé :",
