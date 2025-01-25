@@ -13,13 +13,9 @@ const messages = {
     },
     about: {
       title: "Welcome to my portfolio!",
-      paragraph1_part1: `My name is Victor, a technical writer by training and passionate about web development. After two years of experience in agile documentation and the`,
-      paragraph1_part2:  ` methodology, I decided to dive into coding to combine technique and creativity.`,
-      paragraph2_part1: `Currently training at`, 
-      paragraph2_part2: `I develop projects using modern tools like Vue.js and Symfony.`,
-      paragraph3_part1: "Check out my CV or",
-      paragraph3_part2: "for collaboration!",
-      paragraph3_part3: "contact me",
+      paragraph1: `I’m Victor, a technical writer with a passion for the web. I enjoy creating clear and user-friendly documentation.`, 
+      paragraph2: `Currently, I am undergoing training to acquire skills in programming languages and frameworks. My future goal is to work closely with developers and engineers to create precise and effective documentation.`, 
+      paragraph3: "Feel free to explore my experiences and projects, and contact me for any collaboration opportunities.", 
       helene: "Technical Writer at",
       tem: `"Victor joined my team for a 9-month replacement during a period of significant transformations within the company. Although this was his first real professional experience as a technical writer, I was impressed by how quickly he acquired new skills and adapted to our tools and methods. Victor was particularly helpful in implementing the 'Docs-as-Code' methodology. Naturally curious and eager to do things well, he invested considerable effort in researching ways to optimize our processes and was proactive in making suggestions. Victor is calm and discreet without being withdrawn. He has a calming and positive effect on the team, making it extremely pleasant to work with him. He has all the qualities needed to thrive successfully in the world of technical writing or beyond. I highly recommend him."`
           },
@@ -61,13 +57,9 @@ const messages = {
     },
     about: {
       title: "Bienvenue sur mon portfolio !",
-      paragraph1_part1: `Je m'appelle Victor, rédacteur technique de formation et passionné par le développement web. Après deux ans d'expérience dans la documentation agile et la méthode`, 
-      paragraph1_part2: `, j'ai décidé de me plonger dans le code pour allier technique et créativité.`,
-      paragraph2_part1: `Actuellement en formation au sein de`, 
-      paragraph2_part2: `je développe des projets avec des outils modernes comme Vue.js et Symfony.`,
-      paragraph3_part1: "Découvrez mon CV ou",
-      paragraph3_part2: "pour une collaboration !",
-      paragraph3_part3: "contactez-moi",    
+      paragraph1: `Je suis Victor, rédacteur technique et passionné par le web. J'aime créer des documentations claires et adaptées aux utilisateurs.`, 
+      paragraph2: `Actuellement, je suis une formation afin d’acquérir des compétences en langages et frameworks. Mon objectif futur est de pouvoir travailler en étroite collaboration avec les développeurs et ingénieurs pour concevoir une documentation précise et efficace.`, 
+      paragraph3: "N’hésitez pas à consulter mes expériences et projets, et à me contacter pour toute collaboration.", 
       helene: "Rédactrice Technique chez",
       tem: '"Victor a rejoint mon équipe dans le cadre d`\'un remplacement de 9 mois, au cours d\'une période d\'importantes transformations dans l\'entreprise. Bien que cela soit sa première réelle expérience professionnelle en tant que rédacteur technique, il m\'a impressionnée par la rapidité avec laquelle il est monté en compétences et s\'est adapté à nos outils et méthodes. Victor m\'a notamment été d\'une aide considérable dans la mise en place de la méthode \'Doc-as-code\'. Curieux par nature et soucieux de bien faire, il s\'est beaucoup investi dans les recherches en vue d\'optimiser nos méthodes et a été force de proposition. Victor est calme et discret sans pour autant être effacé. Il a un effet apaisant et positif sur l\'équipe, c\'est extrêmement agréable de travailler avec lui. Il a toutes les qualités pour évoluer avec succès dans le monde de la rédaction technique ou ailleurs. Je le recommande vivement."'
 

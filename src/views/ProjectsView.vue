@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-      <div class="row row-equal scroll-offset" id="VueCLI">
+      <div class="row row-equal scroll-offset" id="vueCLI">
       <h3>{{ $t('vueCLI_title') }}</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
@@ -41,7 +41,7 @@
             <a :href="project.link" target="_blank">
               <h5 class="card-title">{{ project.title }}</h5>
             </a>
-            <p class="card-text">{{ project.desc }}</p>
+            <p class="card-text" v-html="project.desc"></p>
           </div>
         </div>
       </div>
@@ -131,8 +131,6 @@ export default {
   },
   mounted() {
     this.updateProjects();
-    console.log('VueCLI:', this.VueCLI);
-    console.log('VueCDN:', this.VueCDN);
   },
   methods: {
     updateProjects() {
@@ -227,14 +225,14 @@ export default {
 
 .projets{
   text-align: center;
-  background-color: #121212ee;
+  background-color:  #121212;
   color: #f5f5f5;
     height: 100%;
 }
 
 .projets h3 {
-  font-family: "Kalam", cursive;
-    font-weight: 500;
+  font-family: "Racing Sans One", serif;
+      font-weight: 400;
     font-style: normal;
     font-size: 2em;
 }
@@ -288,8 +286,14 @@ border-bottom: 1px solid #8e8e8e7d;
 // width: auto;
 }
 
+.card-title {
+  font-family: "Kalam", sans-serif;
+  font-size: 1.5em;
+}
+
 .card-body {
   text-align: center;
+  
 }
 
 .cli{

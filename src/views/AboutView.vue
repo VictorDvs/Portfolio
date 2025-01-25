@@ -27,17 +27,16 @@
         <div class="bio row mt-5 w-100 justify-content-center">
             <div class="col-12 col-md-10 col-lg-8" id="text-body">
                 <p>
-                    {{ $t('about.paragraph1_part1') }}
-                    <a href="https://www.writethedocs.org/guide/docs-as-code/" target="_blank" rel="noopener" class="me-contacter">Docs-as-Code</a>{{ $t('about.paragraph1_part2') }}
+                    {{ $t('about.paragraph1') }}
+                    <!-- <a href="https://www.writethedocs.org/guide/docs-as-code/" target="_blank" rel="noopener" class="me-contacter">Docs-as-Code</a>{{ $t('about.paragraph1_part2') }} -->
                 </p>
                 <p>
-                    {{ $t('about.paragraph2_part1') }}
-                    <a href="https://territoiredigital.afpa.fr/fr/fair/visiting/1" target="_blank" rel="noopener" class="me-contacter">l'AFPA Territoire Digital</a> {{ $t('about.paragraph2_part2') }}
+                    {{ $t('about.paragraph2') }}
+                    <!-- <a href="https://territoiredigital.afpa.fr/fr/fair/visiting/1" target="_blank" rel="noopener" class="me-contacter">l'AFPA Territoire Digital</a> {{ $t('about.paragraph2_part2') }} -->
                 </p>
                 <p>
-    {{ $t('about.paragraph3_part1') }}
-    <router-link to="/contact" class="me-contacter">{{ $t('about.paragraph3_part3') }}</router-link>
-    {{ $t('about.paragraph3_part2') }}
+    {{ $t('about.paragraph3') }}
+    <!-- <router-link to="/contact" class="me-contacter">{{ $t('about.paragraph3_part3') }}</router-link> -->
   </p>
 </div>
 
@@ -55,7 +54,7 @@
             </a>
           </div>
         </div>
-        <div class=" tem d-flex justify-content-center align-items-center mt-5 flex-column">
+        <!-- <div class=" tem d-flex justify-content-center align-items-center mt-5 flex-column">
             <p class="mb-5 helene-profil">
               <img src="icon-helene.jpg" alt="Photo de ma collègue Hélène Le Tutour" class="helene me-2">
               Hélène Le Tutour, {{ $t('about.helene') }} <b>EXFO</b> :
@@ -63,7 +62,7 @@
             <p>{{ $t('about.tem') }}</p>
             
   
-        </div>
+        </div> -->
       </div>
     </main>
   </template>

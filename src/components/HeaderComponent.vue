@@ -19,10 +19,10 @@
       </a>
       <ul class="dropdown-menu" :class="{ show: isDropdownOpen }">
          <li><router-link class="dropdown-item" :to="'/projects#symfony'" @click="closeDropdown">Symfony</router-link></li>
-         <li><router-link class="dropdown-item" :to="'/projects#vue-cli'" @click="closeDropdown">Vue CLI</router-link></li>
-         <li><router-link class="dropdown-item" :to="'/projects#vue-cdn'" @click="closeDropdown">Vue CDN</router-link></li>
-         <li><router-link class="dropdown-item" :to="'/projects#vanilla-js'" @click="closeDropdown">JavaScript</router-link></li>
-         <li><router-link class="dropdown-item" :to="'/projects#css-pur'"  @click="closeDropdown">CSS</router-link></li>
+         <li><router-link class="dropdown-item" :to="'/projects#vueCLI'" @click="closeDropdown">Vue CLI</router-link></li>
+         <li><router-link class="dropdown-item" :to="'/projects#vueCDN'" @click="closeDropdown">Vue CDN</router-link></li>
+         <li><router-link class="dropdown-item" :to="'/projects#vanillaJS'" @click="closeDropdown">JavaScript</router-link></li>
+         <li><router-link class="dropdown-item" :to="'/projects#css'"  @click="closeDropdown">CSS</router-link></li>
       </ul>
    </div>
             <router-link class="nav-link nav-anchor" :to="'/experiences'" @click="closeMenu">{{ $t('navbar.experiences') }}</router-link>

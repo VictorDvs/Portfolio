@@ -8,6 +8,13 @@
         </p>
         <p class="mb-4">{{ $t('experiences.description1') }}</p>
         <CarouselComponent :slides="carouselSlides1" id="carousel1" />
+        <div class="tem d-flex justify-content-center align-items-center mt-5 flex-column">
+            <p class="mb-5">
+              <img src="/icon-helene.jpg" alt="Photo de ma collègue Hélène Le Tutour" class="helene me-2">
+              Hélène Le Tutour, {{ $t('about.helene') }} <b>EXFO</b> :
+            </p>
+            <p>{{ $t('about.tem') }}</p>
+        </div>
     </div>
     <div class="row row-xp mt-5">
         <h2 class="mb-4">{{ $t('experiences.title2') }}</h2>

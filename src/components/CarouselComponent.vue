@@ -104,8 +104,10 @@ export default {
 .carousel-caption-below {
   text-align: center;
   margin-top: 10px; /* Réduisez l'espacement en dessous */
-  font-size: 0.9rem; /* Ajustez la taille du texte */
+  font-size: 1em; /* Ajustez la taille du texte */
   color: #f5f5f5;
+  font-family: "kalam", sans-serif;
+  font-weight: 500;
 }
 
 /* Positionner les boutons de contrôle en dehors de l'image */

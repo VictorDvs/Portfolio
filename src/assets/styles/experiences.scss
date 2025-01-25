@@ -1,14 +1,26 @@
 // Section "experiences"
 .experiences {
     padding-top: 200px; // Espacement supérieur pour la section
-    background-color: #121212ee; // Couleur de fond foncée avec transparence
+    background-color:  #121212; // Couleur de fond foncée avec transparence
     min-height: 100vh; // S'assurer que la section prend toute la hauteur de la fenêtre
-    color: #f5f5f5; // Couleur de texte claire
+    color: #EAEAEA ; // Couleur de texte claire
     box-sizing: border-box; // Assurer que les padding ne modifient pas les dimensions de la section
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    
   }
+
+h2{
+  font-family: "Racing Sans One", serif;
+  font-weight: 500;
+}
+
+p {
+  font-family: "kalam", sans-serif;
+  font-size: 1.6em;
+  color: #EAEAEA ;
+}
   
   // Container pour les éléments de la section "experiences"
   .row-xp {
@@ -33,6 +45,40 @@
 
   li {
     font-size: 1.3em;
+    font-family: "kalam", sans-serif;
+    color: #EAEAEA ;
+  }
+
+  /* Section Témoignages */
+  .tem {
+    
+    color: #EAEAEA ;
+    
+    text-align: left;
+    border-radius: 200px 25px 200px 26px;
+    min-height: 75vh;
+    width: 100%;
+    // max-width: 75%;
+    // padding: 40px;
+    // box-shadow: 0 10px 50px rgba(0, 0, 0, 0.637);
+    // overflow: auto;
+  }
+  
+  .tem p {
+    font-family: "Racing Sans One", serif;
+    font-weight: 400;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #EAEAEA ;
+    text-align: center;
+    font-size: 1.8em;
+  }
+  
+  .tem img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
   }
   
   // Media Query pour les petits écrans
