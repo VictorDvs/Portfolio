@@ -204,8 +204,8 @@ export default {
     ];
       this.css = [
         {
-        title: this.$t('projects.css.kyoto.title'),
-        desc: this.$t('projects.css.kyoto.desc'),
+        title: this.$t('projects.css_kyoto_title'),
+        desc: this.$t('projects.css_kyoto_desc'),
         image: 'Projets/projets-kyoto-css.png',
         link: 'https://kyoto-css-afpa-project.netlify.app/',
         }

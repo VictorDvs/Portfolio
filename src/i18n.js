@@ -90,14 +90,10 @@ const messages = {
         link: "https://morpion-afpa-project.netlify.app/"
       }
     ],
-    css: {
-      kyoto:{
-        title: "Visit Kyoto",
-        desc: "",
-        image: "Projets/projets-kyoto-css.png",
-        link: "https://kyoto-css-afpa-project.netlify.app/"
-      }
-    },
+    css_kyoto_title: "Visit Kyoto",
+    css_kyoto_desc: "",
+    css_kyoto_image: "Projets/projets-kyoto-css.png",
+    css_kyoto_link: "https://kyoto-css-afpa-project.netlify.app/"
     },
     experiences: {
         title1: "EXFO Solutions, St. Jacques-de-la-Lande, November 2022 - August 2023",
@@ -215,14 +211,10 @@ const messages = {
         link: "https://morpion-afpa-project.netlify.app/"
       }
     ],
-    css: [
-      {
-        title: "Visitez Kyoto",
-        desc: "",
-        image: "Projets/projets-kyoto-css.png",
-        link: "https://kyoto-css-afpa-project.netlify.app/"
-      }
-    ]
+    css_kyoto_title: "Visitez Kyoto",
+    css_kyoto_desc: "",
+    css_kyoto_image: "Projets/projets-kyoto-css.png",
+    css_kyoto_link: "https://kyoto-css-afpa-project.netlify.app/"
     },
     experiences: {
         title1: "EXFO Solutions, St. Jacques-de-la-Lande, Novembre 2022 - Août 2023",
