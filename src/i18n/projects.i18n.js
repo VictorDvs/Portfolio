@@ -8,7 +8,7 @@ export const projectsMessages = {
       // Vue CLI
       vueCLI_title: 'Vue CLI Projects and Group Project',
       webwares_title: "WebWares Group Project",
-      webwares_desc:"",
+      webwares_desc:"User: entrepriseA@example.com Password: motdepasseA // Admin: web.wares@gmail.com Password: motdepasseB12_",
       randomAPI_title: "Random Questions API",
       randomAPI_desc: "Focus on VueX",
       shop_title: "The Shop",
@@ -48,7 +48,7 @@ export const projectsMessages = {
       // Vue CLI
       vueCLI_title: 'Projets Vue CLI',
       webwares_title: "Projet de groupe WebWares",
-      webwares_desc:"",
+      webwares_desc:"User: entrepriseA@example.com Password: motdepasseA // Admin: web.wares@gmail.com Password: motdepasseB12_",
       randomAPI_title: "API Questions aléatoires",
       randomAPI_desc: "Travail avec VueX",
       shop_title: "La boutique",

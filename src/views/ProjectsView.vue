@@ -41,7 +41,7 @@
             <a :href="project.link" target="_blank">
               <h5 class="card-title">{{ project.title }}</h5>
             </a>
-            <p class="card-text" v-html="project.desc"></p>
+            <p class="card-text">{{ project.desc }}</p>
           </div>
         </div>
       </div>
