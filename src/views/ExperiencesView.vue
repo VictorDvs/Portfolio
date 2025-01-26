@@ -6,9 +6,10 @@
         <p class="mb-3">{{ $t('experiences.tech') }}
             <span class="badge bg-success">Oxygen XML Editor</span> <span class="badge bg-success">PHP MyAdmin</span> <span class="badge bg-success">GitLab</span> <span class="badge bg-success">MkDocs</span> <span class="badge bg-success">Visual Studio Code</span> <span class="badge bg-info">DITA XML</span> <span class="badge bg-info">Markdown</span> <span class="badge bg-info">YAML</span>
         </p>
+        <p class="mb-4 mt-4">{{ $t('experiences.description1_1') }}</p>
         <p class="mb-4">{{ $t('experiences.description1') }}</p>
         <CarouselComponent :slides="carouselSlides1" id="carousel1" />
-        <div class="tem d-flex justify-content-center align-items-center mt-5 flex-column">
+        <div class="tem d-flex justify-content-center align-items-center flex-column">
             <p class="mb-5">
               <img src="/icon-helene.jpg" alt="Photo de ma collègue Hélène Le Tutour" class="helene me-2">
               Hélène Le Tutour, {{ $t('about.helene') }} <b>EXFO</b> :
@@ -21,7 +22,7 @@
         <p class="mb-3">{{ $t('experiences.tech') }} 
             <span class="badge bg-success">Paligo</span> <span class="badge bg-success">Oxygen XML Editor</span> <span class="badge bg-success">Confluence</span> <span class="badge bg-info">Docbook</span> <span class="badge bg-info">DITA XML</span>
         </p>
-        <p class="mb-4">{{ $t('experiences.description2') }}</p>
+        <p class="mb-4 mt-4">{{ $t('experiences.description2') }}</p>
         <p>{{ $t('experiences.resources') }}</p>
         <ul> 
         <li class="mb-2">{{ $t('experiences.linkOlfeoDoc') }} <a class="linkOlfeo" href="https://doc.saas.olfeo.eu/index.html?lang=fr" target="_blank" rel="noopener">Olfeo SaaS Doc</a></li>

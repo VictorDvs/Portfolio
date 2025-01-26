@@ -6,10 +6,10 @@ const messages = {
   en: {
     navbar: {
       about: "About Me",
-      projects: "Projects",
+      projects: "Web dev Projects",
       experiences: "Experiences",
       contact: "Contact",
-      cv: "My CV"
+      cv: "My CV (Web Dev)"
     },
     about: {
       title: "Welcome to my portfolio!",
@@ -21,13 +21,14 @@ const messages = {
           },
           ...projectsMessages.en,
     experiences: {
-        title1: "EXFO Solutions, St. Jacques-de-la-Lande, November 2022 - August 2023",
+        title1: "Technical writer at EXFO Solutions, November 2022 - August 2023",
         tech: " Technologies used:",
+        description1_1: "During my 9 months at EXFO, I learned a lot: managing multiple documentations simultaneously, code review, documentation migration (DITA to Markdown), setting up a Docs-as-Code workflow, and handling daily releases...",
         description1: "Since the technical documentation for EXFO solutions is confidential, I am unable to provide the documents I contributed to. However, I am presenting a few images that illustrate my work.",
-        carousel1_slide1:"Documentation setup with MkDocs", 
+        carousel1_slide1:"Doc setup with MkDocs", 
         carousel1_slide2:"Process for Publishing a New Version of Documentation",
         carousel1_slide3: "Comment Validation Process (Feedback)",  
-        title2: "Olfeo, Paris, Apprenticeship from September 2021 to September 2022",
+        title2: "Technical writer at Olfeo, apprenticeship from September 2021 to September 2022",
         description2: "Although the documentation has fortunately evolved over time, I had the opportunity to actively contribute to its redesign and development for Olfeo's SaaS solution. I was involved in integrating new features and creating new sections, such as the knowledge base, which includes use cases, problem-solving guides, and release notes.",
         resources: "To learn more :",
         linkOlfeoDoc: "Link to the documentation :",
@@ -53,11 +54,11 @@ const messages = {
       projects: "Projets Dév Web",
       experiences: "Expériences",
       contact: "Contact",
-      cv: "Mon CV"
+      cv: "Mon CV (Dév web)"
     },
     about: {
       title: "Bienvenue sur mon portfolio !",
-      paragraph1: `Je suis Victor, rédacteur technique et passionné par le web. J'aime créer des documentations claires et adaptées aux utilisateurs.`, 
+      paragraph1: `Je m'appelle Victor, rédacteur technique et passionné par le web. J'aime créer des documentations claires et adaptées aux utilisateurs.`, 
       paragraph2: `Actuellement, je suis une formation afin d’acquérir des compétences en langages et frameworks. Mon objectif futur est de pouvoir travailler en étroite collaboration avec les développeurs et ingénieurs pour concevoir une documentation précise et efficace.`, 
       paragraph3: "N’hésitez pas à consulter mes expériences et projets, et à me contacter pour toute collaboration.", 
       helene: "Rédactrice Technique chez",
@@ -66,13 +67,14 @@ const messages = {
     },
     ...projectsMessages.fr,
     experiences: {
-        title1: "EXFO Solutions, St. Jacques-de-la-Lande, Novembre 2022 - Août 2023",
+        title1: "Rédacteur technique chez EXFO Solutions, Novembre 2022 - Août 2023",
         tech: " Stack utilisé :",
-        description1: "Étant donné que la documentation technique des solutions d'EXFO est confidentielle, je ne peux pas fournir les documents auxquels j'ai contribué. Cependant, je vous présente quelques images qui illustrent mon travail.",
-        carousel1_slide1: "Configuration de la documentation avec MkDocs",
+        description1_1: "Pendant mes 9 mois chez EXFO, j'ai énormément appris : gestion de plusieurs documentations à la fois, revue de code, migration de doc (DITA vers Markdown), mise en place d'un workflow Docs-as-Code, releases quotidiennes...",
+        description1: "Comme la documentation technique d'EXFO est confidentielle, je ne peux pas fournir les documents auxquels j'ai contribué. Cependant, je présente ci-dessous un fichier YAML et 2 process qui illustrent certaines de mes missions.",
+        carousel1_slide1: "Configuration d'une doc avec MkDocs",
         carousel1_slide2: "Process de publication d'une nouvelle version de documentation",  
         carousel1_slide3: "Process de validation des commentaires (feedback)",  
-        title2: "Olfeo, Paris, En alternance de septembre 2021 à septembre 2022",
+        title2: "Rédacteur technique chez Olfeo, en alternance de septembre 2021 à septembre 2022",
         description2: "Bien que la documentation ait heureusement évolué au fil du temps, j’ai eu l’opportunité de contribuer activement à sa refonte et à son développement pour la solution SaaS d’Olfeo. J’ai participé à l’intégration de nouvelles fonctionnalités et à la création de sections inédites, telles que la base de connaissances regroupant des cas d’usage, des résolutions de problèmes et des notes de version.",    
         resources: "Pour en savoir plus :",
         linkOlfeoDoc: "Lien vers la documentation :",

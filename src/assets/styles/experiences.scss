@@ -24,7 +24,7 @@ p {
   
   // Container pour les éléments de la section "experiences"
   .row-xp {
-    width: 65%; // Largeur de la zone de contenu
+    width: 75%; // Largeur de la zone de contenu
     margin: 0 auto; // Centrer la section horizontalement
     @include displayFlex;
     text-align: justify; // Justifier le texte pour une présentation uniforme
@@ -67,10 +67,11 @@ p {
   .tem p {
     font-family: "Racing Sans One", serif;
     font-weight: 400;
-    margin: 0 auto;
-    line-height: 1.8;
+    font-style: normal;
+    // margin: 0 auto;
+    line-height: 1.6;
     color: #EAEAEA ;
-    text-align: center;
+    text-align: left;
     font-size: 1.8em;
   }
   
@@ -80,12 +81,20 @@ p {
     border-radius: 50%;
     margin-right: 10px;
   }
+
+  @media screen and (max-width: 800px) {
+    /* Section exfo - Marges pour les petits écrans */
+    .tem {
+      margin-top: 100px; // Ajouter un espacement en bas
+    }
+  }
   
   // Media Query pour les petits écrans
   @media screen and (max-width: 770px) {
     /* Section exfo - Marges pour les petits écrans */
     .section-exfo {
       margin-bottom: 100px; // Ajouter un espacement en bas
+      width: 90%;
     }
   
     .experiences {
@@ -100,6 +109,11 @@ p {
     /* Modification du texte dans la section "experiences" */
     .experiences p {
       text-align: start; // Aligner le texte au début pour une meilleure lisibilité sur petits écrans
+    }
+
+    .tem p {
+      font-size: 1.4em;
+      text-align: center;// Réduire la taille du texte dans les témoignages sur petits écrans
     }
   }
   

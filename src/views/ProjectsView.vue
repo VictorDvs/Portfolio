@@ -150,6 +150,12 @@ export default {
         link: 'https://vuecli-ecfproject-afpa-project.netlify.app/#/',
       },
       {
+        title: this.$t('pablocires_title'),
+        desc: this.$t('pablocires_desc'),
+        image: 'Projets/projets-pablo-cires.png',
+        link: 'https://www.pablocires.me/',
+      },
+      {
         title: this.$t('randomAPI_title'),
         desc: this.$t('randomAPI_desc'),
         image: 'Projets/projets-random-questions-vuecli.png',
@@ -223,86 +229,6 @@ export default {
 
 <style lang="scss" scoped>
 
-.projets{
-  text-align: center;
-  background-color:  #121212;
-  color: #f5f5f5;
-    height: 100%;
-}
-
-.projets h3 {
-  font-family: "Racing Sans One", serif;
-      font-weight: 400;
-    font-style: normal;
-    font-size: 2em;
-}
-
-.projets a {
-  text-decoration: none;
-  color: black;
-}
-
-.row-equal{
-    display: flex;
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-.scroll-offset {
-   position: relative;
-   padding-top: 120px; /* Ajuste en fonction de la hauteur de ton header */
-   margin-top: -70px;
-}
-
-.row-equal h3 {
-  margin-bottom: 30px;
-  text-align: start;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    // height: 150px;
-    border-radius: 10px;
-    border: none;
-    transition: transform 0.3s ease;
-    margin-bottom: 50px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.281);
-    // width: 100px;
-}
-
-.card:hover {
-    transform: scale(1.07);
-  }
-
-.card-img-top{
-cursor: pointer;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
-background-position: center;
-border-bottom: 1px solid #8e8e8e7d;
-// height: 100px;
-// width: auto;
-}
-
-.card-title {
-  font-family: "Kalam", sans-serif;
-  font-size: 1.5em;
-}
-
-.card-body {
-  text-align: center;
-  
-}
-
-.cli{
-  font-size: 1.3em;
-  text-align: center;
-}
-
-#symfony{
-  padding-top: 250px;
-}
+@import "@/assets/styles/_projects.scss";
 
 </style>

@@ -17,8 +17,8 @@
             </div>
   
             <!-- Intro Text -->
-            <div class="home-text-intro text-center text-lg-start">
-              <h2 id="text-greetings">{{ $t('about.title') }}</h2>
+            <div class="home-text-intro text-center text-lg-center">
+              <h1 id="text-greetings">{{ $t('about.title') }}</h1>
             </div>
           </div>
         </div>

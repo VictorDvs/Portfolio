@@ -4,6 +4,8 @@ export default {
     const navbar = el;
     const scrollThreshold = 200; // Seuil de scroll en pixels avant d'appliquer l'effet
 
+    navbar.style.transition = 'transform 0.4s ease-out'; 
+
     const onScroll = () => {
       const currentScroll = window.scrollY;
 

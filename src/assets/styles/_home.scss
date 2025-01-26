@@ -20,58 +20,24 @@ a {
   
   /* Section Accueil */
   .home {
-    padding-top: 150px;
+    padding-top: 130px;
     padding-bottom: 125px;
     background-color:  #121212;
     // min-height: 100%;
     // min-width: 100%;
   }
   
-  /* Section Bio */
-  // .bio {
-  //   padding-top: 50px;
-  // }
+  /* Section Bio 
   
   /* Texte d'introduction de la page d'accueil */
   .home-text-intro {
     padding: 50px 0;
+    min-width: 200px; /* Ajustez cette valeur en fonction de vos besoins */
+    max-width: 715px; /* Ajoutez un maximum pour éviter que le texte déborde */
+    flex-grow: 1; /* Permet de s'adapter aux changements, mais reste équilibré */
     
-    // min-width: 670px;
   }
-  
-  /* Image de profil */
-  // .helene-profil {
-  //   padding-left: 40px;
-  // }
-  
-  /* Section Témoignages */
-  // .tem {
-  //   font-family: "Kalam", cursive;
-  //   color: #f5f5f5;
-  //   font-size: 1.2em;
-  //   text-align: left;
-  //   border-radius: 200px 25px 200px 26px;
-  //   min-height: 75vh;
-  //   width: 100%;
-  //   max-width: 75%;
-  //   padding: 40px;
-  //   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.637);
-  //   overflow: auto;
-  // }
-  
-  // .tem p {
-  //   font-weight: 500;
-  //   margin: 0 auto;
-  //   line-height: 1.8;
-  // }
-  
-  // .tem img {
-  //   width: 50px;
-  //   height: 50px;
-  //   border-radius: 50%;
-  //   margin-right: 10px;
-  // }
-  
+
   /* Conteneur circulaire */
   .circle-container {
     position: relative;
@@ -155,6 +121,7 @@ a {
   
   /* Tablettes */
   @media (max-width: 1200px) {
+    
     #text-greetings {
       font-size: 3em;
     }
@@ -169,8 +136,11 @@ a {
   
   /* Mobiles */
   @media (max-width: 992px) {
+    .home-text-intro{
+      padding-bottom: 0;
+    }
     #text-greetings {
-      font-size: 2.5em;
+      font-size: 3em;
     }
     #text-body {
       font-size: 1.2em;
@@ -180,15 +150,16 @@ a {
   
   /* Petits écrans */
   @media (max-width: 768px) {
+    
     #text-greetings {
-      font-size: 2em;
+      font-size: 3em;
       margin-bottom: 30px;
     }
     #text-body {
       font-size: 1.1em;
       line-height: 1.6;
       margin: 0 10px;
-      text-align: justify;
+      text-align: left;
     }
     .tem {
       font-size: 1em;
@@ -196,19 +167,19 @@ a {
       padding: 15px;
       width: 100%;
       max-width: 100%;
-      text-align: justify;
+      text-align: left;
     }
   }
   
   /* Très petits écrans */
   @media (max-width: 576px) {
     #text-greetings {
-      font-size: 1.8em;
+      font-size: 2.5em;
       line-height: 1.2;
     }
     #text-body {
       font-size: 1em;
-      text-align: justify;
+      text-align: left;
     }
 
     .tem {
