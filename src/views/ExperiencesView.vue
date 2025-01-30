@@ -17,7 +17,7 @@
             <p>{{ $t('about.tem') }}</p>
         </div>
     </div>
-    <div class="row row-xp mt-5">
+    <div class="row row-xp mt-5 mb-5">
         <h2 class="mb-4">{{ $t('experiences.title2') }}</h2>
         <p class="mb-3">{{ $t('experiences.tech') }} 
             <span class="badge bg-success">Paligo</span> <span class="badge bg-success">Oxygen XML Editor</span> <span class="badge bg-success">Confluence</span> <span class="badge bg-info">Docbook</span> <span class="badge bg-info">DITA XML</span>
@@ -25,7 +25,7 @@
         <p class="mb-4 mt-4">{{ $t('experiences.description2') }}</p>
         <p>{{ $t('experiences.resources') }}</p>
         <ul> 
-        <li class="mb-2">{{ $t('experiences.linkOlfeoDoc') }} <a class="linkOlfeo" href="https://doc.saas.olfeo.eu/index.html?lang=fr" target="_blank" rel="noopener">Olfeo SaaS Doc</a></li>
+        <li class="mb-2">{{ $t('experiences.linkOlfeoDoc') }} <a class="linkOlfeo" href="https://doc.saas.olfeo.eu/index.html?lang=fr" target="_blank" rel="noopener">Olfeo SaaS</a></li>
         <li class="mb-4"> <a href="/Soutenance.pdf" target="_blank" rel="noopener">{{ $t('experiences.soutenance') }}</a></li>
         </ul>
         <CarouselComponent :slides="carouselSlides2" id="carousel2"/>

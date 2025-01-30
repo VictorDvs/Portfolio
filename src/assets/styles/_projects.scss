@@ -6,7 +6,7 @@
   }
   
   .projets h3 {
-    font-family: "Racing Sans One", serif;
+    font-family: "Readex Pro", sans-serif;
         font-weight: 400;
       font-style: normal;
       font-size: 2em;
@@ -62,13 +62,17 @@
   }
   
   .card-title {
-    font-family: "Kalam", sans-serif;
+    font-family: "Signika", sans-serif;
     font-size: 1.5em;
   }
   
   .card-body {
     text-align: center;
     height: fit-content;
+  }
+
+  .card-body p {
+    font-family: "Readex Pro", serif;
   }
   
   .cli{

@@ -106,7 +106,7 @@ export default {
   margin-top: 10px; /* Réduisez l'espacement en dessous */
   font-size: 1em; /* Ajustez la taille du texte */
   color: #f5f5f5;
-  font-family: "kalam", sans-serif;
+  font-family: "Signika", sans-serif;
   font-weight: 500;
 }
 

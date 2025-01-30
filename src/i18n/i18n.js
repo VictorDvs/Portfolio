@@ -40,7 +40,7 @@ const messages = {
 
       },
     contact: {
-      description: "I would be happy to chat with you! Whether you have questions, projects in mind, or just want to have a conversation, feel free to reach out to me. You can count on a quick response so we can move forward together.",
+      description: "I would be happy to chat with you! Whether you have questions, projects in mind, or just want to have a conversation, feel free to reach out to me.",
       form: {
         email: "Email",
         message: "Message",
@@ -59,10 +59,10 @@ const messages = {
     about: {
       title: "Bienvenue sur mon portfolio !",
       paragraph1: `Je m'appelle Victor, rédacteur technique et passionné par le web. J'aime créer des documentations claires et adaptées aux utilisateurs.`, 
-      paragraph2: `Actuellement, je suis une formation afin d’acquérir des compétences en langages et frameworks. Mon objectif futur est de pouvoir travailler en étroite collaboration avec les développeurs et ingénieurs pour concevoir une documentation précise et efficace.`, 
+      paragraph2: `Actuellement, je suis une formation afin d’acquérir des compétences en langages et frameworks de programmation. Mon objectif futur est de pouvoir travailler en étroite collaboration avec les développeurs et ingénieurs pour concevoir une documentation précise et efficace.`, 
       paragraph3: "N’hésitez pas à consulter mes expériences et projets, et à me contacter pour toute collaboration.", 
       helene: "Rédactrice Technique chez",
-      tem: '"Victor a rejoint mon équipe dans le cadre d`\'un remplacement de 9 mois, au cours d\'une période d\'importantes transformations dans l\'entreprise. Bien que cela soit sa première réelle expérience professionnelle en tant que rédacteur technique, il m\'a impressionnée par la rapidité avec laquelle il est monté en compétences et s\'est adapté à nos outils et méthodes. Victor m\'a notamment été d\'une aide considérable dans la mise en place de la méthode \'Doc-as-code\'. Curieux par nature et soucieux de bien faire, il s\'est beaucoup investi dans les recherches en vue d\'optimiser nos méthodes et a été force de proposition. Victor est calme et discret sans pour autant être effacé. Il a un effet apaisant et positif sur l\'équipe, c\'est extrêmement agréable de travailler avec lui. Il a toutes les qualités pour évoluer avec succès dans le monde de la rédaction technique ou ailleurs. Je le recommande vivement."'
+      tem: '" Victor a rejoint mon équipe dans le cadre d\'un remplacement de 9 mois, au cours d\'une période d\'importantes transformations dans l\'entreprise. Bien que cela soit sa première réelle expérience professionnelle en tant que rédacteur technique, il m\'a impressionnée par la rapidité avec laquelle il est monté en compétences et s\'est adapté à nos outils et méthodes. Victor m\'a notamment été d\'une aide considérable dans la mise en place de la méthode \'Doc-as-code\'. Curieux par nature et soucieux de bien faire, il s\'est beaucoup investi dans les recherches en vue d\'optimiser nos méthodes et a été force de proposition. Victor est calme et discret sans pour autant être effacé. Il a un effet apaisant et positif sur l\'équipe, c\'est extrêmement agréable de travailler avec lui. Il a toutes les qualités pour évoluer avec succès dans le monde de la rédaction technique ou ailleurs. Je le recommande vivement. "'
 
     },
     ...projectsMessages.fr,
@@ -85,7 +85,7 @@ const messages = {
         carousel2_slide4: "Notes de versions",
     },
     contact: {
-      description: "Je serai ravi d'échanger avec vous ! Que vous ayez des questions, des projets en tête, ou simplement une envie de discuter, n'hésitez pas à m'écrire. Vous pouvez compter sur une réponse rapide pour que nous puissions avancer ensemble.",
+      description: "Je serai ravi d'échanger avec vous ! Que vous ayez des questions, des projets en tête, ou simplement une envie de discuter, n'hésitez pas à m'écrire.",
       form: {
         email: "Email",
         message: "Message",
