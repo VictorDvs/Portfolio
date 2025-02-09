@@ -9,7 +9,7 @@ const messages = {
       projects: "Web dev Projects",
       experiences: "Experiences",
       contact: "Contact",
-      cv: "My CV (Web Dev)"
+      cv: "My CV"
     },
     about: {
       title: "Welcome to my portfolio!",
@@ -54,7 +54,7 @@ const messages = {
       projects: "Projets Dév Web",
       experiences: "Expériences",
       contact: "Contact",
-      cv: "Mon CV (Dév web)"
+      cv: "Mon CV"
     },
     about: {
       title: "Bienvenue sur mon portfolio !",
