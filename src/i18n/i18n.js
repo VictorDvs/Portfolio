@@ -6,6 +6,7 @@ const messages = {
   en: {
     navbar: {
       about: "About Me",
+      techWritingProjects: "Tech writer Projects",
       projects: "Web dev Projects",
       experiences: "Experiences",
       contact: "Contact",
@@ -19,6 +20,11 @@ const messages = {
       helene: "Technical Writer at",
       tem: `"Victor joined my team for a 9-month replacement during a period of significant transformations within the company. Although this was his first real professional experience as a technical writer, I was impressed by how quickly he acquired new skills and adapted to our tools and methods. Victor was particularly helpful in implementing the 'Docs-as-Code' methodology. Naturally curious and eager to do things well, he invested considerable effort in researching ways to optimize our processes and was proactive in making suggestions. Victor is calm and discreet without being withdrawn. He has a calming and positive effect on the team, making it extremely pleasant to work with him. He has all the qualities needed to thrive successfully in the world of technical writing or beyond. I highly recommend him."`
           },
+    techWritingProjects: {
+      docusaurus_title: "Docusaurus",
+      fastpack_title: `Fastpack`, 
+      fastpack_description: `Fictional project created with Docusaurus`,
+    },
           ...projectsMessages.en,
     experiences: {
         title1: "Technical writer at EXFO Solutions, November 2022 - August 2023",
@@ -51,6 +57,7 @@ const messages = {
   fr: {
     navbar: {
       about: "À mon propos",
+      techWritingProjects: "Projets Rédacteur tech",
       projects: "Projets Dév Web",
       experiences: "Expériences",
       contact: "Contact",
@@ -63,7 +70,11 @@ const messages = {
       paragraph3: "N’hésitez pas à consulter mes expériences et projets, et à me contacter pour toute collaboration.", 
       helene: "Rédactrice Technique chez",
       tem: '" Victor a rejoint mon équipe dans le cadre d\'un remplacement de 9 mois, au cours d\'une période d\'importantes transformations dans l\'entreprise. Bien que cela soit sa première réelle expérience professionnelle en tant que rédacteur technique, il m\'a impressionnée par la rapidité avec laquelle il est monté en compétences et s\'est adapté à nos outils et méthodes. Victor m\'a notamment été d\'une aide considérable dans la mise en place de la méthode \'Doc-as-code\'. Curieux par nature et soucieux de bien faire, il s\'est beaucoup investi dans les recherches en vue d\'optimiser nos méthodes et a été force de proposition. Victor est calme et discret sans pour autant être effacé. Il a un effet apaisant et positif sur l\'équipe, c\'est extrêmement agréable de travailler avec lui. Il a toutes les qualités pour évoluer avec succès dans le monde de la rédaction technique ou ailleurs. Je le recommande vivement. "'
-
+    },
+    techWritingProjects: {
+      docusaurus_title: "Docusaurus",
+      fastpack_title: `Fastpack`, 
+      fastpack_description: `Projet fictif réalisé avec Docusaurus`,
     },
     ...projectsMessages.fr,
     experiences: {

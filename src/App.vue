@@ -42,22 +42,9 @@ export default {
 
 <style>
 
-html, body {
-  height: 10vh;
-}
-
-/* a{
-    text-decoration: none;
-    color: black;
-    font-weight: 400;
-} */
-
 p {
     font-size: 1.5em;
     font-weight: 200;
 }
-
-
-
 
 </style>

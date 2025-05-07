@@ -13,6 +13,7 @@
         <div class="collapse navbar-collapse justify-content-end " :class="{ show: isMenuOpen }" id="navbarNav">
           <div class="navbar-nav ">
             <router-link class="nav-link" :to="'/'" @click="closeMenu"> {{ $t('navbar.about') }} </router-link>
+            <router-link class="nav-link nav-anchor" :to="'/tech-writing-projects'" @click="closeMenu">{{ $t('navbar.techWritingProjects') }}</router-link>
             <div class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" role="button" @click.prevent="toggleDropdown" aria-expanded="isDropdownOpen">
         {{ $t('navbar.projects') }}

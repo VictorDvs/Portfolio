@@ -2,7 +2,7 @@
     <div>
         <HeaderComponent/>
     </div>
-    <div id="projets" class="container-fluid projets section">
+    <div id="projets" class="container-fluid projets">
     
       <div class="row row-equal scroll-offset" id="symfony">
       <h3>{{ $t('symfony_title') }}</h3>

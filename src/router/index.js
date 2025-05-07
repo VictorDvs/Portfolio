@@ -10,6 +10,12 @@ const routes = [
     meta: { title: 'Home' },
   },
   {
+    path: '/tech-writing-projects',
+    name: 'tech-writing-projects',
+    component: () => import(/* webpackChunkName: "about" */ '../views/TechWritingProjectsView.vue'),
+    meta: { title: 'Tech writing Projects' },
+  },
+  {
     path: '/projects',
     name: 'projects',
     component: () => import(/* webpackChunkName: "about" */ '../views/ProjectsView.vue'),
