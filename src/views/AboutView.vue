@@ -42,17 +42,10 @@
 
   
           <!-- Social Media Links -->
-          <div class="col-12 d-flex justify-content-center mt-3" id="sources-perso">
-            <a target="_blank" href="https://github.com/VictorDvs?tab=repositories" rel="noopener">
-              <i class="bi bi-github me-3"></i>
-            </a>
-            <a target="_blank" href="https://www.linkedin.com/in/victor2vos/" rel="noopener">
-              <i class="bi bi-linkedin me-3"></i>
-            </a>
-            <a target="_blank" href="https://www.facebook.com/vittoriodevos" rel="noopener">
-              <i class="bi bi-facebook me-3"></i>
-            </a>
-          </div>
+
+
+          <embed src="/DE_VOS_VICTOR_CV.pdf" class="cv" type="application/pdf">
+
         </div>
         <!-- <div class=" tem d-flex justify-content-center align-items-center mt-5 flex-column">
             <p class="mb-5 helene-profil">

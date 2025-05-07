@@ -5,6 +5,18 @@
         <div class="row">
             <div class="col-sm-12 col-12 align-items-center d-flex justify-content-center flex-column">
                 <h3 id="invit">{{ $t('contact.description') }} </h3>
+
+                <div class="col-12 d-flex justify-content-center" id="sources-perso">
+            <a target="_blank" href="https://github.com/VictorDvs?tab=repositories" rel="noopener">
+              <i class="bi bi-github me-3"></i>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/victor2vos/" rel="noopener">
+              <i class="bi bi-linkedin me-3"></i>
+            </a>
+            <a target="_blank" href="https://www.facebook.com/vittoriodevos" rel="noopener">
+              <i class="bi bi-facebook me-3"></i>
+            </a>
+          </div>
    
              <!-- modify this form HTML and place wherever you want your form -->
                 <form id="form" action="https://formspree.io/f/mpwaeeld" method="POST">

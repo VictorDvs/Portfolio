@@ -28,7 +28,6 @@
    </div>
             <router-link class="nav-link nav-anchor" :to="'/experiences'" @click="closeMenu">{{ $t('navbar.experiences') }}</router-link>
             <router-link class="nav-link nav-anchor" :to="'/contact'" @click="closeMenu">{{ $t('navbar.contact') }}</router-link>
-            <a class="nav-link  nav-anchor" target="_blank" href="/CV_Victor_DE_VOS.pdf">{{ $t('navbar.cv') }}</a>
             <div class="language-switcher">
               <button
                 v-for="lang in languages"
