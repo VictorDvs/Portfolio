@@ -14,7 +14,7 @@ const messages = {
     },
     about: {
       title: "Welcome to my portfolio!",
-      paragraph1: `My name is Victor, a technical writer with a focus on software and more recently, a web developer`, 
+      paragraph1: `My name is Victor, a technical writer with a focus on software and more recently, a web developer.`, 
       paragraph2: `My few years in documenting digital solutions have given me the opportunity to document a SaaS solution as well as tools in the telecommunications sector. I have contributed to writing user guides, getting started documents, troubleshooting documentation, release notes, and many other resources, always with a focus on adapting to the needs of different user types.`, 
       paragraph3: "Explore my experiences and projects, and feel free to reach out if you're interested in collaborating.", 
       helene: "Technical Writer at",

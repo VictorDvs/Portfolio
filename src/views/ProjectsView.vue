@@ -136,6 +136,12 @@ export default {
     updateProjects() {
       this.symfony = [
         {
+          title: this.$t('alloafrofood_title'),
+          desc: this.$t('alloafrofood_desc'),
+          image: 'Projets/projets-alloafrofood.png',
+          link: 'https://alloafrofood.com/test/public/',
+        },
+        {
           title: this.$t('biblion_title'),
           desc: this.$t('biblion_desc'),
           image: 'Projets/projets-symfony-ecf-cover.png',

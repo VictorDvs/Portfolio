@@ -4,6 +4,8 @@ export const projectsMessages = {
       symfony_title: 'Symfony project',
       biblion_title: 'Library βιβλίον',
       biblion_desc: 'Check the README to install the site locally',
+      alloafrofood_title: 'Allo Afro Food',
+      alloafrofood_desc: 'Site still under development, offering several services (restaurant, caterer, grocery store)',
 
       // Vue CLI
       vueCLI_title: 'Vue CLI Projects and Group Project',
@@ -46,6 +48,8 @@ export const projectsMessages = {
       symfony_title: 'Projet Symfony',
       biblion_title: 'Bibliothèque βιβλίον',
       biblion_desc: 'Consultez le README afin d\'installer le site en local',
+      alloafrofood_title: 'Allo Afro Food',
+      alloafrofood_desc: 'Site toujours en développement, proposant plusieurs services (restaurant, traiteur, épicerie)',
 
       // Vue CLI
       vueCLI_title: 'Projets Vue CLI',
