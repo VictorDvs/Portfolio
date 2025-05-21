@@ -43,9 +43,6 @@
   padding: 5px;
   font-size: 30px; /* Taille du bouton burger */
   z-index: 1000;
-  // position: absolute;
-  // right: 15px; /* Positionne le bouton à droite */
-  // top: 15px; /* Positionne le bouton en haut */
   }
   
   /* Style des liens de la navbar */
@@ -88,6 +85,13 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .dropdown-toggle:hover, 
+  .dropdown-toggle:focus {
+    background-color: transparent !important;
+  color: var(--text-color) !important;
+  text-decoration: none;
+  }
   
   /* Menu déroulant du dropdown */
   .dropdown-menu {
@@ -123,6 +127,15 @@
     text-decoration: none;
   }
 
+  .dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: transparent !important;
+  color: var(--background-color) !important;
+  text-decoration: underline;
+}
+
+
+
   
   /* Commutateur de langue */
   .language-switcher {
@@ -152,7 +165,7 @@
   }
   
   /* Bouton de langue actif */
-  .btn-lang.active {
+  .btn-lang:focus {
     background-color: var(--background-color);
     color: var(--text-color);
   }
