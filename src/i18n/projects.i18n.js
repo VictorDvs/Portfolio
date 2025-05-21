@@ -54,7 +54,7 @@ export const projectsMessages = {
       biblion_title: 'Bibliothèque βιβλίον',
       biblion_desc: 'Premier projet réalisé avec Symfony, il s\'agit d\'un portail fictif d\'une bibliothèque à travers duquel un utilisateur se connecte et résèrve des livres. Vous pouvez lire le Readme sur mon repository pour installer le projet ! Version française uniquement.',
       alloafrofood_title: 'Allo Afro Food',
-      alloafrofood_desc: 'Site marchand de restauration africaine créé lors de mon stage dans l\'entreprise Baïfall Dream. Le projet est encore en développement mais une version "test" est hébergée sur Hostinger. Nous l\'avons conçu à 2 avec Symfony 6. Le site propose différents service comme pouvoir commander en ligne (restaurant / épicerie) et demander un devis pour le service traiteur. Affaire à suivre !',
+      alloafrofood_desc: 'Site marchand de restauration africaine créé lors de mon stage dans l\'entreprise Baïfall Dream. Le projet est encore en développement mais une version "test" est hébergée sur Hostinger. Nous l\'avons conçu à 2 avec Symfony 6. Le site propose plusieurs services comme pouvoir commander en ligne (restaurant / épicerie) et demander un devis pour le service traiteur. Affaire à suivre !',
 
       // Vue CLI
       vueCLI_title: 'Projets Vue.js',
