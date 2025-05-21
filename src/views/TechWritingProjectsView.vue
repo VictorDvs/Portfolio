@@ -20,10 +20,29 @@
             <a :href="project.link" target="_blank">
               <h5 class="card-title">{{ project.title }}</h5>
             </a>
-            <p class="card-text cli" v-html="project.desc"></p>
+                        <!-- Bouton qui déclenche le dialog -->
+           <v-btn color="primary" @click="openDialog('docusaurus', index)" class="mt-2">
+            {{ $t('learn_more') }}
+          </v-btn>
           </div>
         </div>
       </div>
+             <!-- Dialog Vuetify -->
+    <v-dialog v-model="dialog" max-width="600">
+      <v-card>
+        <v-card-title class="headline">
+          {{ selectedProject?.title }}
+        </v-card-title>
+        <v-card-text v-html="selectedProject?.desc" />
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" :href="selectedProject?.link" target="_blank">
+            {{ $t('visit_project') }}
+          </v-btn>
+          <v-btn text @click="dialog = false">{{ $t('close') }}</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
     </div>
   </div>
 </template>
@@ -35,6 +54,8 @@ export default {
   data() {
     return {
       docusaurus: [],
+      dialog: false,
+      selectedProject: null,
     };
   },
   components: {
@@ -54,6 +75,10 @@ export default {
         },
       ]
     },
+    openDialog(category, index) {
+  this.selectedProject = this[category][index];
+  this.dialog = true;
+}
   },
   watch: {
   // Surveille les changements de langue pour recharger les traductions

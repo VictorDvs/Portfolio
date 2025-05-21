@@ -35,10 +35,10 @@
                     <!-- <a href="https://territoiredigital.afpa.fr/fr/fair/visiting/1" target="_blank" rel="noopener" class="me-contacter">l'AFPA Territoire Digital</a> {{ $t('about.paragraph2_part2') }} -->
                 </p>
                 <p>
-    {{ $t('about.paragraph3') }}
-    <!-- <router-link to="/contact" class="me-contacter">{{ $t('about.paragraph3_part3') }}</router-link> -->
-  </p>
-</div>
+                    {{ $t('about.paragraph3') }}
+                    <!-- <router-link to="/contact" class="me-contacter">{{ $t('about.paragraph3_part3') }}</router-link> -->
+                  </p>
+                </div>
 
   
           <!-- Social Media Links -->

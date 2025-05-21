@@ -20,10 +20,28 @@
             <a :href="project.link" target="_blank">
               <h5 class="card-title">{{ project.title }}</h5>
             </a>
-            <p class="card-text cli" v-html="project.desc"></p>
+            <v-btn color="primary" @click="openDialog('symfony', index)" class="mt-2">
+            {{ $t('learn_more') }}
+          </v-btn>
           </div>
         </div>
       </div>
+       <!-- Dialog Vuetify -->
+    <v-dialog v-model="dialog" max-width="600">
+      <v-card>
+        <v-card-title class="headline">
+          {{ selectedProject?.title }}
+        </v-card-title>
+        <v-card-text v-html="selectedProject?.desc" />
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" :href="selectedProject?.link" target="_blank">
+            {{ $t('visit_project') }}
+          </v-btn>
+          <v-btn text @click="dialog = false">{{ $t('close') }}</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
     </div>
       <div class="row row-equal scroll-offset" id="vueCLI">
       <h3>{{ $t('vueCLI_title') }}</h3>
@@ -41,31 +59,29 @@
             <a :href="project.link" target="_blank">
               <h5 class="card-title">{{ project.title }}</h5>
             </a>
-            <p class="card-text" v-html="project.desc"></p>
+            <!-- Bouton qui déclenche le dialog -->
+           <v-btn color="primary" @click="openDialog('VueCLI', index)" class="mt-2">
+            {{ $t('learn_more') }}
+          </v-btn>
           </div>
         </div>
       </div>
-    </div>
-    <div class="row row-equal scroll-offset" id="vueCDN">
-      <h3>{{ $t('vueCDN_title') }}</h3>
-      <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
-      <div 
-        v-for="(project, index) in VueCDN" 
-        :key="index" 
-        class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center card-margin"
-      >
-        <div class="card">
-          <a :href="project.link" target="_blank" rel="noopener">
-            <img :src="project.image" class="card-img-top" :alt="project.title" />
-          </a>
-          <div class="card-body">
-            <a :href="project.link" target="_blank">
-              <h5 class="card-title">{{ project.title }}</h5>
-            </a>
-            <p class="card-text">{{ project.desc }}</p>
-          </div>
-        </div>
-      </div>
+    <!-- Dialog Vuetify -->
+    <v-dialog v-model="dialog" max-width="600">
+      <v-card>
+        <v-card-title class="headline">
+          {{ selectedProject?.title }}
+        </v-card-title>
+        <v-card-text v-html="selectedProject?.desc" />
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" :href="selectedProject?.link" target="_blank">
+            {{ $t('visit_project') }}
+          </v-btn>
+          <v-btn text @click="dialog = false">{{ $t('close') }}</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
     </div>
     
     <div class="row row-equal scroll-offset" id="vanillaJS">
@@ -84,10 +100,29 @@
             <a :href="project.link" target="_blank">
               <h5 class="card-title">{{ project.title }}</h5>
             </a>
-            <p class="card-text text-center">{{ project.desc }}</p>
+            <!-- Bouton qui déclenche le dialog -->
+           <v-btn color="primary" @click="openDialog('vanillaJS', index)" class="mt-2">
+            {{ $t('learn_more') }}
+          </v-btn>
           </div>
         </div>
       </div>
+    <!-- Dialog Vuetify -->
+    <v-dialog v-model="dialog" max-width="600">
+      <v-card>
+        <v-card-title class="headline">
+          {{ selectedProject?.title }}
+        </v-card-title>
+        <v-card-text v-html="selectedProject?.desc" />
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" :href="selectedProject?.link" target="_blank">
+            {{ $t('visit_project') }}
+          </v-btn>
+          <v-btn text @click="dialog = false">{{ $t('close') }}</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
     </div>
     <div class="row row-equal scroll-offset" id="css">
       <h3>{{ $t('css_title') }}</h3>
@@ -105,10 +140,29 @@
             <a :href="project.link" target="_blank">
               <h5 class="card-title">{{ project.title }}</h5>
             </a>
-            <p class="card-text text-center">{{ project.desc }}</p>
+            <!-- Bouton qui déclenche le dialog -->
+           <v-btn color="primary" @click="openDialog('css', index)" class="mt-2">
+            {{ $t('learn_more') }}
+          </v-btn>
           </div>
         </div>
       </div>
+    <!-- Dialog Vuetify -->
+    <v-dialog v-model="dialog" max-width="600">
+      <v-card>
+        <v-card-title class="headline">
+          {{ selectedProject?.title }}
+        </v-card-title>
+        <v-card-text v-html="selectedProject?.desc" />
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" :href="selectedProject?.link" target="_blank">
+            {{ $t('visit_project') }}
+          </v-btn>
+          <v-btn text @click="dialog = false">{{ $t('close') }}</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
     </div>
   </div>
 </template>
@@ -116,9 +170,13 @@
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue';
 
+
+
 export default {
   data() {
     return {
+      dialog: false,
+      selectedProject: null,
       symfony: [],
       VueCLI: [],
       VueCDN: [],
@@ -223,6 +281,10 @@ export default {
         }
       ]
     },
+openDialog(category, index) {
+  this.selectedProject = this[category][index];
+  this.dialog = true;
+}
   },
   watch: {
   // Surveille les changements de langue pour recharger les traductions

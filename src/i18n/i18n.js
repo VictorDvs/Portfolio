@@ -23,7 +23,12 @@ const messages = {
     techWritingProjects: {
       docusaurus_title: "Docusaurus",
       fastpack_title: `Fastpack`, 
-      fastpack_description: `Fictional project created with Docusaurus`,
+      fastpack_description: `Fastpack is a fictitious packaging tool designed to automate, simplify and standardize the preparation of web projects prior to deployment. I've tried to document it here with Docusaurus. (French version only, for the moment).`,
+
+            // Bouton 
+      learn_more: "Learn more",
+      visit_project: "Visit project",
+      close: "Close"
     },
           ...projectsMessages.en,
     experiences: {
@@ -74,7 +79,12 @@ const messages = {
     techWritingProjects: {
       docusaurus_title: "Docusaurus",
       fastpack_title: `Fastpack`, 
-      fastpack_description: `Projet fictif réalisé avec Docusaurus`,
+      fastpack_description: `Fastpack est un outil fictif de packaging conçu pour automatiser, simplifier et standardiser la préparation de projets web avant déploiement. J'ai tenté ici de le documenter avec Docusaurus (En version française uniquement pour le moment).`,
+      
+      // Bouton
+      learn_more: "En savoir plus",
+      visit_project: "Visiter le projet",
+      close: "Fermer"
     },
     ...projectsMessages.fr,
     experiences: {
