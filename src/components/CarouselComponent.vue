@@ -12,11 +12,15 @@
       </div>
     </div>
     <button class="carousel-control-prev" type="button" :data-bs-target="`#${id}`" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+       <svg class="carousel-control-prev-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true">
+    <path d="M11 1L3 8l8 7" fill="currentColor"/>
+  </svg>
       <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" :data-bs-target="`#${id}`" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <svg class="carousel-control-next-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true">
+    <path d="M5 1l8 7-8 7" fill="currentColor"/>
+  </svg>
       <span class="visually-hidden">Next</span>
     </button>
     <div class="carousel-caption-below">
@@ -74,67 +78,7 @@ export default {
 </script>
 
 <style scoped>
-.carousel {
-  width: 100%;
-  min-height: 45vh; /* Garantir que le carousel occupe toute la hauteur de la fenêtre */
-}
 
-.carousel-inner {
-  max-height: 400px; /* Assurez-vous que le contenu respecte la hauteur maximale */
-}
-
-.image-container {
-  width: 100%;
-  height: 400px; /* Fixez la hauteur des images */
-  overflow: hidden; /* Cachez le dépassement éventuel */
-}
-
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ajustez l'image pour qu'elle remplisse l'espace sans distorsion */
-  transition: transform 0.3s ease; /* Ajoutez une animation de zoom */
-}
-
-.image-container img:hover {
-  cursor: zoom-in;
-  transform: scale(1.1); /* Ajoutez un léger zoom au survol */
-}
-
-.carousel-caption-below {
-  text-align: center;
-  margin-top: 10px; /* Réduisez l'espacement en dessous */
-  font-size: 1em; /* Ajustez la taille du texte */
-  color: #f5f5f5;
-  font-family: "Signika", sans-serif;
-  font-weight: 500;
-}
-
-/* Positionner les boutons de contrôle en dehors de l'image */
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  top: 50%; /* Centrer verticalement */
-  transform: translateY(-50%); /* Centrer précisément */
-  z-index: 5; /* Assurez-vous que les boutons sont au-dessus de l'image */
-  
-}
-
-.carousel-control-prev {
-  left: -120px; /* Placer le bouton précédent à gauche du carousel */
-  
-}
-
-.carousel-control-next {
-  right: -120px; /* Placer le bouton suivant à droite du carousel */
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  font-size: 3.5rem; /* Ajustez la taille des contrôles */
-  color: white;
-  box-shadow: 0 0 5px rgb(0, 0, 0); /* Ajoutez une ombre légère pour les icônes */
-}
 
 @media screen and (max-width: 768px) {
   .carousel {

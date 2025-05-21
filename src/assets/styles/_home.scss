@@ -1,10 +1,8 @@
-// * {
-//   outline: 1px solid red;
-// }
+@import 'mixins'; 
 
 /* Liens */
 a {
-    color: #f5f5f5;
+    color: var(--text-color);
     font-weight: bolder;
     text-decoration: none;
   }
@@ -22,7 +20,7 @@ a {
   .home {
     padding-top: 110px;
     padding-bottom: 125px;
-    background-color:  #121212;
+    background-color:  var(--background-color);
     // min-height: 100%;
     // min-width: 100%;
   }
@@ -55,13 +53,16 @@ a {
   }
   
   /* Texte principal */
-  #text-body {
+  #text-body{
     font-family: "Signika", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.4em;
-    text-align: justify;
-    color: #EAEAEA ;
+    font-size: 1.2em;
+    text-align: left;
+  }
+
+  #text-body p{ 
+    color: var(--text-color);
   }
   
   /* Titre de salutation */
@@ -69,7 +70,7 @@ a {
     font-size: 3.5em;
     font-family: "Signika", sans-serif;
     font-weight: 500;
-    color: #f5f5f5;
+    color: var(--text-color);
   }
   
   /* Auteur */
@@ -107,7 +108,7 @@ a {
   .bi {
     margin: 10px;
     cursor: pointer;
-    color: #f5f5f5;
+    color: var(--text-color);
     font-size: 25px;
   }
   

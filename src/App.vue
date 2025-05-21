@@ -1,11 +1,7 @@
 <template>
-  <!-- <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/projects">Mes projets</router-link> |
-    <router-link to="/experiences">Mes expériences professionnelles</router-link> |
-    <router-link to="/contact">Pour rentrer en contact 🛸</router-link>
-  </nav> -->
+  <v-app>
   <router-view/>
+  </v-app>
 </template>
 
 <script>

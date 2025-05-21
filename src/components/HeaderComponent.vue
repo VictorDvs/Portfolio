@@ -28,17 +28,18 @@
    </div>
             <router-link class="nav-link nav-anchor" :to="'/experiences'" @click="closeMenu">{{ $t('navbar.experiences') }}</router-link>
             <router-link class="nav-link nav-anchor" :to="'/contact'" @click="closeMenu">{{ $t('navbar.contact') }}</router-link>
-            <div class="language-switcher">
-              <button
-                v-for="lang in languages"
-                :key="lang"
-                class="btn btn-lang"
-                :class="{ active: lang === currentLocale }"
-                @click="changeLanguage(lang)"
-              >
-                {{ lang.toUpperCase() }}
-              </button>
-            </div>
+              <div class="d-flex language-switcher align-items-center">
+                <button
+                  v-for="lang in languages"
+                  :key="lang"
+                  class="btn btn-lang"
+                  :class="{ active: lang === currentLocale }"
+                  @click="changeLanguage(lang)"
+                >
+                  {{ lang.toUpperCase() }}
+                </button>
+              </div>
+                <ThemeToggle />
           </div>
         </div>
       </div>
@@ -46,6 +47,8 @@
   </template>
 
 <script>
+import ThemeToggle from './ThemeToggle.vue'
+
 
     export default {
       data() {
@@ -55,10 +58,14 @@
       languages: ['fr', 'en'], // Langues disponibles
     };
   },
+  components: {
+    ThemeToggle
+  },
   computed: {
     currentLocale() {
       return this.$i18n.locale; // Récupère la langue actuelle
     },
+    
   },
   methods: {
 

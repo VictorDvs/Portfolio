@@ -1,7 +1,8 @@
+@import 'mixins'; 
 /* Style principal de la navbar */
 #nav {
-    background-color: #121212;;
-    color: #EAEAEA ;
+    background-color: var(--background-color);
+    color: var(--text-color);
     z-index: 10;
     position: fixed;
     top: 0;
@@ -26,19 +27,19 @@
   }
   
   /* Style des liens de navigation */
-  .navbar-nav a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .navbar-nav > .nav-link:not(.dropdown-item) {
+    @include displayFlex;
     width: auto; /* Largeur ajustée automatiquement */
-    color: #f5f5f5;
+    color: var(--text-color);
     padding: 10px; /* Ajout de padding pour l'accessibilité */
+
+    
   }
 
   .navbar-toggler{
   border: none;
   background: transparent;
-  color: #f5f5f5;
+  color: var(--burger-button-color);
   padding: 5px;
   font-size: 30px; /* Taille du bouton burger */
   z-index: 1000;
@@ -55,6 +56,13 @@
     font-size: 1.6em;
     text-decoration: none;
     padding-bottom: 5px; /* Espace pour souligner les liens */
+
+    &:hover {
+    // color: var(--text-color); 
+    background: none;
+    text-decoration: none;
+    cursor: default;
+  }
   }
   
   /* Soulignement des liens actifs */
@@ -65,7 +73,7 @@
     left: 50;
     width: 60%;
     height: 2px;
-    background-color: #f5f5f5; /* Couleur du soulignement */
+    background-color: var(--text-color); /* Couleur du soulignement */
   }
   
   /* Suppression du soulignement pour certains liens */
@@ -83,11 +91,12 @@
   
   /* Menu déroulant du dropdown */
   .dropdown-menu {
+    width: 15em;
     position: absolute;
     top: calc(100% + 0.1rem);  
-    left: 15%;
+    left: 4%;
     z-index: 1050;
-    background: linear-gradient(to top, #444444, #121212);
+    background: var(--dropdown-header);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-100px);
@@ -106,16 +115,14 @@
   
   /* Style des éléments du dropdown */
   .dropdown-item {
-    color: #f5f5f5;
+    @include displayFlex;
+    color: var(--background-color);
     font-family: "Readex Pro", serif;
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1em;
+    text-decoration: none;
   }
-  
-  /* Survol des éléments du dropdown */
-  .dropdown-item:hover {
-    background-color: #121212;
-  }
+
   
   /* Commutateur de langue */
   .language-switcher {
@@ -128,8 +135,8 @@
     font-family: "Readex Pro", serif;
     font-weight: 600;
     background-color: transparent;
-    border: 1px solid #f5f5f5;
-    color: #f5f5f5;
+    border: 1px solid var(--background-color);
+    color: var(--text-color);
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 0.9em;
@@ -140,14 +147,14 @@
   
   /* Survol des boutons de langue */
   .btn-lang:hover {
-    background-color: #f5f5f5;
-    color: #121212;
+    background-color: var(--text-color);
+    color: var(--background-color);
   }
   
   /* Bouton de langue actif */
   .btn-lang.active {
-    background-color: #f5f5f5;
-    color: #121212;
+    background-color: var(--background-color);
+    color: var(--text-color);
   }
 
   
@@ -159,7 +166,7 @@
   
   /* Changer la couleur de l'icône */
   .bi-list {
-    color: #f5f5f5; /* Couleur claire pour le menu */
+    color: var(--text-color); /* Couleur claire pour le menu */
   }
   
   /* Media Queries pour les écrans réduits */
@@ -168,7 +175,7 @@
       flex-direction: column; /* Empile les liens en colonne */
       width: 100%; /* Respecte la largeur de l'écran */
       margin: 0; /* Supprime les marges */
-      padding: 0;
+      padding-bottom: 8px;
     }
   
     .router-link-exact-active::after {
@@ -181,5 +188,12 @@
       text-align: center; /* Centre le texte des liens */
     }
   
+  }
+
+  @media screen and (max-width: 990px) {
+    .navbar-nav {
+      border-bottom: 1px solid var(--text-color);
+      padding-bottom: 8px;
+    }
   }
   

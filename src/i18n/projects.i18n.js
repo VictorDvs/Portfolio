@@ -73,7 +73,7 @@ export const projectsMessages = {
 
       // JavaScript
       vanillaJS_title: 'Projets JavaScript',
-      quizz_title: "Quizz World Wibe Web",
+      quizz_title: "Quizz World Wide Web",
       quizz_desc: "",
       shifumi_title: "Shifumi",
       shifumi_desc: "",

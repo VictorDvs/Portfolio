@@ -1,0 +1,16 @@
+// _variables.scss
+:root {
+  --background-color: #eeeeee;
+  --text-color: #121212;
+  --burger-button-color: #eeeeee;
+  --dropdown-header: #121212;
+  --projects-card-text: #121212;
+}
+
+.theme-dark {
+  --background-color: #121212;
+  --text-color: #eeeeee;
+  --burger-button-color: #121212;
+  --dropdown-header: #eeeeee;
+  --projects-card-text: #121212;
+}

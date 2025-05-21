@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "bootstrap": "^5.3.3",
     "core-js": "^3.8.3",
     "drkmd-js": "^1.0.12",
@@ -15,6 +16,7 @@
     "vue": "^3.2.13",
     "vue-i18n": "^10.0.5",
     "vue-router": "^4.0.3",
+    "vuetify": "^3.8.5",
     "vuex": "^4.0.0"
   },
   "devDependencies": {

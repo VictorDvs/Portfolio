@@ -75,5 +75,5 @@
 
 <style lang="scss" scoped>
 @import "@/assets/styles/_mixins.scss";
-@import "@/assets/styles/experiences.scss";
+@import "@/assets/styles/_experiences.scss";
 </style>
