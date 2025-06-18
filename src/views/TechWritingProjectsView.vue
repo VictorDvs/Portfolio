@@ -71,7 +71,7 @@ export default {
           title: this.$t('techWritingProjects.fastpack_title'),
           desc: this.$t('techWritingProjects.fastpack_description'),
           image: 'Projets/projets-fastpack.png',
-          link: 'https://fastpack-software.netlify.app/',
+          link: 'https://fastpack-documentation.netlify.app/',
         },
       ]
     },
