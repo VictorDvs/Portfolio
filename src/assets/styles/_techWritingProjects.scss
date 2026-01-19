@@ -9,11 +9,12 @@
     text-align: center;
     background-color:  var(--background-color);
     color: var(--text-color);
-    height: 100vh;
-    display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+    height: 100%;
+    padding-top: 200px;
+  //   display: flex;
+  //  flex-direction: column;
+  //  justify-content: center;
+  //  align-items: center;
   }
   
   .projets h3 {
@@ -33,17 +34,23 @@
       max-width: 80%;
       margin: 0 auto;
   }
-  
-  #docusaurus.scroll-offset {
-     position: relative;
-     margin-top: 350px; /* Ajuste en fonction de la hauteur de ton header */
-  }
 
-    #mkdocs.scroll-offset {
-     position: relative;
-     padding-top: 50px;
-     margin-bottom: 350px;
-  }
+  //   .scroll-offset {
+  //    position: relative;
+  //    padding-top: 120px; /* Ajuste en fonction de la hauteur de ton header */
+  //    margin-top: -70px;
+  // }
+  
+  // #docusaurus.scroll-offset {
+  //    position: relative;
+  //    margin-top: 350px; /* Ajuste en fonction de la hauteur de ton header */
+  // }
+
+  //   #mkdocs.scroll-offset {
+  //    position: relative;
+  //    padding-top: 50px;
+  //    margin-bottom: 350px;
+  // }
   
   .row-equal h3 {
     margin-bottom: 30px;

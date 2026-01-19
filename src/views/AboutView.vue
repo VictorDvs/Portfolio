@@ -44,7 +44,7 @@
           <!-- Social Media Links -->
 
 
-          <embed src="/DE_VOS_VICTOR_CV.pdf" class="cv" type="application/pdf">
+          <embed src="/CV-Victor-De-Vos.pdf" class="cv" type="application/pdf">
 
         </div>
         <!-- <div class=" tem d-flex justify-content-center align-items-center mt-5 flex-column">
@@ -63,6 +63,9 @@
   
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
+import { useI18n } from 'vue-i18n'
+import Typed from 'typed.js'
+
 
 export default {
     name: 'AboutView',
@@ -71,6 +74,22 @@ export default {
         HeaderComponent,
     },
 
+      mounted() {
+    const { t } = useI18n()
+    const text = t('about.title')
+
+    // efface le texte par défaut et lance Typed.js
+    const el = document.getElementById('text-greetings')
+    if (el) {
+      el.textContent = ''
+      new Typed(el, {
+        strings: [text],
+        typeSpeed: 45,
+        startDelay: 300,
+        showCursor: true
+      })
+    }
+  }
 
 }
 </script>

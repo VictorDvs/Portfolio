@@ -13,10 +13,10 @@ const messages = {
       cv: "My CV"
     },
     about: {
-      title: "Welcome to my portfolio!",
-      paragraph1: `My name is Victor, a technical writer with a focus on software and more recently, a web developer.`, 
-      paragraph2: `My few years in documenting digital solutions have given me the opportunity to document a SaaS solution as well as tools in the telecommunications sector. I have contributed to writing user guides, getting started documents, troubleshooting documentation, release notes, and many other resources, always with a focus on adapting to the needs of different user types.`, 
-      paragraph3: "Explore my experiences and projects, and feel free to reach out if you're interested in collaborating.", 
+      title: "Hi, this is Victor! Welcome to my website.",
+      paragraph1: `I am a software-oriented technical writer with experience as a web developer.`, 
+      paragraph2: `I have documented a cybersecurity SaaS product as well as several software solutions in the telecommunications and medical sectors. I write clear and structured documentation—user guides, troubleshooting guides, release notes—tailored to specific uses and business contexts. I also develop websites using the Vue and Symfony frameworks.`, 
+      paragraph3: "Find out more about my projects and experience, and feel free to contact me.", 
       helene: "Technical Writer at",
       tem: `"Victor joined my team for a 9-month replacement during a period of significant transformations within the company. Although this was his first real professional experience as a technical writer, I was impressed by how quickly he acquired new skills and adapted to our tools and methods. Victor was particularly helpful in implementing the 'Docs-as-Code' methodology. Naturally curious and eager to do things well, he invested considerable effort in researching ways to optimize our processes and was proactive in making suggestions. Victor is calm and discreet without being withdrawn. He has a calming and positive effect on the team, making it extremely pleasant to work with him. He has all the qualities needed to thrive successfully in the world of technical writing or beyond. I highly recommend him."`
           },
@@ -71,10 +71,10 @@ const messages = {
       cv: "Mon CV"
     },
     about: {
-      title: "Bienvenue sur mon portfolio !",
-      paragraph1: `Je m'appelle Victor, rédacteur technique orienté logiciel et plus récemment développeur web.`, 
-      paragraph2: `Mes quelques années dans la documentation de solutions numériques m'ont donné l’occasion de documenter une solution SaaS ainsi que des outils dans le secteur des télécommunications. J’ai contribué à la rédaction de guides utilisateur, de démarrage, de documentations de troubleshooting, de notes de version et bien d’autres ressources, toujours avec le souci de m’adapter aux besoins des différents types d’utilisateurs.`, 
-      paragraph3: "Explorez mes expériences et projets, et contactez-moi si vous êtes intéressé par une collaboration.", 
+      title: "Bonjour, c'est Victor ! Bienvenue sur mon site.",
+      paragraph1: `Je suis rédacteur technique orienté logiciel, avec une casquette de développeur web.`, 
+      paragraph2: `J’ai documenté un produit SaaS de cybersécurité ainsi que plusieurs solutions logicielles dans les télécommunications et le secteur médical. Je rédige des documentations claires et structurées — guides utilisateurs, dépannage, notes de version — adaptées aux usages et aux contextes métiers. Je développe aussi des sites avec les frameworks Vue et Symfony.`, 
+      paragraph3: "Découvrez mes projets et expériences, et n’hésitez pas à me contacter.", 
       helene: "Rédactrice Technique chez",
       tem: '" Victor a rejoint mon équipe dans le cadre d\'un remplacement de 9 mois, au cours d\'une période d\'importantes transformations dans l\'entreprise. Bien que cela soit sa première réelle expérience professionnelle en tant que rédacteur technique, il m\'a impressionnée par la rapidité avec laquelle il est monté en compétences et s\'est adapté à nos outils et méthodes. Victor m\'a notamment été d\'une aide considérable dans la mise en place de la méthode \'Doc-as-code\'. Curieux par nature et soucieux de bien faire, il s\'est beaucoup investi dans les recherches en vue d\'optimiser nos méthodes et a été force de proposition. Victor est calme et discret sans pour autant être effacé. Il a un effet apaisant et positif sur l\'équipe, c\'est extrêmement agréable de travailler avec lui. Il a toutes les qualités pour évoluer avec succès dans le monde de la rédaction technique ou ailleurs. Je le recommande vivement. "'
     },

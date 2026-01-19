@@ -14,7 +14,7 @@ function toggleTheme() {
   }
 }
 
-const iconName = () => theme.global.current.value.dark ? 'mdi-weather-night' : 'mdi-white-balance-sunny'
+const iconName = () => theme.global.current.value.dark ? 'mdi-white-balance-sunny' : 'mdi-weather-night'
 const iconColor = () => theme.global.current.value.dark ? 'yellow lighten-3' : 'blue darken-2'
 
 </script>

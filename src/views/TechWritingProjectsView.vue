@@ -2,7 +2,7 @@
         <HeaderComponent/>
     <div id="projets" class="container-fluid projets section">
     
-      <div class="row row-equal scroll-offset" id="docusaurus">
+      <div class="row row-equal" id="docusaurus">
       <h3>{{ $t('techWritingProjects.docusaurus_title') }}</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
@@ -43,7 +43,7 @@
     </v-dialog>
     </div>
 
-    <div class="row row-equal scroll-offset" id="mkdocs">
+    <div class="row row-equal" id="mkdocs">
       <h3>{{ $t('techWritingProjects.mkdocs_title') }}</h3>
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
       <div 
