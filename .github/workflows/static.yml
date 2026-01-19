@@ -28,4 +28,6 @@ jobs:
         run: npm run build
 
       - name: Deploy to Netlify
-        run: npx netlify-cli deploy --prod --site ffdb6b07-6442-4736-bb4d-f79578ae026b --auth nfp_kaVdedGwiJjby653ygJpYmKkapNTfxLA6dc5
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: npx netlify-cli deploy --prod --site ffdb6b07-6442-4736-bb4d-f79578ae026b
