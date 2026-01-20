@@ -1,6 +1,23 @@
 <template>
         <HeaderComponent/>
 <div class="container-fluid experiences">
+    <div class="row row-xp">
+        <h2 class="mb-4">{{ $t('experiences.title_efor') }}</h2>
+        <p class="mb-3">{{ $t('experiences.tech') }}
+            <span class="badge bg-success">IXIA CCMS (Desktop)</span> <span class="badge bg-info">DITA XML</span>
+        </p>
+        <p class="mb-4 mt-4">{{ $t('experiences.description1_1_efor') }}</p>
+        <p class="mb-4">{{ $t('experiences.description1_efor') }}</p>
+    </div>
+    <div class="row row-xp mt-5 mb-5">
+        <h2 class="mb-4">{{ $t('experiences.title_baifall_dream') }}</h2>
+        <p class="mb-3">{{ $t('experiences.tech') }} 
+            <span class="badge bg-success">Symfony 6.0</span> <span class="badge bg-success">GitHub</span> <span class="badge bg-success">Hostinger</span> <span class="badge bg-success">Figma</span> <span class="badge bg-success">Visual Studio Code</span> <span class="badge bg-info">PHP</span> <span class="badge bg-info">JavaScript</span> <span class="badge bg-info">MySQL</span> <span class="badge bg-info">API Stripe</span>
+        </p>
+        <p class="mb-4 mt-4">{{ $t('experiences.desc_baifall_dream') }}</p>
+        <p>{{ $t('experiences.resources_baifall_dream') }}</p>
+        <CarouselComponent :slides="carouselSlides3" id="carousel3"/>
+    </div>
     <div class="row row-xp section-exfo">
         <h2 class="mb-4">{{ $t('experiences.title1') }}</h2>
         <p class="mb-3">{{ $t('experiences.tech') }}
@@ -59,6 +76,11 @@
             { src: "/Experiences/xp-olfeo-knowledge-base-use-case.png", title: "Third slide label", text: "experiences.carousel2_slide2" },
             { src: "/Experiences/xp-olfeo-knowledge-base-pb.png", title: "Fourth slide label", text: "experiences.carousel2_slide3" },
             { src: "/Experiences/xp-olfeo-notes-versions.png", title: "Second slide label", text: "experiences.carousel2_slide4" },
+        ],
+        carouselSlides3: [
+            { src: "/Experiences/baifall_UML.png", title: "First slide label", text: "experiences.carousel3_slide1" },
+            { src: "/Experiences/baifall_easyAdmin.png", title: "Second slide label", text: "experiences.carousel3_slide2" },
+            { src: "/Experiences/baifall_tests.png", title: "Third slide label", text: "experiences.carousel3_slide3" },
         ],
         activeIndex: 0,
     }

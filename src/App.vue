@@ -1,18 +1,22 @@
 <template>
   <v-app>
-  <router-view/>
+    <v-main>
+      <router-view />
+    </v-main>
   </v-app>
 </template>
+
 
 <script>
 import { onMounted, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { Dropdown } from 'bootstrap';
+import { useTheme } from 'vuetify'
 
 export default {
   setup() {
     const router = useRouter();
-
+    const theme = useTheme();
     const initializeDropdowns = () => {
       // Sélectionne tous les éléments de dropdown
       const dropdownElements = document.querySelectorAll('.dropdown-toggle');
@@ -31,6 +35,7 @@ export default {
           initializeDropdowns(); // Réinitialise les dropdowns après chaque navigation
         }
       );
+      theme.global.name.value = 'dark'
     });
   },
 };
