@@ -7,7 +7,7 @@ const messages = {
     navbar: {
       about: "About Me",
       techWritingProjects: "Technical Writing",
-      projects: "Web Devlopment",
+      projects: "Web Development",
       experiences: "Experiences",
       contact: "Contact",
       cv: "CV"
