@@ -1,5 +1,9 @@
 @import 'mixins'; 
 
+main {
+    background-color: var(--background-color);
+    height: 100%;
+  }
 /* Liens */
 a {
     color: var(--text-color);

@@ -24,7 +24,7 @@
       <span class="visually-hidden">Next</span>
     </button>
     <div class="carousel-caption-below">
-      <p>{{ currentSlideText  }}</p>
+      <p class="text-center">{{ currentSlideText  }}</p>
     </div>
     <div class="modal fade" :id="`${id}-modal`" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-xl">

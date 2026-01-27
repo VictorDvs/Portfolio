@@ -19,7 +19,7 @@
         <p class="mb-4 mt-4">{{ $t('experiences.desc_baifall_dream') }}</p>
         <p>{{ $t('experiences.resources_baifall_dream') }}</p>
         <CarouselComponent :slides="carouselSlides3" id="carousel3"/>
-        <p>{{ $t('experiences.resources') }} <a href="/dossier_de_projet_aaf.pdf" target="_blank" rel="noopener">{{ $t('experiences.soutenance') }}</a></p>
+        <p class="mt-5">{{ $t('experiences.resources') }} <a href="/dossier_de_projet_aaf.pdf" target="_blank" rel="noopener">{{ $t('experiences.soutenance') }}</a></p>
     </div>
     <div class="row row-xp section-exfo">
         <h2 class="mb-4">{{ $t('experiences.title1') }}</h2>

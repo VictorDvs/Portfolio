@@ -1,6 +1,6 @@
 // Section "experiences"
 .experiences {
-    padding-top: 200px; // Espacement supérieur pour la section
+    padding-top: 150px; // Espacement supérieur pour la section
     background-color:  var(--background-color); // Couleur de fond foncée avec transparence
     min-height: 100vh; // S'assurer que la section prend toute la hauteur de la fenêtre
     color: var(--text-color); // Couleur de texte claire
@@ -96,6 +96,7 @@ p {
     @include displayFlex;
     text-align: justify; // Justifier le texte pour une présentation uniforme
     box-sizing: border-box; // Assurer que le padding n'affecte pas les dimensions
+    padding-bottom: 10px;
   }
   
   // Liens dans la section "experiences"
@@ -151,9 +152,9 @@ p {
 
   @media screen and (max-width: 800px) {
     /* Section exfo - Marges pour les petits écrans */
-    .tem {
-      margin-top: 100px; // Ajouter un espacement en bas
-    }
+    // .tem {
+    //   margin-top: 100px; // Ajouter un espacement en bas
+    // }
   }
   
   // Media Query pour les petits écrans
