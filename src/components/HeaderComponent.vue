@@ -21,12 +21,12 @@
       <ul class="dropdown-menu" :class="{ show: isDropdownOpen }">
          <li><router-link class="dropdown-item" :to="'/projects#symfony'" @click="closeDropdown">Symfony</router-link></li>
          <li><router-link class="dropdown-item" :to="'/projects#vueCLI'" @click="closeDropdown">Vue.js</router-link></li>
-         <li><router-link class="dropdown-item" :to="'/projects#vanillaJS'" @click="closeDropdown">JavaScript</router-link></li>
-         <li><router-link class="dropdown-item" :to="'/projects#css'"  @click="closeDropdown">CSS</router-link></li>
+         <li><router-link class="dropdown-item" :to="'/projects#vanillaJS'" @click="closeDropdown">Vanilla JavaScript</router-link></li>
+         <!-- <li><router-link class="dropdown-item" :to="'/projects#css'"  @click="closeDropdown">CSS</router-link></li> -->
       </ul>
    </div>
             <router-link class="nav-link nav-anchor" :to="'/experiences'" @click="closeMenu">{{ $t('navbar.experiences') }}</router-link>
-            <router-link class="nav-link nav-anchor" :to="'/contact'" @click="closeMenu">{{ $t('navbar.contact') }}</router-link>
+            <a class="nav-link nav-anchor" href="/CV-Victor-De-Vos.pdf" target="_blank" @click="closeMenu">{{ $t('navbar.cv') }}</a>
               <div class="d-flex language-switcher align-items-center">
                 <button
                   v-for="lang in languages"

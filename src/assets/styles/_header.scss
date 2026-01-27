@@ -165,9 +165,10 @@
   }
   
   /* Bouton de langue actif */
-  .btn-lang:focus {
+  .btn-lang.active {
     background-color: var(--background-color);
     color: var(--text-color);
+    border: 1px solid var(--text-color);
   }
 
   

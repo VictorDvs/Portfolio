@@ -21,6 +21,7 @@ a {
     padding-top: 110px;
     padding-bottom: 125px;
     background-color:  var(--background-color);
+    height: 100vh;
     // min-height: 100%;
     // min-width: 100%;
   }
@@ -59,6 +60,7 @@ a {
     font-style: normal;
     font-size: 1.2em;
     text-align: left;
+    padding-top: 30px;
   }
 
   #text-body p{ 
@@ -128,6 +130,9 @@ a {
   
   /* Tablettes */
   @media (max-width: 1200px) {
+    .home {
+      height: 100%;
+    }
     #text-greetings {
       font-size: 3em;
     }

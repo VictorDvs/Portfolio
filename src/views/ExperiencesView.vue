@@ -3,6 +3,7 @@
 <div class="container-fluid experiences">
     <div class="row row-xp">
         <h2 class="mb-4">{{ $t('experiences.title_efor') }}</h2>
+        <h3 class="mb-3">{{ $t('experiences.date_efor') }}</h3>
         <p class="mb-3">{{ $t('experiences.tech') }}
             <span class="badge bg-success">IXIA CCMS (Desktop)</span> <span class="badge bg-info">DITA XML</span>
         </p>
@@ -11,31 +12,35 @@
     </div>
     <div class="row row-xp mt-5 mb-5">
         <h2 class="mb-4">{{ $t('experiences.title_baifall_dream') }}</h2>
+        <h3 class="mb-3">{{ $t('experiences.date_baifall_dream') }}</h3>
         <p class="mb-3">{{ $t('experiences.tech') }} 
             <span class="badge bg-success">Symfony 6.0</span> <span class="badge bg-success">GitHub</span> <span class="badge bg-success">Hostinger</span> <span class="badge bg-success">Figma</span> <span class="badge bg-success">Visual Studio Code</span> <span class="badge bg-info">PHP</span> <span class="badge bg-info">JavaScript</span> <span class="badge bg-info">MySQL</span> <span class="badge bg-info">API Stripe</span>
         </p>
         <p class="mb-4 mt-4">{{ $t('experiences.desc_baifall_dream') }}</p>
         <p>{{ $t('experiences.resources_baifall_dream') }}</p>
         <CarouselComponent :slides="carouselSlides3" id="carousel3"/>
+        <p>{{ $t('experiences.resources') }} <a href="/dossier_de_projet_aaf.pdf" target="_blank" rel="noopener">{{ $t('experiences.soutenance') }}</a></p>
     </div>
     <div class="row row-xp section-exfo">
         <h2 class="mb-4">{{ $t('experiences.title1') }}</h2>
+        <h3 class="mb-3">{{ $t('experiences.date_title1') }}</h3>
         <p class="mb-3">{{ $t('experiences.tech') }}
             <span class="badge bg-success">Oxygen XML Editor</span> <span class="badge bg-success">PHP MyAdmin</span> <span class="badge bg-success">GitLab</span> <span class="badge bg-success">MkDocs</span> <span class="badge bg-success">Visual Studio Code</span> <span class="badge bg-info">DITA XML</span> <span class="badge bg-info">Markdown</span> <span class="badge bg-info">YAML</span>
         </p>
         <p class="mb-4 mt-4">{{ $t('experiences.description1_1') }}</p>
         <p class="mb-4">{{ $t('experiences.description1') }}</p>
         <CarouselComponent :slides="carouselSlides1" id="carousel1" />
-        <div class="tem d-flex justify-content-center align-items-center flex-column">
+        <!-- <div class="tem d-flex justify-content-center align-items-center flex-column">
             <p class="mb-5">
               <img src="/icon-helene.jpg" alt="Photo de ma collègue Hélène Le Tutour" class="helene me-2">
               Hélène Le Tutour, {{ $t('about.helene') }} <b>EXFO</b> :
             </p>
             <p>{{ $t('about.tem') }}</p>
-        </div>
+        </div> -->
     </div>
     <div class="row row-xp mt-5 mb-5">
         <h2 class="mb-4">{{ $t('experiences.title2') }}</h2>
+        <h3 class="mb-3">{{ $t('experiences.date_title2') }}</h3>
         <p class="mb-3">{{ $t('experiences.tech') }} 
             <span class="badge bg-success">Paligo</span> <span class="badge bg-success">Oxygen XML Editor</span> <span class="badge bg-success">Confluence</span> <span class="badge bg-info">Docbook</span> <span class="badge bg-info">DITA XML</span>
         </p>

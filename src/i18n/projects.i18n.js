@@ -28,7 +28,7 @@ export const projectsMessages = {
       todo_desc: "",
 
       // JavaScript
-      vanillaJS_title: 'JavaScript projects',
+      vanillaJS_title: 'Vanilla JavaScript projects',
       quizz_title: "World Wide Web Quiz",
       quizz_desc: "Exercise carried out in JavaScript as part of my Web Developer training. 5 questions about the web. Good luck.",
       shifumi_title: "Shifumi",
@@ -77,7 +77,7 @@ export const projectsMessages = {
       todo_desc: "",
 
       // JavaScript
-      vanillaJS_title: 'Projets JavaScript',
+      vanillaJS_title: 'Projets Vanilla JavaScript',
       quizz_title: "Quizz World Wide Web",
       quizz_desc: 'Exercice réalisé en JavaScript dans le cadre de ma formation Dévelopeur web. 5 questions sur le web. "Bon chance".',
       shifumi_title: "Shifumi",

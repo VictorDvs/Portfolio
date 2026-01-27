@@ -160,7 +160,6 @@ p {
   @media screen and (max-width: 770px) {
     /* Section exfo - Marges pour les petits écrans */
     .section-exfo {
-      margin-bottom: 100px; // Ajouter un espacement en bas
       width: 90%;
     }
   
@@ -170,12 +169,13 @@ p {
   
     /* Modification du titre dans la section "experiences" */
     .experiences h2 {
-      text-align: center; // Centrer le titre pour les petits écrans
+      text-align: left; // Centrer le titre pour les petits écrans
     }
   
     /* Modification du texte dans la section "experiences" */
     .experiences p {
       text-align: start; // Aligner le texte au début pour une meilleure lisibilité sur petits écrans
+      font-size: 1.3em;
     }
 
     .tem p {

@@ -1,33 +1,41 @@
 <script setup>
+import { computed, watch } from 'vue'
 import { useTheme } from 'vuetify'
 
 const theme = useTheme()
 
-function toggleTheme() {
-  const newTheme = theme.global.current.value.dark ? 'light' : 'dark'
-  theme.global.name.value = newTheme
+const isDark = computed(() => theme.global.name.value === 'dark')
 
-  if (newTheme === 'dark') {
-    document.body.classList.add('theme-dark')
-  } else {
-    document.body.classList.remove('theme-dark')
-  }
+function toggleTheme() {
+  theme.global.name.value = isDark.value ? 'light' : 'dark'
 }
 
-const iconName = () => theme.global.current.value.dark ? 'mdi-white-balance-sunny' : 'mdi-weather-night'
-const iconColor = () => theme.global.current.value.dark ? 'yellow lighten-3' : 'blue darken-2'
+watch(
+  isDark,
+  (val) => {
+    document.body.classList.toggle('theme-dark', val)
+  },
+  { immediate: true }
+)
 
+const iconName = computed(() =>
+  isDark.value ? 'mdi-white-balance-sunny' : 'mdi-weather-night'
+)
+
+const iconColor = computed(() =>
+  isDark.value ? 'yellow lighten-3' : 'blue darken-2'
+)
 </script>
 
 <template>
-    <v-icon
-    :color="iconColor()"
+  <v-icon
+    :color="iconColor"
     @click="toggleTheme"
     style="cursor: pointer; font-size: 28px;"
     role="button"
     aria-label="Toggle theme"
   >
-    {{ iconName() }}
+    {{ iconName }}
   </v-icon>
 </template>
 

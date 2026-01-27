@@ -124,10 +124,10 @@
       </v-card>
     </v-dialog>
     </div>
-    <div class="row row-equal scroll-offset" id="css">
-      <h3>{{ $t('css_title') }}</h3>
+    <!-- <div class="row row-equal scroll-offset" id="css">
+      <h3>{{ $t('css_title') }}</h3> -->
       <!-- Utilisation de v-for pour générer chaque projet dynamiquement -->
-      <div 
+      <!-- <div 
         v-for="(project, index) in css" 
         :key="index" 
         class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center card-margin"
@@ -139,14 +139,14 @@
           <div class="card-body">
             <a :href="project.link" target="_blank">
               <h5 class="card-title">{{ project.title }}</h5>
-            </a>
+            </a> -->
             <!-- Bouton qui déclenche le dialog -->
-           <v-btn color="primary" @click="openDialog('css', index)" class="mt-2">
+           <!-- <v-btn color="primary" @click="openDialog('css', index)" class="mt-2">
             {{ $t('learn_more') }}
           </v-btn>
           </div>
         </div>
-      </div>
+      </div> -->
     <!-- Dialog Vuetify -->
     <v-dialog v-model="dialog" max-width="600">
       <v-card>
@@ -163,7 +163,7 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 

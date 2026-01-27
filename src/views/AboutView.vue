@@ -40,22 +40,18 @@
                   </p>
                 </div>
 
-  
-          <!-- Social Media Links -->
-
-
-          <embed src="/CV-Victor-De-Vos.pdf" class="cv" type="application/pdf">
-
+                <div class="col-12 d-flex justify-content-center" id="sources-perso">
+            <a target="_blank" href="https://github.com/VictorDvs?tab=repositories" rel="noopener">
+              <i class="bi bi-github me-3"></i>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/victor2vos/" rel="noopener">
+              <i class="bi bi-linkedin me-3"></i>
+            </a>
+            <a target="_blank" href="https://www.facebook.com/vittoriodevos" rel="noopener">
+              <i class="bi bi-facebook me-3"></i>
+            </a>
+          </div>
         </div>
-        <!-- <div class=" tem d-flex justify-content-center align-items-center mt-5 flex-column">
-            <p class="mb-5 helene-profil">
-              <img src="icon-helene.jpg" alt="Photo de ma collègue Hélène Le Tutour" class="helene me-2">
-              Hélène Le Tutour, {{ $t('about.helene') }} <b>EXFO</b> :
-            </p>
-            <p>{{ $t('about.tem') }}</p>
-            
-  
-        </div> -->
       </div>
     </main>
   </template>
