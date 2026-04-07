@@ -6,7 +6,6 @@
   </v-app>
 </template>
 
-
 <script>
 import { onMounted, watch } from 'vue';
 import { useRouter } from 'vue-router';

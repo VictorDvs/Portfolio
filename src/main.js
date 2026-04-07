@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import { VueUmamiPlugin } from '@jaseeey/vue-umami-plugin';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import i18n from './i18n/i18n';
@@ -67,4 +68,7 @@ const app = createApp(App);
 app.directive('scroll', ScrollDirective);
 
 // Utilise les plugins et monte l'application
-app.use(i18n).use(store).use(router).use(vuetify).mount('#app');
+app.use(i18n).use(VueUmamiPlugin, {
+  host: 'https://eu.umami.is/script.js', // Remplacez par l'URL de votre instance Umami
+  id: '64e422d0-5eba-4091-a123-235e95c060be' // Remplacez par votre ID Umami
+}).use(store).use(router).use(vuetify).mount('#app');
