@@ -69,6 +69,6 @@ app.directive('scroll', ScrollDirective);
 
 // Utilise les plugins et monte l'application
 app.use(i18n).use(VueUmamiPlugin, {
-  host: 'https://eu.umami.is/script.js', // Remplacez par l'URL de votre instance Umami
-  id: '64e422d0-5eba-4091-a123-235e95c060be' // Remplacez par votre ID Umami
+  scriptSrc: 'https://eu.umami.is/script.js', // Remplacez par l'URL de votre instance Umami
+  websiteID: '64e422d0-5eba-4091-a123-235e95c060be' // Remplacez par votre ID Umami,
 }).use(store).use(router).use(vuetify).mount('#app');
