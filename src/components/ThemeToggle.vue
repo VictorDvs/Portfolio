@@ -21,21 +21,16 @@ watch(
 const iconName = computed(() =>
   isDark.value ? 'mdi-white-balance-sunny' : 'mdi-weather-night'
 )
-
-const iconColor = computed(() =>
-  isDark.value ? 'yellow lighten-3' : 'blue darken-2'
-)
 </script>
 
 <template>
   <v-icon
-    :color="iconColor"
+    :icon="iconName"
+    color="themeIcon"
     @click="toggleTheme"
     style="cursor: pointer; font-size: 28px;"
     role="button"
     aria-label="Toggle theme"
-  >
-    {{ iconName }}
-  </v-icon>
+  />
 </template>
 

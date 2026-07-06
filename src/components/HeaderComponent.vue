@@ -2,8 +2,6 @@
   <nav v-scroll class="navbar navbar-expand-lg" id="nav">
     <div class="container-fluid coll-header">
 
-     
-
       <button
         class="navbar-toggler ms-auto"
         type="button"
@@ -13,13 +11,11 @@
         <span class="bi bi-list"></span>
       </button>
 
-      <div class="collapse navbar-collapse justify-content-end " :class="{ show: isMenuOpen }" id="navbarNav">
-        <div class="navbar-nav ">
-           <!-- Logo -> renvoie à l'accueil -->
-      <router-link to="/" class="nav-link" aria-label="Retour à l'accueil" @click="closeMenu">
-        <!-- TODO: remplacer par ton fichier logo réel (ex: /logo.svg) une fois prêt -->
-        {{ $t('navbar.home') }}
-      </router-link>
+      <div class="collapse navbar-collapse justify-content-end" :class="{ show: isMenuOpen }" id="navbarNav">
+        <div class="navbar-nav">
+          <router-link to="/" class="nav-link nav-link-home" aria-label="Retour à l'accueil" @click="closeMenu">
+            {{ $t('navbar.home') }}
+          </router-link>
           <router-link class="nav-link" :to="'/offres'" @click="closeMenu">
             {{ $t('navbar.offer') }}
           </router-link>
@@ -45,6 +41,12 @@
             </button>
           </div>
           <ThemeToggle />
+                    <a target="_blank" href="https://github.com/VictorDvs?tab=repositories" rel="noopener">
+            <i class="bi bi-github me-3"></i>
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/victor2vos/" rel="noopener">
+            <i class="bi bi-linkedin me-3"></i>
+          </a>
         </div>
       </div>
     </div>

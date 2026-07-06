@@ -1,17 +1,34 @@
 @import 'mixins';
 
-// TODO: ces 2 variables sont en dur pour l'instant. Idéalement, à terme,
-// promeus-les en custom properties (--accent-color / --accent-color-hover)
-// aux côtés de --background-color et --text-color, pour qu'elles s'adaptent
-// proprement au thème clair/sombre comme le reste du site.
-$accent-color: #2563eb;
-$accent-color-hover: #1d4ed8;
+// Couleur d'accent + espacement de section : désormais définis comme
+// custom properties dans _variables.scss (voir --accent-color et
+// --section-spacing-*), pour s'adapter au thème clair/sombre et être
+// réutilisables dans toutes les vues.
+
+/* ============================= */
+/* Espacement entre sections      */
+/* ============================= */
+.section-spacing {
+  padding-top: var(--section-spacing-desktop);
+  padding-bottom: var(--section-spacing-desktop);
+  scroll-margin-top: 100px; // hauteur approx. du header fixe, pour les ancres
+
+  @media (max-width: 992px) {
+    padding-top: var(--section-spacing-tablet);
+    padding-bottom: var(--section-spacing-tablet);
+  }
+
+  @media (max-width: 576px) {
+    padding-top: var(--section-spacing-mobile);
+    padding-bottom: var(--section-spacing-mobile);
+  }
+}
 
 /* ============================= */
 /* Hero (complément à .home)     */
 /* ============================= */
 .hero-subtitle {
-    font-family: "Poppins", sans-serif;
+  font-family: "Istok Web", sans-serif;
   font-size: 1.2em;
   color: var(--text-color);
   opacity: 0.85;
@@ -24,7 +41,7 @@ $accent-color-hover: #1d4ed8;
 /* ============================= */
 .btn-offer {
   display: inline-block;
-    font-family: "Poppins", sans-serif;
+  font-family: "Istok Web", sans-serif;
   font-weight: 600;
   padding: 12px 28px;
   border-radius: 40px;
@@ -39,11 +56,11 @@ $accent-color-hover: #1d4ed8;
 }
 
 .btn-offer-primary {
-  background-color: $accent-color;
+  background-color: var(--accent-color);
   color: #fff;
 
   &:hover {
-    background-color: $accent-color-hover;
+    background-color: var(--accent-color-hover);
     color: #fff;
   }
 }
@@ -66,7 +83,7 @@ $accent-color-hover: #1d4ed8;
   background-color: var(--background-color);
 
   h2 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Signika", sans-serif;
     font-weight: 500;
     color: var(--text-color);
   }
@@ -95,71 +112,6 @@ $accent-color-hover: #1d4ed8;
   }
 }
 
-/* ============================= */
-/* Section Réalisations          */
-/* ============================= */
-.projects-section {
-  background-color: var(--background-color);
-
-  h2 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    color: var(--text-color);
-  }
-}
-
-.project-card {
-  padding: 30px;
-  border-radius: 16px;
-  background-color: var(--background-color);
-  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
-  color: var(--text-color);
-  transition: transform 0.2s ease-in-out;
-
-  img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-  }
-
-  h3 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
-
-  &:hover {
-    transform: translateY(-4px);
-  }
-}
-
-/* Filtres (page Réalisations) */
-.filter-buttons {
-  flex-wrap: wrap;
-}
-
-.btn-filter {
-    font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  padding: 8px 20px;
-  border-radius: 30px;
-  border: 2px solid var(--text-color);
-  background-color: transparent;
-  color: var(--text-color);
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    background-color: var(--text-color);
-    color: var(--background-color);
-  }
-
-  &.active {
-    background-color: $accent-color;
-    border-color: $accent-color;
-    color: #fff;
-  }
-}
 
 /* ============================= */
 /* Teaser À propos                */
@@ -193,7 +145,7 @@ $accent-color-hover: #1d4ed8;
   background-color: var(--background-color);
 
   h2 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Signika", sans-serif;
     font-weight: 500;
     color: var(--text-color);
     margin-bottom: 25px;

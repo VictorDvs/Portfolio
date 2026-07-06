@@ -4,19 +4,15 @@
 
   <!-- Main Content -->
   <main>
-
     <!-- ============================= -->
     <!-- Section : Hero                -->
     <!-- ============================= -->
     <div class="container-fluid home d-flex flex-column align-items-center justify-content-center" id="home">
-      <div class="row align-items-center justify-content-center mt-5 w-100">
+      <v-parallax container-fluid src="/hero-cover.jpg" height="100vh" width="100%">
+        <div class="hero-overlay"></div>
+        <div class="hero-content align-items-center justify-content-center">
+      <div class="row align-items-center justify-content-center section-spacing w-100">
         <div class="col-12 col-lg-8 d-flex flex-column flex-lg-row align-items-center justify-content-center">
-          <!-- Photo -->
-          <div class="ma-photo mb-3 mb-lg-0 me-lg-3">
-            <div class="circle-container">
-              <img src="/ma-photo.jpg" class="img-fluid" id="ma-photo" alt="Ma photo">
-            </div>
-          </div>
 
           <!-- Intro Text -->
           <div class="home-text-intro text-center text-lg-center">
@@ -24,8 +20,7 @@
             <p class="hero-subtitle">{{ $t('home.hero.subtitle') }}</p>
           </div>
         </div>
-      </div>
-
+      
       <!-- CTA Hero -->
       <div class="row justify-content-center mt-4 w-100">
         <div class="col-12 d-flex flex-column flex-md-row justify-content-center gap-3">
@@ -37,12 +32,14 @@
           </router-link>
         </div>
       </div>
-    
+    </div>
+    </div>
+</v-parallax>
 
     <!-- ============================= -->
     <!-- Section : Offre (2 piliers)   -->
     <!-- ============================= -->
-    <div class="container-fluid offer-section py-5" id="offre-preview">
+    <div class="container-fluid offer-section section-spacing" id="offre-preview">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-8 text-center mb-4">
           <h2>{{ $t('home.offer.title') }}</h2>
@@ -77,7 +74,7 @@
     <!-- ============================= -->
     <!-- Section : Aperçu réalisations -->
     <!-- ============================= -->
-    <div class="container-fluid projects-section py-5" id="realisations-preview">
+    <div class="container-fluid projects-section section-spacing" id="realisations-preview">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-8 text-center mb-4">
           <h2>{{ $t('home.projects.title') }}</h2>
@@ -87,7 +84,7 @@
       <div class="row justify-content-center g-4">
         <div class="col-12 col-md-4" v-for="project in previewProjects" :key="project.id">
           <div class="project-card h-100">
-            <img :src="project.image" class="img-fluid" :alt="project.title">
+            <a :href="project.link" target="_blank" rel="noopener"><img :src="project.image" class="img-fluid" :alt="project.title"></a>
             <h3>{{ project.title }}</h3>
             <p>{{ project.description }}</p>
           </div>
@@ -136,7 +133,7 @@
     <!-- ============================= -->
     <!-- Section : CTA final           -->
     <!-- ============================= -->
-    <div class="container-fluid final-cta-section py-5 text-center" id="contact-cta">
+    <div class="container-fluid final-cta-section section-spacing text-center" id="contact-cta">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-6">
           <h2>{{ $t('home.cta.title') }}</h2>
@@ -169,16 +166,18 @@ export default {
       // de réalisations existant si tu en as un (ex: @/data/projects.js)
       previewProjects: [
         {
-          id: 1,
-          title: 'Projet 1',
-          description: 'Courte description du projet.',
-          image: '/projects/projet-1.jpg',
+          id: 'alkantara',
+          title: 'Alkantara',
+          description: 'Site de l\'agence de communication Alkantara, réalisé avec WordPress.',
+          image: 'Projets/cover-alkantara.png',
+          link: 'https://alkantara.fr/',
         },
         {
-          id: 2,
-          title: 'Projet 2',
-          description: 'Courte description du projet.',
-          image: '/projects/projet-2.jpg',
+          id: 'pablocires',
+          title: 'Portfolio Pablo Cirès',
+          description: 'Site web personnel de Pablo Cirès, réalisateur de documentaires.',
+          image: 'Projets/projets-pablo-cires.png',
+          link: 'https://www.pablocires.me/',
         },
         {
           id: 3,
@@ -212,4 +211,5 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/styles/_mixins.scss";
 @import "@/assets/styles/_home.scss";
+@import "@/assets/styles/_home-sections.scss";
 </style>

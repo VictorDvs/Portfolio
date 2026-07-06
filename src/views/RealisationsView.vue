@@ -1,16 +1,16 @@
 <template>
   <HeaderComponent />
 
-  <main class="container-fluid realisations-page py-5">
+  <main class="container-fluid realisations-page section-spacing">
     <!-- Titre -->
-    <section class="row justify-content-center mb-4">
+    <!-- <section class="row justify-content-center">
       <div class="col-12 col-lg-8 text-center">
         <h1>{{ $t('realisationsPage.title') }}</h1>
       </div>
-    </section>
+    </section> -->
 
 <!-- Filtres -->
-<section class="row justify-content-center mb-4">
+<section class="row justify-content-center mt-5 mb-5">
   <div class="col-12 d-flex justify-content-center gap-2 filter-buttons">
     <button
       v-for="filter in filters"
@@ -26,16 +26,18 @@
 
     <!-- Grille de projets -->
     <section class="row justify-content-center g-4">
-      <div class="col-12 col-sm-6 col-lg-4" v-for="item in filteredItems" :key="item.id">
+      <div class="col-12 col-sm-6 col-lg-6" v-for="item in filteredItems" :key="item.id">
         <div class="project-card h-100">
                 <a v-if="item.image" :href="item.link" target="_blank" rel="noopener">
         <img :src="item.image" :alt="item.title" class="img-fluid" />
       </a>
+      <div class="project-content">
           <span class="project-badge">{{ item.group }}</span>
           <h3>{{ item.title }}</h3>
           <button class="btn-offer btn-offer-secondary mt-2" @click="openDialog(item)">
             {{ $t('techWritingProjects.learn_more') }}
           </button>
+      </div>
         </div>
       </div>
     </section>
@@ -174,5 +176,5 @@ filters: [
 
 <style lang="scss" scoped>
 @import "@/assets/styles/_mixins.scss";
-@import "@/assets/styles/_home-sections.scss";
+@import "@/assets/styles/_realisations.scss";
 </style>

@@ -5,7 +5,7 @@ import { projectsMessages } from './projects.i18n';
 const messages = {
   en: {
     navbar: {
-      home: "Home",
+      home: "VDEV",
       offer: "Services",
       realisations: "Portfolio",
       about: "About",
@@ -92,8 +92,8 @@ realisationsPage: {
   },
   fr: {
     navbar: {
-      home: "Accueil",
-      offer: "Offres",
+      home: "VDEV",
+      offer: "Services",
       realisations: "Réalisations",
       about: "À propos",
       contact: "Contact",
@@ -117,7 +117,7 @@ realisationsPage: {
           title: "Rédaction technique",
           text: "Documentation claire pour vos utilisateurs et vos équipes : guides, notices, bases de connaissances.",
         },
-        cta: "Découvrir l'offre complète",
+        cta: "Découvrir les offres complètes",
       },
       projects: {
         title: "Quelques réalisations",

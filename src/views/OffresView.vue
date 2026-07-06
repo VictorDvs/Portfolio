@@ -1,7 +1,8 @@
 <template>
   <HeaderComponent />
 
-  <main class="container-fluid offre-page py-5">
+  <main class="container-fluid offre-page section-spacing">
+    <div class="section-spacing">
     <!-- Intro -->
     <section class="row justify-content-center mb-5">
       <div class="col-12 col-lg-8 text-center">
@@ -32,7 +33,7 @@
         </div>
       </div>
     </section>
-
+</div>
     <!-- CTA -->
     <section class="row justify-content-center">
       <div class="col-12 text-center">
@@ -77,5 +78,4 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/styles/_mixins.scss";
-@import "@/assets/styles/_home-sections.scss";
 </style>

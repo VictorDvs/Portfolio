@@ -1,7 +1,7 @@
 @import 'mixins'; 
 /* Style principal de la navbar */
 #nav {
-    background-color: var(--background-color);
+    background-color: var(--background-color-header);
     color: var(--text-color);
     z-index: 10;
     position: fixed;
@@ -17,14 +17,20 @@
     height: auto;
   }
   
-  /* Alignement des liens dans la navbar */
-  .navbar-nav {
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
+/* Alignement des liens dans la navbar (hors Accueil, désormais séparé) */
+.navbar-nav {
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  width: 100%; // <- corrigé, était "auto"
+  padding: 0;
+  margin: 0 30px;
+}
+
+/* Lien Accueil, toujours visible à gauche */
+.nav-link-home {
+  margin-right: auto; // pousse tout le reste vers la droite
+}
   
   /* Style des liens de navigation */
   .navbar-nav > .nav-link:not(.dropdown-item) {
@@ -77,71 +83,12 @@
   .no-underline::after {
     display: none;
   }
-  
-  /* Style du dropdown */
-  .dropdown {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .dropdown-toggle:hover, 
-  .dropdown-toggle:focus {
-    background-color: transparent !important;
-  color: var(--text-color) !important;
-  text-decoration: none;
-  }
-  
-  /* Menu déroulant du dropdown */
-  .dropdown-menu {
-    width: 15em;
-    position: absolute;
-    top: calc(100% + 0.1rem);  
-    left: 4%;
-    z-index: 1050;
-    background: var(--dropdown-header);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-100px);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Affichage du menu déroulant */
-  .dropdown-menu.show {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  
-  /* Style des éléments du dropdown */
-  .dropdown-item {
-    @include displayFlex;
-    color: var(--background-color);
-    font-family: "Readex Pro", serif;
-    font-weight: 600;
-    font-size: 1em;
-    text-decoration: none;
-  }
-
-  .dropdown-item:hover,
-.dropdown-item:focus {
-  background-color: transparent !important;
-  color: var(--background-color) !important;
-  text-decoration: underline;
-}
-
-
-
-  
   /* Commutateur de langue */
   .language-switcher {
     display: flex;
     gap: 10px;
-    padding-bottom: 7px;
+    padding-bottom: 0px;
   }
   
   /* Boutons de sélection de langue */
@@ -176,7 +123,7 @@
   
   /* Changer la taille de l'icône */
   .bi {
-    font-size: 50px; /* Ajuster la taille */
+    font-size: 22px; /* Ajuster la taille */
   }
   
   /* Changer la couleur de l'icône */
@@ -188,10 +135,15 @@
   @media screen and (max-width: 1200px) {
     .navbar-nav {
       flex-direction: column; /* Empile les liens en colonne */
+      gap: 0;
       width: 100%; /* Respecte la largeur de l'écran */
       margin: 0; /* Supprime les marges */
       padding-bottom: 8px;
     }
+
+      .nav-link-home {
+    margin-right: 0; // <- ajouté : annule la poussée desktop, redevient un lien normal centré
+  }
   
     .router-link-exact-active::after {
       display: none;

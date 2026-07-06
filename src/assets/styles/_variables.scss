@@ -1,16 +1,32 @@
 // _variables.scss
 :root {
-  --background-color: #eeeeee;
-  --text-color: #121212;
-  --burger-button-color: #eeeeee;
-  --dropdown-header: #121212;
-  --projects-card-text: #121212;
+  --background-color: #FAF6F0;
+  --background-color-header: #FAF6F0;
+  --text-color: #201A1E;
+  --burger-button-color: #FAF6F0;
+  --projects-card-text: #201A1E;
+
+  // Couleur d'accent (boutons CTA, filtres actifs, badges de projet)
+  --accent-color: #F0AE4A;
+  --accent-color-hover: #C97A2B;
+
+  // Échelle d'espacement vertical entre sections (voir .section-spacing
+  // dans _home-sections.scss). Un seul endroit à modifier pour ajuster
+  // le rythme de respiration sur tout le site.
+  --section-spacing-desktop: 120px;
+  --section-spacing-tablet: 90px;
+  --section-spacing-mobile: 60px;
 }
 
 .theme-dark {
-  --background-color: #121212;
-  --text-color: #eeeeee;
+  --background-color: #201A1E;
+  --background-color-header: #121212;
+  --text-color: #FAF6F0;
   --burger-button-color: #121212;
-  --dropdown-header: #eeeeee;
   --projects-card-text: #121212;
+
+  // Bleu légèrement plus clair en mode sombre pour garder un bon contraste
+  // sur fond #121212 (le bleu #2563eb du mode clair y paraîtrait terne).
+  --accent-color: #F0AE4A;
+  --accent-color-hover: #C97A2B;
 }
