@@ -22,7 +22,7 @@ a {
   
   /* Section Accueil */
   .home {
-    padding-top: 110px;
+    padding-top: 100px;
     padding-bottom: 125px;
     background-color:  var(--background-color);
     height: 100%;
@@ -59,7 +59,7 @@ a {
   
   /* Texte principal */
   #text-body{
-    font-family: "Signika", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1.2em;
@@ -74,7 +74,7 @@ a {
   /* Titre de salutation */
   #text-greetings {
     font-size: 3.5em;
-    font-family: "Signika", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     color: var(--text-color);
   }
@@ -83,7 +83,7 @@ a {
   .author {
     @include displayFlex;
     padding: 30px;
-    font-family: "Istok Web", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
   }
   

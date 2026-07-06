@@ -1,38 +1,58 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AboutView from '@/views/AboutView.vue'
-
+import HomeView from '@/views/HomeView.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: AboutView,
-    meta: { title: 'Home' },
+    component: HomeView,
+    meta: { title: 'Accueil' },
   },
   {
-    path: '/tech-writing-projects',
-    name: 'tech-writing-projects',
-    component: () => import(/* webpackChunkName: "about" */ '../views/TechWritingProjectsView.vue'),
-    meta: { title: 'Tech writing Projects' },
+    // TODO: créer OffreView.vue — page de service qui présente
+    // Développement web + Rédaction technique (contenu ex-ProjectsView
+    // et ex-TechWritingProjectsView, réécrit en angle "offre" plutôt
+    // que liste de projets)
+    path: '/offres',
+    name: 'offres',
+    component: () => import(/* webpackChunkName: "offres" */ '../views/OffresView.vue'),
+    meta: { title: 'Offres' },
   },
   {
-    path: '/projects',
-    name: 'projects',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ProjectsView.vue'),
-    meta: { title: 'Dev Projects' },
+    // TODO: créer RealisationsView.vue — portfolio unifié,
+    // fusion des projets dev (ex-ProjectsView) et rédaction
+    // (ex-TechWritingProjectsView), filtrable par type
+    path: '/realisations',
+    name: 'realisations',
+    component: () => import(/* webpackChunkName: "realisations" */ '../views/RealisationsView.vue'),
+    meta: { title: 'Réalisations' },
   },
   {
-    path: '/experiences',
-    name: 'experiences',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ExperiencesView.vue'),
-    meta: { title: 'Experiences' },
+    path: '/a-propos',
+    name: 'about',
+    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
+    meta: { title: 'À propos' },
   },
   {
     path: '/contact',
     name: 'contact',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ContactView.vue'),
+    component: () => import(/* webpackChunkName: "contact" */ '../views/ContactView.vue'),
     meta: { title: 'Contact' },
-  }
+  },
+
+  // --- Redirections pour ne pas casser d'anciens liens / indexation Google ---
+  {
+    path: '/about',
+    redirect: { name: 'about' },
+  },
+  {
+    path: '/projects',
+    redirect: { name: 'realisations' },
+  },
+  {
+    path: '/tech-writing-projects',
+    redirect: { name: 'realisations' },
+  },
 ]
 
 const router = createRouter({

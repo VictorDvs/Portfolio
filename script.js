@@ -22,7 +22,6 @@ document.querySelectorAll('.nav-anchor').forEach(anchor => {
 
 
 var typed = new Typed('#text-greetings', {
-  strings: ["Bienvenu(e) sur mon site !", "Je m'appelle Victor, je suis apprenti développeur web et rédacteur technique de profession."],
   typeSpeed: 10,
   backSpeed: 30, 
 });
