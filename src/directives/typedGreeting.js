@@ -5,8 +5,8 @@ export function initTypedGreeting(el, text) {
 
   return new Typed(el, {
     strings: [text],
-    typeSpeed: 50,
-    startDelay: 300,
-    showCursor: false
+    typeSpeed: 70,
+    startDelay: 100,
+    showCursor: true
   })
 }

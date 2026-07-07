@@ -13,10 +13,10 @@
 
       <div class="collapse navbar-collapse justify-content-end" :class="{ show: isMenuOpen }" id="navbarNav">
         <div class="navbar-nav">
-          <router-link to="/" class="nav-link nav-link-home" aria-label="Retour à l'accueil" @click="closeMenu">
+          <router-link to="/" class="nav-link nav-link-home no-underline" aria-label="Retour à l'accueil" @click="closeMenu">
             {{ $t('navbar.home') }}
           </router-link>
-          <router-link class="nav-link" :to="'/offres'" @click="closeMenu">
+          <router-link class="nav-link" :to="'/services'" @click="closeMenu">
             {{ $t('navbar.offer') }}
           </router-link>
           <router-link class="nav-link" :to="'/realisations'" @click="closeMenu">
@@ -28,7 +28,6 @@
           <router-link class="nav-link" :to="'/contact'" @click="closeMenu">
             {{ $t('navbar.contact') }}
           </router-link>
-
           <div class="d-flex language-switcher align-items-center">
             <button
               v-for="lang in languages"
@@ -40,13 +39,6 @@
               {{ lang.toUpperCase() }}
             </button>
           </div>
-          <ThemeToggle />
-                    <a target="_blank" href="https://github.com/VictorDvs?tab=repositories" rel="noopener">
-            <i class="bi bi-github me-3"></i>
-          </a>
-          <a target="_blank" href="https://www.linkedin.com/in/victor2vos/" rel="noopener">
-            <i class="bi bi-linkedin me-3"></i>
-          </a>
         </div>
       </div>
     </div>
@@ -54,7 +46,6 @@
 </template>
 
 <script>
-import ThemeToggle from './ThemeToggle.vue'
 
 export default {
   data() {
@@ -64,7 +55,6 @@ export default {
     };
   },
   components: {
-    ThemeToggle
   },
   computed: {
     currentLocale() {

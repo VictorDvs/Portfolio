@@ -9,14 +9,14 @@ const routes = [
     meta: { title: 'Accueil' },
   },
   {
-    // TODO: créer OffreView.vue — page de service qui présente
+    // TODO: créer ServicesView.vue — page de service qui présente
     // Développement web + Rédaction technique (contenu ex-ProjectsView
     // et ex-TechWritingProjectsView, réécrit en angle "offre" plutôt
     // que liste de projets)
-    path: '/offres',
-    name: 'offres',
-    component: () => import(/* webpackChunkName: "offres" */ '../views/OffresView.vue'),
-    meta: { title: 'Offres' },
+    path: '/services',
+    name: 'services',
+    component: () => import(/* webpackChunkName: "services" */ '../views/ServicesView.vue'),
+    meta: { title: 'Services' },
   },
   {
     // TODO: créer RealisationsView.vue — portfolio unifié,

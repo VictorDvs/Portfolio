@@ -1,0 +1,113 @@
+  /* Section Accueil */
+  .home {
+    padding-bottom: 125px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color:  var(--background-color);
+    height: 100%;
+    // min-height: 100%;
+    // min-width: 100%;
+  }
+
+  
+  /* Conteneur circulaire */
+  .circle-container {
+    position: relative;
+    @include displayFlex;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.9);
+    padding-bottom: 60px;
+  }
+  
+  .circle-container img {
+    max-width: 100%;
+  }
+  
+  /* Texte principal */
+  #text-body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
+    text-align: left;
+    padding-top: 30px;
+  }
+
+  #text-body p{ 
+    color: var(--text-color);
+  }
+
+    /* Responsive Design */
+  
+  /* Tablettes */
+  @media (max-width: 1200px) {
+    .home {
+      height: 100%;
+    }
+    #text-greetings {
+      font-size: 3em;
+    }
+    #text-body {
+      font-size: 1.3em;
+    }
+    .ma-photo {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  /* Mobiles */
+  @media (max-width: 992px) {
+    .home-text-intro{
+      padding-bottom: 0;
+    }
+    #text-greetings {
+      font-size: 3em;
+    }
+    #text-body {
+      font-size: 1.2em;
+      text-align: left;
+    }
+  }
+  
+  /* Petits écrans */
+  @media (max-width: 768px) {
+    #text-greetings {
+      font-size: 2.8em;
+      margin-bottom: 30px;
+    }
+    #text-body {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin: 0 10px;
+      text-align: left;
+    }
+    .tem {
+      font-size: 1em;
+      border-radius: 100px 0px 100px 0px;
+      padding: 15px;
+      width: 100%;
+      max-width: 100%;
+      text-align: left;
+    }
+  }
+  
+  /* Très petits écrans */
+  @media (max-width: 576px) {
+    #text-greetings {
+      font-size: 2.3em;
+      line-height: 1.2;
+    }
+    #text-body {
+      font-size: 1em;
+      text-align: left;
+    }
+
+    .tem {
+      max-width: 100%;
+      text-align: justify;
+    }
+  }

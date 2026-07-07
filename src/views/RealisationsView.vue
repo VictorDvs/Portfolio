@@ -83,10 +83,6 @@ filters: [
   { value: 'dev', labelKey: 'realisationsPage.filters.dev' },
   { value: 'redaction', labelKey: 'realisationsPage.filters.redaction' },
 ],
-      // Fusion de ton ancien ProjectsView.vue (Symfony / Vue CLI / Vue CDN /
-      // Vanilla JS / CSS) et TechWritingProjectsView.vue (Docusaurus / MkDocs).
-      // "featured: true" = projets aboutis mis en avant en premier,
-      // "featured: false" = exercices de formation, affichés ensuite.
       items: [
         // --- Développement web : Symfony ---
         {
@@ -99,18 +95,6 @@ filters: [
           image: 'Projets/cover-alkantara.png',
           link: 'https://alkantara.fr/',
         },
-
-        // --- Développement web : Vue.js (CLI) ---
-        // {
-        //   id: 'webwares',
-        //   category: 'dev',
-        //   group: 'Vue.js',
-        //   featured: true,
-        //   titleKey: 'webwares_title',
-        //   descKey: 'webwares_desc',
-        //   image: 'Projets/projets-webwares-vuecli.png',
-        //   link: 'https://vuecli-ecfproject-afpa-project.netlify.app/#/',
-        // },
         {
           id: 'pablocires',
           category: 'dev',

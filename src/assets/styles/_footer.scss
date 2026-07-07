@@ -1,0 +1,24 @@
+@import "mixins";
+
+.footer{
+    background-color: #C97A2B;
+    min-height: 50px;
+    color: #FAF6F0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    @include displayFlex;
+    justify-content: flex-end;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.copyright{
+    font-size: 1.2em;
+    white-space: nowrap;
+}

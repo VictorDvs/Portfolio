@@ -1,0 +1,78 @@
+@import 'mixins';
+@import 'variables';
+/* ============================= */
+/* Boutons CTA                   */
+/* ============================= */
+.btn-offer {
+  display: inline-block;
+  font-family: "Istok Web", sans-serif;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+}
+
+.btn-offer-primary {
+  background-color: var(--accent-color);
+  color: #fff;
+
+  &:hover {
+    background-color: var(--accent-color-hover);
+    color: #fff;
+  }
+}
+
+.btn-offer-secondary {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+
+  &:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }
+}
+
+/* ============================= */
+/* Responsive Design              */
+/* ============================= */
+
+/* Mobiles */
+@media (max-width: 992px) {
+
+  .btn-offer {
+    padding: 10px 22px;
+  }
+}
+
+/* Petits écrans */
+@media (max-width: 768px) {
+  .final-cta-section h2 {
+    font-size: 1.6em;
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 576px) {
+
+  .btn-offer {
+    width: 100%;
+    text-align: center;
+  }
+
+  .filter-buttons {
+    gap: 8px;
+  }
+
+  .btn-filter {
+    font-size: 0.9em;
+    padding: 6px 16px;
+  }
+}

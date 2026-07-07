@@ -1,44 +1,43 @@
 <template>
   <!-- Header -->
-  <HeaderComponent />
+  <HeaderComponent/>
 
   <!-- Main Content -->
   <main>
-    <!-- ============================= -->
-    <!-- Section : Hero                -->
-    <!-- ============================= -->
-    <div class="container-fluid home d-flex flex-column align-items-center justify-content-center" id="home">
-      <v-parallax container-fluid src="/hero-cover.jpg" height="100vh" width="100%">
-        <div class="hero-overlay"></div>
-        <div class="hero-content align-items-center justify-content-center">
-      <div class="row align-items-center justify-content-center section-spacing w-100">
-        <div class="col-12 col-lg-8 d-flex flex-column flex-lg-row align-items-center justify-content-center">
+<!-- ============================= -->
+<!-- Section : Hero                -->
+<!-- ============================= -->
+<div class="container-fluid home d-flex flex-column align-items-center justify-content-center" id="home">
+  <v-parallax src="/hero-cover.jpg" height="100vh" width="100%">
+    <div class="hero-overlay"></div>
 
-          <!-- Intro Text -->
-          <div class="home-text-intro text-center text-lg-center">
-            <h1 id="text-greetings">{{ $t('home.hero.title') }}</h1>
-            <p class="hero-subtitle">{{ $t('home.hero.subtitle') }}</p>
-          </div>
+<div class="hero-content d-flex flex-column align-items-center justify-content-center w-100">
+  <div class="home-text-intro text-center">
+    <h1 id="text-greetings">{{ $t('home.hero.title') }}</h1>
+    <div class="d-flex flex-column gap-3 w-100">
+    <p class="hero-subtitle">{{ $t('home.hero.subtitle') }}</p>
+    <div class="d-flex flex-row align-items-center justify-content-center gap-3">
+            <router-link to="/services" class="btn-offer btn-offer-primary">
+          {{ $t('home.hero.cta_primary') }}
+        </router-link>
+        <router-link to="/contact" class="btn-offer btn-offer-secondary">
+          {{ $t('home.hero.cta_secondary') }}
+        </router-link>
         </div>
-      
+    </div>
+  </div>
+
       <!-- CTA Hero -->
-      <div class="row justify-content-center mt-4 w-100">
-        <div class="col-12 d-flex flex-column flex-md-row justify-content-center gap-3">
-          <router-link to="/offre" class="btn-offer btn-offer-primary">
-            {{ $t('home.hero.cta_primary') }}
-          </router-link>
-          <router-link to="/contact" class="btn-offer btn-offer-secondary">
-            {{ $t('home.hero.cta_secondary') }}
-          </router-link>
-        </div>
-      </div>
-    </div>
-    </div>
-</v-parallax>
+      <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
 
-    <!-- ============================= -->
-    <!-- Section : Offre (2 piliers)   -->
-    <!-- ============================= -->
+      </div>
+
+    </div>
+  </v-parallax>
+
+<!-- ============================= -->
+<!-- Section : Offre (2 piliers)   -->
+<!-- ============================= -->
     <div class="container-fluid offer-section section-spacing" id="offre-preview">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-8 text-center mb-4">
@@ -49,13 +48,13 @@
 
       <div class="row justify-content-center g-4">
         <div class="col-12 col-md-5">
-          <div class="offer-card h-100">
+          <div class="offer-card text-center h-100">
             <h3>{{ $t('home.offer.dev.title') }}</h3>
             <p>{{ $t('home.offer.dev.text') }}</p>
           </div>
         </div>
         <div class="col-12 col-md-5">
-          <div class="offer-card h-100">
+          <div class="offer-card text-center h-100">
             <h3>{{ $t('home.offer.redaction.title') }}</h3>
             <p>{{ $t('home.offer.redaction.text') }}</p>
           </div>
@@ -64,7 +63,7 @@
 
       <div class="row justify-content-center mt-4">
         <div class="col-12 d-flex justify-content-center">
-          <router-link to="/offre" class="btn-offer">
+          <router-link to="/offre" class="btn-offer btn-offer-primary">
             {{ $t('home.offer.cta') }}
           </router-link>
         </div>
@@ -93,7 +92,7 @@
 
       <div class="row justify-content-center mt-4">
         <div class="col-12 d-flex justify-content-center">
-          <router-link to="/realisations" class="btn-offer">
+          <router-link to="/realisations" class="btn-offer btn-offer-primary">
             {{ $t('home.projects.cta') }}
           </router-link>
         </div>
@@ -112,20 +111,9 @@
         </div>
         <div class="col-12 col-md-6">
           <p>{{ $t('home.about.teaser') }}</p>
-          <router-link to="/a-propos" class="me-contacter">
+          <router-link to="/a-propos" class="me-contacter btn-offer btn-offer-primary">
             {{ $t('home.about.cta') }}
           </router-link>
-        </div>
-      </div>
-
-      <div class="row mt-4">
-        <div class="col-12 d-flex justify-content-center" id="sources-perso">
-          <a target="_blank" href="https://github.com/VictorDvs?tab=repositories" rel="noopener">
-            <i class="bi bi-github me-3"></i>
-          </a>
-          <a target="_blank" href="https://www.linkedin.com/in/victor2vos/" rel="noopener">
-            <i class="bi bi-linkedin me-3"></i>
-          </a>
         </div>
       </div>
     </div>
@@ -145,11 +133,13 @@
     </div>
 </div>
   </main>
+  <FooterComponent/>
 </template>
 
 
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 import { useI18n } from 'vue-i18n'
 import Typed from 'typed.js'
 
@@ -158,6 +148,7 @@ export default {
 
   components: {
     HeaderComponent,
+    FooterComponent,
   },
 
   data() {
@@ -210,6 +201,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/styles/_mixins.scss";
+@import "@/assets/styles/_boutons.scss";
 @import "@/assets/styles/_home.scss";
-@import "@/assets/styles/_home-sections.scss";
+@import "@/assets/styles/_espacement.scss";
 </style>

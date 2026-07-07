@@ -14,8 +14,8 @@ const messages = {
     },
     home: {
       hero: {
-        title: "Web developer & technical writer",
-        subtitle: "I build your website, I document it, you stay in control.",
+        title: "Victor De Vos, web developer and technical writer",
+        subtitle: "Whether you're building a website or updating documentation, I'll work with you wherever you are.",
         cta_primary: "See my services",
         cta_secondary: "Get in touch",
       },
@@ -81,14 +81,19 @@ realisationsPage: {
       close: "Close"
     },
           ...projectsMessages.en,
-    contact: {
-      description: "I'd be happy to connect with you! Whether it's for questions, sharing projects, or just having a chat, feel free to reach out.",
-      form: {
-        email: "Email",
-        message: "Message",
-        submit: "Send Message",
-      },
-    },
+contact: {
+      description: "Ready to bring your project to life? Send me a message.",
+      location: "Based in Lyon, France",
+form: {
+  name: "Your name",
+  email: "Email",
+  phone: "Phone",
+  subject: "Subject",
+  message: "Message",
+  callback: "Would you like us to call you back?",
+  submit: "Send Message",
+},
+    },  
   },
   fr: {
     navbar: {
@@ -101,9 +106,9 @@ realisationsPage: {
     },
     home: {
       hero: {
-        title: "Je suis développeur web et rédacteur technique",
-        subtitle: "Je conçois votre site, je le documente, vous gardez le contrôle.",
-        cta_primary: "Voir mes offres",
+        title: "Victor De Vos, intégrateur web et rédacteur technique",
+        subtitle: "Création et refonte de sites, gestion de la documentation technique.",
+        cta_primary: "Voir mes services",
         cta_secondary: "Me contacter",
       },
       offer: {
@@ -111,7 +116,7 @@ realisationsPage: {
         subtitle: "Deux compétences complémentaires, un seul interlocuteur.",
         dev: {
           title: "Développement web",
-          text: "Sites vitrines, applications sur mesure, migrations — je conçois des sites robustes et faciles à maintenir.",
+          text: "Sites vitrines, e-commerce, migrations. Développement de sites robustes et faciles à maintenir.",
         },
         redaction: {
           title: "Rédaction technique",
@@ -120,7 +125,7 @@ realisationsPage: {
         cta: "Découvrir les offres complètes",
       },
       projects: {
-        title: "Quelques réalisations",
+        title: "Mes dernières réalisations",
         cta: "Voir toutes les réalisations",
       },
       about: {
@@ -168,13 +173,18 @@ realisationsPage: {
       close: "Fermer"
     },
     ...projectsMessages.fr,
-    contact: {
-      description: "Je serais heureux d'échanger avec vous ! Que ce soit pour des questions, des projets à partager, ou simplement pour discuter, contactez-moi sans hésiter.",
-      form: {
-        email: "Email",
-        message: "Message",
-        submit: "Envoyer le message",
-      },
+contact: {
+      description: "Prêt à donner vie à votre projet ? Écrivez-moi.",
+      location: "Basé à Lyon, France",
+form: {
+  name: "Votre nom",
+  email: "Email",
+  phone: "Téléphone",
+  subject: "Objet de votre message",
+  message: "Message",
+  callback: "Souhaitez-vous être rappelé(e) ?",
+  submit: "Envoyer le message",
+},
     },
   },
 };

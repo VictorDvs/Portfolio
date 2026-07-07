@@ -47,9 +47,6 @@
             <a target="_blank" href="https://www.linkedin.com/in/victor2vos/" rel="noopener">
               <i class="bi bi-linkedin me-3"></i>
             </a>
-            <a target="_blank" href="https://www.facebook.com/vittoriodevos" rel="noopener">
-              <i class="bi bi-facebook me-3"></i>
-            </a>
           </div>
         </div>
       </div>
