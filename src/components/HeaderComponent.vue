@@ -1,5 +1,5 @@
 <template>
-  <nav v-scroll class="navbar navbar-expand-lg" id="nav">
+  <nav v-scroll class="navbar navbar-expand-lg" id="nav" :class="{ 'menu-open': isMenuOpen }">
     <div class="container-fluid coll-header">
 
       <button

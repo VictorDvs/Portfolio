@@ -82,7 +82,7 @@
 
       <div class="row justify-content-center g-4">
         <div class="col-12 col-md-4" v-for="project in previewProjects" :key="project.id">
-          <div class="project-card h-100">
+          <div class="project-card text-center h-100">
             <a :href="project.link" target="_blank" rel="noopener"><img :src="project.image" class="img-fluid" :alt="project.title"></a>
             <h3>{{ project.title }}</h3>
             <p>{{ project.description }}</p>
@@ -114,6 +114,44 @@
           <router-link to="/a-propos" class="me-contacter btn-offer btn-offer-primary">
             {{ $t('home.about.cta') }}
           </router-link>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================= -->
+    <!-- Section : Témoignages         -->
+    <!-- ============================= -->
+    <div class="container-fluid testimonials-section section-spacing" id="testimonials">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8 text-center mb-4">
+          <h2>{{ $t('home.testimonials.title') }}</h2>
+        </div>
+      </div>
+
+      <div class="row justify-content-center g-4">
+        <div class="col-12 col-md-5">
+          <div class="testimonial-card h-100">
+            <p class="testimonial-quote">{{ $t('home.testimonials.item1.quote') }}</p>
+            <div class="testimonial-author d-flex align-items-center gap-3">
+              <img src="/testimonial-1.jpg" class="testimonial-avatar" :alt="$t('home.testimonials.item1.name')">
+              <div class="text-start">
+                <p class="testimonial-name mb-0">{{ $t('home.testimonials.item1.name') }}</p>
+                <p class="testimonial-role mb-0">{{ $t('home.testimonials.item1.role') }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-5">
+          <div class="testimonial-card h-100">
+            <p class="testimonial-quote">{{ $t('home.testimonials.item2.quote') }}</p>
+            <div class="testimonial-author d-flex align-items-center gap-3">
+              <img src="/icon-helene.jpg" class="testimonial-avatar" :alt="$t('home.testimonials.item2.name')">
+              <div class="text-start">
+                <p class="testimonial-name mb-0">{{ $t('home.testimonials.item2.name') }}</p>
+                <p class="testimonial-role mb-0">{{ $t('home.testimonials.item2.role') }}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

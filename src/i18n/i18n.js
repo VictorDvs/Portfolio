@@ -5,7 +5,7 @@ import { projectsMessages } from './projects.i18n';
 const messages = {
   en: {
     navbar: {
-      home: "VDEV",
+      home: "VICTOR DE VOS",
       offer: "Services",
       realisations: "Portfolio",
       about: "About",
@@ -40,6 +40,19 @@ const messages = {
         teaser: "A technical writer turned developer, I bring documentation rigor and attention to detail to every project.",
         cta: "More about my background",
       },
+            testimonials: {
+  "title": "What They're Saying",
+  "item1": {
+    "quote": "Un travail sérieux et des délais respectés, exactement ce qu'il me fallait pour mon site.",
+    "name": "Éléonore Kahia",
+    "role": "Digital Project Manager, Alkantara"
+  },
+  "item2": {
+    "quote": "Victor joined my team for a 9-month temporary assignment during a period of significant change within the company. Although this was his first real professional experience as a technical writer, I was impressed by how quickly he developed his skills and adapted to our tools and methods. Victor was particularly helpful to me in implementing the “Doc-as-code” method. Curious by nature and committed to doing things right, he put a lot of effort into researching ways to optimize our methods and was always full of ideas. Victor is calm and unassuming without being shy. He has a calming and positive influence on the team; it’s a real pleasure to work with him. He has all the qualities needed to thrive in the field of technical writing or elsewhere. I highly recommend him!",
+    "name": "Hélène Letutour",
+    "role": "Technical Writer, NumoData"
+  }
+},
       cta: {
         title: "Got a project in mind?",
         button: "Let's talk about it",
@@ -97,7 +110,7 @@ form: {
   },
   fr: {
     navbar: {
-      home: "VDEV",
+      home: "VICTOR DE VOS",
       offer: "Services",
       realisations: "Réalisations",
       about: "À propos",
@@ -132,6 +145,19 @@ form: {
         teaser: "Rédacteur technique devenu développeur, j'allie rigueur documentaire et sens du détail dans chaque projet.",
         cta: "En savoir plus sur mon parcours",
       },
+            testimonials: {
+  "title": "Ce qu'ils en disent",
+  "item1": {
+    "quote": "Un travail sérieux et des délais respectés, exactement ce qu'il me fallait pour mon site.",
+    "name": "Éléonore Kahia",
+    "role": "Cheffe de projet digital, Alkantara"
+  },
+  "item2": {
+    "quote": "Victor a rejoint mon équipe dans le cadre d'un remplacement de 9 mois, au cours d'une période d'importantes transformations dans l'entreprise. Bien que cela soit sa première réelle expérience professionnelle en tant que rédacteur technique, il m'a impressionnée par la rapidité avec laquelle il est monté en compétences et s'est adapté à nos outils et méthodes. Victor m'a notamment été d'une aide considérable dans la mise en place de la méthode 'Doc-as-code'. Curieux par nature et soucieux de bien faire, il s'est beaucoup investi dans les recherches en vue d'optimiser nos méthodes et a été force de proposition. Victor est calme et discret sans pour autant être effacé. Il a un effet apaisant et positif sur l'équipe, c'est extrêmement agréable de travailler avec lui. Il a toutes les qualités pour évoluer avec succès dans le monde de la rédaction technique ou ailleurs. Je le recommande vivement.",
+    "name": "Hélène Letutour",
+    "role": "Rédactrice technique, NumoData"
+  }
+},
       cta: {
         title: "Un projet en tête ?",
         button: "Discutons-en",

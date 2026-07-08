@@ -16,7 +16,8 @@
   transition: background-color 0.3s ease;
 
   // Ajoutée par le JS au premier scroll, jamais retirée ensuite
-  &.navbar--solid {
+    &.navbar--solid,
+  &.menu-open {
     background-color: var(--background-color-header); // ou ta variable de couleur
   }
   }
@@ -52,7 +53,6 @@
   }
 
   .navbar-toggler{
-  border: none;
   background: transparent;
   color: var(--burger-button-color);
   padding: 5px;
@@ -102,7 +102,7 @@
   
   /* Boutons de sélection de langue */
   .btn-lang {
-    font-family: "Readex Pro", serif;
+    font-family: "Poppins", serif;
     font-weight: 600;
     background-color: transparent;
     border: 1px solid var(--background-color);
@@ -110,7 +110,7 @@
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 0.9em;
-    font-family: "Readex Pro", serif;
+    font-family: "Poppins", serif;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
   }
@@ -126,18 +126,6 @@
     background-color: var(--background-color);
     color: var(--text-color);
     border: 1px solid var(--text-color);
-  }
-
-  
-  
-  /* Changer la taille de l'icône */
-  .bi {
-    font-size: 22px; /* Ajuster la taille */
-  }
-  
-  /* Changer la couleur de l'icône */
-  .bi-list {
-    color: var(--text-color); /* Couleur claire pour le menu */
   }
   
   /* Media Queries pour les écrans réduits */
@@ -168,7 +156,7 @@
 
   @media screen and (max-width: 990px) {
     .navbar-nav {
-      border-bottom: 1px solid var(--text-color);
+      // border-bottom: 1px solid var(--text-color);
       padding-bottom: 8px;
     }
   }
