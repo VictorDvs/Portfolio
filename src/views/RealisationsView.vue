@@ -102,7 +102,7 @@ filters: [
           featured: true,
           titleKey: 'devWebProjects.pablocires_title',
           descKey: 'devWebProjects.pablocires_desc',
-          image: 'Projets/projets-pablo-cires.png',
+          image: 'Projets/cover-pablocires.png',
           link: 'https://www.pablocires.me/',
         },
         // --- Rédaction technique ---
@@ -113,7 +113,7 @@ filters: [
           featured: true,
           titleKey: 'techWritingProjects.fastpack_title',
           descKey: 'techWritingProjects.fastpack_description',
-          image: 'Projets/projets-fastpack.png',
+          image: 'Projets/cover-fastpack.png',
           link: 'https://fastpack-documentation.netlify.app/',
         },
         {

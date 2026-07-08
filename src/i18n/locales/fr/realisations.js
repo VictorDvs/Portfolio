@@ -21,7 +21,7 @@ export default {
   devWebProjects: {
     alkantara_title: "Alkantara",
     alkantara_desc: "Site web pour l'agence de communication Alkantara. Développé avec WordPress.",
-    pablocires_title: "Portfolio de Pablo Cirès",
+    pablocires_title: "Pablo Cirès",
     pablocires_desc: "Portfolio de Pablo Cirès, réalisateur documentaire. Site web développé avec Vue.js.",
     learn_more: "En savoir plus",
     visit_project: "Visiter le projet",
