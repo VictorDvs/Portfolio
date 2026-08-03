@@ -6,11 +6,12 @@
     z-index: 1000;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: auto;
     overflow: visible;
     transition: height 0.3s ease;
-
+    
       // État par défaut = transparent (pas besoin de classe JS pour ça)
   background-color: transparent;
   transition: background-color 0.3s ease;
@@ -37,10 +38,7 @@
   margin: 0 30px;
 }
 
-/* Lien Accueil, toujours visible à gauche */
-.nav-link-home {
-  margin-right: auto; // pousse tout le reste vers la droite
-}
+
   
   /* Style des liens de navigation */
   .navbar-nav > .nav-link:not(.dropdown-item) {
@@ -76,6 +74,14 @@
     cursor: pointer;
   }
   }
+
+  /* Lien Accueil, toujours visible à gauche */
+.nav-link-home {
+  margin-right: auto; // pousse tout le reste vers la droite
+  font-family: "Pattaya", sans-serif;
+  font-weight: 500;
+  font-size: 2em;
+}
   
   /* Soulignement des liens actifs */
   .router-link-exact-active::after {
@@ -105,7 +111,7 @@
     font-family: "Poppins", serif;
     font-weight: 600;
     background-color: transparent;
-    border: 1px solid var(--background-color);
+    // border: 1px solid var(--background-color);
     color: var(--text-color);
     border-radius: 5px;
     padding: 5px 10px;
@@ -123,9 +129,10 @@
   
   /* Bouton de langue actif */
   .btn-lang.active {
-    background-color: var(--background-color);
+    background-color: #8A4266;
     color: var(--text-color);
-    border: 1px solid var(--text-color);
+    border-color: transparent; /* Supprime la bordure pour le bouton actif */
+    // border: 1px solid var(--text-color);
   }
   
   /* Media Queries pour les écrans réduits */

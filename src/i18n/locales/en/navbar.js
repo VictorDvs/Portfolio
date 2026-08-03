@@ -1,6 +1,6 @@
     export default {
     navbar: {
-      home: "VICTOR DE VOS",
+      home: "Victor De Vos",
       offer: "Services",
       realisations: "Portfolio",
       about: "About",

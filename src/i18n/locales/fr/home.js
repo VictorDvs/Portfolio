@@ -1,7 +1,7 @@
 export default {
     home: {
       hero: {
-        title: "Victor De Vos, intégrateur web et rédacteur technique",
+        title: "Du développement web à la rédaction technique, je vous accompagne dans vos projets digitaux.",
         subtitle: "Création et refonte de sites, gestion de la documentation technique.",
         cta_primary: "Voir mes services",
         cta_secondary: "Me contacter",

@@ -8,14 +8,25 @@
 <!-- Section : Hero                -->
 <!-- ============================= -->
 <div class="container-fluid home d-flex flex-column align-items-center justify-content-center" id="home">
-  <v-parallax src="/hero-cover.jpg" height="100vh" width="100%">
-    <div class="hero-overlay"></div>
+  <!-- <v-parallax src="/hero-cover.jpg" height="100vh" width="100%"> -->
+    <!-- <div class="hero-overlay"></div> -->
 
 <div class="hero-content d-flex flex-column align-items-center justify-content-center w-100">
+  
   <div class="home-text-intro text-center">
-    <h1 id="text-greetings">{{ $t('home.hero.title') }}</h1>
+    <div class="photo-wrapper">
+    <div class="photo-circle">
+      <img src="/ma-photo.jpg" alt="Victor De Vos" />
+    </div>
+    </div>
+       <!-- Cercle + titre côte à côte -->
+    <div class="d-flex flex-row align-items-center justify-content-center gap-3">
+      <h1 id="text-greetings">{{ $t('home.hero.title') }}</h1>
+    </div>
+    
     <div class="d-flex flex-column gap-3 w-100">
     <p class="hero-subtitle">{{ $t('home.hero.subtitle') }}</p>
+    
     <div class="d-flex flex-row align-items-center justify-content-center gap-3">
             <router-link to="/services" class="btn-offer btn-offer-primary">
           {{ $t('home.hero.cta_primary') }}
@@ -23,6 +34,7 @@
         <router-link to="/contact" class="btn-offer btn-offer-secondary">
           {{ $t('home.hero.cta_secondary') }}
         </router-link>
+
         </div>
     </div>
   </div>
@@ -33,7 +45,7 @@
       </div>
 
     </div>
-  </v-parallax>
+  <!-- </v-parallax> -->
 
 <!-- ============================= -->
 <!-- Section : Offre (2 piliers)   -->
@@ -178,8 +190,8 @@
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
-import { useI18n } from 'vue-i18n'
-import Typed from 'typed.js'
+// import { useI18n } from 'vue-i18n'
+// import Typed from 'typed.js'
 
 export default {
   name: 'HomeView',
@@ -218,23 +230,21 @@ export default {
     }
   },
 
-  mounted() {
-    const { t } = useI18n()
-    const text = t('home.hero.title')
+
+}
+    //const text = t('home.hero.title')
 
     // efface le texte par défaut et lance Typed.js
-    const el = document.getElementById('text-greetings')
-    if (el) {
-      el.textContent = ''
-      new Typed(el, {
-        strings: [text],
-        typeSpeed: 45,
-        startDelay: 300,
-        showCursor: true,
-      })
-    }
-  },
-}
+    //const el = document.getElementById('text-greetings')
+    //if (el) {
+    //  el.textContent = ''
+    //  new Typed(el, {
+    //    strings: [text],
+    //    typeSpeed: 45,
+    //    startDelay: 300,
+        // showCursor: //true,
+      //})
+    // }
 </script>
 
 <style lang="scss" scoped>
