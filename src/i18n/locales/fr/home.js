@@ -1,7 +1,7 @@
 export default {
     home: {
       hero: {
-        title: "Du développement web à la rédaction technique, je vous accompagne dans vos projets digitaux.",
+        title: "Du Développement web à la Rédaction technique, je vous accompagne dans vos projets digitaux.",
         subtitle: "Création et refonte de sites, gestion de la documentation technique.",
         cta_primary: "Voir mes services",
         cta_secondary: "Me contacter",
@@ -20,7 +20,7 @@ export default {
         cta: "Découvrir les offres complètes",
       },
       projects: {
-        title: "Mes dernières réalisations",
+        title: "Ce que j'ai réalisé récemment",
         cta: "Voir toutes les réalisations",
       },
       about: {
@@ -28,7 +28,7 @@ export default {
         cta: "En savoir plus sur mon parcours",
       },
      testimonials: {
-    "title": "Ce qu'ils en disent",
+    "title": "Ce qu'ils, ou plutôt ce qu'elles en disent",
     "item1": {
         "quote": "Un travail sérieux et des délais respectés, exactement ce qu'il me fallait pour mon site.",
         "name": "Éléonore Kahia",

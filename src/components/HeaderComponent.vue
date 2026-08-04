@@ -22,9 +22,9 @@
           <router-link class="nav-link" :to="'/realisations'" @click="closeMenu">
             {{ $t('navbar.realisations') }}
           </router-link>
-          <router-link class="nav-link" :to="'/a-propos'" @click="closeMenu">
+          <!-- <router-link class="nav-link" :to="'/a-propos'" @click="closeMenu">
             {{ $t('navbar.about') }}
-          </router-link>
+          </router-link> -->
           <router-link class="nav-link" :to="'/contact'" @click="closeMenu">
             {{ $t('navbar.contact') }}
           </router-link>

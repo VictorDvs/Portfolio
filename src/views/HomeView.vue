@@ -114,7 +114,7 @@
     <!-- ============================= -->
     <!-- Section : Teaser À propos     -->
     <!-- ============================= -->
-    <div class="container-fluid about-teaser-section py-5" id="about-teaser">
+    <!-- <div class="container-fluid about-teaser-section py-5" id="about-teaser">
       <div class="row align-items-center justify-content-center g-4">
         <div class="col-12 col-md-3 text-center">
           <div class="circle-container circle-container-small">
@@ -128,7 +128,7 @@
           </router-link>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- ============================= -->
     <!-- Section : Témoignages         -->
@@ -145,7 +145,7 @@
           <div class="testimonial-card h-100">
             <p class="testimonial-quote">{{ $t('home.testimonials.item1.quote') }}</p>
             <div class="testimonial-author d-flex align-items-center gap-3">
-              <img src="/testimonial-1.jpg" class="testimonial-avatar" :alt="$t('home.testimonials.item1.name')">
+              <img src="/icon-eleonore.jpg" class="testimonial-avatar" :alt="$t('home.testimonials.item1.name')">
               <div class="text-start">
                 <p class="testimonial-name mb-0">{{ $t('home.testimonials.item1.name') }}</p>
                 <p class="testimonial-role mb-0">{{ $t('home.testimonials.item1.role') }}</p>
@@ -217,14 +217,15 @@ export default {
           id: 'pablocires',
           title: 'Portfolio Pablo Cirès',
           description: 'Site web personnel de Pablo Cirès, réalisateur de documentaires.',
-          image: 'Projets/projets-pablo-cires.png',
+          image: 'Projets/cover-pablocires.png',
           link: 'https://www.pablocires.me/',
         },
         {
-          id: 3,
-          title: 'Projet 3',
+          id: 'fastpack',
+          title: 'Fastpack',
           description: 'Courte description du projet.',
-          image: '/projects/projet-3.jpg',
+          image: 'Projets/cover-fastpack.png',
+          link: 'https://www.fastpack.fr/',
         },
       ],
     }

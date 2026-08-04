@@ -1,7 +1,7 @@
 export default {
     home: {
       hero: {
-        title: "Victor De Vos, web developer and technical writer",
+        title: "From web development to technical writing, I'll support you in your digital projects.",
         subtitle: "Whether you're building a website or updating documentation, I'll work with you wherever you are.",
         cta_primary: "See my services",
         cta_secondary: "Get in touch",
@@ -20,7 +20,7 @@ export default {
         cta: "Discover the full offer",
       },
       projects: {
-        title: "A few recent projects",
+        title: "What I've Been Up To Lately",
         cta: "See all projects",
       },
       about: {
