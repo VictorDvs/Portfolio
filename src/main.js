@@ -4,8 +4,10 @@ import router from './router'
 import store from './store'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'lenis/dist/lenis.css'
 import i18n from '@/i18n';
 import ScrollDirective from './directives/scroll';
+import LenisVue from 'lenis/vue'
 // Vuetify
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
@@ -53,4 +55,4 @@ const app = createApp(App);
 app.directive('scroll', ScrollDirective);
 
 // Utilise les plugins et monte l'application
-app.use(i18n).use(store).use(router).use(vuetify).mount('#app');
+app.use(i18n).use(store).use(router).use(vuetify).use(LenisVue).mount('#app');

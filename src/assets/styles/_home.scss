@@ -144,6 +144,29 @@ a {
     color: #202d26;
     font-weight: 400;
   }
+
+  .offer-card {
+    background-color: #729c87;
+    color: #202d26;
+    // border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h3 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      color: var(--text-color);
+      font-size: 2em;
+    }
+
+    p {
+      font-weight: 500;
+      color: var(--text-color);
+    }
+  }
   .btn-offer {
     background-color: #547866;
   }

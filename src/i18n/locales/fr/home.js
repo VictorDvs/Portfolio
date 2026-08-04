@@ -11,7 +11,7 @@ export default {
         subtitle: "Deux compétences complémentaires, un seul interlocuteur.",
         dev: {
           title: "Développement web",
-          text: "Sites vitrines, e-commerce, migrations. Développement de sites robustes et faciles à maintenir.",
+          text: "Je vous aide à concevoir, structurer, designer, maintenir et faire évoluer votre site vitrine, marchand, portfolio.",
         },
         redaction: {
           title: "Rédaction technique",
