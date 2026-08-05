@@ -7,50 +7,47 @@
 <!-- ============================= -->
 <!-- Section : Hero                -->
 <!-- ============================= -->
-<div class="container-fluid home d-flex flex-column align-items-center justify-content-center" id="home">
-  <!-- <v-parallax src="/hero-cover.jpg" height="100vh" width="100%"> -->
-    <!-- <div class="hero-overlay"></div> -->
 
-<div class="hero-content d-flex flex-column align-items-center justify-content-center w-100">
+
+  <div class="hero-content d-flex flex-column align-items-center justify-content-center w-100">
   
-  <div class="home-text-intro text-center">
-    <div class="photo-wrapper">
-    <div class="photo-circle">
-      <img src="/ma-photo.jpg" alt="Victor De Vos" />
+    <div class="home-text-intro text-center">
+      <div class="photo-wrapper">
+      <div class="photo-circle">
+        <img src="/ma-photo.jpg" alt="Victor De Vos" />
+      </div>
+      </div>
+         <!-- Cercle + titre côte à côte -->
+      <div class="d-flex flex-row align-items-center justify-content-center gap-3">
+        <h1 id="text-greetings">{{ $t('home.hero.title') }}</h1>
+      </div>
+  
+      <div class="d-flex flex-column gap-3 w-100">
+      <p class="hero-subtitle">{{ $t('home.hero.subtitle') }}</p>
+  
+      <div class="d-flex flex-row align-items-center justify-content-center gap-3">
+              <router-link to="/services" class="btn-offer btn-offer-primary">
+            {{ $t('home.hero.cta_primary') }}
+          </router-link>
+          <router-link to="/contact" class="btn-offer btn-offer-secondary">
+            {{ $t('home.hero.cta_secondary') }}
+          </router-link>
+  
+          </div>
+      </div>
     </div>
-    </div>
-       <!-- Cercle + titre côte à côte -->
-    <div class="d-flex flex-row align-items-center justify-content-center gap-3">
-      <h1 id="text-greetings">{{ $t('home.hero.title') }}</h1>
-    </div>
-    
-    <div class="d-flex flex-column gap-3 w-100">
-    <p class="hero-subtitle">{{ $t('home.hero.subtitle') }}</p>
-    
-    <div class="d-flex flex-row align-items-center justify-content-center gap-3">
-            <router-link to="/services" class="btn-offer btn-offer-primary">
-          {{ $t('home.hero.cta_primary') }}
-        </router-link>
-        <router-link to="/contact" class="btn-offer btn-offer-secondary">
-          {{ $t('home.hero.cta_secondary') }}
-        </router-link>
-
+  
+        <!-- CTA Hero -->
+        <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
         </div>
-    </div>
-  </div>
-
-      <!-- CTA Hero -->
-      <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-
       </div>
 
-    </div>
-  <!-- </v-parallax> -->
 
 <!-- ============================= -->
 <!-- Section : Offre (2 piliers)   -->
 <!-- ============================= -->
-    <div class="container-fluid offer-section section-spacing" id="offre-preview">
+
+    <div class="container-fluid offer-section section-spacing reveal-on-scroll" id="offre-preview">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-8 text-center mb-4">
           <h2>{{ $t('home.offer.title') }}</h2>
@@ -85,7 +82,7 @@
     <!-- ============================= -->
     <!-- Section : Aperçu réalisations -->
     <!-- ============================= -->
-    <div class="container-fluid projects-section section-spacing" id="realisations-preview">
+    <div class="container-fluid projects-section section-spacing reveal-on-scroll" id="realisations-preview">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-8 text-center mb-4">
           <h2>{{ $t('home.projects.title') }}</h2>
@@ -112,28 +109,9 @@
     </div>
 
     <!-- ============================= -->
-    <!-- Section : Teaser À propos     -->
-    <!-- ============================= -->
-    <!-- <div class="container-fluid about-teaser-section py-5" id="about-teaser">
-      <div class="row align-items-center justify-content-center g-4">
-        <div class="col-12 col-md-3 text-center">
-          <div class="circle-container circle-container-small">
-            <img src="/ma-photo.jpg" class="img-fluid" alt="Ma photo">
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <p>{{ $t('home.about.teaser') }}</p>
-          <router-link to="/a-propos" class="me-contacter btn-offer btn-offer-primary">
-            {{ $t('home.about.cta') }}
-          </router-link>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- ============================= -->
     <!-- Section : Témoignages         -->
     <!-- ============================= -->
-    <div class="container-fluid testimonials-section section-spacing" id="testimonials">
+    <div class="container-fluid testimonials-section section-spacing reveal-on-scroll" id="testimonials">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-8 text-center mb-4">
           <h2>{{ $t('home.testimonials.title') }}</h2>
@@ -167,11 +145,10 @@
         </div>
       </div>
     </div>
-
     <!-- ============================= -->
     <!-- Section : CTA final           -->
     <!-- ============================= -->
-    <div class="container-fluid final-cta-section section-spacing text-center" id="contact-cta">
+    <div class="container-fluid final-cta-section section-spacing text-center reveal-on-scroll" id="contact-cta">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-6">
           <h2>{{ $t('home.cta.title') }}</h2>
@@ -181,7 +158,6 @@
         </div>
       </div>
     </div>
-</div>
   </main>
   <FooterComponent/>
 </template>
@@ -190,8 +166,9 @@
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
-// import { useI18n } from 'vue-i18n'
-// import Typed from 'typed.js'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+
 
 export default {
   name: 'HomeView',
@@ -230,22 +207,40 @@ export default {
       ],
     }
   },
+mounted() {
+    // Une seule création de matchMedia pour tout le composant
+    this.mm = gsap.matchMedia();
 
+    this.mm.add("(prefers-reduced-motion: no-preference)", () => {
 
-}
-    //const text = t('home.hero.title')
+      // --- Reveal des sections au scroll ---
+      const sections = gsap.utils.toArray(".reveal-on-scroll");
+      sections.forEach((el) => {
+        gsap.from(el, {
+          y: 80,
+          opacity: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
 
-    // efface le texte par défaut et lance Typed.js
-    //const el = document.getElementById('text-greetings')
-    //if (el) {
-    //  el.textContent = ''
-    //  new Typed(el, {
-    //    strings: [text],
-    //    typeSpeed: 45,
-    //    startDelay: 300,
-        // showCursor: //true,
-      //})
-    // }
+      // Cleanup unique pour tout ce bloc
+      return () => {
+        ScrollTrigger.getAll().forEach((st) => st.kill());
+      };
+    });
+  },
+
+  beforeUnmount() {
+    this.mm?.revert();
+  },
+};
+
 </script>
 
 <style lang="scss" scoped>

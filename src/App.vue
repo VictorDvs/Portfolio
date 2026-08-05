@@ -10,12 +10,10 @@
 import { onMounted, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { Dropdown } from 'bootstrap';
-import { useTheme } from 'vuetify'
 
 export default {
   setup() {
     const router = useRouter();
-    const theme = useTheme();
     const initializeDropdowns = () => {
       // Sélectionne tous les éléments de dropdown
       const dropdownElements = document.querySelectorAll('.dropdown-toggle');
@@ -34,17 +32,9 @@ export default {
           initializeDropdowns(); // Réinitialise les dropdowns après chaque navigation
         }
       );
-      theme.global.name.value = 'dark'
     });
   },
 };
 </script>
 
-<style>
-
-p {
-    font-size: 1.5em;
-    font-weight: 200;
-}
-
-</style>
+<style></style>
