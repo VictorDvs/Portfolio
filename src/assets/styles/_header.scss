@@ -1,7 +1,7 @@
 @import 'mixins'; 
 /* Style principal de la navbar */
 #nav {
-    background-color: var(--background-color-header);
+    // background-color: var(--background-color-header);
     color: var(--text-color);
     z-index: 1000;
     position: fixed;
@@ -15,6 +15,10 @@
       // État par défaut = transparent (pas besoin de classe JS pour ça)
   background-color: transparent;
   transition: background-color 0.3s ease;
+
+  &.header--dark {
+    background-color: var(--background-color-header);
+  }
 
   // Ajoutée par le JS au premier scroll, jamais retirée ensuite
     &.navbar--solid,

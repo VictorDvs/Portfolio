@@ -112,6 +112,8 @@ a {
 .offer-section {
   background-color: #f6e9ef;
   height: 75vh;
+  @include displayFlex;
+  flex-direction: column;
 
   h2 {
     font-family: "Poppins", sans-serif;
@@ -130,7 +132,7 @@ a {
   }
 
   .offer-card {
-    background-color: #729c87;
+    background-color: #547866;
     color: #202d26;
     // border: 1px solid var(--border-color);
     border-radius: 12px;
@@ -169,7 +171,7 @@ a {
   }
 }
 
-.project-card {
+.project-card-home {
   background-color: #f6e9ef;
   border: 2px solid #202d26;
   border-radius: 8px;

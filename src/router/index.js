@@ -16,7 +16,7 @@ const routes = [
     path: '/services',
     name: 'services',
     component: () => import(/* webpackChunkName: "services" */ '../views/ServicesView.vue'),
-    meta: { title: 'Services' },
+    meta: { title: 'Services', darkHeader: true }
   },
   {
     // TODO: créer RealisationsView.vue — portfolio unifié,
@@ -25,13 +25,7 @@ const routes = [
     path: '/realisations',
     name: 'realisations',
     component: () => import(/* webpackChunkName: "realisations" */ '../views/RealisationsView.vue'),
-    meta: { title: 'Réalisations' },
-  },
-  {
-    path: '/a-propos',
-    name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
-    meta: { title: 'À propos' },
+    meta: { title: 'Réalisations'},
   },
   {
     path: '/contact',

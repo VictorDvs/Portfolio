@@ -91,7 +91,7 @@
 
       <div class="row justify-content-center g-4">
         <div class="col-12 col-md-4" v-for="project in previewProjects" :key="project.id">
-          <div class="project-card text-center h-100">
+          <div class="project-card-home text-center h-100">
             <a :href="project.link" target="_blank" rel="noopener"><img :src="project.image" class="img-fluid" :alt="project.title"></a>
             <h3>{{ project.title }}</h3>
             <p>{{ project.description }}</p>

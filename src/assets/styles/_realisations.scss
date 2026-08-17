@@ -1,12 +1,16 @@
 /* ============================= */
 /* Section Réalisations          */
 /* ============================= */
+.realisations-page {
+  background-color: #8a4266;
 
-.realisations-page h1 {
+h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: var(--text-color);
   margin-bottom: 20px;
+  
+}
 }
 
 .projects-section {
@@ -20,10 +24,9 @@
 }
 
 .project-card {
-  border-radius: 8px;
-  background-color: var(--background-color);
-  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
-  color: var(--text-color);
+  border-radius: 2px;
+  background-color: #f6e9ef;
+  color: var(--text-color-dark);
   transition: transform 0.2s ease-in-out;
 
 .project-content {

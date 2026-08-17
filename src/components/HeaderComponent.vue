@@ -1,5 +1,5 @@
 <template>
-  <nav v-scroll class="navbar navbar-expand-lg" id="nav" :class="{ 'menu-open': isMenuOpen }">
+  <nav v-scroll class="navbar navbar-expand-lg" id="nav" :class="{ 'menu-open': isMenuOpen, 'header--dark': isDarkHeader }">
     <div class="container-fluid coll-header">
 
       <button
@@ -60,6 +60,9 @@ export default {
     currentLocale() {
       return this.$i18n.locale; // Récupère la langue actuelle
     },
+      isDarkHeader() {
+    return this.$route.meta.darkHeader === true;
+  },
   },
   methods: {
     changeLanguage(lang) {

@@ -34,7 +34,7 @@
       <div class="project-content">
           <span class="project-badge">{{ item.group }}</span>
           <h3>{{ item.title }}</h3>
-          <button class="btn-offer btn-offer-secondary mt-2" @click="openDialog(item)">
+          <button class="btn-offer btn-offer-primary mt-2" @click="openDialog(item)">
             {{ $t('techWritingProjects.learn_more') }}
           </button>
       </div>
@@ -61,16 +61,19 @@
       </v-card>
     </v-dialog>
   </main>
+  <FooterComponent/>
 </template>
 
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 
 export default {
   name: 'RealisationsView',
 
   components: {
     HeaderComponent,
+    FooterComponent,
   },
 
   data() {
