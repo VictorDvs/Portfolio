@@ -7,7 +7,7 @@ export default {
         cta_secondary: "Me contacter",
       },
       offer: {
-        title: "Ce que je peux faire pour vous",
+        title: "À votre service",
         subtitle: "Deux compétences complémentaires, un seul interlocuteur.",
         dev: {
           title: "Développement web",
@@ -20,7 +20,7 @@ export default {
         cta: "Découvrir les offres complètes",
       },
       projects: {
-        title: "Ce que j'ai réalisé récemment",
+        title: "Derniers projets",
         cta: "Voir toutes les réalisations",
       },
       about: {

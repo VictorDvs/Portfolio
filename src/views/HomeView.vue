@@ -47,23 +47,23 @@
 <!-- Section : Offre (2 piliers)   -->
 <!-- ============================= -->
 
-    <div class="container-fluid offer-section section-spacing reveal-on-scroll" id="offre-preview">
+    <div class="container-fluid offer-section reveal-on-scroll" id="offre-preview">
       <div class="row justify-content-center">
-        <div class="col-12 col-lg-8 text-center mb-4">
+        <div class="col-12 col-lg-8 text-center mb-5 w-100">
           <h2>{{ $t('home.offer.title') }}</h2>
-          <p>{{ $t('home.offer.subtitle') }}</p>
+          <!-- <p>{{ $t('home.offer.subtitle') }}</p> -->
         </div>
       </div>
 
-      <div class="row justify-content-center g-4">
+      <div class="row justify-content-center g-5">
         <div class="col-12 col-md-5">
-          <div class="offer-card text-center h-100">
+          <div class="offer-card wavy-circle text-center h-100">
             <h3>{{ $t('home.offer.dev.title') }}</h3>
             <p>{{ $t('home.offer.dev.text') }}</p>
           </div>
         </div>
         <div class="col-12 col-md-5">
-          <div class="offer-card text-center h-100">
+          <div class="offer-card wavy-circle text-center h-100">
             <h3>{{ $t('home.offer.redaction.title') }}</h3>
             <p>{{ $t('home.offer.redaction.text') }}</p>
           </div>
@@ -93,8 +93,8 @@
         <div class="col-12 col-md-4" v-for="project in previewProjects" :key="project.id">
           <div class="project-card-home text-center h-100">
             <a :href="project.link" target="_blank" rel="noopener"><img :src="project.image" class="img-fluid" :alt="project.title"></a>
-            <h3>{{ project.title }}</h3>
-            <p>{{ project.description }}</p>
+            <h3 class="p-2">{{ project.title }}</h3>
+            <!-- <p>{{ project.description }}</p> -->
           </div>
         </div>
       </div>
@@ -217,13 +217,13 @@ mounted() {
       const sections = gsap.utils.toArray(".reveal-on-scroll");
       sections.forEach((el) => {
         gsap.from(el, {
-          y: 80,
+          y: 90,
           opacity: 0,
-          duration: 1,
+          duration: 1.4,
           ease: "power2.out",
           scrollTrigger: {
             trigger: el,
-            start: "top 85%",
+            start: "top 90%",
             toggleActions: "play none none reverse",
           },
         });
