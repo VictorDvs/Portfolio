@@ -35,9 +35,9 @@ export default {
     "role": "Digital Project Manager, Alkantara"
   },
   "item2": {
-    "quote": "Victor joined my team for a 9-month temporary assignment during a period of significant change within the company. Although this was his first real professional experience as a technical writer, I was impressed by how quickly he developed his skills and adapted to our tools and methods. Victor was particularly helpful to me in implementing the “Doc-as-code” method. Curious by nature and committed to doing things right, he put a lot of effort into researching ways to optimize our methods and was always full of ideas. Victor is calm and unassuming without being shy. He has a calming and positive influence on the team; it’s a real pleasure to work with him. He has all the qualities needed to thrive in the field of technical writing or elsewhere. I highly recommend him!",
-    "name": "Hélène Letutour",
-    "role": "Technical Writer, NumoData"
+    quote: "Victor joined my team for a 9-month temporary assignment during a period of significant change within the company. Although this was his first real professional experience as a technical writer, I was impressed by how quickly he developed his skills and adapted to our tools and methods. Victor was particularly helpful to me in implementing the “Doc-as-code” method. Curious by nature and committed to doing things right, he put a lot of effort into researching ways to optimize our methods and was always full of ideas. Victor is calm and unassuming without being shy. He has a calming and positive influence on the team; it’s a real pleasure to work with him. He has all the qualities needed to thrive in the field of technical writing or elsewhere. I highly recommend him!",
+    name: "Hélène Letutour",
+    role: "Technical Writer, NumoData"
   }
 },
       cta: {

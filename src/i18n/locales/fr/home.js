@@ -28,7 +28,7 @@ export default {
         cta: "En savoir plus sur mon parcours",
       },
      testimonials: {
-    "title": "Ce qu'ils, ou plutôt ce qu'elles en disent",
+    "title": "Témoignages",
     "item1": {
         "quote": "Un travail sérieux et des délais respectés, exactement ce qu'il me fallait pour mon site.",
         "name": "Éléonore Kahia",

@@ -202,7 +202,7 @@ export default {
           title: 'Fastpack',
           description: 'Courte description du projet.',
           image: 'Projets/cover-fastpack.png',
-          link: 'https://www.fastpack.fr/',
+          link: 'https://fastpack-documentation.netlify.app/',
         },
       ],
     }

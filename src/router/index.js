@@ -6,7 +6,7 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView,
-    meta: { title: 'Accueil' },
+    meta: { title: 'Victor De Vos' },
   },
   {
     // TODO: créer ServicesView.vue — page de service qui présente
@@ -16,7 +16,7 @@ const routes = [
     path: '/services',
     name: 'services',
     component: () => import(/* webpackChunkName: "services" */ '../views/ServicesView.vue'),
-    meta: { title: 'Services', darkHeader: true }
+    meta: { title: 'Victor De Vos - Services', darkHeader: true }
   },
   {
     // TODO: créer RealisationsView.vue — portfolio unifié,
@@ -25,13 +25,13 @@ const routes = [
     path: '/realisations',
     name: 'realisations',
     component: () => import(/* webpackChunkName: "realisations" */ '../views/RealisationsView.vue'),
-    meta: { title: 'Réalisations'},
+    meta: { title: 'Victor De Vos - Réalisations'},
   },
   {
     path: '/contact',
     name: 'contact',
     component: () => import(/* webpackChunkName: "contact" */ '../views/ContactView.vue'),
-    meta: { title: 'Contact' },
+    meta: { title: 'Victor De Vos - Contact' },
   },
 
   // --- Redirections pour ne pas casser d'anciens liens / indexation Google ---
