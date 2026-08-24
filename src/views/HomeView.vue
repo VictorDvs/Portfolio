@@ -29,7 +29,7 @@
               <router-link to="/services" class="btn-offer btn-offer-primary">
             {{ $t('home.hero.cta_primary') }}
           </router-link>
-          <router-link to="/contact" class="btn-offer btn-offer-secondary">
+          <router-link to="/#contact-cta" class="btn-offer btn-offer-secondary no-underline">
             {{ $t('home.hero.cta_secondary') }}
           </router-link>
   
@@ -48,31 +48,30 @@
 <!-- ============================= -->
 
     <div class="container-fluid offer-section reveal-on-scroll" id="offre-preview">
-      <div class="row justify-content-center">
+      <!-- <div class="row justify-content-center">
         <div class="col-12 col-lg-8 text-center mb-5 w-100">
           <h2>{{ $t('home.offer.title') }}</h2>
-          <!-- <p>{{ $t('home.offer.subtitle') }}</p> -->
         </div>
-      </div>
+      </div> -->
 
       <div class="row justify-content-center g-5">
         <div class="col-12 col-md-5">
-          <div class="offer-card wavy-circle text-center h-100">
-            <h3>{{ $t('home.offer.dev.title') }}</h3>
-            <p>{{ $t('home.offer.dev.text') }}</p>
+          <div class="offer-card wavy-circle h-100">
+            <p>{{ $t('home.offer.dev.title') }}</p>
+            <h3>{{ $t('home.offer.dev.text') }}</h3>
           </div>
         </div>
         <div class="col-12 col-md-5">
-          <div class="offer-card wavy-circle text-center h-100">
-            <h3>{{ $t('home.offer.redaction.title') }}</h3>
-            <p>{{ $t('home.offer.redaction.text') }}</p>
+          <div class="offer-card wavy-circle h-100">
+            <p>{{ $t('home.offer.redaction.title') }}</p>
+            <h3>{{ $t('home.offer.redaction.text') }}</h3>
           </div>
         </div>
       </div>
 
       <div class="row justify-content-center mt-4">
         <div class="col-12 d-flex justify-content-center">
-          <router-link to="/offre" class="btn-offer btn-offer-primary">
+          <router-link to="/services" class="btn-offer btn-offer-primary">
             {{ $t('home.offer.cta') }}
           </router-link>
         </div>
@@ -89,25 +88,97 @@
         </div>
       </div>
 
-      <div class="row justify-content-center g-4">
-        <div class="col-12 col-md-4" v-for="project in previewProjects" :key="project.id">
-          <div class="project-card-home text-center h-100">
-            <a :href="project.link" target="_blank" rel="noopener"><img :src="project.image" class="img-fluid" :alt="project.title"></a>
-            <h3 class="p-2">{{ project.title }}</h3>
-            <!-- <p>{{ project.description }}</p> -->
-          </div>
-        </div>
+<div class="row justify-content-center g-4">
+  <div class="col-12 col-md-4" v-for="project in previewProjects" :key="project.id">
+    <a :href="project.link" target="_blank" rel="noopener" class="project-card-home text-center h-100">
+      <div class="project-image-wrapper">
+        <img :src="project.image" class="img-fluid" :alt="project.title">
+        <h3 class="project-title">{{ project.title }}</h3>
       </div>
+    </a>
+  </div>
+</div>
 
       <div class="row justify-content-center mt-4">
-        <div class="col-12 d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center mt-4">
           <router-link to="/realisations" class="btn-offer btn-offer-primary">
             {{ $t('home.projects.cta') }}
           </router-link>
         </div>
       </div>
     </div>
+    
+    <!-- ============================= -->
+    <!-- Section : Qui suis-je ?       -->
+    <!-- ============================= -->
 
+    <div class="container-fluid about-section section-spacing reveal-on-scroll" id="about">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8 text-center mb-4">
+          <h2 class="mb-4">{{ $t('home.about.title') }}</h2>
+          <p class="text-about" v-html="$t('home.about.text')"></p>
+        </div>
+      </div>
+    </div>
+        <!-- ============================= -->
+    <!-- Section : FORMULAIRE           -->
+    <!-- ============================= -->
+    <div class="container-fluid final-cta-section section-spacing text-center reveal-on-scroll" id="contact-cta">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-6">
+          <h2>{{ $t('home.cta.title') }}</h2>
+
+<div class="col-12 d-flex justify-content-center">
+  <form id="form" action="https://formspree.io/f/mpwaeeld" method="POST" class="contact-form">
+    
+    <!-- Ligne 1 : Name & Email -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">{{ $t('home.cta.form.name') }} <span class="required">*</span></label>
+        <input type="text" name="name" id="name" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">{{ $t('home.cta.form.email') }} <span class="required">*</span></label>
+        <input type="email" name="email" id="email" class="form-control" required>
+      </div>
+    </div>
+
+    <!-- Ligne 2 : Phone & Subject -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">{{ $t('home.cta.form.phone') }}</label>
+        <input type="tel" name="phone" id="phone" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="subject">{{ $t('home.cta.form.subject') }}</label>
+        <input type="text" name="_subject" id="subject" class="form-control">
+      </div>
+    </div>
+
+    <!-- Ligne 3 : Message (full width) -->
+    <div class="form-group form-group--full">
+      <label for="message">{{ $t('home.cta.form.message') }} <span class="required">*</span></label>
+      <textarea name="message" id="message" class="form-control" rows="6" required></textarea>
+    </div>
+
+    <!-- Checkbox -->
+    <div class="form-check mb-0">
+      <input type="checkbox" name="callback" id="callback" class="form-check-input">
+      <label for="callback" class="form-check-label">{{ $t('home.cta.form.callback') }}</label>
+    </div>
+
+    <!-- Button -->
+    <button type="submit" class="btn-submit">{{ $t('home.cta.form.submit') }}</button>
+  </form>
+</div>
+          <!-- <router-link to="/contact" class="btn-offer btn-offer-primary">
+            {{ $t('home.cta.button') }}
+          </router-link> -->
+        </div>
+      </div>
+    </div>
     <!-- ============================= -->
     <!-- Section : Témoignages         -->
     <!-- ============================= -->
@@ -145,19 +216,7 @@
         </div>
       </div>
     </div>
-    <!-- ============================= -->
-    <!-- Section : CTA final           -->
-    <!-- ============================= -->
-    <div class="container-fluid final-cta-section section-spacing text-center reveal-on-scroll" id="contact-cta">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-6">
-          <h2>{{ $t('home.cta.title') }}</h2>
-          <router-link to="/contact" class="btn-offer btn-offer-primary">
-            {{ $t('home.cta.button') }}
-          </router-link>
-        </div>
-      </div>
-    </div>
+
   </main>
   <FooterComponent/>
 </template>

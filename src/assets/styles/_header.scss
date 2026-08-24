@@ -118,7 +118,7 @@
     // border: 1px solid var(--background-color);
     color: var(--text-color);
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 2px 8px;
     font-size: 0.9em;
     font-family: "Poppins", serif;
     cursor: pointer;
@@ -137,6 +137,10 @@
     color: var(--text-color);
     border-color: transparent; /* Supprime la bordure pour le bouton actif */
     // border: 1px solid var(--text-color);
+  }
+
+  .bi {
+    font-size: 20px;
   }
   
   /* Media Queries pour les écrans réduits */

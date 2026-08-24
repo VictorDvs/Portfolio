@@ -10,7 +10,6 @@
         aria-label="Toggle navigation">
         <span class="bi bi-list"></span>
       </button>
-
       <div class="collapse navbar-collapse justify-content-end" :class="{ show: isMenuOpen }" id="navbarNav">
         <div class="navbar-nav">
           <router-link to="/" class="nav-link nav-link-home no-underline" aria-label="Retour à l'accueil" @click="closeMenu">
@@ -25,9 +24,9 @@
           <!-- <router-link class="nav-link" :to="'/a-propos'" @click="closeMenu">
             {{ $t('navbar.about') }}
           </router-link> -->
-          <router-link class="nav-link" :to="'/contact'" @click="closeMenu">
+          <!-- <router-link class="nav-link" :to="'/contact'" @click="closeMenu">
             {{ $t('navbar.contact') }}
-          </router-link>
+          </router-link> -->
           <div class="d-flex language-switcher align-items-center">
             <button
               v-for="lang in languages"
@@ -39,6 +38,18 @@
               {{ lang.toUpperCase() }}
             </button>
           </div>
+            <!-- Icônes de contact -->
+      <div class="d-flex contact-icons align-items-center ms-3">
+        <a href="mailto:victordevos.pro@gmail.com" title="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
+        <a href="https://wa.me/33681883176" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/victor2vos/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
         </div>
       </div>
     </div>

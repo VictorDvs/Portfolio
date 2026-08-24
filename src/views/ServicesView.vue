@@ -37,7 +37,7 @@
     <!-- CTA -->
     <section class="row justify-content-center p-5">
       <div class="col-12 text-center d-flex flex-row align-items-center justify-content-center gap-3">
-        <router-link to="/contact" class="btn-offer btn-offer-primary">
+        <router-link to="/#contact-cta" class="btn-offer btn-offer-primary">
           {{ $t('offer.cta_devis') }}
         </router-link>
         <router-link to="/realisations" class="btn-offer btn-offer-secondary-services">

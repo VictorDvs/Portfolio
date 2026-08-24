@@ -1,14 +1,13 @@
 export default {
     home: {
       hero: {
-        title: "Du Développement web à la Rédaction technique, je vous accompagne dans vos projets digitaux.",
-        subtitle: "Création et refonte de sites, gestion de la documentation technique.",
+        title: "Deux expertises, un même objectif : créer des produits numériques clairs, fiables et durables.",
+        subtitle: "J'accompagne entreprises et particuliers dans le développement de leurs sites web et la création d'une documentation technique qui facilite l'utilisation, la maintenance et l'évolution de leurs produits.",
         cta_primary: "Voir mes services",
         cta_secondary: "Me contacter",
       },
       offer: {
         title: "À votre service",
-        subtitle: "Deux compétences complémentaires, un seul interlocuteur.",
         dev: {
           title: "Développement web",
           text: "Je vous aide à concevoir, structurer, designer, maintenir et faire évoluer votre site vitrine, marchand, portfolio.",
@@ -24,7 +23,11 @@ export default {
         cta: "Voir toutes les réalisations",
       },
       about: {
-        teaser: "Rédacteur technique devenu développeur, j'allie rigueur documentaire et sens du détail dans chaque projet.",
+        title: "À propos de moi",
+          text: `Ma carrière dans le web est née de deux passions complémentaires : <strong>rendre le complexe accessible</strong> et <strong>créer des solutions digitales de qualité</strong>.
+Pendant plusieurs années, j'ai travaillé comme rédacteur technique au sein de différentes entreprises, documentant des solutions web complexes.
+Mais ma curiosité m'a poussé plus loin. En parallèle, je suis devenu développeur web, déterminé à maîtriser aussi bien la conception et le développement d'un site web. Aujourd'hui, je conjugue ces deux mondes : du code, du WordPress, de la doc logicielle, du design d'interface et toujours cette obsession de clarté et de qualité.
+Maintenant, en tant que développeur web et rédacteur technique freelance, je mets cette double compétence au service de mes clients, qu'ils cherchent à créer un site web sur-mesure ou à documenter une solution complexe. Parce que pour moi, <strong> un bon produit web, c'est aussi un produit bien expliqué.</strong>`,
         cta: "En savoir plus sur mon parcours",
       },
      testimonials: {
@@ -41,8 +44,17 @@ export default {
     }
     },
       cta: {
-        title: "Un projet en tête ?",
+        title: "Prêt à donner vie à votre projet ?",
         button: "Discutons-en",
+                form: {
+            name: "Prénom et Nom",
+            email: "Email",
+            phone: "Téléphone",
+            subject: "Objet",
+            message: "Message",
+            callback: "Souhaitez-vous être rappelé(e) ?",
+            submit: "Discutons-en",
+            },
       },
     },
 }

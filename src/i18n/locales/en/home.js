@@ -8,7 +8,6 @@ export default {
       },
       offer: {
         title: "What I can do for you",
-        subtitle: "Two complementary skills, one point of contact.",
         dev: {
           title: "Web development",
           text: "Showcase websites, custom applications, migrations — I build sites that are robust and easy to maintain.",
@@ -41,8 +40,17 @@ export default {
   }
 },
       cta: {
-        title: "Got a project in mind?",
+        title: "Ready to bring your project to life?",
         button: "Let's talk about it",
+        form: {
+  name: "Name",
+  email: "Email",
+  phone: "Phone",
+  subject: "Subject",
+  message: "Message",
+  callback: "Would you like me to call you back?",
+  submit: "Let's talk about it",
+},
       },
     },
 }

@@ -9,12 +9,8 @@
 
                 <div class="contact-info">
                     <p>
-                        <i class="bi bi-envelope-fill me-2"></i>
-                        <a href="mailto:victordevos.pro@gmail.com">victordevos.pro@gmail.com</a>
-                    </p>
-                    <p>
-                        <i class="bi bi-geo-alt-fill me-2"></i>
-                        {{ $t('contact.location') }}
+                        
+
                     </p>
                 </div>
 
@@ -24,6 +20,12 @@
                     </a>
                     <a target="_blank" href="https://www.linkedin.com/in/victor2vos/" rel="noopener">
                         <i class="bi bi-linkedin me-3"></i>
+                    </a>
+                                            <a href="mailto:victordevos.pro@gmail.com">
+                            <i class="bi bi-envelope-fill me-2"></i>
+                        </a>
+                        <a href="https://wa.me/33681883176" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-whatsapp me-2"></i>
                     </a>
                 </div>
             </div>
