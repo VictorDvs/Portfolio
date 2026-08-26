@@ -28,7 +28,7 @@
           <!-- <router-link class="nav-link" :to="'/contact'" @click="closeMenu">
             {{ $t('navbar.contact') }}
           </router-link> -->
-          <div class="d-flex language-switcher align-items-center">
+          <!-- <div class="d-flex language-switcher align-items-center">
             <button
               v-for="lang in languages"
               :key="lang"
@@ -38,7 +38,7 @@
             >
               {{ lang.toUpperCase() }}
             </button>
-          </div>
+          </div> -->
             <!-- Icônes de contact -->
       <div class="d-flex contact-icons align-items-center ms-3">
         <a href="mailto:victordevos.pro@gmail.com" title="Email">

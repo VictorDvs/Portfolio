@@ -1,8 +1,8 @@
 export default {
     home: {
       hero: {
-        title: "Deux expertises, un même objectif : créer des produits numériques clairs, fiables et durables.",
-        subtitle: "J'accompagne entreprises et particuliers dans le développement de leurs sites web et la création d'une documentation technique qui facilite l'utilisation, la maintenance et l'évolution de leurs produits.",
+        title: "Victor De Vos, rédacteur technique et développeur web freelance",
+        subtitle: "J'accompagne entreprises et indépendants dans le développement de leurs sites web ou dans la gestion de leur documentation technique",
         cta_primary: "Voir mes services",
         cta_secondary: "Me contacter",
       },

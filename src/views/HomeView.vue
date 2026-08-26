@@ -14,16 +14,16 @@
     <div class="home-text-intro text-center">
       <div class="photo-wrapper">
       <div class="photo-circle">
-        <img src="/ma-photo.jpg" alt="Victor De Vos" />
+        <img src="/ma-photo-header.png" alt="Victor De Vos" />
       </div>
       </div>
-         <!-- Cercle + titre côte à côte -->
-      <div class="d-flex flex-row align-items-center justify-content-center gap-3">
-        <h1 id="text-greetings">{{ $t('home.hero.title') }}</h1>
+      <div class="hero-text">
+        <div class="d-flex flex-row align-items-center justify-content-center gap-3">
+          <h1 id="text-greetings">{{ $t('home.hero.title') }}</h1>
+        </div>
+        <div class="d-flex flex-column gap-3 w-100">
+        <p class="hero-subtitle">{{ $t('home.hero.subtitle') }}</p>
       </div>
-  
-      <div class="d-flex flex-column gap-3 w-100">
-      <p class="hero-subtitle">{{ $t('home.hero.subtitle') }}</p>
   
       <div class="d-flex flex-row align-items-center justify-content-center gap-3">
               <router-link to="/services" class="btn-offer btn-offer-primary">
@@ -292,7 +292,6 @@ mounted() {
     this.mm = gsap.matchMedia();
 
     this.mm.add("(prefers-reduced-motion: no-preference)", () => {
-      this.initProcessScroll();
       // --- Reveal des sections au scroll ---
       const sections = gsap.utils.toArray(".reveal-on-scroll");
       sections.forEach((el) => {
