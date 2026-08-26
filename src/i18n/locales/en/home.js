@@ -10,11 +10,13 @@ export default {
         title: "What I can do for you",
         dev: {
           title: "Web development",
-          text: "Showcase websites, custom applications, migrations — I build sites that are robust and easy to maintain.",
+          text: "Create a high-performance, maintainable website tailored to your goals.",
+          description: "Landing pages, e-commerce, WordPress integration or custom development.",
         },
         redaction: {
           title: "Technical writing",
-          text: "Clear documentation for your users and your teams: guides, manuals, knowledge bases.",
+          text: "Turning complex products into clear and useful documentation.",
+          description: "Precise and accessible technical documentation to facilitate the use and maintenance of your products.",
         },
         cta: "Discover the full offer",
       },

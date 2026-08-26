@@ -12,8 +12,9 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" :class="{ show: isMenuOpen }" id="navbarNav">
         <div class="navbar-nav">
+          
           <router-link to="/" class="nav-link nav-link-home no-underline" aria-label="Retour à l'accueil" @click="closeMenu">
-            {{ $t('navbar.home') }}
+            <img src="ma-photo-header.png" alt="Logo" class="logo" />
           </router-link>
           <router-link class="nav-link" :to="'/services'" @click="closeMenu">
             {{ $t('navbar.offer') }}

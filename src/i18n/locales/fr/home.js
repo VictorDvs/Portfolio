@@ -10,13 +10,43 @@ export default {
         title: "À votre service",
         dev: {
           title: "Développement web",
-          text: "Je vous aide à concevoir, structurer, designer, maintenir et faire évoluer votre site vitrine, marchand, portfolio.",
+          text: "Créer un site performant, maintenable et adapté à vos objectifs.",
+          description: "Sites vitrines, marchands, intégration WordPress ou développement sur mesure.",
+          list: {
+            item1: "Conception & maquettage UX/UI",
+            item2: "Développement front-end & back-end",
+            item3: "SEO, hébergement & maintenance",
+          },
         },
         redaction: {
           title: "Rédaction technique",
-          text: "Documentation claire pour vos utilisateurs et vos équipes : guides, notices, bases de connaissances.",
+          text: "Transformer des produits complexes en documentation claire et utile.",
+          description: "Rédaction de documentations techniques précises et accessibles pour faciliter l'utilisation et la maintenance de vos produits.",
+          list: {
+            item1: "Documentation utilisateur, développeur, troubleshooting",
+            item2: "Architecture de l'information, UX writing",
+            item3: "Docs-as-code, structuration DITA",
+          },
         },
         cta: "Découvrir les offres complètes",
+      },
+      process: {
+        step1: {
+          title: "Compréhension du projet",
+          text: "Je commence par comprendre vos besoins, vos objectifs et votre public cible pour définir la meilleure approche.",
+        },
+        step2: {
+          title: "Conception et planification",
+          text: "Je conçois une stratégie adaptée à vos besoins, en tenant compte des contraintes techniques et des délais.",
+        },
+        step3: {
+          title: "Implémentation",
+          text: "Je développe les solutions techniques en suivant les meilleures pratiques et en assurant la qualité du code.",
+        },
+        step4: {
+          title: "Livraison et support",
+          text: "Je livre le projet final et fournis un support continu pour garantir son bon fonctionnement.",
+        }
       },
       projects: {
         title: "Derniers projets",

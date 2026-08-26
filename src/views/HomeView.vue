@@ -57,23 +57,45 @@
       <div class="row justify-content-center g-5">
         <div class="col-12 col-md-5">
           <div class="offer-card wavy-circle h-100">
-            <p>{{ $t('home.offer.dev.title') }}</p>
-            <h3>{{ $t('home.offer.dev.text') }}</h3>
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <img src="/icon-dev.svg" class="offer-icon" alt="">
+              <p>{{ $t('home.offer.dev.title') }}</p>
+            </div>
+            <h3 class="mb-4">{{ $t('home.offer.dev.text') }}</h3>
+            <p>{{ $t('home.offer.dev.description') }}</p>
+            <hr class="offer-card-separator mb-4">
+            <div class="mb-4">
+              <ul class="offer-list">
+                <li>{{ $t('home.offer.dev.list.item1') }}</li>
+                <li>{{ $t('home.offer.dev.list.item2') }}</li>
+                <li>{{ $t('home.offer.dev.list.item3') }}</li>
+              </ul>
+            </div>
+          <router-link to="/services" class="btn-offer btn-offer-primary mt-4">
+            {{ $t('home.offer.cta') }}
+          </router-link>
           </div>
         </div>
         <div class="col-12 col-md-5">
           <div class="offer-card wavy-circle h-100">
-            <p>{{ $t('home.offer.redaction.title') }}</p>
-            <h3>{{ $t('home.offer.redaction.text') }}</h3>
-          </div>
-        </div>
-      </div>
-
-      <div class="row justify-content-center mt-4">
-        <div class="col-12 d-flex justify-content-center">
-          <router-link to="/services" class="btn-offer btn-offer-primary">
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <img src="/icon-doc.svg" class="offer-icon" alt="">
+              <p>{{ $t('home.offer.redaction.title') }}</p>
+            </div>
+            <h3 class="mb-4">{{ $t('home.offer.redaction.text') }}</h3>
+            <p>{{ $t('home.offer.redaction.description') }}</p>
+            <hr class="offer-card-separator mb-4">
+            <div class="mb-4">
+              <ul class="offer-list">
+                <li>{{ $t('home.offer.redaction.list.item1') }}</li>
+                <li>{{ $t('home.offer.redaction.list.item2') }}</li>
+                <li>{{ $t('home.offer.redaction.list.item3') }}</li>
+              </ul>
+            </div>
+          <router-link to="/services" class="btn-offer btn-offer-primary mt-4">
             {{ $t('home.offer.cta') }}
           </router-link>
+          </div>
         </div>
       </div>
     </div>
@@ -239,8 +261,7 @@ export default {
 
   data() {
     return {
-      // TODO: remplacer par un import depuis ton fichier de données
-      // de réalisations existant si tu en as un (ex: @/data/projects.js)
+
       previewProjects: [
         {
           id: 'alkantara',
@@ -271,7 +292,7 @@ mounted() {
     this.mm = gsap.matchMedia();
 
     this.mm.add("(prefers-reduced-motion: no-preference)", () => {
-
+      this.initProcessScroll();
       // --- Reveal des sections au scroll ---
       const sections = gsap.utils.toArray(".reveal-on-scroll");
       sections.forEach((el) => {
@@ -293,12 +314,13 @@ mounted() {
         ScrollTrigger.getAll().forEach((st) => st.kill());
       };
     });
+    
   },
 
   beforeUnmount() {
     this.mm?.revert();
   },
-};
+}
 
 </script>
 

@@ -40,6 +40,12 @@
   width: 100%; // <- corrigé, était "auto"
   padding: 0;
   margin: 0 30px;
+
+  .logo {
+    width: 50px; // Ajustez la taille du logo selon vos besoins
+    height: auto;
+    margin-right: 10px; // Espace entre le logo et le lien Accueil
+  }
 }
 
 
@@ -82,10 +88,13 @@
   /* Lien Accueil, toujours visible à gauche */
 .nav-link-home {
   margin-right: auto; // pousse tout le reste vers la droite
-  font-family: "Pattaya", sans-serif;
-  font-weight: 500;
-  font-size: 2em;
 }
+logo {
+    width: 75px; // Ajustez la taille du logo selon vos besoins
+    height: auto;
+    margin-right: 10px; // Espace entre le logo et le lien Accueil
+  }
+
   
   /* Soulignement des liens actifs */
   .router-link-exact-active::after {
