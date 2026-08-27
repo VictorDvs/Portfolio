@@ -16,15 +16,15 @@
           <router-link to="/" class="nav-link nav-link-home no-underline" aria-label="Retour à l'accueil" @click="closeMenu">
             <img src="ma-photo-header.png" alt="Logo" class="logo" />
           </router-link>
+          <router-link class="nav-link" :to="'/about'" @click="closeMenu">
+            {{ $t('navbar.about') }}
+          </router-link>
           <router-link class="nav-link" :to="'/services'" @click="closeMenu">
             {{ $t('navbar.offer') }}
           </router-link>
           <router-link class="nav-link" :to="'/realisations'" @click="closeMenu">
             {{ $t('navbar.realisations') }}
           </router-link>
-          <!-- <router-link class="nav-link" :to="'/a-propos'" @click="closeMenu">
-            {{ $t('navbar.about') }}
-          </router-link> -->
           <!-- <router-link class="nav-link" :to="'/contact'" @click="closeMenu">
             {{ $t('navbar.contact') }}
           </router-link> -->

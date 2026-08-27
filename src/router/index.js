@@ -8,11 +8,13 @@ const routes = [
     component: HomeView,
     meta: { title: 'Victor De Vos' },
   },
+    {
+    path: '/about',
+    name: 'about',
+    component: () => import(/* webpackChunkName: "contact" */ '../views/AboutView.vue'),
+    meta: { title: 'Victor De Vos - À Propos' },
+  },
   {
-    // TODO: créer ServicesView.vue — page de service qui présente
-    // Développement web + Rédaction technique (contenu ex-ProjectsView
-    // et ex-TechWritingProjectsView, réécrit en angle "offre" plutôt
-    // que liste de projets)
     path: '/services',
     name: 'services',
     component: () => import(/* webpackChunkName: "services" */ '../views/ServicesView.vue'),
