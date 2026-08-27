@@ -87,7 +87,9 @@ a {
 .photo-circle {
   width: 300px;
   height: 300px;
-  border-radius: 50% 0% 0%;
+  border-radius: 50%;
+  border: 1px solid #303834;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   flex-shrink: 0; // évite que Bootstrap l'écrase en largeur
   contain: paint;
@@ -143,10 +145,6 @@ a {
   padding: 50px;
   gap: 100px;
 
-  h2 {
-    color: var(--text-color-dark);
-  }
-
   .offer-card {
     padding: 2.5rem;
   }
@@ -160,9 +158,9 @@ a {
     position: absolute;
     inset: -10px;
     background: 
-      radial-gradient(circle at 15% 25%, #547866 0%, transparent 30%),
-      radial-gradient(circle at 85% 75%, #547866 0%, transparent 50%),
-      radial-gradient(ellipse 80% 60% at 50% 100%, #547866 0%, transparent 50%);
+      radial-gradient(circle at 15% 25%, #94F7C6 0%, transparent 30%),
+      radial-gradient(circle at 85% 75%, #94F7C6 0%, transparent 50%),
+      radial-gradient(ellipse 80% 60% at 50% 100%, #94F7C6 0%, transparent 50%);
     filter: blur(60px);
     z-index: 0;
   }
@@ -471,9 +469,9 @@ a {
     position: absolute;
     inset: -10px;
     background: 
-      radial-gradient(circle at 15% 25%, #d9a5c9 0%, transparent 40%),
-      radial-gradient(circle at 85% 75%, #b573a0 0%, transparent 45%),
-      radial-gradient(ellipse 80% 60% at 50% 100%, #c48cac 0%, transparent 50%);
+      radial-gradient(circle at 15% 25%, #CDA29D 0%, transparent 40%),
+      radial-gradient(circle at 85% 75%, #CDA29D 0%, transparent 45%),
+      radial-gradient(ellipse 80% 60% at 50% 100%, #CDA29D 0%, transparent 50%);
     filter: blur(40px);
     z-index: 0;
   }

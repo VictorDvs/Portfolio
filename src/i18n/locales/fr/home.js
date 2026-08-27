@@ -30,24 +30,6 @@ export default {
         },
         cta: "Découvrir les offres complètes",
       },
-      process: {
-        step1: {
-          title: "Compréhension du projet",
-          text: "Je commence par comprendre vos besoins, vos objectifs et votre public cible pour définir la meilleure approche.",
-        },
-        step2: {
-          title: "Conception et planification",
-          text: "Je conçois une stratégie adaptée à vos besoins, en tenant compte des contraintes techniques et des délais.",
-        },
-        step3: {
-          title: "Implémentation",
-          text: "Je développe les solutions techniques en suivant les meilleures pratiques et en assurant la qualité du code.",
-        },
-        step4: {
-          title: "Livraison et support",
-          text: "Je livre le projet final et fournis un support continu pour garantir son bon fonctionnement.",
-        }
-      },
       projects: {
         title: "Derniers projets",
         cta: "Voir toutes les réalisations",
@@ -57,7 +39,7 @@ export default {
           text: `Ma carrière dans le web est née de deux passions complémentaires : <strong>rendre le complexe accessible</strong> et <strong>créer des solutions digitales de qualité</strong>.
 Pendant plusieurs années, j'ai travaillé comme rédacteur technique au sein de différentes entreprises, documentant des solutions web complexes.
 Mais ma curiosité m'a poussé plus loin. En parallèle, je suis devenu développeur web, déterminé à maîtriser aussi bien la conception et le développement d'un site web. Aujourd'hui, je conjugue ces deux mondes : du code, du WordPress, de la doc logicielle, du design d'interface et toujours cette obsession de clarté et de qualité.
-Maintenant, en tant que développeur web et rédacteur technique freelance, je mets cette double compétence au service de mes clients, qu'ils cherchent à créer un site web sur-mesure ou à documenter une solution complexe. Parce que pour moi, <strong> un bon produit web, c'est aussi un produit bien expliqué.</strong>`,
+Maintenant, en tant que développeur web et rédacteur technique freelance, je mets cette double compétence au service de mes clients, qu'ils cherchent à créer un site web sur-mesure ou à documenter une solution complexe.`,
         cta: "En savoir plus sur mon parcours",
       },
      testimonials: {
