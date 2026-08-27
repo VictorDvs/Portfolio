@@ -4,7 +4,7 @@ export default {
         title: "Victor De Vos, rédacteur technique et développeur web freelance",
         subtitle: "J'accompagne entreprises et indépendants dans le développement de leurs sites web ou dans la gestion de leur documentation technique",
         cta_primary: "Voir mes services",
-        cta_secondary: "Me contacter",
+        cta_secondary: "Contactez-moi",
       },
       offer: {
         title: "À votre service",

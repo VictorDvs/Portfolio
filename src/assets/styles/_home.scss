@@ -88,8 +88,8 @@ a {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: 1px solid #303834;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  // border: 1px solid #303834;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   flex-shrink: 0; // évite que Bootstrap l'écrase en largeur
   contain: paint;
@@ -268,13 +268,21 @@ a {
 /* =====================================ABOUT=================================================== */
 
 .about-section {
+    background-image: 
+                    url('/public/ma-photo.png');
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-attachment: fixed;
   h2 {
-    color: var(--text-color-dark);
+    color: var(--text-color);
     font-family: "Belanosima", sans-serif;
     font-weight: 500;
   }
   p {
-    color: var(--text-color-dark);
+    color: var(--text-color);
   }
 
   .text-about {
@@ -300,6 +308,7 @@ a {
 
 .final-cta-section {
   background-color: #547866;
+  height: 100vh;
   h2 {
     color: var(--text-color);
   }

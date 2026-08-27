@@ -142,6 +142,45 @@
         </div>
       </div>
     </div>
+
+        <!-- ============================= -->
+    <!-- Section : Témoignages         -->
+    <!-- ============================= -->
+    <div class="container-fluid testimonials-section section-spacing reveal-on-scroll" id="testimonials">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8 text-center mb-4">
+          <h2>{{ $t('home.testimonials.title') }}</h2>
+        </div>
+      </div>
+
+      <div class="row justify-content-center g-4">
+        <div class="col-12 col-md-5">
+          <div class="testimonial-card h-100">
+            <p class="testimonial-quote">{{ $t('home.testimonials.item1.quote') }}</p>
+            <div class="testimonial-author d-flex align-items-center gap-3">
+              <img src="/icon-eleonore.jpg" class="testimonial-avatar" :alt="$t('home.testimonials.item1.name')">
+              <div class="text-start">
+                <p class="testimonial-name mb-0">{{ $t('home.testimonials.item1.name') }}</p>
+                <p class="testimonial-role mb-0">{{ $t('home.testimonials.item1.role') }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-5">
+          <div class="testimonial-card h-100">
+            <p class="testimonial-quote">{{ $t('home.testimonials.item2.quote') }}</p>
+            <div class="testimonial-author d-flex align-items-center gap-3">
+              <img src="/icon-helene.jpg" class="testimonial-avatar" :alt="$t('home.testimonials.item2.name')">
+              <div class="text-start">
+                <p class="testimonial-name mb-0">{{ $t('home.testimonials.item2.name') }}</p>
+                <p class="testimonial-role mb-0">{{ $t('home.testimonials.item2.role') }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
         <!-- ============================= -->
     <!-- Section : FORMULAIRE           -->
     <!-- ============================= -->
@@ -198,43 +237,6 @@
           <!-- <router-link to="/contact" class="btn-offer btn-offer-primary">
             {{ $t('home.cta.button') }}
           </router-link> -->
-        </div>
-      </div>
-    </div>
-    <!-- ============================= -->
-    <!-- Section : Témoignages         -->
-    <!-- ============================= -->
-    <div class="container-fluid testimonials-section section-spacing reveal-on-scroll" id="testimonials">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-8 text-center mb-4">
-          <h2>{{ $t('home.testimonials.title') }}</h2>
-        </div>
-      </div>
-
-      <div class="row justify-content-center g-4">
-        <div class="col-12 col-md-5">
-          <div class="testimonial-card h-100">
-            <p class="testimonial-quote">{{ $t('home.testimonials.item1.quote') }}</p>
-            <div class="testimonial-author d-flex align-items-center gap-3">
-              <img src="/icon-eleonore.jpg" class="testimonial-avatar" :alt="$t('home.testimonials.item1.name')">
-              <div class="text-start">
-                <p class="testimonial-name mb-0">{{ $t('home.testimonials.item1.name') }}</p>
-                <p class="testimonial-role mb-0">{{ $t('home.testimonials.item1.role') }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-5">
-          <div class="testimonial-card h-100">
-            <p class="testimonial-quote">{{ $t('home.testimonials.item2.quote') }}</p>
-            <div class="testimonial-author d-flex align-items-center gap-3">
-              <img src="/icon-helene.jpg" class="testimonial-avatar" :alt="$t('home.testimonials.item2.name')">
-              <div class="text-start">
-                <p class="testimonial-name mb-0">{{ $t('home.testimonials.item2.name') }}</p>
-                <p class="testimonial-role mb-0">{{ $t('home.testimonials.item2.role') }}</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
