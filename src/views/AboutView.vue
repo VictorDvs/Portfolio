@@ -33,9 +33,7 @@
                 {{ $t('about.bio.title') }}
               </h2>
               
-              <p class="bio-text" data-aos="fade-up" data-aos-delay="50">
-                {{ $t('about.bio.paragraph1') }}
-              </p>
+              <p class="bio-text" data-aos="fade-up" data-aos-delay="50" v-html="$t('about.bio.paragraph1')"></p>
               
               <p class="bio-text" data-aos="fade-up" data-aos-delay="100">
                 {{ $t('about.bio.paragraph2') }}
@@ -77,7 +75,7 @@
 
         <div class="row g-4">
           <!-- Expertise 1: Web Development -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-6">
             <div class="expertise-card" data-aos="fade-up" data-aos-delay="50">
               <div class="expertise-icon">
                 <i class="bi bi-code-square"></i>
@@ -96,7 +94,7 @@
           </div>
 
           <!-- Expertise 2: Technical Writing -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-6">
             <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
               <div class="expertise-icon">
                 <i class="bi bi-file-earmark-text"></i>
@@ -115,7 +113,7 @@
           </div>
 
           <!-- Expertise 3: Accessibility -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <!-- <div class="col-12 col-md-6 col-lg-4">
             <div class="expertise-card" data-aos="fade-up" data-aos-delay="150">
               <div class="expertise-icon">
                 <i class="bi bi-universal-access"></i>
@@ -131,7 +129,7 @@
                 <li>SEO best practices</li>
               </ul>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>

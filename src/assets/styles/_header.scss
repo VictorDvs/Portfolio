@@ -71,7 +71,7 @@
   /* Style des liens de la navbar */
   .nav-link {
     position: relative;
-    font-family: "Belanosima", sans-serif;
+    font-family: var(--body-font-family);
     font-weight: 400;
     font-size: 1.5em;
     text-decoration: none;
@@ -88,12 +88,8 @@
   /* Lien Accueil, toujours visible à gauche */
 .nav-link-home {
   margin-right: auto; // pousse tout le reste vers la droite
+  font-family: var(--heading-font-family);
 }
-logo {
-    width: 75px; // Ajustez la taille du logo selon vos besoins
-    height: auto;
-    margin-right: 10px; // Espace entre le logo et le lien Accueil
-  }
 
   
   /* Soulignement des liens actifs */
@@ -120,36 +116,36 @@ logo {
   }
   
   /* Boutons de sélection de langue */
-  .btn-lang {
-    font-family: "Poppins", serif;
-    font-weight: 600;
-    background-color: transparent;
-    // border: 1px solid var(--background-color);
-    color: var(--text-color);
-    border-radius: 5px;
-    padding: 2px 8px;
-    font-size: 0.9em;
-    font-family: "Poppins", serif;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
+  // .btn-lang {
+  //   font-family: "Poppins", serif;
+  //   font-weight: 600;
+  //   background-color: transparent;
+  //   // border: 1px solid var(--background-color);
+  //   color: var(--text-color);
+  //   border-radius: 5px;
+  //   padding: 2px 8px;
+  //   font-size: 0.9em;
+  //   font-family: "Poppins", serif;
+  //   cursor: pointer;
+  //   transition: background-color 0.3s, color 0.3s;
+  // }
   
-  /* Survol des boutons de langue */
-  .btn-lang:hover {
-    background-color: var(--text-color);
-    color: var(--background-color);
-  }
+  // /* Survol des boutons de langue */
+  // .btn-lang:hover {
+  //   background-color: var(--text-color);
+  //   color: var(--background-color);
+  // }
   
-  /* Bouton de langue actif */
-  .btn-lang.active {
-    background-color: #8A4266;
-    color: var(--text-color);
-    border-color: transparent; /* Supprime la bordure pour le bouton actif */
-    // border: 1px solid var(--text-color);
-  }
+  // /* Bouton de langue actif */
+  // .btn-lang.active {
+  //   background-color: #8A4266;
+  //   color: var(--text-color);
+  //   border-color: transparent; /* Supprime la bordure pour le bouton actif */
+  //   // border: 1px solid var(--text-color);
+  // }
 
   .bi {
-    font-size: 20px;
+    font-size: 17px;
   }
   
   /* Media Queries pour les écrans réduits */

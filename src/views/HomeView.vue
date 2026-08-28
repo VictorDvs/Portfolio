@@ -47,15 +47,9 @@
 <!-- Section : Offre (2 piliers)   -->
 <!-- ============================= -->
 
-    <div class="container-fluid offer-section reveal-on-scroll" id="offre-preview">
-      <!-- <div class="row justify-content-center">
-        <div class="col-12 col-lg-8 text-center mb-5 w-100">
-          <h2>{{ $t('home.offer.title') }}</h2>
-        </div>
-      </div> -->
-
+    <div class="container offer-section reveal-on-scroll" id="offre-preview">
       <div class="row justify-content-center g-5">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-md-6 col-lg-6">
           <div class="offer-card wavy-circle h-100">
             <div class="d-flex align-items-center gap-3 mb-4">
               <img src="/icon-dev.svg" class="offer-icon" alt="">
@@ -76,7 +70,7 @@
           </router-link>
           </div>
         </div>
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-md-6 col-lg-6">
           <div class="offer-card wavy-circle h-100">
             <div class="d-flex align-items-center gap-3 mb-4">
               <img src="/icon-doc.svg" class="offer-icon" alt="">
@@ -129,21 +123,8 @@
         </div>
       </div>
     </div>
-    
-    <!-- ============================= -->
-    <!-- Section : Qui suis-je ?       -->
-    <!-- ============================= -->
 
-    <div class="container-fluid about-section section-spacing reveal-on-scroll" id="about">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-8 text-center mb-4">
-          <h2 class="mb-4">{{ $t('home.about.title') }}</h2>
-          <p class="text-about" v-html="$t('home.about.text')"></p>
-        </div>
-      </div>
-    </div>
-
-        <!-- ============================= -->
+    <!-- ============================= -->
     <!-- Section : Témoignages         -->
     <!-- ============================= -->
     <div class="container-fluid testimonials-section section-spacing reveal-on-scroll" id="testimonials">

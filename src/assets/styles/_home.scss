@@ -57,12 +57,10 @@ a {
 
 .hero-content {
   min-height: 100vh;
-  background-color: #547866; /* ajuste ici */
-    aspect-ratio: 2/1;
-  /* update the 85% to control the curvature
-     you can also update the 50% to control the position
-  */
-  clip-path: ellipse(75% 95% at 50% 0%);
+  background-color: #547866;
+  aspect-ratio: 2/1;
+  clip-path: ellipse(100% 100% at 50% 0%);
+  position: relative;
 }
   
   /* Texte d'introduction de la page d'accueil */
@@ -135,7 +133,7 @@ a {
 
 .offer-section {
   background-color: #f6e9ef;
-  height: 50vh;
+  height: 80vh;
   @include displayFlex;
   flex-direction: column;
   justify-content: flex-start;
@@ -144,6 +142,31 @@ a {
 
   .offer-card {
     padding: 2.5rem;
+
+    .offer-card-separator {
+      color: var(--text-color-dark);
+    }
+
+    .offer-list {
+      color: var(--text-color-dark);
+      font-family: var(--body-font-family);
+      padding-left: 0;
+
+        li {
+    padding: 0.5rem 0;
+    
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '✓';
+      color: #DC6E44;
+      font-weight: bold;
+      margin-right: 0.75rem;
+      
+    }
+  }
+    }
   }
 
 .offer-card.wavy-circle {
@@ -170,15 +193,12 @@ a {
   // le texte doit passer au-dessus des deux pseudo-éléments
   h3, p {
     color: var(--text-color-dark);
+    margin-bottom: 0;
   }
   h3 {
-    font-weight: 500;
+    font-weight: 400;
   }
 }
-  
-  // .btn-offer {
-  //   background-color: #547866;
-  // }
 }
 
 /* =======================================Section Derniers projets============================================== */

@@ -6,9 +6,9 @@ export default {
       },
       "bio": {
         "title": "Qui suis-je ?",
-        "paragraph1": "Je m'appelle Victor, et je suis développeur web et rédacteur technique freelance basé à Lyon. Depuis plus de 5 ans, je conjugue deux passions : créer des interfaces web performantes et accessibles, et documenter des produits complexes de manière claire et pédagogique.",
-        "paragraph2": "Mon approche combine l'ingénierie frontend (Vue.js, React, Bootstrap) et l'expertise en documentation technique. Je crois que la qualité d'une application se mesure aussi par sa documentation et son accessibilité.",
-        "paragraph3": "Que tu aies besoin d'un site web moderne, d'une refonte WordPress, ou d'une documentation technique solide, je suis là pour transformer tes idées en solutions concrètes.",
+        "paragraph1": "Ma carrière dans le web est née de deux passions complémentaires : <strong>rendre le complexe accessible</strong> et <strong>créer des solutions digitales de qualité</strong>. Pendant plusieurs années, j'ai travaillé comme rédacteur technique au sein de différentes entreprises, documentant des solutions web complexes.",
+        "paragraph2": "Mais ma curiosité m'a poussé plus loin. En parallèle, je suis devenu développeur web, déterminé à maîtriser aussi bien la conception et le développement d'un site web. Aujourd'hui, je conjugue ces deux mondes : du code, du WordPress, de la doc logicielle, du design d'interface et toujours cette obsession de clarté et de qualité.",
+        "paragraph3": "Maintenant, en tant que développeur web et rédacteur technique freelance, je mets cette double compétence au service de mes clients, qu'ils cherchent à créer un site web sur-mesure ou à documenter une solution complexe.",
         "philosophy": "Ma philosophie :",
         "docsAsCode": "Documentation-as-Code pour des docs maintenables et versionées."
       },
