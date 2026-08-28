@@ -1,113 +1,497 @@
-  /* Section Accueil */
-  .home {
-    padding-bottom: 125px;
-    padding-left: 0;
-    padding-right: 0;
-    background-color:  var(--background-color);
-    height: 100%;
-    // min-height: 100%;
-    // min-width: 100%;
-  }
+// ===== VARIABLESDE COULEUR =====
+$color-primary: #547866;
+$color-secondary: #DC6E44;
+$color-neutral-50: #FAFAFA;
+$color-neutral-100: #F5F5F5;
+$color-neutral-200: #EEEEEE;
+$color-neutral-600: #525252;
+$color-neutral-900: #171717;
 
-  
-  /* Conteneur circulaire */
-  .circle-container {
-    position: relative;
-    @include displayFlex;
-    width: 200px;
-    height: 200px;
+$color-bg-light: #ECEEF0; // Primaire 50
+$color-text-body: $color-neutral-900;
+$color-text-light: $color-neutral-600;
+
+$py-spacing: 80px; // 5rem
+$py-spacing-lg: 120px; // 7.5rem
+
+// ===== SECTION 1: HERO =====
+.hero {
+  background: linear-gradient(135deg, $color-neutral-50 0%, $color-bg-light 100%);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba($color-primary, 0.1) 0%, transparent 70%);
     border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.9);
-    padding-bottom: 60px;
+    pointer-events: none;
   }
-  
-  .circle-container img {
-    max-width: 100%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-text-body;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  color: $color-text-light;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+// ===== SECTION 2: BIO =====
+.bio-section {
+  padding: $py-spacing-lg 0;
+  background: $color-neutral-50;
+}
+
+.bio-content {
+  h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: $color-text-body;
+    margin-bottom: 2rem;
+    line-height: 1.3;
   }
-  
-  /* Texte principal */
-  #text-body{
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.2em;
-    text-align: left;
-    padding-top: 30px;
+}
+
+.bio-text {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: $color-text-body;
+  margin-bottom: 1.5rem;
+
+  a {
+    color: $color-secondary;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: darken($color-secondary, 10%);
+      text-decoration: underline;
+    }
   }
 
-  #text-body p{ 
-    color: var(--text-color);
+  &.highlight {
+    background: $color-bg-light;
+    padding: 1.5rem;
+    border-left: 4px solid $color-primary;
+    border-radius: 4px;
+  }
+}
+
+// Profile Placeholder
+.profile-placeholder {
+  width: 300px;
+  height: 300px;
+}
+
+.profile-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, lighten($color-primary, 15%) 0%, $color-primary 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 150px;
+  color: rgba(#fff, 0.9);
+  box-shadow: 0 20px 60px rgba($color-primary, 0.2);
+}
+
+// ===== SECTION 3: EXPERTISE =====
+.expertise-section {
+  padding: $py-spacing-lg 0;
+  background: $color-bg-light;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: $color-text-body;
+  line-height: 1.3;
+  margin-bottom: 3rem;
+}
+
+.expertise-card {
+  background: $color-neutral-50;
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 1px solid $color-neutral-200;
+
+  &:hover {
+    box-shadow: 0 12px 40px rgba($color-primary, 0.15);
+    transform: translateY(-4px);
   }
 
-    /* Responsive Design */
-  
-  /* Tablettes */
-  @media (max-width: 1200px) {
-    .home {
-      height: 100%;
-    }
-    #text-greetings {
-      font-size: 3em;
-    }
-    #text-body {
-      font-size: 1.3em;
-    }
-    .ma-photo {
-      display: flex;
-      justify-content: center;
+  .expertise-icon {
+    font-size: 3rem;
+    color: $color-secondary;
+    margin-bottom: 1.5rem;
+
+    i {
+      display: inline-block;
     }
   }
-  
-  /* Mobiles */
-  @media (max-width: 992px) {
-    .home-text-intro{
-      padding-bottom: 0;
-    }
-    #text-greetings {
-      font-size: 3em;
-    }
-    #text-body {
-      font-size: 1.2em;
-      text-align: left;
+
+  h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: $color-text-body;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: $color-text-light;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+
+  li {
+    font-size: 0.875rem;
+    color: $color-text-body;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '✓';
+      color: $color-secondary;
+      font-weight: bold;
+      margin-right: 0.75rem;
     }
   }
-  
-  /* Petits écrans */
+}
+
+// ===== SECTION 4: EXPÉRIENCE TIMELINE =====
+.experience-section {
+  padding: $py-spacing-lg 0;
+  background: $color-neutral-50;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, $color-primary, $color-secondary);
+
+    @media (max-width: 768px) {
+      left: 20px;
+      height: calc(100% + 40px);
+    }
+  }
+}
+
+.timeline-item {
+  margin-bottom: 3rem;
+  position: relative;
+
   @media (max-width: 768px) {
-    #text-greetings {
-      font-size: 2.8em;
-      margin-bottom: 30px;
-    }
-    #text-body {
-      font-size: 1.1em;
-      line-height: 1.6;
-      margin: 0 10px;
-      text-align: left;
-    }
-    .tem {
-      font-size: 1em;
-      border-radius: 100px 0px 100px 0px;
-      padding: 15px;
-      width: 100%;
-      max-width: 100%;
+    margin-left: 60px;
+  }
+
+  &:nth-child(odd) {
+    text-align: right;
+    padding-right: 52%;
+
+    @media (max-width: 768px) {
+      padding-right: 0;
       text-align: left;
     }
   }
-  
-  /* Très petits écrans */
-  @media (max-width: 576px) {
-    #text-greetings {
-      font-size: 2.3em;
-      line-height: 1.2;
-    }
-    #text-body {
-      font-size: 1em;
+
+  &:nth-child(even) {
+    text-align: left;
+    padding-left: 52%;
+
+    @media (max-width: 768px) {
+      padding-left: 0;
       text-align: left;
+    }
+  }
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: $color-secondary;
+  border: 4px solid $color-neutral-50;
+  border-radius: 50%;
+  top: 0;
+
+  @media (max-width: 768px) {
+    left: 20px;
+  }
+}
+
+.timeline-content {
+  background: $color-bg-light;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid $color-primary;
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $color-text-body;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-date {
+    font-size: 0.875rem;
+    color: $color-secondary;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: $color-text-body;
+    margin: 0;
+  }
+}
+
+// ===== SECTION 5: COMPÉTENCES =====
+.skills-section {
+  padding: $py-spacing-lg 0;
+  background: $color-bg-light;
+}
+
+.skill-category {
+  background: $color-neutral-50;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid $color-neutral-200;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 24px rgba($color-primary, 0.1);
+  }
+}
+
+.skill-category-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $color-text-body;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid $color-primary;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  background: $color-primary;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: darken($color-primary, 10%);
+    transform: translateY(-2px);
+  }
+}
+
+// ===== SECTION 6: CTA FORTE =====
+.cta-section {
+  padding: $py-spacing-lg 0;
+  background: linear-gradient(135deg, $color-primary 0%, darken($color-primary, 5%) 100%);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(#fff, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: 10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba($color-secondary, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+}
+
+.cta-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-buttons {
+  position: relative;
+  z-index: 1;
+  
+  .btn {
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+
+    &.btn-secondary {
+      background: $color-secondary;
+      border-color: $color-secondary;
+      color: #fff;
+
+      &:hover {
+        background: darken($color-secondary, 10%);
+        border-color: darken($color-secondary, 10%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba($color-secondary, 0.4);
+      }
     }
 
-    .tem {
-      max-width: 100%;
-      text-align: justify;
+    &.btn-outline-light {
+      border-color: #fff;
+      color: #fff;
+
+      &:hover {
+        background: rgba(#fff, 0.1);
+        border-color: #fff;
+        transform: translateY(-2px);
+      }
     }
   }
+}
+
+// ===== SECTION 7: RÉSEAUX SOCIAUX =====
+.social-section {
+  padding: $py-spacing 0;
+  background: $color-neutral-50;
+  border-top: 1px solid $color-neutral-200;
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color-text-body;
+  }
+}
+
+.social-links {
+  .social-link {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: $color-primary;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 2px solid $color-primary;
+
+    &:hover {
+      background: $color-secondary;
+      border-color: $color-secondary;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba($color-secondary, 0.3);
+    }
+  }
+}
+
+// ===== RESPONSIVE =====
+@media (max-width: 768px) {
+  .py-120 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .py-80 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .cta-buttons {
+    flex-direction: column !important;
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+// ===== ANIMATIONS (via AOS library) =====
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-out;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}

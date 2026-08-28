@@ -1,6 +1,7 @@
 import { createI18n } from 'vue-i18n';
 import frNavbar from './locales/fr/navbar';
 import frHome from './locales/fr/home';
+import frAbout from './locales/fr/about';
 import frServices from './locales/fr/services';
 import frRealisations from './locales/fr/realisations';
 import frContact from './locales/fr/contact';
@@ -12,7 +13,7 @@ import enRealisations from './locales/en/realisations';
 import enContact from './locales/en/contact';
 
 const messages = {
-  fr: { ...frNavbar, ...frHome, ...frServices, ...frRealisations, ...frContact },
+  fr: { ...frNavbar, ...frHome, ...frServices, ...frRealisations, ...frContact, ...frAbout },
   en: { ...enNavbar, ...enHome, ...enServices, ...enRealisations, ...enContact },
 };
 

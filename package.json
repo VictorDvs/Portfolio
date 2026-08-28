@@ -10,6 +10,7 @@
   "dependencies": {
     "@jaseeey/vue-umami-plugin": "^1.5.0",
     "@mdi/font": "^7.4.47",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "core-js": "^3.8.3",
     "drkmd-js": "^1.0.12",

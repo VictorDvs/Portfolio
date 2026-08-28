@@ -30,6 +30,9 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { SplitText } from "gsap/SplitText";
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 gsap.registerPlugin(Flip,ScrollTrigger,ScrollSmoother,ScrollToPlugin,SplitText,CustomEase,CustomWiggle);
 
 const vuetify = createVuetify({
@@ -70,4 +73,4 @@ const app = createApp(App);
 app.directive('scroll', ScrollDirective);
 
 // Utilise les plugins et monte l'application
-app.use(i18n).use(store).use(router).use(vuetify).use(LenisVue).mount('#app');
+app.use(i18n).use(store).use(router).use(vuetify).use(LenisVue).use(AOS.init).mount('#app');
