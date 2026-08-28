@@ -10,28 +10,28 @@ body {
 
 main {
     height: 100%;
-    font-family: "Poppins", sans-serif;
     background-color: #f6e9ef;
 
     p {
         font-weight: 400;
         font-size: var(--p-font-size-desktop);
+        font-family: var(--body-font-family);
     }
 
     h1 {
-        font-family: "Poppins", sans-serif;
+        font-family: var(--heading-font-family);
         font-weight: 500;
         font-size: var(--h1-font-size-desktop);
     }
 
     h2 {
-        font-family: "Poppins", sans-serif;
+        font-family: "Belanosima", sans-serif;
         font-weight: 700;
         font-size: var(--h2-font-size-desktop);
     }
 
     h3 {
-        font-family: "Poppins", sans-serif;
+        font-family: "Belanosima", sans-serif;
         font-weight: 500;
         font-size: var(--h3-font-size-desktop);
         color: var(--text-color);
@@ -119,18 +119,15 @@ a {
     line-height: 1.2;
     text-align: center;
     font-size: 3em;
-    font-family: "Belanosima", sans-serif;
     // height: 130px;
     // padding: 15px 0;
   }
 
   .hero-subtitle {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   text-align: center;
   padding: 15px 0;
   font-weight: 400;
-  font-family: "Belanosima", sans-serif;
-
 }
   }
 
@@ -173,11 +170,9 @@ a {
   // le texte doit passer au-dessus des deux pseudo-éléments
   h3, p {
     color: var(--text-color-dark);
-    font-family: "Belanosima", sans-serif;
   }
   h3 {
     font-weight: 500;
-    font-family: "Belanosima", sans-serif;
   }
 }
   
@@ -279,7 +274,7 @@ a {
   h2 {
     color: var(--text-color);
     font-family: "Belanosima", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
   }
   p {
     color: var(--text-color);
@@ -287,8 +282,7 @@ a {
 
   .text-about {
     text-align: justify;
-    font-family: "Belanosima", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.5rem;
   }
     #sources-perso {

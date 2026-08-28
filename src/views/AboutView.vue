@@ -60,7 +60,7 @@
             <!-- Placeholder pour une photo ou illustration -->
             <div class="profile-placeholder" data-aos="fade-left">
               <div class="profile-circle">
-                <i class="bi bi-person-circle"></i>
+                <img src="/ma-photo.png" alt="Victor De Vos" class="photo-about" />
               </div>
             </div>
           </div>

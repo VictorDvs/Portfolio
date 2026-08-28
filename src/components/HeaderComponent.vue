@@ -1,6 +1,6 @@
 <template>
   <nav v-scroll class="navbar navbar-expand-lg" id="nav" :class="{ 'menu-open': isMenuOpen, 'header--dark': isDarkHeader }">
-    <div class="container-fluid coll-header">
+    <div class="container coll-header">
 
       <button
         class="navbar-toggler ms-auto"
@@ -14,7 +14,7 @@
         <div class="navbar-nav">
           
           <router-link to="/" class="nav-link nav-link-home no-underline" aria-label="Retour à l'accueil" @click="closeMenu">
-            <img src="ma-photo-header.png" alt="Logo" class="logo" />
+            VDV
           </router-link>
           <router-link class="nav-link" :to="'/about'" @click="closeMenu">
             {{ $t('navbar.about') }}
