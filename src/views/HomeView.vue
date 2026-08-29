@@ -65,7 +65,7 @@
                 <li>{{ $t('home.offer.dev.list.item3') }}</li>
               </ul>
             </div>
-          <router-link to="/services" class="btn-offer btn-offer-primary mt-4">
+          <router-link to="/services#webdev" class="btn-offer btn-offer-primary mt-4">
             {{ $t('home.offer.cta') }}
           </router-link>
           </div>
@@ -86,7 +86,7 @@
                 <li>{{ $t('home.offer.redaction.list.item3') }}</li>
               </ul>
             </div>
-          <router-link to="/services" class="btn-offer btn-offer-primary mt-4">
+          <router-link to="/services#techwriting" class="btn-offer btn-offer-primary mt-4">
             {{ $t('home.offer.cta') }}
           </router-link>
           </div>
