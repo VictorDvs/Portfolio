@@ -4,7 +4,7 @@
 .section-spacing {
   padding-top: var(--section-spacing-desktop);
   padding-bottom: var(--section-spacing-desktop);
-  scroll-margin-top: 100px; // hauteur approx. du header fixe, pour les ancres
+  // scroll-margin-top: 100px; // hauteur approx. du header fixe, pour les ancres
 
   @media (max-width: 992px) {
     padding-top: var(--section-spacing-tablet);
