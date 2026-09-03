@@ -4,46 +4,39 @@ export default {
         title: "Victor De Vos, rédacteur technique et développeur web freelance",
         subtitle: "J'accompagne entreprises et indépendants dans le développement de leurs sites web ou dans la gestion de leur documentation technique",
         cta_primary: "Voir mes services",
-        cta_secondary: "Contactez-moi",
+        cta_secondary: "M'envoyer un message",
       },
-      offer: {
+      services: {
         title: "À votre service",
-        dev: {
+        "subtitle": "Deux expertises complémentaires pour répondre à vos besoins digitaux.",
+        webdev: {
           title: "Développement web",
-          text: "Créer un site performant, maintenable et adapté à vos objectifs.",
           description: "Sites vitrines, marchands, intégration WordPress ou développement sur mesure.",
-          list: {
-            item1: "Conception & maquettage UX/UI",
-            item2: "Développement front-end & back-end",
-            item3: "SEO, hébergement & maintenance",
-          },
+          highlights: [
+            "Conception & maquettage UX/UI",
+            "Développement front-end & back-end",
+            "SEO, hébergement & maintenance",
+          ]
         },
-        redaction: {
+        techwriting: {
           title: "Rédaction technique",
-          text: "Transformer des produits complexes en documentation claire et utile.",
           description: "Rédaction de documentations techniques précises et accessibles pour faciliter l'utilisation et la maintenance de vos produits.",
-          list: {
-            item1: "Documentation utilisateur, développeur, troubleshooting",
-            item2: "Architecture de l'information, UX writing",
-            item3: "Docs-as-code, structuration DITA",
-          },
+          highlights: [
+            "Documentation utilisateur, développeur, troubleshooting",
+            "Architecture de l'information, UX writing",
+            "Docs-as-code, structuration DITA",
+          ],
         },
-        cta: "Découvrir les offres complètes",
+        cta: "En savoir plus",
       },
       projects: {
         title: "Derniers projets",
-        cta: "Voir toutes les réalisations",
-      },
-      about: {
-        title: "À propos de moi",
-          text: `Ma carrière dans le web est née de deux passions complémentaires : <strong>rendre le complexe accessible</strong> et <strong>créer des solutions digitales de qualité</strong>.
-Pendant plusieurs années, j'ai travaillé comme rédacteur technique au sein de différentes entreprises, documentant des solutions web complexes.
-Mais ma curiosité m'a poussé plus loin. En parallèle, je suis devenu développeur web, déterminé à maîtriser aussi bien la conception et le développement d'un site web. Aujourd'hui, je conjugue ces deux mondes : du code, du WordPress, de la doc logicielle, du design d'interface et toujours cette obsession de clarté et de qualité.
-Maintenant, en tant que développeur web et rédacteur technique freelance, je mets cette double compétence au service de mes clients, qu'ils cherchent à créer un site web sur-mesure ou à documenter une solution complexe.`,
-        cta: "En savoir plus sur mon parcours",
+        "subtitle": "Quelques réalisations récentes qui reflètent mon expertise.",
+        cta: "Voir tous mes projets",
       },
      testimonials: {
-    "title": "Témoignages",
+    "title": "Ce que mes clients et collaborateurs disent",
+    "subtitle": "Des retours authentiques de personnes avec lesquelles j'ai collaboré.",
     "item1": {
         "quote": "Un travail sérieux et des délais respectés, exactement ce qu'il me fallait pour mon site.",
         "name": "Éléonore Kahia",
@@ -56,17 +49,19 @@ Maintenant, en tant que développeur web et rédacteur technique freelance, je m
     }
     },
       cta: {
-        title: "Prêt à donner vie à votre projet ?",
-        button: "Discutons-en",
-                form: {
-            name: "Prénom et Nom",
-            email: "Email",
-            phone: "Téléphone",
-            subject: "Objet",
-            message: "Message",
-            callback: "Souhaitez-vous être rappelé(e) ?",
-            submit: "Discutons-en",
-            },
+        title: "Prêt à collaborer ?",
+        "subtitle": "Envoyez-moi un message et discutons de votre projet.",
+       "form": {
+          "name": "Nom complet",
+          "email": "Adresse email",
+          "phone": "Téléphone (optionnel)",
+          "subject": "Sujet",
+          "message": "Votre message",
+          "callback": "Je préférerais un appel pour discuter de mon projet",
+          "submit": "Envoyer mon message",
+          "sending": "Envoi en cours...",
+          "success": "Merci ! J'ai reçu votre message et je vous répondrai bientôt."
+        }
       },
     },
 }

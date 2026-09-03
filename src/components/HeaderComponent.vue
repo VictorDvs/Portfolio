@@ -14,7 +14,7 @@
         <div class="navbar-nav">
           
           <router-link to="/" class="nav-link nav-link-home no-underline" aria-label="Retour à l'accueil" @click="closeMenu">
-            V<span style="color: #F7B6AD">D</span>V
+            V<span style="color: #DC6E44">D</span>V
           </router-link>
           <router-link class="nav-link" :to="'/about'" @click="closeMenu">
             {{ $t('navbar.about') }}

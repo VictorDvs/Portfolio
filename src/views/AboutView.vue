@@ -203,7 +203,6 @@
               <h3 class="skill-category-title">Frontend</h3>
               <div class="skill-tags">
                 <span class="skill-tag">Vue.js</span>
-                <span class="skill-tag">React</span>
                 <span class="skill-tag">JavaScript</span>
                 <span class="skill-tag">SCSS</span>
                 <span class="skill-tag">CSS3</span>
@@ -232,11 +231,11 @@
             <div class="skill-category" data-aos="fade-up" data-aos-delay="150">
               <h3 class="skill-category-title">Documentation</h3>
               <div class="skill-tags">
-                <span class="skill-tag">Technical Writing</span>
+                <span class="skill-tag">Information Developer</span>
                 <span class="skill-tag">MDX / Markdown</span>
                 <span class="skill-tag">API Docs</span>
                 <span class="skill-tag">User Guides</span>
-                <span class="skill-tag">Docs-as-Code</span>
+                <span class="skill-tag">Troubleshooting Guides</span>
               </div>
             </div>
           </div>
@@ -247,9 +246,10 @@
               <h3 class="skill-category-title">Outils & Méthodologies</h3>
               <div class="skill-tags">
                 <span class="skill-tag">Figma</span>
-                <span class="skill-tag">WCAG / A11y</span>
                 <span class="skill-tag">Agile</span>
                 <span class="skill-tag">Git Workflow</span>
+                <span class="skill-tag">Docs-as-Code</span>
+
               </div>
             </div>
           </div>

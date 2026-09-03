@@ -30,23 +30,23 @@ export default {
       "experience": {
         "title": "Mon parcours",
         "item1": {
-          "title": "Rédacteur technique en startup SaaS",
-          "date": "2019 - 2021",
-          "desc": "Documentation de produits complexes, guides utilisateur, API docs. Initiation aux workflows Docs-as-Code et collaboration agile."
-        },
-        "item2": {
-          "title": "Formation AFPA Territoire Digital",
-          "date": "2022",
-          "desc": "Bootcamp intensif en développement web. Maîtrise de Vue.js, JavaScript, SCSS, et méthodologies frontend modernes."
-        },
-        "item3": {
           "title": "Formation université Paris Cité",
-          "date": "2020 - 2022",
+          "date": "2021 - 2022",
           "desc": "Diplôme en rédaction technique. Étude approfondie de la documentation numérique, XML, et stratégies de contenus."
         },
+        "item2": {
+          "title": "Rédacteur technique ",
+          "date": "2022 - 2025",
+          "desc": "Documentation de produits complexes, guides utilisateur, API docs. Initiation aux workflows Docs-as-Code et collaboration agile."
+        },
+        "item3": {
+          "title": "Formation AFPA Territoire Digital",
+          "date": "2024 - 2025",
+          "desc": "Bootcamp intensif en développement web. Maîtrise de Vue.js, JavaScript, SCSS, et méthodologies frontend modernes."
+        },
         "item4": {
-          "title": "Freelance — Vos codes",
-          "date": "2023 - Aujourd'hui",
+          "title": "Freelance — Victor De Vos",
+          "date": "2026 - Aujourd'hui",
           "desc": "Création de sites web pour PME/indépendants. Gestion de projets WordPress. Documentation technique personnalisée."
         }
       },

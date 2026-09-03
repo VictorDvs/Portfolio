@@ -73,4 +73,4 @@ const app = createApp(App);
 app.directive('scroll', ScrollDirective);
 
 // Utilise les plugins et monte l'application
-app.use(i18n).use(store).use(router).use(vuetify).use(LenisVue).use(AOS.init).mount('#app');
+app.use(i18n).use(store).use(router).use(vuetify).use(LenisVue).use(AOS.init({ duration: 1000, once: true })).mount('#app');
