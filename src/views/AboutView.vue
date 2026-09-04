@@ -42,14 +42,6 @@
               <p class="bio-text" data-aos="fade-up" data-aos-delay="150">
                 {{ $t('about.bio.paragraph3') }}
               </p>
-
-              <!-- Lien Docs-as-Code (si applicable) -->
-              <p class="bio-text highlight" data-aos="fade-up" data-aos-delay="200">
-                <strong>{{ $t('about.bio.philosophy') }}</strong>
-                <a href="https://www.writethedocs.org/guide/docs-as-code/" target="_blank" rel="noopener">
-                  {{ $t('about.bio.docsAsCode') }}
-                </a>
-              </p>
             </div>
           </div>
 
@@ -219,9 +211,9 @@
               <div class="skill-tags">
                 <span class="skill-tag">WordPress</span>
                 <span class="skill-tag">PHP</span>
-                <span class="skill-tag">Git</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">MariaDB</span>
                 <span class="skill-tag">REST APIs</span>
-                <span class="skill-tag">SEO</span>
               </div>
             </div>
           </div>
@@ -231,8 +223,7 @@
             <div class="skill-category" data-aos="fade-up" data-aos-delay="150">
               <h3 class="skill-category-title">Documentation</h3>
               <div class="skill-tags">
-                <span class="skill-tag">Information Developer</span>
-                <span class="skill-tag">MDX / Markdown</span>
+                <span class="skill-tag">Architecture de l'information</span>
                 <span class="skill-tag">API Docs</span>
                 <span class="skill-tag">User Guides</span>
                 <span class="skill-tag">Troubleshooting Guides</span>
@@ -246,8 +237,10 @@
               <h3 class="skill-category-title">Outils & Méthodologies</h3>
               <div class="skill-tags">
                 <span class="skill-tag">Figma</span>
-                <span class="skill-tag">Agile</span>
                 <span class="skill-tag">Git Workflow</span>
+                <span class="skill-tag">DITA XML</span>
+                <span class="skill-tag">MDX / Markdown</span>
+                <span class="skill-tag">Agile</span>
                 <span class="skill-tag">Docs-as-Code</span>
 
               </div>

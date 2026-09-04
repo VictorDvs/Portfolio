@@ -1,184 +1,152 @@
-@import 'mixins'; 
-/* Style principal de la navbar */
+@import 'mixins';
+
+/* Header principal */
 #nav {
-    // background-color: var(--background-color-header);
-    color: var(--text-color);
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    overflow: visible;
-    transition: height 0.3s ease;
-    
-      // État par défaut = transparent (pas besoin de classe JS pour ça)
+  color: var(--text-color);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  overflow: visible;
   background-color: transparent;
   transition: background-color 0.3s ease;
 
-  &.header--dark {
+  &.header--dark,
+  &.navbar--solid,
+  &.menu-open {
     background-color: var(--background-color-header);
   }
 
-  // Ajoutée par le JS au premier scroll, jamais retirée ensuite
-    &.navbar--solid,
-  &.menu-open {
-    background-color: var(--background-color-header); // ou ta variable de couleur
-  }
-  }
-  
-  /* Hauteur ajustée lorsque la navbar est ouverte */
-  #nav.show {
+  &.show {
     height: auto;
   }
-  
-/* Alignement des liens dans la navbar (hors Accueil, désormais séparé) */
+}
+
+/* Navbar container */
 .navbar-nav {
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
-  width: 100%; // <- corrigé, était "auto"
+  width: 100%;
   padding: 0;
   margin: 0 30px;
-  font-family: var(--body-font-family);
-
-  .logo {
-    width: 50px; // Ajustez la taille du logo selon vos besoins
-    height: auto;
-    margin-right: 10px; // Espace entre le logo et le lien Accueil
-  }
-}
-
-
-  
-  /* Style des liens de navigation */
-  .navbar-nav > .nav-link:not(.dropdown-item) {
-    @include displayFlex;
-    width: auto; /* Largeur ajustée automatiquement */
-    color: var(--text-color);
-    padding: 10px; /* Ajout de padding pour l'accessibilité */
-    cursor: pointer;
-    
-  }
-
-  .navbar-toggler{
-  background: transparent;
-  color: var(--burger-button-color);
-  padding: 5px;
-  font-size: 30px; /* Taille du bouton burger */
-  z-index: 1000;
-  }
-  
-  /* Style des liens de la navbar */
-  .nav-link {
-    position: relative;
-    font-family: var(--body-font-family);
-    font-weight: 400;
-    font-size: 1.5em;
-    text-decoration: none;
-    padding-bottom: 2px; /* Espace pour souligner les liens */
-
-    &:hover {
-    // color: var(--text-color); 
-    background: none;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  }
-
-  /* Lien Accueil, toujours visible à gauche */
-.nav-link-home {
-  margin-right: auto; // pousse tout le reste vers la droite
   font-family: var(--heading-font-family);
 }
 
-  
-  /* Soulignement des liens actifs */
-  .router-link-exact-active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50;
-    width: 60%;
-    height: 2px;
-    background-color: var(--text-color); /* Couleur du soulignement */
+/* Logo */
+.navbar-nav .logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Lien Accueil - aligné à gauche */
+.nav-link-home {
+  margin-right: auto;
+  font-family: var(--heading-font-family);
+}
+
+/* Style des liens */
+.nav-link {
+  position: relative;
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 10px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  width: auto;
+
+  &:hover {
+    opacity: 0.8;
   }
-  
-  /* Suppression du soulignement pour certains liens */
-  .no-underline::after {
+}
+
+/* Underline pour lien actif */
+.router-link-exact-active:not(.no-underline)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background-color: var(--text-color);
+}
+
+/* Bouton burger */
+.navbar-toggler {
+  background: transparent;
+  color: var(--burger-button-color);
+  padding: 5px;
+  font-size: 30px;
+  z-index: 1001;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Icônes de contact */
+.contact-icons {
+  gap: 15px;
+  padding-left: 15px;
+
+  a {
+    color: var(--text-color);
+    font-size: 17px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+/* Bootstrap icon styling */
+.bi {
+  font-size: 17px;
+}
+
+/* Responsive pour petit écran */
+@media screen and (max-width: 1200px) {
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 8px;
+  }
+
+  .nav-link-home {
+    margin-right: 0;
+  }
+
+  .router-link-exact-active::after {
     display: none;
   }
 
-  /* Commutateur de langue */
-  .language-switcher {
-    display: flex;
-    gap: 10px;
-    padding-bottom: 0px;
-  }
-  
-  /* Boutons de sélection de langue */
-  // .btn-lang {
-  //   font-family: "Poppins", serif;
-  //   font-weight: 600;
-  //   background-color: transparent;
-  //   // border: 1px solid var(--background-color);
-  //   color: var(--text-color);
-  //   border-radius: 5px;
-  //   padding: 2px 8px;
-  //   font-size: 0.9em;
-  //   font-family: "Poppins", serif;
-  //   cursor: pointer;
-  //   transition: background-color 0.3s, color 0.3s;
-  // }
-  
-  // /* Survol des boutons de langue */
-  // .btn-lang:hover {
-  //   background-color: var(--text-color);
-  //   color: var(--background-color);
-  // }
-  
-  // /* Bouton de langue actif */
-  // .btn-lang.active {
-  //   background-color: #8A4266;
-  //   color: var(--text-color);
-  //   border-color: transparent; /* Supprime la bordure pour le bouton actif */
-  //   // border: 1px solid var(--text-color);
-  // }
-
-  .bi {
-    font-size: 17px;
-  }
-  
-  /* Media Queries pour les écrans réduits */
-  @media screen and (max-width: 1200px) {
-    .navbar-nav {
-      flex-direction: column; /* Empile les liens en colonne */
-      gap: 0;
-      width: 100%; /* Respecte la largeur de l'écran */
-      margin: 0; /* Supprime les marges */
-      padding-bottom: 8px;
-    }
-
-      .nav-link-home {
-    margin-right: 0; // <- ajouté : annule la poussée desktop, redevient un lien normal centré
-  }
-  
-    .router-link-exact-active::after {
-      display: none;
-    }
-
-    .nav-link {
-      font-size: 1.4em; /* Réduit la taille du texte */
-      width: 100%; /* Les liens occupent toute la largeur */
-      text-align: center; /* Centre le texte des liens */
-    }
-  
+  .nav-link {
+    font-size: 1.4em;
+    width: 100%;
+    text-align: center;
   }
 
-  @media screen and (max-width: 990px) {
-    .navbar-nav {
-      // border-bottom: 1px solid var(--text-color);
-      padding-bottom: 8px;
-    }
+  .contact-icons {
+    padding-left: 0;
+    padding-top: 10px;
   }
-  
+}
+
+@media screen and (max-width: 990px) {
+  .navbar-nav {
+    padding-bottom: 8px;
+  }
+}

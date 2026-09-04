@@ -180,6 +180,10 @@ $py-80: 5rem;
     font-size: 2rem;
     color: $color-primary;
     margin-bottom: 1.5rem;
+
+    .bi-code-square, .bi-file-earmark-text {
+      color: $color-neutral-900;
+    }
  
     &.service-icon-secondary {
       background: rgba($color-secondary, 0.1);
