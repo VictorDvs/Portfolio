@@ -26,7 +26,7 @@
           <div class="col-12 col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
             <div class="service-visual">
               <div class="service-icon-large">
-                <i class="bi bi-code-square"></i>
+                <img src="/web-development-illustration.svg"/>
               </div>
             </div>
           </div>
@@ -152,7 +152,7 @@
           <div class="col-12 col-lg-5 order-1 order-lg-2 mb-5 mb-lg-0" data-aos="fade-left">
             <div class="service-visual">
               <div class="service-icon-large service-icon-secondary">
-                <i class="bi bi-file-earmark-text"></i>
+                <img src="/technical-writing-illustration.svg" alt="Technical Writing Illustration"/>
               </div>
             </div>
           </div>
@@ -161,46 +161,6 @@
     </section>
  
     <!-- ===== SECTION 3: COMPARISON TABLE ===== -->
-    <section class="comparison-section py-120 bg-light" id="services-comparison">
-      <div class="container">
-        <h2 class="section-title text-center mb-5" data-aos="fade-up">
-          {{ $t('services.comparison.title') }}
-        </h2>
- 
-        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-12 col-lg-10">
-            <div class="comparison-table-wrapper">
-              <table class="comparison-table">
-                <thead>
-                  <tr>
-                    <th>{{ $t('services.comparison.feature') }}</th>
-                    <th class="text-center">
-                      {{ $t('services.webdev.title') }}
-                    </th>
-                    <th class="text-center">
-                      {{ $t('services.techwriting.title') }}
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="(row, i) in comparisonRows" :key="i">
-                    <td>{{ row.feature }}</td>
-                    <td class="text-center">
-                      <i v-if="row.webdev" class="bi bi-check-circle-fill text-success"></i>
-                      <span v-else class="text-muted">—</span>
-                    </td>
-                    <td class="text-center">
-                      <i v-if="row.techwriting" class="bi bi-check-circle-fill text-success"></i>
-                      <span v-else class="text-muted">—</span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
  
     <!-- ===== SECTION 4: PROCESS / HOW IT WORKS ===== -->
     <section class="process-section py-120" id="services-process">

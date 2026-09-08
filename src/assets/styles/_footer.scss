@@ -30,6 +30,11 @@ $footer-hover: #DC6E44;
   .router-link-exact-active::after {
       display: none;
     }
+
+      .btn-footer {
+    color: $footer-text;
+    background-color: $footer-hover;
+  }
 }
  
 .footer-section-title {

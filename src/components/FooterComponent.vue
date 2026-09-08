@@ -6,7 +6,7 @@
         <div class="row g-4 py-5">
           
           <!-- Section 1: Brand / About -->
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="footer-section">
               <h3 class="footer-section-title">
                 {{ $t('footer.brand.title') }}
@@ -21,7 +21,7 @@
           </div>
  
           <!-- Section 2: Navigation -->
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="footer-section">
               <h3 class="footer-section-title">
                 {{ $t('footer.navigation.title') }}
@@ -47,48 +47,12 @@
                     {{ $t('footer.navigation.about') }}
                   </router-link>
                 </li>
-                <li>
-                  <router-link to="/contact">
-                    {{ $t('footer.navigation.contact') }}
-                  </router-link>
-                </li>
               </ul>
             </div>
           </div>
  
-          <!-- Section 3: Resources -->
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="footer-section">
-              <h3 class="footer-section-title">
-                {{ $t('footer.resources.title') }}
-              </h3>
-              <ul class="footer-links">
-                <li>
-                  <a href="mailto:contact@voscodes.fr">
-                    {{ $t('footer.resources.contact') }}
-                  </a>
-                </li>
-                <li>
-                  <router-link to="/contact">
-                    {{ $t('footer.resources.quote') }}
-                  </router-link>
-                </li>
-                <li>
-                  <a href="#" aria-label="Blog">
-                    {{ $t('footer.resources.blog') }}
-                  </a>
-                </li>
-                <li>
-                  <a href="#" aria-label="Guides">
-                    {{ $t('footer.resources.guides') }}
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
- 
-          <!-- Section 4: Connect / Social -->
-          <div class="col-12 col-md-6 col-lg-3">
+          <!-- Section 3: Connect / Social + CTA -->
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="footer-section">
               <h3 class="footer-section-title">
                 {{ $t('footer.connect.title') }}
@@ -96,7 +60,7 @@
               <p class="footer-section-desc">
                 {{ $t('footer.connect.desc') }}
               </p>
-              <div class="footer-social-links">
+              <div class="footer-social-links mb-4">
                 <a href="https://github.com/VictorDvs?tab=repositories"
                    target="_blank"
                    rel="noopener"
@@ -116,14 +80,10 @@
                    class="footer-social-link">
                   <i class="bi bi-envelope"></i>
                 </a>
-                <a href="https://twitter.com/yourusername"
-                   target="_blank"
-                   rel="noopener"
-                   aria-label="Twitter"
-                   class="footer-social-link">
-                  <i class="bi bi-twitter"></i>
-                </a>
               </div>
+              <router-link to="/contact" class="btn btn-footer btn-sm">
+                {{ $t('footer.contact.button') }}
+              </router-link>
             </div>
           </div>
  

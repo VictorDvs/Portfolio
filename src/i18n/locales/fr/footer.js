@@ -6,18 +6,14 @@ export default {
       },
       "navigation": {
         "title": "Navigation",
-        "home": "Accueil",
-        "offer": "Offre",
-        "works": "Réalisations",
+        "home": "Home",
+        "offer": "Mes Services",
+        "works": "Projets",
         "about": "À propos",
         "contact": "Contact"
       },
-      "resources": {
-        "title": "Ressources",
-        "contact": "Me contacter",
-        "quote": "Demander un devis",
-        "blog": "Blog",
-        "guides": "Guides"
+      "contact": {
+        "button": "Me contacter",
       },
       "connect": {
         "title": "Me suivre",
