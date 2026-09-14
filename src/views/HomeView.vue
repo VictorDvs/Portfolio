@@ -68,7 +68,7 @@
                 </li>
               </ul>
  
-              <router-link to="/services#webdev" class="btn btn-primary btn-sm mt-4">
+              <router-link to="/services#webdev" class="btn btn-primary btn-sm btn-service-preview mt-4">
                 {{ $t('home.services.cta') }}
               </router-link>
             </div>
@@ -89,7 +89,7 @@
                 </li>
               </ul>
  
-              <router-link to="/services#techwriting" class="btn btn-primary btn-sm mt-4">
+              <router-link to="/services#techwriting" class="btn btn-primary btn-sm btn-service-preview mt-4">
                 {{ $t('home.services.cta') }}
               </router-link>
             </div>
@@ -155,10 +155,10 @@
             :data-aos="`fade-up`"
             :data-aos-delay="`${(i + 1) * 100}`">
             <div class="testimonial-card">
-              <p class="testimonial-quote">
-                <i class="bi bi-quote"></i>
-                {{ testimonial.quote }}
-              </p>
+            <div class="testimonial-quote">
+              <i class="bi bi-quote"></i>
+              <p v-html="testimonial.quote"></p>
+            </div>
               <div class="testimonial-author">
                 <img :src="testimonial.avatar" :alt="testimonial.name" class="testimonial-avatar" />
                 <div class="testimonial-info">

@@ -21,7 +21,6 @@ $py-80: 5rem;
  
   // Reset des balises
   p {
-    margin: 0;
     font-size: 1.0625rem;
     line-height: 1.7;
   }
@@ -134,13 +133,15 @@ $py-80: 5rem;
  
 .section-title {
   font-size: clamp(2rem, 4vw, 2.5rem);
-  font-weight: 700;
+  font-family: var(--heading-font-family);
+  font-weight: 600;
   line-height: 1.3;
   margin-bottom: 1rem;
 }
  
 .section-subtitle {
   font-size: 1.125rem;
+  font-family: var(--body-font-family);
   color: $color-text-light;
   max-width: 600px;
   margin: 0 auto;
@@ -168,6 +169,10 @@ $py-80: 5rem;
     box-shadow: 0 12px 32px rgba($color-primary, 0.12);
     transform: translateY(-4px);
   }
+
+  .btn-service-preview {
+    font-family: var(--body-font-family);
+  }
  
   .service-icon {
     width: 60px;
@@ -193,14 +198,16 @@ $py-80: 5rem;
  
   .service-title {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 1rem;
+    font-family: var(--heading-font-family);
   }
  
   .service-description {
     color: $color-text-light;
     margin-bottom: 1.5rem;
     flex-grow: 1;
+    font-family: var(--body-font-family);
   }
  
   .service-highlights {
@@ -214,6 +221,7 @@ $py-80: 5rem;
     li {
       display: flex;
       align-items: center;
+      font-family: var(--body-font-family);
       gap: 0.75rem;
       font-size: 0.95rem;
       color: $color-neutral-900;
@@ -314,6 +322,7 @@ $py-80: 5rem;
   color: $color-neutral-900;
   margin-bottom: 1.5rem;
   flex-grow: 1;
+  font-family: var(--body-font-family);
  
   i {
     color: $color-secondary;
@@ -328,6 +337,7 @@ $py-80: 5rem;
   gap: 1rem;
   padding-top: 1.5rem;
   border-top: 1px solid $color-neutral-200;
+  font-family: var(--heading-font-family);
 }
  
 .testimonial-avatar {
