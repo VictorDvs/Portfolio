@@ -32,37 +32,41 @@
   width: 100%;
   padding: 0;
   margin: 0 30px;
-  font-family: var(--heading-font-family);
+  font-family: var(--body-font-family);
 }
 
 /* Logo */
-.navbar-nav .logo {
-  width: 50px;
-  height: auto;
-  margin-right: 10px;
+.logo-header {
+  height: 75px;
+  width: 75px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 /* Lien Accueil - aligné à gauche */
 .nav-link-home {
   margin-right: auto;
-  font-family: var(--heading-font-family);
-   font-size: 1.8rem;
 }
 
 /* Style des liens */
 .nav-link {
   position: relative;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.5rem;
   text-decoration: none;
   padding: 10px;
   color: var(--text-color);
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: transform 0.3s ease;
   width: auto;
 
   &:hover {
-    opacity: 0.8;
+    color: white;
+    transform: scale(1.08);
   }
 }
 
@@ -87,33 +91,33 @@
   z-index: 1001;
   border: none;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: transform 0.3s ease;
 
   &:hover {
-    opacity: 0.8;
+    transform: scale(1.08);
   }
 }
 
 /* Icônes de contact */
 .contact-icons {
-  gap: 15px;
-  padding-left: 15px;
+  gap: 20px;
+  // padding-left: 15px;
 
   a {
     color: var(--text-color);
     font-size: 17px;
     text-decoration: none;
-    transition: opacity 0.3s ease;
+    transition: transform 0.1s ease;
 
     &:hover {
-      opacity: 0.6;
+      transform: scale(1.08);
     }
   }
 }
 
 /* Bootstrap icon styling */
 .bi {
-  font-size: 17px;
+  font-size: 25px;
 }
 
 /* Responsive pour petit écran */

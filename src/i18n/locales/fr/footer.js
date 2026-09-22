@@ -16,7 +16,7 @@ export default {
         "button": "Me contacter",
       },
       "connect": {
-        "title": "Me suivre",
+        "title": "Restez connecté",
         "desc": "Retrouvez-moi sur les réseaux sociaux et restez informé des dernières actualités."
       },
       "bottom": {

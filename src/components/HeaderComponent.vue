@@ -22,14 +22,18 @@
         id="navbarNav"
       >
         <div class="navbar-nav">
-          <router-link 
-            to="/" 
-            class="nav-link nav-link-home no-underline" 
-            aria-label="Retour à l'accueil" 
-            @click="closeMenu"
-          >
-            V<span style="color: #DC6E44">D</span>V
-          </router-link>
+<router-link 
+  to="/" 
+  class="nav-link nav-link-home no-underline" 
+  aria-label="Retour à l'accueil" 
+  @click="closeMenu"
+>
+  <img 
+    src="/vdv-logo.svg"  
+    alt="VDV Logo" 
+    class="logo-header"
+  />
+</router-link>
 
           <router-link 
             class="nav-link" 
@@ -62,7 +66,7 @@
               title="Email"
               aria-label="Envoyer un email"
             >
-              <i class="bi bi-envelope-fill"></i>
+              <i class="bi-envelope-fill"></i>
             </a>
             <a 
               href="https://wa.me/33681883176" 
@@ -71,7 +75,7 @@
               title="WhatsApp"
               aria-label="Contacter sur WhatsApp"
             >
-              <i class="bi bi-whatsapp"></i>
+              <i class="bi-whatsapp"></i>
             </a>
             <a 
               href="https://www.linkedin.com/in/victor2vos/" 
@@ -80,7 +84,7 @@
               title="LinkedIn"
               aria-label="Visiter le profil LinkedIn"
             >
-              <i class="bi bi-linkedin"></i>
+              <i class="bi-linkedin"></i>
             </a>
           </div>
         </div>
@@ -90,6 +94,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'HeaderComponent',
   

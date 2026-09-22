@@ -45,7 +45,7 @@ export default {
           "desc": "Bootcamp intensif en développement web. Maîtrise de Vue.js, JavaScript, SCSS, et méthodologies frontend modernes."
         },
         "item4": {
-          "title": "Freelance — Victor De Vos",
+          "title": "Freelance",
           "date": "2026 - Aujourd'hui",
           "desc": "Création de sites web pour PME/indépendants. Gestion de projets WordPress. Documentation technique personnalisée."
         }

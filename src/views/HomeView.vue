@@ -15,8 +15,11 @@
                 </div>
  
                 <!-- Title -->
-                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
-                  {{ $t('home.hero.title') }}
+                <h1 
+                class="hero-title" 
+                data-aos="fade-up" 
+                data-aos-delay="200"
+                v-html="$t('home.hero.title')">
                 </h1>
  
                 <!-- Subtitle -->
@@ -128,7 +131,7 @@
  
         <div class="row justify-content-center mt-5">
           <div class="col-12 text-center">
-            <router-link to="/works" class="btn btn-primary btn-lg">
+            <router-link to="/realisations" class="btn btn-primary btn-lg">
               <i class="bi bi-briefcase me-2"></i>
               {{ $t('home.projects.cta') }}
             </router-link>
@@ -137,42 +140,59 @@
       </div>
     </section>
  
-    <!-- ===== SECTION 4: TESTIMONIALS ===== -->
-    <section class="testimonials-section" id="testimonials" data-aos="fade-up">
-      <div class="container py-120">
-        <div class="row justify-content-center mb-5">
-          <div class="col-12 col-lg-8 text-center">
-            <h2 class="section-title">{{ $t('home.testimonials.title') }}</h2>
-            <p class="section-subtitle">{{ $t('home.testimonials.subtitle') }}</p>
-          </div>
-        </div>
- 
-        <div class="row g-4 justify-content-center">
-          <div 
-            class="col-12 col-md-6 col-lg-5"
-            v-for="(testimonial, i) in testimonials"
-            :key="i"
-            :data-aos="`fade-up`"
-            :data-aos-delay="`${(i + 1) * 100}`">
-            <div class="testimonial-card">
-            <div class="testimonial-quote">
-              <i class="bi bi-quote"></i>
-              <p v-html="testimonial.quote"></p>
-            </div>
-              <div class="testimonial-author">
-                <img :src="testimonial.avatar" :alt="testimonial.name" class="testimonial-avatar" />
-                <div class="testimonial-info">
-                  <p class="testimonial-name">{{ testimonial.name }}</p>
-                  <p class="testimonial-role">{{ testimonial.role }}</p>
+<!-- ===== SECTION 4: TESTIMONIALS ===== -->
+<section class="testimonials-section" id="testimonials" data-aos="fade-up">
+  <div class="container py-120">
+    <div class="row justify-content-center mb-5">
+      <div class="col-12 col-lg-8 text-center">
+        <h2 class="section-title">{{ $t('home.testimonials.title') }}</h2>
+        <p class="section-subtitle">{{ $t('home.testimonials.subtitle') }}</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        <div class="testimonials-wrapper">
+          <button class="testimonial-nav-btn testimonial-nav-prev" @click="prevSlide" aria-label="Précédent">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+
+          <SwiperCarousel
+            ref="swiperRef"
+            :modules="modules"
+            :navigation="false"
+            :pagination="{ clickable: true }"
+            class="testimonials-carousel"
+            @swiper="onSwiperReady">
+            <SwiperSlide 
+              v-for="(testimonial, i) in testimonials"
+              :key="i">
+              <div class="testimonial-card">
+                <div class="testimonial-quote">
+                  <i class="bi bi-quote"></i>
+                  <p v-html="testimonial.quote"></p>
+                </div>
+                <div class="testimonial-author">
+                  <img :src="testimonial.avatar" :alt="testimonial.name" class="testimonial-avatar" />
+                  <div class="testimonial-info">
+                    <p class="testimonial-name">{{ testimonial.name }}</p>
+                    <p class="testimonial-role">{{ testimonial.role }}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </SwiperSlide>
+          </SwiperCarousel>
+
+          <button class="testimonial-nav-btn testimonial-nav-next" @click="nextSlide" aria-label="Suivant">
+            <i class="bi bi-chevron-right"></i>
+          </button>
         </div>
       </div>
-    </section>
- 
-    <!-- ===== SECTION 5: CONTACT CTA + FORM ===== -->
+    </div>
+  </div>
+</section>    
+
+<!-- ===== SECTION 5: CONTACT CTA + FORM ===== -->
     <section class="contact-section" id="contact-cta" data-aos="fade-up">
       <div class="container py-120">
         <div class="row justify-content-center">
@@ -281,116 +301,128 @@
 
 
 
-<script>
+<script setup>
+import { ref } from 'vue'
+import { Pagination } from 'swiper/modules'
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
- 
-export default {
-  name: 'HomeView',
- 
-  components: {
-    HeaderComponent,
-    FooterComponent,
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
+// Modules Swiper
+const modules = ref([Pagination])
+const swiperRef = ref(null)
+
+const onSwiperReady = (swiper) => {
+  swiperRef.value = swiper
+}
+
+const prevSlide = () => {
+  swiperRef.value?.slidePrev()
+}
+
+const nextSlide = () => {
+  swiperRef.value?.slideNext()
+}
+
+// Données
+const previewProjects = ref([
+  {
+    id: 'alkantara',
+    title: 'Alkantara',
+    image: 'Projets/cover-alkantara.png',
+    link: 'https://alkantara.fr/',
   },
- 
-  data() {
-    return {
-      previewProjects: [
-        {
-          id: 'alkantara',
-          title: 'Alkantara',
-          image: 'Projets/cover-alkantara.png',
-          link: 'https://alkantara.fr/',
-        },
-        {
-          id: 'pablocires',
-          title: 'Portfolio Pablo Cirès',
-          image: 'Projets/cover-pablocires.png',
-          link: 'https://www.pablocires.me/',
-        },
-        {
-          id: 'fastpack',
-          title: 'Fastpack',
-          image: 'Projets/cover-fastpack.png',
-          link: 'https://fastpack-documentation.netlify.app/',
-        },
-      ],
-      testimonials: [
-        {
-          quote: this.$t('home.testimonials.item1.quote'),
-          name: this.$t('home.testimonials.item1.name'),
-          role: this.$t('home.testimonials.item1.role'),
-          avatar: '/icon-eleonore.jpg',
-        },
-        {
-          quote: this.$t('home.testimonials.item2.quote'),
-          name: this.$t('home.testimonials.item2.name'),
-          role: this.$t('home.testimonials.item2.role'),
-          avatar: '/icon-helene.jpg',
-        },
-      ],
-      form: {
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-        callback: false,
+  {
+    id: 'pablocires',
+    title: 'Pablo Cirès',
+    image: 'Projets/cover-pablocires.png',
+    link: 'https://www.pablocires.me/',
+  },
+  {
+    id: 'fastpack',
+    title: 'Fastpack',
+    image: 'Projets/cover-fastpack.png',
+    link: 'https://fastpack-documentation.netlify.app/',
+  },
+])
+
+const testimonials = ref([
+  {
+    quote: t('home.testimonials.item1.quote'),
+    name: t('home.testimonials.item1.name'),
+    role: t('home.testimonials.item1.role'),
+    avatar: '/icon-eleonore.jpg',
+  },
+  {
+    quote: t('home.testimonials.item2.quote'),
+    name: t('home.testimonials.item2.name'),
+    role: t('home.testimonials.item2.role'),
+    avatar: '/icon-helene.jpg',
+  },
+  {
+    quote: t('home.testimonials.item3.quote'),
+    name: t('home.testimonials.item3.name'),
+    role: t('home.testimonials.item3.role'),
+    avatar: '/icon-lucia.jpg',
+  },
+])
+
+const form = ref({
+  name: '',
+  email: '',
+  phone: '',
+  subject: '',
+  message: '',
+  callback: false,
+})
+
+const isSubmitting = ref(false)
+const submitSuccess = ref(false)
+
+// Fonctions
+const resetForm = () => {
+  form.value = {
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: '',
+    callback: false,
+  }
+}
+
+const handleSubmit = async () => {
+  isSubmitting.value = true
+  try {
+    const response = await fetch('https://formspree.io/f/mpwaeeld', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
-      isSubmitting: false,
-      submitSuccess: false,
+      body: JSON.stringify({
+        name: form.value.name,
+        email: form.value.email,
+        phone: form.value.phone,
+        subject: form.value.subject || 'Contact depuis la homepage',
+        message: form.value.message,
+        callback: form.value.callback,
+      }),
+    })
+
+    if (response.ok) {
+      submitSuccess.value = true
+      resetForm()
+      setTimeout(() => {
+        submitSuccess.value = false
+      }, 5000)
     }
-  },
- 
-  methods: {
-    async handleSubmit() {
-      this.isSubmitting = true
-      try {
-        const response = await fetch('https://formspree.io/f/mpwaeeld', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name: this.form.name,
-            email: this.form.email,
-            phone: this.form.phone,
-            subject: this.form.subject || 'Contact depuis la homepage',
-            message: this.form.message,
-            callback: this.form.callback,
-          }),
-        })
- 
-        if (response.ok) {
-          this.submitSuccess = true
-          this.resetForm()
-          setTimeout(() => {
-            this.submitSuccess = false
-          }, 5000)
-        }
-      } catch (error) {
-        console.error('Form submission error:', error)
-      } finally {
-        this.isSubmitting = false
-      }
-    },
- 
-    resetForm() {
-      this.form = {
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-        callback: false,
-      }
-    },
-  },
- 
-  mounted() {
-    // AOS est géré dans main.js
-    // Les animations jouent automatiquement au scroll
-  },
+  } catch (error) {
+    console.error('Form submission error:', error)
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>
 <style lang="scss" scoped>

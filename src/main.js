@@ -33,6 +33,12 @@ import { SplitText } from "gsap/SplitText";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+// Swiper
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 gsap.registerPlugin(Flip,ScrollTrigger,ScrollSmoother,ScrollToPlugin,SplitText,CustomEase,CustomWiggle);
 
 const vuetify = createVuetify({
@@ -64,13 +70,21 @@ const vuetify = createVuetify({
   },
 });
 
-
-
 // Crée l'application Vue
 const app = createApp(App);
 
 // Ajoute la directive scroll globalement
 app.directive('scroll', ScrollDirective);
 
+// Enregistre les composants Swiper globalement
+app.component('SwiperCarousel', Swiper);
+app.component('SwiperSlide', SwiperSlide);
+
 // Utilise les plugins et monte l'application
-app.use(i18n).use(store).use(router).use(vuetify).use(LenisVue).use(AOS.init({ duration: 1000, once: true })).mount('#app');
+app.use(i18n)
+  .use(store)
+  .use(router)
+  .use(vuetify)
+  .use(LenisVue)
+  .use(AOS.init({ duration: 1000, once: true }))
+  .mount('#app');
