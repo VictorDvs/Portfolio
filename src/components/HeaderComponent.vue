@@ -24,7 +24,7 @@
         <div class="navbar-nav">
 <router-link 
   to="/" 
-  class="nav-link nav-link-home no-underline" 
+  class="nav-link-home no-underline" 
   aria-label="Retour à l'accueil" 
   @click="closeMenu"
 >

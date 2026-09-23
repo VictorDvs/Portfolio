@@ -1,7 +1,7 @@
 export default {
     home: {
       hero: {
-        title: "Ensemble, on transforme vos idées en projets clairs et solides",
+        title: "Ensemble, transformons vos idées <br>en projets clairs et solides",
         subtitle: "Rédacteur technique spécialisé dans les logiciels, je mets aussi mes compétences en développement web au service de projets numériques clairs, accessibles et faciles à maintenir",
         cta_primary: "Voir mes services",
         cta_secondary: "M'envoyer un message",
@@ -40,7 +40,7 @@ export default {
     "item1": {
         "quote": "J’ai eu le plaisir de travailler avec Victor pour la refonte complète du site web d’Alkantara, et je ne peux que le recommander ! <br><br>On lui a quand même donné un petit challenge 😅 : passer notre ancien site Wix sur WordPress et refaire entièrement le site… en seulement 1 mois ! <br><br>Victor a été hyper réactif, mais surtout vraiment force de proposition. Il a su nous guider, nous donner les bonnes pistes et aussi nous aider à recadrer nos idées quand on partait un peu dans tous les sens (et il fallait parfois être patient avec nous 😅). <br>C’est un réel plaisir de travailler avec lui : toujours le sourire, disponible, patient et à l’écoute. Et surtout, ses compétences vont bien au-delà du simple développement d’un site. Il nous a accompagnés et aidés sur plein d’autres sujets liés au web et au digital, en trouvant toujours des solutions. <br><br>Un profil multipotentiel, réactif et humain, que je recommande avec grand plaisir !",
         "name": "Éléonore Kahia",
-        "role": "Cheffe de projet digital, Alkantara"
+        "role": "Directrice associée, Alkantara"
     },
     "item2": {
         "quote": "Victor a rejoint mon équipe dans le cadre d'un remplacement de 9 mois, au cours d'une période d'importantes transformations dans l'entreprise. <br><br>Bien que cela soit sa première réelle expérience professionnelle en tant que rédacteur technique, il m'a impressionnée par la rapidité avec laquelle il est monté en compétences et s'est adapté à nos outils et méthodes. <br><br>Victor m'a notamment été d'une aide considérable dans la mise en place de la méthode 'Doc-as-code'. Curieux par nature et soucieux de bien faire, il s'est beaucoup investi dans les recherches en vue d'optimiser nos méthodes et a été force de proposition. <br>Victor est calme et discret sans pour autant être effacé. Il a un effet apaisant et positif sur l'équipe, c'est extrêmement agréable de travailler avec lui. Il a toutes les qualités pour évoluer avec succès dans le monde de la rédaction technique ou ailleurs. <br><br>Je le recommande vivement.",

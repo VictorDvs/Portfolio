@@ -13,14 +13,14 @@ export default {
         "docsAsCode": "Documentation-as-Code pour des docs maintenables et versionées."
       },
       "expertise": {
-        "title": "Mon expertise",
+        "title": "Mes expertises",
         "webdev": {
           "title": "Développement Web",
-          "desc": "Je conçois et développe des sites web modernes, responsifs et performants avec un focus sur l'expérience utilisateur et l'accessibilité."
+          "desc": "Je conçois et développe des sites web modernes, responsifs et performants en m'adaptant à vos besoins et à votre identité visuelle."
         },
         "techwriting": {
-          "title": "Documentation Technique",
-          "desc": "Je documente APIs, guides utilisateur et processus internes en utilisant des approches innovantes comme Docs-as-Code."
+          "title": "Rédaction Technique",
+          "desc": "Je documente des guides et des manuels en anglais ou en français à destination des clients, des partenaires ou des utilisateurs internes à l'entreprise."
         },
         "accessibility": {
           "title": "Accessibilité & Performance",
@@ -32,22 +32,22 @@ export default {
         "item1": {
           "title": "Formation université Paris Cité",
           "date": "2021 - 2022",
-          "desc": "Diplôme en rédaction technique. Étude approfondie de la documentation numérique, XML, et stratégies de contenus."
+          "desc": "Diplôme en rédaction technique. <br>Étude approfondie de la documentation numérique et structurée, langages du web et stratégies de contenus."
         },
         "item2": {
           "title": "Rédacteur technique ",
           "date": "2022 - 2025",
-          "desc": "Documentation de produits complexes, guides utilisateur, API docs. Initiation aux workflows Docs-as-Code et collaboration agile."
+          "desc": "Documentation de solutions complexes comprenant des docs utilisateurs, d'installation, de développement, de troubleshooting et des bases de connaissances. Rédaction structurée, claire, minimaliste."
         },
         "item3": {
           "title": "Formation AFPA Territoire Digital",
           "date": "2024 - 2025",
-          "desc": "Bootcamp intensif en développement web. Maîtrise de Vue.js, JavaScript, SCSS, et méthodologies frontend modernes."
+          "desc": "Bootcamp intensif en développement web. Maîtrise de frameworks comme Vue.js, Symfony et apprentissage desméthodologies frontend modernes."
         },
         "item4": {
           "title": "Freelance",
           "date": "2026 - Aujourd'hui",
-          "desc": "Création de sites web pour PME/indépendants. Gestion de projets WordPress. Documentation technique personnalisée."
+          "desc": "Création de sites web pour PME et indépendants."
         }
       },
       "skills": {
@@ -55,7 +55,7 @@ export default {
       },
       "cta": {
         "title": "Prêt à collaborer ?",
-        "subtitle": "Que ce soit pour un projet web, une refonte de documentation, ou une discussion sur vos besoin spécifiques, je serais ravi de vous aider.",
+        "subtitle": "Que ce soit pour un projet de site web, un besoin de documentation, ou une discussion sur vos besoin spécifiques, je serais ravi de vous aider.",
         "contactBtn": "Me contacter",
         "quoteBtn": "Demander un devis"
       },
