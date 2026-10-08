@@ -15,7 +15,11 @@
                 {{ $t('footer.brand.desc') }}
               </p>
               <div class="footer-logo">
-                <strong>Victor De Vos</strong>
+                  <img 
+    src="/vdv-logo.svg"  
+    alt="VDV Logo" 
+    class="logo-header"
+  />
               </div>
             </div>
           </div>
