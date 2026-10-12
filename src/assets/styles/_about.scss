@@ -35,21 +35,11 @@ $py-spacing-lg: 120px; // 7.5rem
 
 .bio-text {
   font-family: var(--body-font-family);
+  font-size: 1.1rem;
   line-height: 1.7;
   color: #fff;
   margin-bottom: 1.5rem;
 
-  a {
-    color: $color-secondary;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: darken($color-secondary, 10%);
-      text-decoration: underline;
-    }
-  }
 }
 
 // Profile Placeholder

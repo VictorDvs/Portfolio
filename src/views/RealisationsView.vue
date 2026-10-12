@@ -3,36 +3,38 @@
  
   <main class="realisations-page">
     <!-- ===== SECTION HERO ===== -->
-    <section class="hero-section" id="hero" data-aos="fade-up">
-      <div class="container">
-        <div class="row align-items-center justify-content-center min-vh-100">
-          <div class="col-12 col-lg-8">
-            <div class="hero-content text-center">
-              <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
-                {{ $t('works.hero.title') }}
-              </h1>
-              <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
-                {{ $t('works.hero.subtitle') }}
-              </p>
-              <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
-                <div class="stat">
-                  <p class="stat-number">{{ projectCount }}</p>
-                  <p class="stat-label">{{ $t('works.hero.projects') }}</p>
-                </div>
-                <div class="stat">
-                  <p class="stat-number">{{ clientCount }}+</p>
-                  <p class="stat-label">{{ $t('works.hero.clients') }}</p>
-                </div>
-                <div class="stat">
-                  <p class="stat-number">{{ yearCount }}+</p>
-                  <p class="stat-label">{{ $t('works.hero.years') }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+<section class="hero-section" id="hero">
+  <!-- Slides de couvertures -->
+<div class="hero-slides" aria-hidden="true">
+  <div
+    v-for="(project, index) in heroProjects"
+    :key="project.id"
+    class="hero-slide"
+    :class="slideClass(index)"
+  >
+    <div
+      class="hero-slide__image"
+      :style="{ backgroundImage: `url(${heroImageUrl(project)})` }"
+    ></div>
+  </div>
+</div>
+  <div class="hero-overlay"></div>
+
+
+    <div class="container-fluid d-flex flex-column align-items-center justify-content-center min-vh-100">
+      <div class="col-12 col-lg-8">
+        <div class="hero-content text-center">
+          <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+            {{ $t('works.hero.title') }}
+          </h1>
+          <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+            {{ $t('works.hero.subtitle') }}
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+
+</section>
  
     <!-- ===== SECTION FILTERS ===== -->
     <section class="filters-section" id="filters" data-aos="fade-up">
@@ -193,6 +195,8 @@
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
+
+const HERO_INTERVAL = 3000
  
 export default {
   name: 'RealisationsView',
@@ -209,6 +213,11 @@ export default {
       projectCount: 4,
       clientCount: 5,
       yearCount: 2,
+
+      // Hero slideshow
+      currentSlide: 0,
+      previousSlide: null,
+      heroTimer: null,
  
       filters: [
         { value: 'all', labelKey: 'works.filters.all' },
@@ -295,6 +304,17 @@ export default {
       // Featured projects first
       return [...projects].sort((a, b) => Number(b.featured) - Number(a.featured))
     },
+
+        // Couvertures affichées dans le hero (toujours tous les projets,
+    // indépendamment du filtre actif)
+    heroProjects() {
+      return this.projects.filter((p) => p.image)
+    },
+  },
+
+    mounted() {
+    this.startHeroSlideshow()
+    document.addEventListener('visibilitychange', this.onVisibilityChange)
   },
  
   methods: {
@@ -307,9 +327,57 @@ export default {
       this.selectedProject = null
       document.body.style.overflow = ''
     },
+
+    nextSlide() {
+      this.previousSlide = this.currentSlide
+      this.currentSlide = (this.currentSlide + 1) % this.heroProjects.length
+    },
+
+    slideClass(index) {
+      return {
+        'is-active': index === this.currentSlide,
+        'is-leaving': index === this.previousSlide && index !== this.currentSlide,
+      }
+    },
+
+    startHeroSlideshow() {
+      // Respect de prefers-reduced-motion et inutile avec une seule image
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (reduceMotion || this.heroProjects.length < 2) return
+
+      // Préchargement pour éviter les flashs au premier passage
+      this.heroProjects.forEach((p) => {
+        new Image().src = this.heroImageUrl(p)
+      })
+
+      this.stopHeroSlideshow()
+      this.heroTimer = setInterval(this.nextSlide, HERO_INTERVAL)
+    },
+
+    stopHeroSlideshow() {
+      clearInterval(this.heroTimer)
+      this.heroTimer = null
+    },
+
+    // Met le diaporama en pause quand l'onglet n'est pas visible
+    onVisibilityChange() {
+      if (document.hidden) {
+        this.stopHeroSlideshow()
+      } else {
+        this.startHeroSlideshow()
+      }
+    },
+
+    // À adapter à la façon dont tu résous déjà tes images ailleurs
+    // dans le template (ex. new URL(...), require(...), préfixe public...)
+    heroImageUrl(project) {
+      return `/${project.image}`
+    },
   },
  
   beforeUnmount() {
+    this.stopHeroSlideshow()
+    document.removeEventListener('visibilitychange', this.onVisibilityChange)
     document.body.style.overflow = ''
   },
 }
