@@ -6,6 +6,7 @@ import frServices from './locales/fr/services';
 import frRealisations from './locales/fr/realisations';
 import frContact from './locales/fr/contact';
 import frFooter from './locales/fr/footer';
+import frBooking from './locales/fr/booking';
 
 
 import enNavbar from './locales/en/navbar';
@@ -15,8 +16,8 @@ import enRealisations from './locales/en/realisations';
 import enContact from './locales/en/contact';
 
 const messages = {
-  fr: { ...frNavbar, ...frHome, ...frServices, ...frRealisations, ...frContact, ...frAbout, ...frFooter },
-  en: { ...enNavbar, ...enHome, ...enServices, ...enRealisations, ...enContact },
+  fr: { ...frNavbar, ...frHome, ...frServices, ...frRealisations, ...frContact, ...frAbout, ...frFooter, ...frBooking },
+  en: { ...enNavbar, ...enHome, ...enServices, ...enRealisations, ...enContact},
 };
 
 export default createI18n({

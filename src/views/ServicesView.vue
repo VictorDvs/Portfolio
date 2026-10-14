@@ -80,7 +80,6 @@
               <!-- CTA for Service -->
               <div class="service-cta mt-5">
                 <router-link to="/contact" class="btn btn-primary btn-lg">
-                  <i class="bi bi-envelope-fill me-2"></i>
                   {{ $t('services.webdev.cta') }}
                 </router-link>
               </div>
@@ -142,7 +141,6 @@
               <!-- CTA for Service -->
               <div class="service-cta mt-5">
                 <router-link to="/contact" class="btn btn-primary btn-lg">
-                  <i class="bi bi-envelope-fill me-2"></i>
                   {{ $t('services.techwriting.cta') }}
                 </router-link>
               </div>
@@ -261,19 +259,16 @@
             <div class="cta-buttons d-flex flex-column flex-md-row gap-3 justify-content-center mt-5" data-aos="fade-up" data-aos-delay="100">
               <!-- Primary CTA: Quote -->
               <router-link to="/contact" class="btn btn-secondary btn-lg">
-                <i class="bi bi-file-earmark-arrow-down me-2"></i>
                 {{ $t('services.cta_final.quote') }}
               </router-link>
  
               <!-- Secondary CTA: Contact -->
               <a href="mailto:contact@voscodes.fr" class="btn btn-outline-light btn-lg">
-                <i class="bi bi-envelope me-2"></i>
                 {{ $t('services.cta_final.contact') }}
               </a>
  
               <!-- Tertiary CTA: Portfolio -->
               <router-link to="/works" class="btn btn-outline-light btn-lg">
-                <i class="bi bi-briefcase me-2"></i>
                 {{ $t('services.cta_final.portfolio') }}
               </router-link>
             </div>

@@ -1,8 +1,8 @@
 export default {
     home: {
       hero: {
-        title: "Ensemble, transformons vos idées <br>en projets clairs et solides",
-        subtitle: "Rédacteur technique spécialisé dans les logiciels, je mets aussi mes compétences en développement web au service de projets numériques clairs, accessibles et faciles à maintenir",
+        title: "De l’idée à la mise en ligne, <br>je vous accompagne pour que votre projet soit clair, solide et fait pour durer",
+        subtitle: "Rédacteur technique pour les logiciels et développeur web, je conçois des sites accessibles <br>et une documentation utile, pour les particuliers comme pour les entreprises.",
         cta_primary: "Voir mes services",
         cta_secondary: "M'envoyer un message",
       },
@@ -54,19 +54,21 @@ export default {
     }
     },
       cta: {
-        title: "Prêt à collaborer ?",
+        title: "Prêt pour un échange ?",
         "subtitle": "Envoyez-moi un message et discutons de votre projet.",
-       "form": {
-          "name": "Nom complet",
-          "email": "Adresse email",
-          "phone": "Téléphone (optionnel)",
-          "subject": "Sujet",
-          "message": "Votre message",
-          "callback": "Je préférerais un appel pour discuter de mon projet",
-          "submit": "Envoyer mon message",
-          "sending": "Envoi en cours...",
-          "success": "Merci ! J'ai reçu votre message et je vous répondrai bientôt."
-        }
+      //  "form": {
+      //     "name": "Nom complet",
+      //     "email": "Adresse email",
+      //     "phone": "Téléphone (optionnel)",
+      //     "subject": "Sujet",
+      //     "message": "Votre message",
+      //     "callback": "Je préférerais un appel pour discuter de mon projet",
+      //     "submit": "Envoyer mon message",
+      //     "sending": "Envoi en cours...",
+      //     "success": "Merci ! J'ai reçu votre message et je vous répondrai bientôt."
+      //   }
+      "alternative": "Vous préférez m'écrire ?",
+"alternative_link": "Utiliser le formulaire de contact"
       },
     },
 }

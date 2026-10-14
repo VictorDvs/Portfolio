@@ -3,48 +3,39 @@
  
   <main class="home-page">
     <!-- ===== SECTION 1: HERO ===== -->
-    <section class="hero-section" id="hero" data-aos="fade-up">
-      <div class="container-fluid hero-container">
-        <div class="container">
-          <div class="row align-items-center justify-content-center min-vh-100">
-            <div class="col-12 col-lg-8">
-              <div class="hero-content text-center">
-                <!-- Photo -->
-                <div class="hero-photo" data-aos="zoom-in" data-aos-delay="100">
-                  <img src="/ma-photo-header.png" alt="Victor De Vos" class="hero-image" />
-                </div>
- 
-                <!-- Title -->
-                <h1 
-                class="hero-title" 
-                data-aos="fade-up" 
-                data-aos-delay="200"
-                v-html="$t('home.hero.title')">
-                </h1>
- 
-                <!-- Subtitle -->
-                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
-                  {{ $t('home.hero.subtitle') }}
-                </p>
- 
-                <!-- CTAs -->
-                <div class="hero-ctas" data-aos="fade-up" data-aos-delay="400">
-                  <router-link to="/services" class="btn btn-primary btn-lg">
-                    <i class="bi bi-arrow-right me-2"></i>
-                    {{ $t('home.hero.cta_primary') }}
-                  </router-link>
-                  <a href="#contact-cta" class="btn btn-outline-light btn-lg">
-                    <i class="bi bi-envelope me-2"></i>
-                    {{ $t('home.hero.cta_secondary') }}
-                  </a>
-                </div>
-              </div>
+<section class="hero-section" id="hero" data-aos="fade-up">
+  <div class="container-fluid hero-container">
+    <div class="container">
+      <div class="row align-items-center justify-content-center min-vh-100">
+        <div class="col-12 col-xl-10">
+          <div class="hero-content">
+            <!-- Photo -->
+            <div class="hero-photo" data-aos="fade-right" data-aos-delay="100">
+              <img src="/ma-photo-header.png" alt="Victor De Vos" class="hero-image" />
+            </div>
+
+            <!-- Titre + sous-titre -->
+            <div class="hero-text" data-aos="fade-left" data-aos-delay="200">
+              <h1 class="hero-title" v-html="$t('home.hero.title')"></h1>
+              <p class="hero-subtitle" v-html="$t('home.hero.subtitle')">
+              </p>
+            </div>
+
+            <!-- CTAs -->
+            <div class="hero-ctas" data-aos="fade-up" data-aos-delay="400">
+              <router-link to="/services" class="btn btn-primary btn-lg">
+                {{ $t('home.hero.cta_primary') }}
+              </router-link>
+              <a href="#contact-cta" class="btn btn-outline-light btn-lg">
+                {{ $t('home.hero.cta_secondary') }}
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
- 
+    </div>
+  </div>
+</section> 
     <!-- ===== SECTION 2: SERVICES PREVIEW ===== -->
     <section class="services-preview" id="services-preview" data-aos="fade-up">
       <div class="container py-120">
@@ -132,7 +123,6 @@
         <div class="row justify-content-center mt-5">
           <div class="col-12 text-center">
             <router-link to="/realisations" class="btn btn-primary btn-lg">
-              <i class="bi bi-briefcase me-2"></i>
               {{ $t('home.projects.cta') }}
             </router-link>
           </div>
@@ -192,108 +182,29 @@
   </div>
 </section>    
 
-<!-- ===== SECTION 5: CONTACT CTA + FORM ===== -->
-    <section class="contact-section" id="contact-cta" data-aos="fade-up">
-      <div class="container py-120">
-        <div class="row justify-content-center">
-          <div class="col-12 col-lg-6">
-            <!-- Heading -->
-            <div class="text-center mb-5">
-              <h2 class="section-title">{{ $t('home.cta.title') }}</h2>
-              <p class="section-subtitle">{{ $t('home.cta.subtitle') }}</p>
-            </div>
- 
-            <!-- Form -->
-            <form 
-              @submit.prevent="handleSubmit"
-              class="contact-form"
-              data-aos="fade-up"
-              data-aos-delay="100">
-              
-              <!-- Row 1: Name & Email -->
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">{{ $t('home.cta.form.name') }} <span class="required">*</span></label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    v-model="form.name"
-                    class="form-control" 
-                    required>
-                </div>
-                <div class="form-group">
-                  <label for="email">{{ $t('home.cta.form.email') }} <span class="required">*</span></label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    v-model="form.email"
-                    class="form-control" 
-                    required>
-                </div>
-              </div>
- 
-              <!-- Row 2: Phone & Subject -->
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="phone">{{ $t('home.cta.form.phone') }}</label>
-                  <input 
-                    type="tel" 
-                    id="phone" 
-                    v-model="form.phone"
-                    class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="subject">{{ $t('home.cta.form.subject') }}</label>
-                  <input 
-                    type="text" 
-                    id="subject" 
-                    v-model="form.subject"
-                    class="form-control">
-                </div>
-              </div>
- 
-              <!-- Row 3: Message (full width) -->
-              <div class="form-group form-group--full">
-                <label for="message">{{ $t('home.cta.form.message') }} <span class="required">*</span></label>
-                <textarea 
-                  id="message" 
-                  v-model="form.message"
-                  class="form-control" 
-                  rows="6" 
-                  required></textarea>
-              </div>
- 
-              <!-- Checkbox -->
-              <div class="form-check">
-                <input 
-                  type="checkbox" 
-                  id="callback" 
-                  v-model="form.callback"
-                  class="form-check-input">
-                <label for="callback" class="form-check-label">
-                  {{ $t('home.cta.form.callback') }}
-                </label>
-              </div>
- 
-              <!-- Submit Button -->
-              <button 
-                type="submit" 
-                class="btn btn-primary btn-lg"
-                :disabled="isSubmitting">
-                <i v-if="!isSubmitting" class="bi bi-send me-2"></i>
-                <span v-if="isSubmitting" class="spinner-border spinner-border-sm me-2"></span>
-                {{ isSubmitting ? $t('home.cta.form.sending') : $t('home.cta.form.submit') }}
-              </button>
-            </form>
- 
-            <!-- Success Message -->
-            <div v-if="submitSuccess" class="alert alert-success mt-4" role="alert">
-              {{ $t('home.cta.form.success') }}
-            </div>
-          </div>
+<!-- ===== SECTION 5: CONTACT CTA + BOOKING ===== -->
+<section class="contact-section" id="contact-cta" data-aos="fade-up">
+  <div class="container py-120">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <!-- Heading -->
+        <div class="text-center mb-5">
+          <h2 class="section-title">{{ $t('home.cta.title') }}</h2>
+          <p class="section-subtitle">{{ $t('home.cta.subtitle') }}</p>
         </div>
+
+        <!-- Booking -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+          <BookingEmbedComponent :show-heading="false" />
+        </div>
+        <p class="mt-4">
+  {{ $t('home.cta.alternative') }}
+  <router-link to="/contact">{{ $t('home.cta.alternative_link') }}</router-link>
+</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   </main>
  
   <FooterComponent />
@@ -306,6 +217,7 @@ import { ref } from 'vue'
 import { Pagination } from 'swiper/modules'
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
+import BookingEmbedComponent from '@/components/BookingEmbedComponent.vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
@@ -369,61 +281,61 @@ const testimonials = ref([
   },
 ])
 
-const form = ref({
-  name: '',
-  email: '',
-  phone: '',
-  subject: '',
-  message: '',
-  callback: false,
-})
+// const form = ref({
+//   name: '',
+//   email: '',
+//   phone: '',
+//   subject: '',
+//   message: '',
+//   callback: false,
+// })
 
-const isSubmitting = ref(false)
-const submitSuccess = ref(false)
+// const isSubmitting = ref(false)
+// const submitSuccess = ref(false)
 
 // Fonctions
-const resetForm = () => {
-  form.value = {
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-    callback: false,
-  }
-}
+// const resetForm = () => {
+//   form.value = {
+//     name: '',
+//     email: '',
+//     phone: '',
+//     subject: '',
+//     message: '',
+//     callback: false,
+//   }
+// }
 
-const handleSubmit = async () => {
-  isSubmitting.value = true
-  try {
-    const response = await fetch('https://formspree.io/f/mpwaeeld', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name: form.value.name,
-        email: form.value.email,
-        phone: form.value.phone,
-        subject: form.value.subject || 'Contact depuis la homepage',
-        message: form.value.message,
-        callback: form.value.callback,
-      }),
-    })
+// const handleSubmit = async () => {
+//   isSubmitting.value = true
+//   try {
+//     const response = await fetch('https://formspree.io/f/mpwaeeld', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({
+//         name: form.value.name,
+//         email: form.value.email,
+//         phone: form.value.phone,
+//         subject: form.value.subject || 'Contact depuis la homepage',
+//         message: form.value.message,
+//         callback: form.value.callback,
+//       }),
+//     })
 
-    if (response.ok) {
-      submitSuccess.value = true
-      resetForm()
-      setTimeout(() => {
-        submitSuccess.value = false
-      }, 5000)
-    }
-  } catch (error) {
-    console.error('Form submission error:', error)
-  } finally {
-    isSubmitting.value = false
-  }
-}
+//     if (response.ok) {
+//       submitSuccess.value = true
+//       resetForm()
+//       setTimeout(() => {
+//         submitSuccess.value = false
+//       }, 5000)
+//     }
+//   } catch (error) {
+//     console.error('Form submission error:', error)
+//   } finally {
+//     isSubmitting.value = false
+//   }
+// }
 </script>
 <style lang="scss" scoped>
 @import "@/assets/styles/_mixins.scss";

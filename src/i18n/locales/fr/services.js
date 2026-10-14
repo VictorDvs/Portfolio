@@ -23,16 +23,16 @@ export default {
         "for_whom": "Freelances, PME, petits commerces ou entrepreneurs qui ont besoin d'une présence web professionnelle, d'une refonte de leur site actuel, ou d'une amélioration de leurs performances en ligne.",
         "benefits": [
           "Site optimisé pour la conversion",
-          "100% personnalisé à ta marque",
+          "100% personnalisé à votre marque",
           "Maintenance simplifiée",
           "Support long terme"
         ],
-        "cta": "Parlons de ton projet web"
+        "cta": "Parlons de votre projet web"
       },
       "techwriting": {
         "title": "Rédaction Technique",
-        "intro": "Documenter clairement tes produits complexes",
-        "description": "Je crée une documentation technique complète et accessible pour tes produits, APIs, et processus internes. Approche Docs-as-Code pour une documentation maintenable et versionée avec le code.",
+        "intro": "Documenter clairement vos produits complexes",
+        "description": "Je crée une documentation technique complète et accessible pour vos produits, APIs, et processus internes. Approche Docs-as-Code pour une documentation maintenable et versionée avec le code.",
         "included_title": "Ce qui est inclus",
         "items": [
           "Audit documentaire complet",
@@ -52,7 +52,7 @@ export default {
           "Documentation versionée",
           "Équipe autonome pour les updates"
         ],
-        "cta": "Commençons ta documentation"
+        "cta": "Parlons de votre documentation technique"
       },
       "comparison": {
         "title": "Comparaison des services",
@@ -107,8 +107,8 @@ export default {
         ]
       },
       "cta_final": {
-        "title": "Prêt à démarrer ?",
-        "subtitle": "Que tu aies une idée précise ou besoin de conseils, je suis là pour t'aider à transformer tes besoins en solutions concrètes.",
+        "title": "Prêt à discuter ?",
+        "subtitle": "Que vous ayez une idée précise ou besoin de conseils, je suis là pour vous aider à transformer vos besoins en solutions concrètes.",
         "quote": "Demander un devis",
         "contact": "Me contacter",
         "portfolio": "Voir mes réalisations"
