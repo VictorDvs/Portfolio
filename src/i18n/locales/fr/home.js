@@ -2,12 +2,12 @@ export default {
     home: {
       hero: {
         title: "De l’idée à la mise en ligne, <br>je vous accompagne pour que votre projet soit clair, solide et fait pour durer",
-        subtitle: "Rédacteur technique pour les logiciels et développeur web, je conçois des sites accessibles <br>et une documentation utile, pour les particuliers comme pour les entreprises.",
+        subtitle: "Rédacteur technique pour les logiciels et développeur web, je conçois des sites accessibles <br>et une documentation utile, pour les entreprises comme pour les indépendants.",
         cta_primary: "Voir mes services",
-        cta_secondary: "M'envoyer un message",
+        cta_secondary: "Réserver un créneau",
       },
       services: {
-        title: "À votre service",
+        title: "Comment puis-je vous aider ?",
         "subtitle": "Deux expertises complémentaires pour répondre à vos besoins digitaux.",
         webdev: {
           title: "Développement web",
@@ -20,11 +20,11 @@ export default {
         },
         techwriting: {
           title: "Rédaction technique",
-          description: "Rédaction de documentations techniques précises et accessibles pour faciliter l'utilisation et la maintenance de vos produits.",
+          description: "Une documentation qui réduit les questions au support et facilite la prise en main et la maintenance de vos produits.",
           highlights: [
-            "Documentation utilisateur, développeur, troubleshooting",
-            "Architecture de l'information, UX writing",
-            "Docs-as-code, structuration DITA",
+            "Typologies de documents variées, selon vos usages",
+            "Organisation de l’information et rédaction d’interface (UX writing)",
+            "Workflows docs-as-code et contenus structurés (DITA, XML)",
           ],
         },
         cta: "En savoir plus",
