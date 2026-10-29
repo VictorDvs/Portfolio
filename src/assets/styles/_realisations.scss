@@ -18,12 +18,12 @@ $hero-slide-easing: cubic-bezier(0.65, 0, 0.35, 1); // easeInOutCubic
  
 // ===== PAGE =====
 .realisations-page {
-  background: linear-gradient(135deg, $color-primary 0%, darken($color-primary, 5%) 100%);
+  background: rgb(35, 35, 35);
 }
  
 // ===== HERO SECTION =====
 .hero-section {
-  background: $color-primary; // fond de secours le temps du chargement
+  background: rgb(35, 35, 35);
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -76,8 +76,8 @@ $hero-slide-easing: cubic-bezier(0.65, 0, 0.35, 1); // easeInOutCubic
   z-index: 1;
   background: linear-gradient(
     135deg,
-    rgba($color-primary, 0.92) 0%,
-    rgba(darken($color-primary, 5%), 0.8) 100%
+    rgba(35, 35, 35) 0%,
+    rgba(35, 35, 35, 0.8) 100%
   );
   pointer-events: none;
 }
@@ -111,7 +111,9 @@ $hero-slide-easing: cubic-bezier(0.65, 0, 0.35, 1); // easeInOutCubic
  
 // ===== FILTERS SECTION =====
 .filters-section {
-  background: $color-neutral-50;
+  padding-top: $py-120;
+  padding-bottom: 3rem;
+  background: rgb(35, 35, 35);
   border-bottom: 1px solid $color-neutral-200;
 }
  
@@ -134,9 +136,9 @@ $hero-slide-easing: cubic-bezier(0.65, 0, 0.35, 1); // easeInOutCubic
 .filter-btn {
   padding: 0.75rem 1.5rem;
   border-radius: 30px;
-  border: 2px solid $color-primary;
+  border: 2px solid $color-secondary;
   background: transparent;
-  color: $color-primary;
+  color: #fff;
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
@@ -148,9 +150,9 @@ $hero-slide-easing: cubic-bezier(0.65, 0, 0.35, 1); // easeInOutCubic
   }
  
   &--active {
-    background: $color-primary;
+    background: $color-secondary;
     color: #fff;
-    border-color: $color-primary;
+    border-color: $color-secondary;
     box-shadow: 0 4px 12px rgba($color-primary, 0.3);
   }
  
@@ -197,7 +199,7 @@ $hero-slide-easing: cubic-bezier(0.65, 0, 0.35, 1); // easeInOutCubic
   .project-overlay {
     position: absolute;
     inset: 0;
-    background: rgba($color-primary, 0.8);
+    background: rgba(35, 35, 35, 0.6);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -300,13 +302,13 @@ $hero-slide-easing: cubic-bezier(0.65, 0, 0.35, 1); // easeInOutCubic
   font-size: 0.9rem;
  
   &.btn-primary {
-    background: $color-primary;
+    background: rgb(35, 35, 35);
     color: #fff;
  
     &:hover {
-      background: darken($color-primary, 10%);
+      background: darken(rgb(35, 35, 35), 10%);
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba($color-primary, 0.3);
+      box-shadow: 0 4px 12px rgba(rgb(35, 35, 35), 0.3);
     }
   }
  

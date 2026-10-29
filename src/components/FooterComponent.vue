@@ -16,7 +16,7 @@
               </p>
               <div class="footer-logo">
                   <img 
-    src="/vdv-logo.svg"  
+    src="/logo_vdv.png"  
     alt="VDV Logo" 
     class="logo-header"
   />

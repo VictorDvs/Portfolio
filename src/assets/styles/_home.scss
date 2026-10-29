@@ -32,7 +32,7 @@ $py-80: 5rem;
  
 // ===== SECTION HERO =====
 .hero-section {
-  background: rgb(84, 120, 102);
+  background: rgb(35, 35, 35);
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -283,7 +283,7 @@ $py-80: 5rem;
  
 // ===== SECTION PROJECTS PREVIEW =====
 .projects-preview {
-  background: linear-gradient(180deg, $color-neutral-50 0%, lighten($color-primary, 25%) 100%);
+  background: linear-gradient(180deg, $color-neutral-50 0%, lighten($color-secondary, 25%) 100%);
 }
  
 .project-card {

@@ -18,7 +18,7 @@ $py-spacing-lg: 120px; // 7.5rem
 // ===== SECTION 2: BIO =====
 .bio-section {
   padding: $py-spacing-lg 0;
-  background: rgb(84, 120, 102);
+  background: rgb(35, 35, 35);
   min-height: 100vh;
   @include displayFlex;
 }
@@ -46,7 +46,7 @@ $py-spacing-lg: 120px; // 7.5rem
 .profile-placeholder {
   width: 300px;
   height: 300px;
-  background: linear-gradient(135deg, lighten($color-primary, 15%) 0%, $color-primary 100%);
+  background: #DC6E44;
 }
 
 .profile-circle {

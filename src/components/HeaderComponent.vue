@@ -1,92 +1,77 @@
 <template>
-  <nav 
-    v-scroll 
-    class="navbar navbar-expand-lg" 
-    id="nav" 
+  <nav
+    v-scroll
+    class="navbar navbar-expand-lg"
+    id="nav"
     :class="{ 'menu-open': isMenuOpen, 'header--dark': isDarkHeader }"
   >
     <div class="container coll-header">
+      <!-- Logo : toujours visible, à gauche -->
+      <router-link
+        to="/"
+        class="nav-link-home no-underline"
+        aria-label="Retour à l'accueil"
+        @click="closeMenu"
+      >
+        <img src="/logo_vdv.png" alt="VDV Logo" class="logo-header" />
+      </router-link>
+
+      <!-- Icônes de contact : toujours visibles, à gauche du burger -->
+      <div class="d-flex contact-icons align-items-center">
+        <a
+          href="mailto:victordevos.pro@gmail.com"
+          title="Email"
+          aria-label="Envoyer un email"
+        >
+          <i class="bi-envelope-fill"></i>
+        </a>
+        <a
+          href="https://wa.me/33681883176"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="WhatsApp"
+          aria-label="Contacter sur WhatsApp"
+        >
+          <i class="bi-whatsapp"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/victor2vos/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="LinkedIn"
+          aria-label="Visiter le profil LinkedIn"
+        >
+          <i class="bi-linkedin"></i>
+        </a>
+      </div>
+
       <button
-        class="navbar-toggler ms-auto"
+        class="navbar-toggler"
         type="button"
         @click.stop="toggleMenu"
         :aria-expanded="isMenuOpen"
+        aria-controls="navbarNav"
         aria-label="Toggle navigation"
       >
         <span class="bi bi-list"></span>
       </button>
 
-      <div 
-        class="collapse navbar-collapse justify-content-end" 
-        :class="{ show: isMenuOpen }" 
+      <!-- Menu déroulant : uniquement les liens de navigation -->
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        :class="{ show: isMenuOpen }"
         id="navbarNav"
       >
         <div class="navbar-nav">
-<router-link 
-  to="/" 
-  class="nav-link-home no-underline" 
-  aria-label="Retour à l'accueil" 
-  @click="closeMenu"
->
-  <img 
-    src="/vdv-logo.svg"  
-    alt="VDV Logo" 
-    class="logo-header"
-  />
-</router-link>
-
-          <router-link 
-            class="nav-link" 
-            :to="'/services'" 
-            @click="closeMenu"
-          >
+          <router-link class="nav-link" :to="'/services'" @click="closeMenu">
             {{ $t('navbar.offer') }}
           </router-link>
-
-          <router-link 
-            class="nav-link" 
-            :to="'/realisations'" 
-            @click="closeMenu"
-          >
+          <router-link class="nav-link" :to="'/realisations'" @click="closeMenu">
             {{ $t('navbar.realisations') }}
           </router-link>
-
-          <router-link 
-            class="nav-link" 
-            :to="'/about'" 
-            @click="closeMenu"
-          >
+          <router-link class="nav-link" :to="'/about'" @click="closeMenu">
             {{ $t('navbar.about') }}
           </router-link>
-
-          <!-- Icônes de contact -->
-          <div class="d-flex contact-icons align-items-center ms-3">
-            <a 
-              href="mailto:victordevos.pro@gmail.com" 
-              title="Email"
-              aria-label="Envoyer un email"
-            >
-              <i class="bi-envelope-fill"></i>
-            </a>
-            <a 
-              href="https://wa.me/33681883176" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              title="WhatsApp"
-              aria-label="Contacter sur WhatsApp"
-            >
-              <i class="bi-whatsapp"></i>
-            </a>
-            <a 
-              href="https://www.linkedin.com/in/victor2vos/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              title="LinkedIn"
-              aria-label="Visiter le profil LinkedIn"
-            >
-              <i class="bi-linkedin"></i>
-            </a>
-          </div>
         </div>
       </div>
     </div>

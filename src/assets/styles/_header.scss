@@ -1,5 +1,7 @@
 @import 'mixins';
 
+$burger-bp: 992px;
+
 /* Header principal */
 #nav {
   color: var(--text-color);
@@ -49,17 +51,13 @@
 
 /* Lien Accueil - aligné à gauche */
 .nav-link-home {
-  margin-right: auto;
   position: relative;
-  font-weight: 400;
-  font-size: 1.2rem;
-  text-decoration: none;
   padding: 10px;
   color: var(--text-color);
+  text-decoration: none;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  width: auto;
   display: inline-block;
+  width: auto;
 }
 
 /* Style des liens */
@@ -127,6 +125,7 @@
 .navbar-toggler {
   background: transparent;
   color: var(--burger-button-color);
+  margin: 0;
   padding: 5px;
   font-size: 30px;
   z-index: 1001;
@@ -142,7 +141,8 @@
 /* Icônes de contact */
 .contact-icons {
   gap: 20px;
-  // padding-left: 15px;
+  margin-left: auto;
+  margin-right: 12px;
 
   a {
     color: var(--text-color);
@@ -162,17 +162,14 @@
 }
 
 /* Responsive pour petit écran */
+/* Mobile / tablette : le menu déroulant ne contient plus que les liens */
 @media screen and (max-width: 1200px) {
   .navbar-nav {
     flex-direction: column;
     gap: 0;
     width: 100%;
     margin: 0;
-    padding-bottom: 8px;
-  }
-
-  .nav-link-home {
-    margin-right: 0;
+    padding: 8px 0;
   }
 
   .router-link-exact-active::after {
@@ -184,15 +181,17 @@
     width: 100%;
     text-align: center;
   }
-
-  .contact-icons {
-    padding-left: 0;
-    padding-top: 10px;
-  }
 }
 
-@media screen and (max-width: 990px) {
-  .navbar-nav {
-    padding-bottom: 8px;
+/* Bureau : logo | liens | icônes sur une seule ligne */
+@media screen and (min-width: $burger-bp) {
+  .navbar-collapse {
+    order: 1;
+  }
+
+  .contact-icons {
+    order: 2;
+    margin-left: 20px;
+    margin-right: 0;
   }
 }

@@ -3,8 +3,7 @@
  
   <main class="realisations-page">
     <!-- ===== SECTION HERO ===== -->
-<section class="hero-section" id="hero">
-  <!-- Slides de couvertures -->
+<!-- <section class="hero-section" id="hero">
 <div class="hero-slides" aria-hidden="true">
   <div
     v-for="(project, index) in heroProjects"
@@ -34,16 +33,11 @@
       </div>
     </div>
 
-</section>
+</section> -->
  
     <!-- ===== SECTION FILTERS ===== -->
     <section class="filters-section" id="filters" data-aos="fade-up">
       <div class="container py-80">
-        <div class="row justify-content-center mb-5">
-          <div class="col-12 text-center">
-            <p class="filter-label">{{ $t('works.filters.label') }}</p>
-          </div>
-        </div>
  
         <div class="row justify-content-center">
           <div class="col-12 col-lg-8">
@@ -232,7 +226,7 @@ export default {
           category: 'dev',
           group: 'WordPress',
           featured: true,
-          year: 2024,
+          year: 2026,
           titleKey: 'works.projects.alkantara.title',
           descKey: 'works.projects.alkantara.desc',
           detailsKey: 'works.projects.alkantara.details',
@@ -245,7 +239,7 @@ export default {
           category: 'dev',
           group: 'Vue.js',
           featured: true,
-          year: 2023,
+          year: 2025,
           titleKey: 'works.projects.pablocires.title',
           descKey: 'works.projects.pablocires.desc',
           detailsKey: 'works.projects.pablocires.details',
@@ -260,7 +254,7 @@ export default {
           category: 'writing',
           group: 'Docusaurus',
           featured: true,
-          year: 2024,
+          year: 2025,
           titleKey: 'works.projects.fastpack.title',
           descKey: 'works.projects.fastpack.desc',
           detailsKey: 'works.projects.fastpack.details',
@@ -273,7 +267,7 @@ export default {
           category: 'writing',
           group: 'MkDocs',
           featured: true,
-          year: 2023,
+          year: 2025,
           titleKey: 'works.projects.restokit.title',
           descKey: 'works.projects.restokit.desc',
           detailsKey: 'works.projects.restokit.details',
